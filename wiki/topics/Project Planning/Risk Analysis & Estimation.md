@@ -3,11 +3,12 @@ phase: Project Planning
 topic: Risk Analysis & Estimation
 lectures: 18
 co: CSE3102.2
+asked_as: [compare]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 2
-pyq_marks_latest: 2
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -96,26 +97,38 @@ the right product built badly.**
 > the category most likely to be under-reported — a nice point to make in any
 > longer risk answer.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | What risk is, and typical software risks | 0 | the definition and Capers Jones's five categories |
-| 2 | Risk assessment | **2** | carries A4 — identification, analysis, prioritization |
-| 3 | Risk control | 0 | planning, monitoring, resolution — the other half |
+Generic skeleton on [[answer-patterns]] §5. **2 of 80.**
 
-## Mindmap
+### Compare & distinguish — A4, 2 marks
 
-```mermaid
-graph TD
-    S1["1 · What risk is<br/>0 marks"]
-    S2["2 · Risk assessment<br/>2 marks"]
-    S3["3 · Risk control<br/>0 marks"]
+- **Spot it:** *"Difference between risk identification and risk assessment."*
+- **The structural point the question turns on:** **identification is not the
+  opposite of assessment — it is the first step of it.** Say this explicitly; it
+  is what separates a correct answer from a plausible-sounding wrong one.
+- **Skeleton:** a short table — what each does · where it sits in the sequence ·
+  its output — then the one line above.
+- **Earns the marks:** naming the containment relationship, not just listing two
+  definitions.
+- **Trap:** treating them as two parallel phases. Assessment = identification +
+  analysis + prioritisation.
 
-    S1 -->|"a list of fears is useless<br/>until it is ranked"| S2
-    S2 -->|"knowing the worst risks<br/>changes nothing until you act"| S3
-    S3 -.->|"and monitoring surfaces<br/>risks nobody listed"| S1
-```
+**Never asked as:** `numerical`, `draw`, `scenario`, `explain`. Risk exposure
+(probability × magnitude) is a plausible small numerical and has not appeared —
+a prediction, not evidence.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | What risk is, and typical software risks | definitional | — | 0 | the definition and Capers Jones's five categories |
+| 2 | Risk assessment | procedural | **compare** | **2** | carries A4 — identification, analysis, prioritization |
+| 3 | Risk control | procedural | — | 0 | planning, monitoring, resolution — the other half |
+
+**The thread:** a risk has not happened yet (1) — assessment finds, analyses and
+ranks what could hurt (2) — and control is everything you do about it afterwards
+(3), whose most under-rated option is simply **not doing the risky thing**.
 
 ## 1 · What risk is, and typical software risks
 

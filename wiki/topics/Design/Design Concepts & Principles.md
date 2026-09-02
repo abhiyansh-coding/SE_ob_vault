@@ -3,11 +3,12 @@ phase: Design
 topic: Design Concepts & Principles
 lectures: 24-26
 co: CSE3102.2
+asked_as: []
 mte: true
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---

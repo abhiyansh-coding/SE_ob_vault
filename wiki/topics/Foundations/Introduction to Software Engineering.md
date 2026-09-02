@@ -3,11 +3,12 @@ phase: Foundations
 topic: Introduction to Software Engineering
 lectures: 1-3
 co: CSE3102.1
+asked_as: [scenario]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 2
-pyq_marks_latest: 2
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -132,17 +133,38 @@ person sincerely believes:
 | "Until the program runs, quality can't be assessed" | practitioner | reviews and inspections find defects earlier and cheaper |
 | "The only deliverable is the working program" | practitioner | software = program + documentation + operating procedures |
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | What software engineering is | 0 | the definition every other page assumes |
-| 2 | The software crisis | **2** | the only examined part — carries A5 |
-| 3 | Program vs software | 0 | the distinction the whole course rests on |
-| 4 | Software characteristics and the deterioration curve | 0 | the diagram that explains why maintenance dominates |
-| 5 | The changing nature of software | 0 | the eight application domains, a listing answer |
-| 6 | Legacy software | 0 | **no deck covers this** |
-| 7 | Software myths | 0 | **no deck covers this** |
+Generic skeleton on [[answer-patterns]] §1. **2 of 80, all of it in one 2-marker.**
+
+### Scenario → identify & justify — A5, 2 marks
+
+- **Spot it:** a project behind schedule, asking whether adding people can rescue
+  it. Any phrasing of "add more developers / employees / programmers".
+- **Skeleton:** answer **no in the first line** → give two of the three mechanisms
+  (training diverts your best people · communication paths grow as *n(n−1)/2*
+  against at-best-linear output · sequential work cannot be parallelised) → close
+  by naming the real remedies: reduce scope, extend the schedule, re-plan.
+- **Earns the marks:** the mechanism. A 2-marker wants the *reason*.
+- **Trap:** "yes, if they are added early" — the question says the project is
+  *already* late. Second trap: naming Brooks's Law and stopping. **The eponym
+  earns nothing on its own.**
+
+**Never asked as:** `numerical`, `draw`, `compare`, `explain`. The six crisis
+causes and three named failures are plausible Section A material and have not been
+asked — a prediction, not evidence (rule 7).
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | What software engineering is | definitional | — | 0 | the definition every other page assumes |
+| 2 | The software crisis | definitional | **scenario** | **2** | the only examined part — carries A5 |
+| 3 | Program vs software | definitional | — | 0 | the distinction the whole course rests on |
+| 4 | Software characteristics and the deterioration curve | notational | — | 0 | the diagram that explains why maintenance dominates |
+| 5 | The changing nature of software | definitional | — | 0 | the eight application domains, a listing answer |
+| 6 | Legacy software | definitional | — | 0 | **no deck covers this** |
+| 7 | Software myths | definitional | — | 0 | **no deck covers this** |
 
 ## Mindmap
 

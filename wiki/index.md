@@ -5,15 +5,18 @@ Catalog of everything in the wiki. Updated on every ingest/generate/grade.
 - [[syllabus]] — what the course covers (scope; rule 1)
 - [[weightage]] — what the exam actually asks (marks; rule 2)
 - [[story]] — why each phase exists and how they chain (understanding)
+- **[[answer-patterns]]** — the five answer archetypes and their skeletons
+  (**what a correct answer looks like**; added 2026-09-03)
 - **Mid-Term: [[MTE Roadmap]]** — lectures 1-32, the live queue
 - **Full course: [[SE Roadmap]]** — all 30 topics, lectures 1-53
 - [[log]] — append-only timeline of every change to this vault
 
-> [!warning] Every topic page is a scaffold
-> Scaffolded 2026-09-02 from the handout's lecture plan and the deck sweep. Each
-> page has frontmatter, Prerequisites, an Overview and its deck list — **no
-> subtopics, Quick Reference or Question Bank yet.** Those are built one topic at
-> a time by reading the decks first (rule 8).
+> [!info] 15 of 30 pages are built; the other 15 are scaffolds
+> The built pages follow the **SE-native schema adopted 2026-09-03** — Quick
+> Reference, **How it's asked**, Contents, then sections shaped by content type.
+> The remaining 15 carry frontmatter, Prerequisites, an Overview and their deck
+> list; the seven that carry marks also carry a **How it's asked** block, so the
+> answer shape is known before the page is built. Build order: [[MTE Roadmap]].
 
 ## Topics
 

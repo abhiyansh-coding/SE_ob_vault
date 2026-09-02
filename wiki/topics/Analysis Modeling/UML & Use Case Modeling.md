@@ -3,11 +3,12 @@ phase: Analysis Modeling
 topic: UML & Use Case Modeling
 lectures: 22-23
 co: CSE3102.2
+asked_as: [draw]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 10
-pyq_marks_latest: 10
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -127,14 +128,47 @@ ready it is presented to customers. Use cases are **implementation-independent**
 descriptions of functionality, and are realized in later stages using, say, a
 class diagram.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | What UML is, and the diagram taxonomy | 0 | the three authors, the two groups, the 9-vs-13 count |
-| 2 | The use case approach | 0 | actors, use cases, the template — lecture 22's other half |
-| 3 | Class, object and sequence diagrams | 0 | named by the handout; thin deck coverage |
-| 4 | Activity diagrams | **10** | **carries D2** — the paper's biggest drawing |
+Generic skeleton on [[answer-patterns]] §4. **Tied heaviest topic in the MTE
+window at 10 of 80, and the paper's largest single block — one drawing.**
+
+### Draw & label — D2, 10 marks
+
+- **Spot it:** a described workflow with two roles and, critically, **two things
+  happening at once** — "document verification **and** credit check". The word
+  *and* over two simultaneous activities is the question's whole point.
+- **Skeleton:**
+  1. **Legend first** — filled circle = initial node · rounded rectangle =
+     action · diamond = decision · **solid bar = fork/join** · bullseye = final
+     node · vertical partitions = swimlanes, one per role.
+  2. **Swimlanes labelled with the actors** named in the stem (Loan Officer,
+     Applicant). Put every action in the lane of whoever performs it.
+  3. **The diagram**, every action and every guard labelled.
+  4. **Reading** — two or three lines saying what it asserts, and the validity
+     rule: **every fork has a matching join**, and flow resumes only when all
+     parallel branches complete.
+- **Earns the marks:** the fork/join bar. **Drawing a decision diamond where the
+  question describes parallel work is the error the question exists to catch** —
+  a diamond means *choose one path*, a bar means *do both*.
+- **Trap:** omitting swimlanes when the stem names roles; leaving guards off
+  decision branches; forgetting the join.
+
+**A 10-mark drawing is worth planning on scrap first.** Identify actors → list
+actions in order → find the parallelism → place fork and join → then draw once.
+
+**Never asked as:** `numerical`, `compare`. A `scenario` or `explain` question on
+use cases is plausible but has never appeared — that is a prediction, not
+evidence (rule 7).
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | What UML is, and the diagram taxonomy | definitional | — | 0 | the three authors, the two groups, the 9-vs-13 count |
+| 2 | The use case approach | procedural | — | 0 | actors, use cases, the template — lecture 22's other half |
+| 3 | Class, object and sequence diagrams | notational | — | 0 | named by the handout; thin deck coverage |
+| 4 | Activity diagrams | notational | **draw** | **10** | **carries D2** — the paper's biggest drawing |
 
 ## Mindmap
 

@@ -3,11 +3,12 @@ phase: DevOps
 topic: DevOps, Cloud & Virtualization
 lectures: 51-53
 co: CSE3102.5
+asked_as: [explain]
 mte: false
 studied: false
 status: not-started
 pyq_marks: 6
-pyq_marks_latest: 6
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -30,6 +31,21 @@ last_practiced: null
 > reading it as marks.
 
 Introduction to DevOps, cloud computing and virtualization, migration to DevOps and the tool chain. The course's closing module and its most industry-facing.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §2. **6 of 80 — B5, in two 3-mark halves.**
+
+- **B5(a)** — *"Migration to DevOps step-by-step: cultural, technical,
+  automation."* A **procedural explain**: give the steps *in order*, grouped under
+  the three headings the question names. The grouping is not decoration — answer
+  under those three words.
+- **B5(b)** — *"How cloud and virtualization improve maintainability, scalability
+  and deployment automation."* A **three-part explain**: one block per named
+  benefit, each saying the mechanism, not just the claim.
+- **Earns the marks:** answering under the question's own headings. Both halves
+  hand you the structure; use it.
+- **Trap:** a general DevOps essay that never touches the three named dimensions.
 
 ## Course Material
 

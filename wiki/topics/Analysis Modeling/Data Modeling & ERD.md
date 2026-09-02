@@ -3,11 +3,12 @@ phase: Analysis Modeling
 topic: Data Modeling & ERD
 lectures: 19-20
 co: CSE3102.2
+asked_as: []
 mte: true
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 1
 attempts: 0
 last_practiced: null
 ---
@@ -107,26 +108,45 @@ Read this before drawing anything — an unlabelled ER diagram scores near zero.
 direction separately, and a one-to-many drawn without the 1 and the M is
 indistinguishable from a many-to-many.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | Entities, attributes and keys | 0 | the building blocks; candidate key vs identifier |
-| 2 | Relationships — degree and cardinality | 0 | the pair students merge; where all the marks would be |
-| 3 | Drawing the ER diagram | 0 | notation and worked examples |
+Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — one
+assignment question ([[se-assign-1-2026]] Q5(c), a 12-entity clinic ERD).**
 
-## Mindmap
+### Draw & label — the archetype to prepare
 
-```mermaid
-graph TD
-    S1["1 · Entities, attributes, keys<br/>0 marks"]
-    S2["2 · Degree & cardinality<br/>0 marks"]
-    S3["3 · Drawing the ERD<br/>0 marks"]
+- **Spot it:** *"Draft an ERD (entities, keys, relationships) for…"* — usually
+  with the entities listed for you, which makes it a **notation** test rather than
+  a modelling one.
+- **Skeleton:**
+  1. **Legend** — which notation: crow's foot or Chen. State it.
+  2. **An entity table** — entity · **primary key** · attributes · foreign keys.
+     This earns marks the diagram alone does not, and it is fast to write.
+  3. **The diagram**, with **cardinality at both ends of every relationship**.
+  4. **Reading** — what it asserts, plus the validity rule: **every many-to-many
+     resolved into an associative entity**, every identifier underlined.
+- **Earns the marks:** cardinality markers and keys. **An unlabelled ERD is worth
+  close to zero.**
+- **Trap:** drawing a direct many-to-many. Resolve it through the entity that
+  already exists in the domain (patient↔provider resolves through *appointment*).
+- **Second trap:** answering *degree* when asked *cardinality*. Degree counts how
+  many **entity types** a relationship connects; cardinality counts **instances**
+  per side. They vary independently — see section 2.
 
-    S1 -->|"things alone say nothing.<br/>how do they connect?"| S2
-    S2 -->|"the rules are settled.<br/>now put them on paper"| S3
-    S3 -.->|"and every box needs<br/>an underlined identifier"| S1
-```
+**Never asked as:** `numerical`, `explain`, `scenario`. `compare` is plausible for
+*degree vs cardinality*.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | Entities, attributes and keys | definitional | — | 0 | the building blocks; candidate key vs identifier |
+| 2 | Relationships — degree and cardinality | definitional | compare (likely) | 0 | the pair students merge; where all the marks would be |
+| 3 | Drawing the ER diagram | notational | **draw** | 0 | notation and worked examples |
+
+**The thread:** ask what the system must remember (1) — then how those things
+relate, which is two questions students merge (2) — and the diagram is the
+deliverable, graded on notation as much as content (3).
 
 ## 1 · Entities, attributes and keys
 

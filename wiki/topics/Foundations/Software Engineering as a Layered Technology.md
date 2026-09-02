@@ -3,11 +3,12 @@ phase: Foundations
 topic: Software Engineering as a Layered Technology
 lectures: 4-5
 co: CSE3102.1
+asked_as: []
 mte: true
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -98,33 +99,34 @@ the five characteristics, the eight application domains — all on
 [[Introduction to Software Engineering]]. The handout assigns them to lecture 5;
 the deck teaches them alongside lecture 1-3 material, so rule 8 keeps them there.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | Software engineering as a layered technology | 0 | the four-layer stack — **no deck** |
-| 2 | The generic process framework | 0 | the five activities every model rearranges — **no deck** |
-| 3 | Umbrella activities | 0 | what runs across all phases — **no deck** |
-| 4 | The process, and software products | 0 | generic vs customised; points back to topic 1 |
+**Never asked, on the one paper in this vault** — `asked_as` is empty. Rule 7
+requires saying that plainly rather than inventing drill.
 
-## Mindmap
+**If it appears, the two likely shapes** (prediction, not evidence):
+- **`compare`** — *framework activity vs umbrella activity*, or *process framework
+  vs process model*. Both pairs are in Quick Reference; answer as a table with the
+  dimension named in every row. See [[answer-patterns]] §5.
+- **`explain`** — "explain software engineering as a layered technology", 2 marks.
+  Four names bottom-up, one line each, **and draw the stack** — it costs ten
+  seconds and makes the ordering unambiguous.
 
-```mermaid
-graph TD
-    S1["1 · Layered technology<br/>0 marks · no deck"]
-    S2["2 · Process framework<br/>0 marks · no deck"]
-    S3["3 · Umbrella activities<br/>0 marks · no deck"]
-    S4["4 · The process &<br/>software products · 0 marks"]
+**The single most likely thing to be tested** is the *direction* of the stack:
+quality focus at the bottom, tools at the top.
 
-    S1 -->|"'process' is one of the four layers.<br/>so what is actually in it?"| S2
-    S2 -->|"five activities in sequence —<br/>but some work never stops"| S3
-    S3 -->|"that is the machinery.<br/>what does it produce?"| S4
-    S4 -.->|"and rearranging the five<br/>gives every process model"| S2
-```
+## Contents
 
-> [!warning] Subtopics 1-3 are unsourced
-> Zero deck hits for any of them. Standard Pressman material — see the banner
-> above. Not repeated on each subtopic below.
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | Software engineering as a layered technology | definitional | — | 0 | the four-layer stack — **no deck** |
+| 2 | The generic process framework | procedural | — | 0 | the five activities every model rearranges — **no deck** |
+| 3 | Umbrella activities | definitional | — | 0 | what runs across all phases — **no deck** |
+| 4 | The process, and software products | definitional | — | 0 | generic vs customised; points back to topic 1 |
+
+**The thread:** "process" is one of the four layers, so what is in it? (1→2) —
+five activities in sequence, but some work never stops (2→3) — and that machinery
+exists to produce something (3→4), whose nature decides which model is viable.
 
 ## 1 · Software engineering as a layered technology
 

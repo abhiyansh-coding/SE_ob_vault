@@ -3,11 +3,12 @@ phase: Project Planning
 topic: Effort Estimation & COCOMO
 lectures: 17
 co: CSE3102.2
+asked_as: [numerical]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 10
-pyq_marks_latest: 10
+assignment_qs: 3
 attempts: 0
 last_practiced: null
 ---
@@ -132,14 +133,48 @@ hierarchy** (module / subsystem / system), allocating manpower per phase.
 Plan and requirements: **effort 6-8%**, development time **10-40%**, depending on
 mode and size.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | The three development modes | 0 | picks every coefficient — the first step of any question |
-| 2 | Basic COCOMO | 0 | two worked deck examples; staff size and productivity |
-| 3 | Intermediate COCOMO and the cost drivers | **10** | **carries D1** — the paper's only numerical |
-| 4 | Detailed COCOMO | 0 | phase-sensitive multipliers; definition only |
+Generic skeleton on [[answer-patterns]] §3. **This is the paper's only numerical
+long-answer and the heaviest topic in the MTE window — 10 of 80.**
+
+### Numerical — D1, 10 marks (4 + 4 + 2)
+
+- **Spot it:** a size in LOC, a mode named or implied, and a note supplying
+  *a, b, c, d*. **An *a* of 2.8 or 3.0/3.2 means Intermediate, not Basic** — the
+  coefficient set identifies the model, and the question will not say so.
+- **Skeleton, in this exact order:**
+  1. **Given block** — convert LOC → KLOC on the first line. State the mode and
+     which model the coefficients belong to.
+  2. **Nominal effort** *E* = *a* × KLOC<sup>*b*</sup>, showing the log-antilog
+     working for the power.
+  3. **EAF** = product of the cost-driver multipliers given.
+  4. **Adjusted effort** = nominal × EAF, then **duration** *D* = *c* × *E*<sup>*d*</sup>.
+  5. **Repeat for each case**, then compute what was actually asked — usually the
+     **variation between cases**, absolute and percentage.
+  6. Answer line **with units**: PM for effort, months for duration.
+- **Earns the marks:** the variation step. D1 gives 2 marks for it specifically,
+  and candidates who compute both cases correctly still lose those 2 by stopping.
+- **Trap:** forgetting to divide by 1000; using KLOC where effort belongs in the
+  duration formula; reporting person-months as months.
+
+**Also asked as a mode-selection sub-step.** Deck Example 4.6 gives a word problem
+with no mode stated ("average experience", "schedule not very tight") and expects
+you to pick semi-detached and justify. That is a `scenario` move embedded inside a
+`numerical` question — see section 1.
+
+**Never asked as:** `draw`, `compare`. `explain` appears only adjacent — B3's
+effort-distribution question is filed on [[SDLC & CMMI]] but its machinery is
+here.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | The three development modes | definitional | scenario (embedded) | 0 | picks every coefficient — the first step of any question |
+| 2 | Basic COCOMO | numerical | numerical | 0 | two worked deck examples; staff size and productivity |
+| 3 | Intermediate COCOMO and the cost drivers | numerical | **numerical** | **10** | **carries D1** — the paper's only numerical |
+| 4 | Detailed COCOMO | definitional | — | 0 | phase-sensitive multipliers; definition only |
 
 ## Mindmap
 

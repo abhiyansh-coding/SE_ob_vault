@@ -264,3 +264,5 @@ change that stops development and operations optimising against each other.
 
 Ten sentences, one per phase, in causal order. If you can say that, you can
 rebuild the syllabus from it — which is the whole point of this page.
+
+**Related:** [[syllabus]] (scope) · [[weightage]] (marks) · [[answer-patterns]] (answer shape) · [[index]]

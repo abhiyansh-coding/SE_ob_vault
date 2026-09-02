@@ -3,11 +3,12 @@ phase: Requirements
 topic: Requirements Engineering
 lectures: 13
 co: CSE3102.2
+asked_as: [explain]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 2
-pyq_marks_latest: 2
+assignment_qs: 1
 attempts: 0
 last_practiced: null
 ---
@@ -127,26 +128,47 @@ practice* list adds: requirements change · over-reliance on CASE tools · tight
 schedules · communication barriers · market-driven development · lack of
 resources.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | What requirements engineering is | 0 | the definition and why RE is hard |
-| 2 | Types of requirements | 0 | functional vs non-functional, plus eight more |
-| 3 | The SRS | **2** | carries A3; the document everything downstream reads |
+Generic skeleton on [[answer-patterns]] §2. **2 of 80.**
 
-## Mindmap
+### Explain with reason — A3, 2 marks
 
-```mermaid
-graph TD
-    S1["1 · What RE is<br/>0 marks"]
-    S2["2 · Types of requirements<br/>0 marks"]
-    S3["3 · The SRS<br/>2 marks"]
+- **Spot it:** any question contrasting formal documentation with agile practice,
+  or asking why a document is or is not needed. The stem *"illustrate with
+  reason"* is this instructor's phrasing for explain.
+- **Skeleton, for a 2-marker — one reason per side plus the principle:**
+  1. **Why large projects need it:** it is a **contract and shared reference** —
+     many stakeholders, distributed teams, and the basis for acceptance testing.
+  2. **Why agile avoids it:** requirements are expected to change, so a frozen SRS
+     is stale immediately; the manifesto trades it for working software.
+  3. **The principle underneath both:** an SRS is worth its cost when
+     communication cannot happen face to face and scope must be fixed in advance.
+     **Agile removes both conditions.**
+- **Earns the marks:** step 3, and saying agile **replaces** the SRS with stories,
+  a backlog and an on-site customer rather than abandoning specification.
+- **Trap:** writing "Agile has no documentation." It has less, and different.
+  *"Working software **over** comprehensive documentation"* is a priority, not a
+  prohibition.
 
-    S1 -->|"you must collect them —<br/>but they are not all one kind"| S2
-    S2 -->|"sorted requirements are still<br/>only notes. write them down"| S3
-    S3 -.->|"and the written contract is what<br/>makes the next phase possible"| S1
-```
+### Compare — [[se-assign-1-2026]] Q7(a)
+
+Functional vs non-functional from a scenario. Table it, and note that a
+non-functional requirement must be **measurable** to be verifiable.
+
+**Never asked as:** `numerical`, `draw`, `scenario`.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | What requirements engineering is | definitional | — | 0 | the definition and why RE is hard |
+| 2 | Types of requirements | definitional | compare | 0 | functional vs non-functional, plus eight more |
+| 3 | The SRS | definitional | **explain** | **2** | carries A3; the document everything downstream reads |
+
+**The thread:** you must collect requirements, but they are not all one kind
+(1→2); and sorted requirements are still only notes until they are written down
+(2→3) — and the written contract is what makes the next phase possible at all.
 
 ## 1 · What requirements engineering is
 

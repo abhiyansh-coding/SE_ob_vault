@@ -3,11 +3,12 @@ phase: Process Models
 topic: Agile Development
 lectures: 9-11
 co: CSE3102.1
+asked_as: []
 mte: true
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 5
 attempts: 0
 last_practiced: null
 ---
@@ -183,15 +184,52 @@ $$N = \lceil P / V \rceil \qquad \text{Duration} = N \times L \qquad \text{Cost}
 day**, summed across the team. Where hours/day is a range, team capacity is a
 range too.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | The Agile manifesto and its trade-offs | 0 | the four values, and the disadvantages students skip |
-| 2 | Scrum | 0 | the most detailed model in the deck |
-| 3 | Extreme Programming | 0 | the engineering-practice model — pair programming, TDD, refactoring |
-| 4 | The other agile models | 0 | ASD, DSDM, FDD, Crystal, AM, Kanban |
-| 5 | Agile planning arithmetic | 0 | **two deck numericals** — the page's real drill |
+**Zero marks on the one paper — and five of the assignment's fifteen questions.**
+That gap is the most interesting thing about this page.
+
+> [!tip] Rule 2 and rule 8 point in opposite directions here, so both are stated
+> **Rule 2 says this topic earned nothing.** On one sitting, which is nearly no
+> evidence. **Rule 8 and the coursework say the opposite:** the deck carries two
+> full numericals, and [[se-assign-1-2026]] used **one of them verbatim (Q4) and
+> the other with the numbers changed (Q1)**. Coursework never moves `pyq_marks`
+> — but as evidence of the instructor's hand it is as direct as it gets.
+
+### Numerical — the archetype to prepare
+
+- **Spot it:** a backlog table with estimates plus a velocity (or velocity
+  **range**) and an iteration length; or a capacity table with days and hours/day.
+- **Skeleton — release planning:** sum the points → *N* = ⌈*P*/*V*⌉ at **each**
+  bound → duration = *N* × iteration length → cost = *N* × cost per iteration →
+  **report as a range**.
+- **Skeleton — sprint capacity:** per person, days × hours/day as a low and a high
+  → sum → walk the backlog **in priority order accumulating task hours** → stop at
+  the first story that does not fit.
+- **Earns the marks:** rounding **up**, and giving both bounds.
+- **Trap:** rounding iterations down; reporting one number when velocity is a
+  range; **committing a sprint by story points instead of task hours** — capacity
+  is in hours.
+
+### Explain — [[se-assign-1-2026]] Q7(b)
+
+"How does the Sprint contribute to the success of an Agile project?" Answer
+through the **time box with frozen scope**: the date never moves so scope gives ·
+backlog items freeze during the sprint, giving a stable environment · it forces a
+working increment · it creates the feedback loop · it yields velocity.
+
+**Never asked as:** `draw`, `compare`, `scenario` — though [[se-ete-2025-26]] A3
+turns on agile's second value, its marks sit on [[Requirements Engineering]].
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | The Agile manifesto and its trade-offs | definitional | explain | 0 | the four values, and the disadvantages students skip |
+| 2 | Scrum | definitional | explain | 0 | the most detailed model in the deck |
+| 3 | Extreme Programming | definitional | — | 0 | the engineering-practice model — pair programming, TDD, refactoring |
+| 4 | The other agile models | definitional | — | 0 | ASD, DSDM, FDD, Crystal, AM, Kanban |
+| 5 | Agile planning arithmetic | numerical | **numerical** | 0 | **two deck numericals, both reused in the assignment** — the page's real drill |
 
 ## Mindmap
 

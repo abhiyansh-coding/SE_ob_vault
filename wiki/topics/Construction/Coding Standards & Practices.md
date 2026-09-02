@@ -3,11 +3,12 @@ phase: Construction
 topic: Coding Standards & Practices
 lectures: 33-34
 co: CSE3102.3
+asked_as: []
 mte: false
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---

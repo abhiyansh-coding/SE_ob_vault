@@ -3,11 +3,12 @@ phase: Testing
 topic: White-Box Testing
 lectures: 38, 41
 co: CSE3102.4
+asked_as: [draw, numerical]
 mte: false
 studied: false
 status: not-started
 pyq_marks: 4
-pyq_marks_latest: 4
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -30,6 +31,25 @@ last_practiced: null
 > reading it as marks.
 
 Structural testing: basis path testing and data flow testing, driven by the code's own control structure.
+
+## How it's asked
+
+**4 of 80 — C1(c), the path-enumeration half.** The CFG and V(G) parts (6 marks)
+are on [[Cyclomatic Complexity & Graph Matrices]].
+
+### Derive & enumerate — C1(c), 4 marks
+
+- **Spot it:** *"list all independent paths"*, following a CFG and a computed
+  V(G).
+- **Skeleton:** state that **the number of independent paths equals V(G)** →
+  list exactly that many, each as a node sequence (1-2-4-7…) → confirm each new
+  path introduces **at least one edge not on any previous path**.
+- **Earns the marks:** the count matching V(G), and every path written as an
+  explicit node sequence.
+- **Trap:** listing more paths than V(G) (you have listed dependent ones) or
+  fewer (you have missed a branch).
+
+See [[answer-patterns]] §3.
 
 ## Course Material
 

@@ -165,6 +165,14 @@ ranking, and collapsing these into one is how the rules get broken:
     is an argument about how rigidly that order must hold. A student who can
     recite that chain can reconstruct most of the syllabus from it. That is the
     page's job.
+  - `wiki/answer-patterns.md` — static glance-reference of **answer shape**:
+    the five archetypes every question in the corpus belongs to, each with its
+    skeleton, what earns the marks, and a worked exemplar. **The fourth of the
+    four glance-references, added 2026-09-03 and the most SE-specific thing in
+    this vault.** [[syllabus]] answers *what is in scope*, [[weightage]] *what it
+    is worth*, [[story]] *why it exists*, and this one *what a correct answer
+    looks like*. Derived from the corpus, so it is regenerated when a paper is
+    ingested. Read it before building any topic page.
   - `wiki/weightage.md` — static glance-reference of **marks**, from the PYQs
     only. Deliberately a separate page from `syllabus.md`: rules 1 and 2 name
     different sources of truth, so they get different pages. Never merge them.
@@ -173,265 +181,261 @@ ranking, and collapsing these into one is how the rules get broken:
 
 ## Topic pages
 
+> [!info] Rebuilt 2026-09-03 — the schema is now SE's, not CN's
+> The original structure was inherited from the CN vault, where nearly every
+> topic is a formula and nearly every question is a calculation. It gave each
+> subtopic a *Formulas & variables* part and a *Solved questions* part, which
+> is **the numerical archetype and nothing else**. Measured against this
+> corpus, that covers 28% of the marks and leaves the largest earner —
+> *explain with reason*, 24 of 80 — with no support at all. Evidence of the
+> mismatch was visible in the pages themselves: every discursive topic had to
+> fall back to an improvised "Definitions & distinctions" part.
+>
+> **[[answer-patterns]] is now the spine of this vault.** Read it before
+> building any topic page.
+
 ```yaml
 ---
 phase: Requirements          # the lifecycle-phase folder
-topic: Requirements Elicitation
-lectures: 9-11               # of the handout's 53-lecture plan — depth, NOT weightage
+topic: Requirements Engineering
+lectures: 13                 # of the handout's 53-lecture plan — depth, NOT weightage
 co: CSE3102.2                # course outcome, as printed in the handout
 mte: true                    # inside lectures 1-32 — see the override on [[syllabus]]
+asked_as: [scenario, explain]  # the answer archetypes the corpus has used — see below
 studied: false               # user's manual "finished learning this" signal
 status: not-started          # not-started | weak | developing | strong | mastered
-pyq_marks: 0                 # of 80 across the corpus — the rule-2 figure
-pyq_marks_latest: 0          # of 80 in the most recent paper; identical while the corpus is one paper
+pyq_marks: 2                 # of 80 across the corpus — the rule-2 figure
+assignment_qs: 1             # coursework count — evidence of emphasis, NEVER marks
 attempts: 0                  # activity volume, not a performance verdict
 last_practiced: null         # YYYY-MM-DD
 ---
 ```
 
-Both `pyq_marks` denominators are stated on [[weightage]] and change when a
-paper is ingested. **While the corpus is a single paper the two fields are
-always equal** — keep them so, and split them only when a second paper lands.
-`mte` is derived from `lectures`, not judged: true iff the topic's highest
-lecture is ≤ 32. The filename is the topic name verbatim so `[[Topic Name]]`-style
-wikilinks resolve — keep them in sync on any rename. `status` is a qualitative
-judgment maintained from graded papers, Personal Notes, and conversation — not a
-formula. Both `pyq_marks` fields are factual counts from the corpus and change
-only when a new paper is ingested.
+**`asked_as` is the field that makes this vault SE-shaped.** Its values are the
+five archetypes on [[answer-patterns]]: `scenario` · `explain` · `numerical` ·
+`draw` · `compare`. It is a **factual record of how the corpus has asked this
+topic**, not a prediction — an empty list means the corpus has never asked it,
+which is a rule-7 statement, not permission to skip.
+
+**`assignment_qs` counts coursework questions and is deliberately separate from
+`pyq_marks`.** Rule 2 says weightage comes from the exam papers and nothing
+else, so an assignment can never move `pyq_marks`. But coursework is direct
+evidence of what the instructor thinks matters, and throwing that away would be
+its own mistake — so it gets its own field and is read as *emphasis*, never as
+*weight*.
+
+`pyq_marks` is stated against the denominator on [[weightage]]. **`pyq_marks_latest`
+was removed on 2026-09-03** — the schema itself admitted the two fields are
+identical while the corpus is one paper, so it was a column of duplicated data.
+Reintroduce it when a second paper lands and the two genuinely differ.
+
+`mte` is derived from `lectures`, not judged: true iff the topic's highest lecture
+is ≤ 32. The filename is the topic name verbatim so `[[Topic Name]]` wikilinks
+resolve — keep them in sync on any rename. `status` is a qualitative judgment from
+graded papers, Personal Notes and conversation — not a formula.
 
 Directly under the H1, before Overview, every topic page carries a one-line
 **Prerequisites** entry: the wikilinks to the topics that must be read first for
-this page to parse, or `none`. Keep it to what is genuinely load-bearing — two
-or three links, not a dependency graph. This is what makes studying in weightage
+this page to parse, or `none`. Keep it to what is genuinely load-bearing — two or
+three links, not a dependency graph. This is what makes studying in weightage
 order survivable: the queue can be reordered freely as long as each page states
-its own entry conditions. Anything a page needs that has no topic of its own
-(a formula, a distinction) gets **defined on the page that needs it**, not
-delegated to a topic the reader has not reached.
+its own entry conditions. Anything a page needs that has no topic of its own gets
+**defined on the page that needs it**, not delegated to a topic the reader has not
+reached.
 
-Body sections, grown only when there is content for them (no empty
-boilerplate): Overview · Quick Reference · Subtopic map · **Mindmap** · **the
-numbered subtopics** · Personal Notes · Practice History · Mistakes & Traps ·
-Question Bank · Course Material.
+### The page's sections, in order
 
-**Quick Reference and Question Bank are not optional.** Every topic page carries
-both — the one-page cheat sheet and the worked drill set. They are the two
-sections the page is actually used from.
+| Section | Required? | What it is |
+|---|---|---|
+| **Overview** | yes | the weightage banner and two or three bullets of orientation |
+| **Quick Reference** | **yes** | the one-page cram sheet — every subtopic represented |
+| **How it's asked** | **yes** | per archetype: spot it, the answer skeleton for *this topic*, the trap |
+| **Contents** | yes | one row per section, carrying **archetype and marks** |
+| **Mindmap** | **only when earned** | see below |
+| the numbered sections | yes | shaped by content type, not by a fixed template |
+| **Personal Notes** · **Practice History** | when there is content | the user's own material |
+| **Mistakes & Traps** | yes | |
+| **Question Bank** | **yes** | worked answers, four tiers |
+| **Course Material** | yes | decks read, gaps found |
 
-### Mindmap
+**Quick Reference, How it's asked and Question Bank are the three that carry the
+page.** They answer the three questions a reader actually arrives with: *what do
+I need to know* · *what shape will the question be* · *let me practise*.
 
-A **mermaid diagram of the whole topic**, sitting directly after the Subtopic map
-and before subtopic 1 — the last thing read before diving in, and the thing
-reread when the detail stops cohering. One node per subtopic, numbered to match,
-with its marks on it, and **labelled edges** carrying the reason one subtopic
-leads to the next. The edges are the point: a bare tree of headings adds nothing
-the Subtopic map does not already give.
+### How it's asked — the section that replaced "What gets asked"
 
-**The diagram and nothing else.** No per-subtopic capsules under it — they were
-a third restatement of what Quick Reference tabulates and the Subtopic map
-lists, and they were cut on 2026-09-02 for exactly that reason. If a fact is
-worth carrying, it belongs in Quick Reference, where it is carried once.
+The old schema scattered a *What gets asked* part across every subtopic, which
+fragmented the one thing a reader most needs in one place, and repeated "never
+examined" a dozen times per page.
 
-Use `graph TD`/`graph LR` rather than mermaid's `mindmap` type — the flowchart
-renderer is the one Obsidian is known to handle here, and labelled edges need it.
+**It is now one section near the top of the page**, organised by archetype:
+
+- **One block per archetype in `asked_as`.** Nothing for archetypes the corpus
+  has not used — say so once, in a line, rather than per subtopic.
+- Each block: **Spot it** (the phrasing) · **Skeleton** (this topic's version of
+  the generic skeleton on [[answer-patterns]], not a restatement of it) ·
+  **Earns the marks** · **Trap**.
+- **Link to [[answer-patterns]] for the generic shape and do not repeat it.**
+  The topic page carries only what is specific to this topic.
+- For a topic the corpus has never asked: one honest paragraph naming the most
+  likely archetype **and saying it is a prediction**, per rule 7.
+
+### The numbered sections — shaped by type, not by template
+
+**A topic is still taught one section at a time, and the division still comes from
+the decks (rule 8).** What changed is the internals: the old fixed four-part
+template is gone. **Choose the shape that fits the content**, from four:
+
+| Content type | The shape |
+|---|---|
+| **Definitional** — terms, taxonomies, lists | a **term table**, then the **confusable pairs** side by side. No prose restatement of the table. |
+| **Procedural** — a method, a lifecycle, a sequence of steps | the **steps in order**, each with its output; then what breaks if one is skipped. |
+| **Numerical** — a formula and its use | **formula box** (every variable, its meaning, its unit), then a worked example in Given → Steps → Answer form. |
+| **Notational** — a diagram convention | **legend**, a **specimen diagram**, and the **validity rule** it must satisfy. |
+
+Every section opens with **two to five bullets of intuition** — what the thing is
+for, what breaks without it — and then goes straight to its shape. **No section
+repeats a table that Quick Reference already carries; it points at it.**
+
+Length is earned by marks and by method, in that order. A never-examined
+definitional section is a term table and four bullets. Do not pad it to match the
+shape of a heavy one.
+
+### Mindmap — now conditional
+
+Keep a `graph TD`/`graph LR` diagram **only where the edges carry an argument** —
+where one section genuinely causes or motivates the next, as in the process-model
+progression or the lifecycle chain. There, the labelled edges are the content.
+
+**Drop it where the topic is a flat list.** A bare tree of section headings adds
+nothing the Contents table does not already give, and eight of the built pages had
+exactly that. The per-subtopic capsules were removed on 2026-09-02 and are not
+coming back — they were a third restatement of Quick Reference.
+
 **Never put a `[[wikilink]]` inside a mermaid label** — Obsidian renders it as
 literal text. Plain text inside diagrams, links outside them.
 
-### Subtopics — the page's spine
+### Contents — the table under Quick Reference
 
-**A topic is taught and built one subtopic at a time**, never as one wall. The
-division comes **from the lecture decks** (rule 8): follow the deck's own slide
-order and section breaks, drop the parts that belong to a different topic page,
-and add anything the syllabus names that the deck skipped. The deck decides the
-boundaries, the shape below is fixed, and each subtopic gets four parts in this
-order:
+One row per numbered section: **number · name · type · archetype · marks · why
+it's here.** It is the page's contents list, its weightage statement and its
+answer-shape map in one, and it is what makes "do the heavy one first" possible
+without reading the page.
 
-1. **Intuition** — what the thing is *for*, before any notation: why it
-   exists, what breaks without it, the mental picture. **Bullets, three to
-   five, one idea each — never a paragraph.** A heavy subtopic may run to
-   seven, a never-examined one gets two. Never repeat a table Quick Reference
-   already carries; point at it.
-2. **Formulas & variables** — the formulas *and* what every variable ranges
-   over, the constants worth memorizing, the tables. Never a bare formula. For
-   a subtopic whose content is definitional rather than numerical, this part
-   becomes **Definitions & distinctions**: the terms that get confused for each
-   other, side by side. SE is full of pairs that are examined precisely because
-   they are easy to blur — verification vs validation, error/fault/failure,
-   coupling vs cohesion, black-box vs white-box.
-3. **Solved questions** — worked examples, in full. PYQ questions first, quoted
-   verbatim and cited; then the deck's own worked examples (rule 8 — these have
-   repeatedly turned out to be the PYQ questions with the numbers changed); the
-   textbook's only to fill a gap. **Every step, not a sketch** — the reader is
-   learning the method here, not being reminded of it — ending in the answer and
-   a `✓` once checked against a printed solution. Numericals follow the **Given →
-   Steps → Answer** shape below; drawn answers follow **Diagram answers**.
-4. **What gets asked** — sized to the **PYQ marks for that subtopic and nothing
-   else** (rule 2, rule 3):
-   - **Heavy** (a recurring long-answer block): spell out the question forms,
-     the phrasing that identifies each, and the trap each invites.
-   - **Light**: one or two lines — "this can be asked as a 2-marker", or just
-     what is important here.
-   - **Never asked**: say exactly that, and keep it to the definition. Do not
-     manufacture drill for a subtopic the corpus has never touched.
-
-Per-subtopic marks must **reconcile to the topic's `pyq_marks`**, with rider
-parts counted inside the question that carried them rather than double-counted.
+Per-section marks must **reconcile to the topic's `pyq_marks`**, with rider parts
+counted inside the question that carried them rather than double-counted.
 
 ### Bullets, not prose
 
-**Learned 2026-09-02, from the user, after the first fifteen pages were built:
-the pages were unnecessarily long.** Measured, they came to ~48,000 words with
-*no* correlation to marks — the longest page in the vault (Software Size
-Estimation, 4,613 words) was worth zero, and 39% of every word sat above the
-first subtopic in four layers that each re-summarised the topic.
+**Learned 2026-09-02, from the user: the pages were unnecessarily long.** Measured,
+~48,000 words with *no* correlation to marks — the longest page in the vault was
+worth zero, and 39% of every word sat above the first subtopic in four layers that
+each re-summarised the topic.
 
-The fix is not to drop content. It is to stop writing content as prose:
-
-- **Every explanatory section is bullets.** Intuition, What gets asked,
-  Mistakes & Traps, Course Material, the Overview body. One idea per bullet,
-  bolded lead-in, no connective paragraph around them.
-- **Prose survives in exactly three places:** the Overview weightage banner,
-  the *Reading* lines under a diagram, and the narrative steps of a worked
-  solution. Everywhere else, bullets or a table.
-- **Nothing is deleted, only compressed.** Every fact, every deck verdict,
-  every definition pair keeps its line. If a rewrite loses a fact, it is wrong.
-- **Say it once.** A fact belongs to Quick Reference *or* to its subtopic, not
-  both. A subtopic that needs the table points at Quick Reference by name.
-- **Length is earned by marks and by method, in that order.** A 10-mark topic
-  may run long; a 0-mark topic is tight *unless* it carries a worked numerical
-  or a drawing convention, which are never compressed away — those are the
-  method, and method is what the marks are actually paid for.
+- **Every explanatory section is bullets.** One idea per bullet, bolded lead-in,
+  no connective paragraph around them.
+- **Prose survives in exactly three places:** the Overview banner, the *reading*
+  lines under a diagram, and the narrative steps of a worked solution.
+- **Nothing is deleted, only compressed.** If a rewrite loses a fact, it is wrong.
+- **Say it once.** A fact belongs to Quick Reference *or* to its section, never
+  both. A section that needs the table points at Quick Reference by name.
 
 ### Quick Reference
 
-**The one-page cheat sheet — the whole topic, revisable from this section
-alone.** What you reread in the ten minutes before the exam, and the test is
-that nothing important is missing from it. Not formulas alone: formulas **plus**
-the variables they range over, the definition pairs, the diagram notation
-legends, and the memorize-this facts (COCOMO coefficient tables, the process
-model comparison grid, UML arrowhead meanings, testing-level definitions).
-Dense and scannable — tables over prose.
+**The one-page cheat sheet — the whole topic, revisable from this section alone.**
+Formulas **plus** the variables they range over, the definition pairs, the
+notation legends, and the memorize-this facts. Dense and scannable — tables over
+prose.
 
-**It must cover every subtopic, including the never-examined ones.** A subtopic
-worth zero marks still gets its line — one row, the definition, done. The point
-is that a reader revising from Quick Reference alone is never silently missing a
-piece of the topic. Weight the space by marks; do not let it drop anything.
+**It must cover every section, including never-examined ones.** A section worth
+zero marks still gets its line. A reader revising from Quick Reference alone must
+never be silently missing a piece of the topic. Weight the space by marks; do not
+let it drop anything.
 
 ### Numerical solutions — Given, then steps
 
-SE looks like a theory subject and is not: COCOMO effort and duration, function
-point counting, cyclomatic complexity, PERT/CPM critical paths and slack,
-reliability (MTBF/MTTF/availability), defect density, Halstead metrics and
-earned value are all standard long-answer numericals.
+SE looks like a theory subject and is not: COCOMO, function points, Halstead,
+cyclomatic complexity, PERT/CPM, reliability, velocity and capacity are all
+standard long-answer numericals — **23 of the paper's 80 marks**.
 
-**Every numerical solution in this vault opens by stating what it was given**,
-before a single line of working — on topic pages and in the Question Bank alike.
-A short table: each quantity with its symbol and value, units converted where the
-question stated them awkwardly (KLOC vs LOC is the classic), and a final **Find**
-row naming what is being solved for. Then the numbered steps, one idea each,
-showing the substitution and not just the result. Then the answer on its own
-line, **with its unit** — person-months and months are different answers to
-different questions and are routinely confused.
+**Every numerical solution opens by stating what it was given**, before a single
+line of working: a table of each quantity with its symbol, value and **unit**,
+conversions done here (KLOC vs LOC is the classic), and a final **Find** row.
 
-This is not decoration. Half the traps in this class of question are unit and
-mode errors — LOC read as KLOC, organic coefficients used on an embedded
-project — and they are caught in the Given block or not at all.
+Then numbered steps, one idea each, showing the substitution. **Show the
+log-antilog working for any fractional power** — `log₁₀400 = 2.60206 → × 1.05 =
+2.732163 → antilog = 539.71` — because the exam is handwritten and that working is
+method marks. Then the answer on its own line **with its unit**, and a **sanity
+check** where a second route exists.
+
+Half the traps in this class are unit and mode errors, and they are caught in the
+Given block or not at all.
 
 ### Diagram answers — legend, then drawing, then reading
 
-**SE's distinctive answer type is a drawing**, and the marks are in the notation
-as much as the content: DFDs (context/level-0/level-1 and levelling balance),
-UML class, use-case, sequence, state and activity diagrams, ER diagrams, control
-flow graphs, and Gantt/PERT charts. A question that says *draw* is graded on
-whether the symbols mean what the convention says they mean.
+**SE's distinctive answer type is a drawing** — 13 of 80 on the paper and 7 of the
+assignment's questions — and the marks are in the notation.
 
-Every drawn answer in this vault carries three parts:
-
-1. **Legend** — the notation being used, stated before the drawing: what each
-   shape, arrowhead and line style means in this diagram type, and **which
-   convention** (Yourdon vs Gane-Sarson for DFDs; UML version for the rest).
-   Conventions differ between textbooks and the deck's convention wins (rule 8).
+1. **Legend** — the convention, stated before the drawing. Where sources differ,
+   **the deck's convention wins** (rule 8).
 2. **The diagram** — mermaid where it renders faithfully (`classDiagram`,
-   `sequenceDiagram`, `stateDiagram-v2`, `erDiagram`, `flowchart` for CFGs and
-   activity diagrams). Where mermaid cannot express the notation honestly — DFDs
-   especially, which have no mermaid type and whose bubbles/open-ended stores are
-   the examinable part — **do not fake it with a flowchart**: use a clean ASCII
-   or table rendering and say what the real symbols are, so the reader draws the
-   right thing on paper.
-3. **Reading** — two or three lines saying what the diagram asserts, and the
-   **rule it must satisfy** to be correct: DFD levelling balance, a class
-   diagram's multiplicity at both ends, a sequence diagram's activation
-   lifetimes, a CFG's edge count feeding cyclomatic complexity.
+   `sequenceDiagram`, `stateDiagram-v2`, `erDiagram`, `flowchart`). Where mermaid
+   cannot express the notation honestly — **DFDs especially, which have no mermaid
+   type and whose bubbles and open-ended stores are the examinable part** — do not
+   fake it: use clean ASCII and say what the real symbols are.
+3. **Reading** — what the diagram asserts, and **the validity rule** it must
+   satisfy. The rules are tabulated on [[answer-patterns]].
 
-An unlabelled diagram is worth close to zero marks in this subject. Label
-everything: every arrow, every store, every multiplicity.
-
-### Question forms, inside "What gets asked"
-
-Where a subtopic is heavy enough to name its question forms, each gets:
-
-- **Spot it** — the phrasing that identifies the form in the wild.
-- **Method** — the approach, in a line or two.
-- **Trap** — the specific wrong turn it invites.
-
-Forms derive from real PYQ questions only. Expect 1–3 per heavy subtopic, not an
-exhaustive taxonomy. A solution that contradicts a paper's printed one gets
-investigated and the disagreement recorded — third-party solution keys have been
-wrong before, and so has a lecture deck.
+**Label everything.** An unlabelled diagram is worth close to zero.
 
 ### Question Bank
 
-**The drill section: every question this topic has, each with a full
-step-by-step worked answer.** Not an index — the answers live here, written out,
-in a form you can check yourself against. Three tiers, in this order, each
-labelled with its source:
+**The drill section: every question this topic has, each with a full worked
+answer.** Four tiers, in this order, each labelled with its source:
 
-1. **PYQ questions** — quoted verbatim and cited to the paper, with the printed
-   solution's method followed and a `✓` once checked against it. A disagreement
-   with a printed solution gets investigated and recorded.
-2. **Deck questions** — the lecture decks' own worked examples and any MCQ or
-   practice bank they carry (rule 8). These have repeatedly turned out to be the
-   PYQ questions with the numbers changed, so they are drill of the highest
-   value even when a form has never been examined.
-3. **Textbook questions** — the prescribed textbook's end-of-chapter set, as the
-   fallback when the first two are thin (rule 6: to fill gaps, never to expand
-   scope).
+1. **PYQ questions** — quoted verbatim and cited, `✓` once checked against a
+   printed solution. A disagreement with a printed key gets investigated and
+   recorded.
+2. **Assignment questions** — quoted and cited to [[se-assign-1-2026]]. **New tier,
+   added 2026-09-03.** Coursework, so it never touches `pyq_marks` — but the
+   assignment reused two deck questions verbatim and a third with the numbers
+   changed, so it is drill of proven value.
+3. **Deck questions** — the decks' own worked examples and practice banks (rule 8).
+   These have repeatedly turned out to be the assessed questions with the numbers
+   changed.
+4. **Textbook questions** — the fallback when the first three are thin (rule 6).
 
-Solved questions also appear inline inside their subtopic, where they teach the
-method in context. That overlap is deliberate: **the subtopic teaches, the
-Question Bank drills.** If a topic has no questions in any of the three tiers,
-say exactly that rather than inventing them.
+**Quote the question verbatim, including its tables.** Learned 2026-09-03: a
+paraphrased question cannot be practised against.
 
-### Subtopic map
+Solved questions may also appear inline in their section where they teach the
+method. **The section teaches, the Question Bank drills.** Where a full solution
+would be duplicated, keep it in the Question Bank and have the section point at
+it in two lines.
 
-A table directly under Quick Reference, before the subtopics themselves: one row
-per subtopic with its **PYQ marks** and a one-line "why it's here". It is the
-page's contents page and its weightage statement in one, and it is what makes
-"do the heavy subtopic first" possible without reading the whole page.
+If a topic has no questions in any tier, say exactly that rather than inventing
+them.
 
 ### Visual style
 
-Read in Obsidian. Use **callouts** (`> [!type] title`) for material **above the
-first subtopic** — the Overview banner, the Quick Reference cram sheet, the
-subtopic map's flags. Inside a subtopic, keep the **plain format** (bold inline
-labels, blockquoted questions): it reads better for dense worked solutions. One
-exception: the **Intuition** part may use `> [!note]` when a memory hook carries
-it better than prose.
+Read in Obsidian. Use **callouts** (`> [!type] title`) above the first numbered
+section — the Overview banner, the Quick Reference cram sheet, scope flags. Inside
+a section, keep the **plain format** (bold inline labels, blockquoted questions):
+it reads better for dense worked solutions.
 
 | Callout | Used for |
 |---|---|
 | `> [!info]` | the weightage banner at the top of Overview |
-| `> [!warning]` | a never-examined topic, or a missing-material gap |
+| `> [!warning]` | a never-examined topic, a missing-material gap, a scope flag |
 | `> [!abstract]` | Quick Reference hero — the few facts that carry the topic |
-| `> [!tip]` | a shortcut or rule of thumb |
+| `> [!tip]` | a shortcut, a rule of thumb, a rule-8 find |
 | `> [!note]` | asides, memory hooks, cross-references |
 
-Large reference grids (comparison tables, notation legends) stay as plain
-tables. No decorative emoji.
+Large reference grids stay as plain tables. No decorative emoji.
 
 **Two Obsidian bugs, both hit in the CN vault, both silent:** a wikilink broken
-across a line wrap (`[[Requirements\nElicitation]]`) does not resolve, and a
-wikilink inside a mermaid label renders as literal text. Sweep for both before
-declaring a build done.
+across a line wrap does not resolve, and a wikilink inside a mermaid label renders
+as literal text. Sweep for both before declaring a build done.
 
 ## Paper pages
 

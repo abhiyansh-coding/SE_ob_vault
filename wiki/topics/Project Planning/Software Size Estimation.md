@@ -3,11 +3,12 @@ phase: Project Planning
 topic: Software Size Estimation
 lectures: 15-16
 co: CSE3102.2
+asked_as: []
 mte: true
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 4
 attempts: 0
 last_practiced: null
 ---
@@ -140,31 +141,71 @@ and for every 100 projects there are **94 restarts**.
 | Economic | do the benefits exceed the costs? |
 | Operational | will it work in the organisation, and will people use it? |
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | Feasibility study and software scope | 0 | the cheapest way to cancel a doomed project |
-| 2 | LOC estimation | 0 | the simplest size measure, and its problems |
-| 3 | Function point analysis | 0 | **three worked deck examples** — the page's real drill |
-| 4 | Static estimation models | 0 | SEL and Walston-Felix; one worked comparison |
-| 5 | Halstead size estimation | 0 | named by the handout — **no deck covers it** |
+**Zero marks on the one paper — and four of the assignment's fifteen questions.**
+Like [[Agile Development]], the coursework says what the exam did not.
+
+> [!warning] Do not read the zero as "skip it"
+> This page is the **prerequisite for [[Effort Estimation & COCOMO]]**, which is
+> the heaviest topic in the window. Function points and Halstead are also
+> examinable on their own — the handout names both, and rule 1 governs scope.
+
+### Numerical — the archetype to prepare
+
+Three distinct calculations live here, and the assignment used all three:
+
+- **Function points** — count × weight per functional unit → UFP → optionally
+  × CAF. **Memorise the weighting table; it is rarely supplied.** *(Assignment
+  Q14 supplied it, the deck's own examples do not.)*
+- **Halstead** — four counts → vocabulary, length, volume, difficulty, effort,
+  time, defects. **Lower-case *n* is distinct, upper-case *N* is total**; confuse
+  them and every derived quantity is wrong. *(Assignment Q13.)*
+- **Static models** — *E* = *aL*<sup>b</sup>, SEL vs Walston-Felix.
+- **Cost from size** — FP ÷ productivity = effort, × rate = cost. *(Q10.)*
+
+**Skeleton:** the standard Given → Steps → Answer of [[answer-patterns]] §3, with
+the log-antilog working shown for any fractional power.
+
+**Traps specific to this page:**
+- **Applying the CAF when the question says *Unadjusted*.** UFP stops before it.
+- **Confusing ILF and EIF** — maintained *inside* vs referenced from *elsewhere*.
+- **Using log₁₀ in Halstead.** It is base 2 throughout.
+
+### Explain — assignment Q13 and Q14(b)
+
+Both open with a written part: *"explain Halstead as a technique"*, *"explain how
+FPA assists estimation"*. **Lead with what the technique fixes about the
+alternative** — FPA can be counted before code exists and is language-independent;
+Halstead is objective where LOC is formatting-sensitive.
+
+**Never asked as:** `draw`, `compare`, `scenario`.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | Feasibility study and software scope | definitional | — | 0 | the cheapest way to cancel a doomed project |
+| 2 | LOC estimation | definitional | — | 0 | the simplest size measure, and its problems |
+| 3 | Function point analysis | numerical | **numerical** | 0 | **three worked deck examples** — the page's real drill |
+| 4 | Static estimation models | numerical | numerical | 0 | SEL and Walston-Felix; one worked comparison |
+| 5 | Halstead size estimation | numerical | **numerical** | 0 | named by the handout — **no deck covers it** |
 
 ## Mindmap
 
 ```mermaid
 graph TD
     S1["1 · Feasibility & scope<br/>0 marks"]
-    S2["2 · LOC estimation<br/>0 marks"]
-    S3["3 · Function points<br/>0 marks · 3 worked examples"]
+    S2["2 · LOC<br/>0 marks"]
+    S3["3 · Function points<br/>0 marks · 3 deck examples"]
     S4["4 · Static models<br/>0 marks"]
     S5["5 · Halstead<br/>0 marks · no deck"]
 
-    S1 -->|"the project survives.<br/>now: how big is it?"| S2
-    S2 -->|"counting lines needs code.<br/>we have none yet"| S3
-    S3 -->|"a size is not a schedule.<br/>convert it"| S4
-    S4 -->|"one more size measure,<br/>counted from operators"| S5
-    S5 -.->|"every measure feeds<br/>the same effort equation"| S4
+    S1 -->|"decided to build it.<br/>now — how big is it?"| S2
+    S2 -->|"you cannot count lines<br/>that do not exist yet"| S3
+    S3 -->|"a size is only useful if it<br/>converts into effort"| S4
+    S4 -->|"both inputs are still<br/>partly subjective"| S5
+    S5 -.->|"whichever measure, it feeds<br/>the same estimation question"| S3
 ```
 
 ## 1 · Feasibility study and software scope

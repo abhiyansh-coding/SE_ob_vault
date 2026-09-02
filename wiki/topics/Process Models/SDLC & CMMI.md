@@ -3,11 +3,12 @@ phase: Process Models
 topic: SDLC & CMMI
 lectures: 12
 co: CSE3102.1
+asked_as: [scenario, explain]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 8
-pyq_marks_latest: 8
+assignment_qs: 1
 attempts: 0
 last_practiced: null
 ---
@@ -120,26 +121,55 @@ shifts **earlier** — out of coding and maintenance, into analysis and design.
 Because a defect costs more the later it is found, front-loading reduces total
 effort.
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | The SDLC and its phases | 0 | the phase sequence and its deliverables |
-| 2 | Effort distribution across phases | **6** | carries B3 — **no deck covers this** |
-| 3 | CMMI and the five maturity levels | **2** | carries A2 |
+Generic skeletons on [[answer-patterns]] §1 and §2. **This topic is asked in two
+different archetypes on the same paper — 8 of 80, third-heaviest in the window.**
 
-## Mindmap
+### Explain with reason — B3, 6 marks
 
-```mermaid
-graph TD
-    S1["1 · SDLC phases<br/>0 marks"]
-    S2["2 · Effort distribution<br/>6 marks · no deck"]
-    S3["3 · CMMI five levels<br/>2 marks"]
+- **Spot it:** "Explain the distribution of effort … **by relating them to**
+  traditional, structured and CASE development environments." The words *relating
+  them to* mean a comparison is compulsory.
+- **Skeleton — the three components, and the third is the one candidates skip:**
+  1. **State** the 40-20-40 baseline with the finer percentages. (~2 marks)
+  2. **Apply** — a table of the three environments against the phases, showing
+     effort moving *earlier* as sophistication rises. (~2 marks)
+  3. **Mechanism** — the cost of fixing a defect rises steeply with the phase it
+     is found in, so early effort is **relocated**, not added. (~2 marks)
+- **Earns the marks:** component 3. Two candidates write the same table; the one
+  who explains *why* scores higher.
+- **Trap:** giving 40-20-40 and stopping — that is a third of the question.
+  Second trap: conflating *development* effort (40-20-40) with *lifetime* effort
+  (maintenance ≈ 60%). Say which you mean.
 
-    S1 -->|"six phases exist. but they<br/>do not cost the same"| S2
-    S2 -->|"knowing where effort goes<br/>needs measuring it first"| S3
-    S3 -.->|"and a mature organisation<br/>redistributes effort deliberately"| S2
-```
+### Scenario → identify & justify — A2, 2 marks
+
+- **Spot it:** a short organisational story ending "identify the CMMI maturity
+  level and justify".
+- **Skeleton:** name the level → map two or three of the scenario's own phrases
+  onto that level's characteristics → **say explicitly why the adjacent level is
+  wrong** → one line on what the level means.
+- **Earns the marks:** the mapping, and the exclusion of the neighbour.
+- **Trap:** matching one keyword. "Documented" → 3, "metrics" → 4, "improvement"
+  → 5, and scenarios contain several deliberately. Read for the **highest
+  capability demonstrated**, and let the outcome phrase ("predictable",
+  "continuously improving") break the tie.
+
+**Never asked as:** `numerical`, `draw`. The 40-20-40 percentages are quoted, not
+computed.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | The SDLC and its phases | procedural | — | 0 | the phase sequence and its deliverables |
+| 2 | Effort distribution across phases | definitional | **explain** | **6** | carries B3 — **no deck covers this** |
+| 3 | CMMI and the five maturity levels | definitional | **scenario** | **2** | carries A2 |
+
+**The thread:** six phases exist, but they do not cost the same (1→2); and knowing
+where effort goes requires an organisation mature enough to measure it (2→3) —
+which is why a level-4 organisation redistributes effort deliberately.
 
 ## 1 · The SDLC and its phases
 

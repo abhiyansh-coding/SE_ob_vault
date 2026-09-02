@@ -3,11 +3,12 @@ phase: Process Models
 topic: Evolutionary Process Models
 lectures: 8
 co: CSE3102.1
+asked_as: [scenario]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 4
-pyq_marks_latest: 4
+assignment_qs: 1
 attempts: 0
 last_practiced: null
 ---
@@ -119,16 +120,48 @@ table applied backwards:
 | Component-based | a component library exists and the domain is well understood | reuse |
 | V-model | requirements stable and testing rigour required | a test stage per development stage |
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | The incremental model | **2** | carries B1 case 3; delivery in slices |
-| 2 | The iterative model, and incremental vs iterative | 0 | the distinction that gets confused |
-| 3 | The spiral model | 0 | the only model with explicit risk handling |
-| 4 | Component-Based Development | **2** | carries B1 case 2 (contested — see below) |
-| 5 | The V-model | 0 | verification vs validation, used all through testing |
-| 6 | Comparison of models | 0 | the table a "which model and why" question wants |
+Generic skeleton on [[answer-patterns]] §1. **4 of 80 — two cases of the same
+question.**
+
+### Scenario → identify & justify — B1 cases 2 and 3, 2 marks each
+
+- **Spot it:** the same B1 form as [[Conventional Process Models]] — a scenario
+  described by behaviour, "identify the model and justify".
+  - **Incremental's tells:** "releases a basic version", "core features first",
+    then cycles that **add** functionality.
+  - **CBD's tell:** the phrase **"reusable components"**, which names a mechanism
+    no other model in the course is characterised by.
+- **Skeleton:** name → quote two or three phrases → map each → state the general
+  condition.
+- **Earns the marks:** the mapping, again.
+- **Trap:** answering "iterative" for an incremental scenario. **If each cycle
+  adds new features it is incremental; if each refines the same whole it is
+  iterative.** "Until all features are complete" settles it.
+- **The contested one:** case 2 fits **RAD** too. This vault answers CBD because
+  "reusable components" names a mechanism while "quickly" only names an outcome —
+  but **a well-justified RAD answer should score**. Justify from the scenario's
+  own words and the choice is defensible either way.
+
+### Compare — likeliest unasked form
+
+*Incremental vs iterative* is the most confusable pair on this page and the most
+plausible 2-mark `compare` question. Table it: **adds** versus **refines**, one
+example each. See [[answer-patterns]] §5.
+
+**Never asked as:** `numerical`, `draw`.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | The incremental model | procedural | **scenario** | **2** | carries B1 case 3; delivery in slices |
+| 2 | The iterative model, and incremental vs iterative | definitional | compare (likely) | 0 | the distinction that gets confused |
+| 3 | The spiral model | procedural | — | 0 | the only model with explicit risk handling |
+| 4 | Component-Based Development | procedural | **scenario** | **2** | carries B1 case 2 (contested — see below) |
+| 5 | The V-model | notational | — | 0 | verification vs validation, used all through testing |
+| 6 | Comparison of models | definitional | — | 0 | the table a "which model and why" question wants |
 
 ## Mindmap
 

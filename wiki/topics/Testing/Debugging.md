@@ -3,11 +3,12 @@ phase: Testing
 topic: Debugging
 lectures: 43
 co: CSE3102.4
+asked_as: []
 mte: false
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---

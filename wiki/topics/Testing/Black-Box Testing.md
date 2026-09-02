@@ -3,11 +3,12 @@ phase: Testing
 topic: Black-Box Testing
 lectures: 36-37
 co: CSE3102.4
+asked_as: [numerical, explain]
 mte: false
 studied: false
 status: not-started
 pyq_marks: 10
-pyq_marks_latest: 10
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -30,6 +31,32 @@ last_practiced: null
 > reading it as marks.
 
 Functional testing without seeing the code: boundary value analysis, equivalence class partitioning and decision-table-based testing.
+
+## How it's asked
+
+**10 of 80 — the largest testing block, and the heaviest non-MTE topic.** C2 mixes
+two archetypes.
+
+### Numerical / derive — C2(a), 6 marks
+
+- **Spot it:** a range with inclusive bounds — *"valid age 18–60 inclusive"* — and
+  "design the BVA test cases".
+- **Skeleton:** state the technique's rule (**min−1, min, min+1, nominal, max−1,
+  max, max+1**) → tabulate the cases with expected result for each → count them.
+- **Earns the marks:** the table with *expected outcome* per case, and including
+  the **invalid** boundaries (17 and 61). Candidates who list only valid values
+  lose half.
+- **Trap:** off-by-one on an *inclusive* bound.
+
+### Explain — C2(b) and C2(c), 2 marks each
+
+- *"How BVA catches boundary defects"* → because **defects cluster at boundaries**,
+  where relational operators are written wrong (`<` for `<=`).
+- *"How BVA handles multiple input variables"* → hold all but one at nominal and
+  vary that one through its boundaries; for *n* variables this gives **4n + 1**
+  test cases (or 6n + 1 with robustness).
+
+See [[answer-patterns]] §2 and §3.
 
 ## Course Material
 

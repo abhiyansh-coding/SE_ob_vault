@@ -3,11 +3,12 @@ phase: Quality & Maintenance
 topic: Software Quality Assurance
 lectures: 46-47
 co: CSE3102.5
+asked_as: [explain]
 mte: false
 studied: false
 status: not-started
 pyq_marks: 3
-pyq_marks_latest: 3
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -30,6 +31,18 @@ last_practiced: null
 > reading it as marks.
 
 Quality concepts and attributes, SQA activities, software reviews, and formal technical reviews: the meeting, the reporting, the guidelines.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §2. **3 of 80 — the SQA half of B4.**
+
+- **Spot it:** *"How SQA activities and ISO 9001 adherence produce reliability and
+  consistency"* — one question spanning two topics, 3 marks each. The other half
+  is on [[Software Reliability & ISO Standards]].
+- **Skeleton:** name the SQA activities → say **how each produces the named
+  outcome**, not just what it is → close with the causal line linking process
+  discipline to product consistency.
+- **Earns the marks:** the causal step. The question's verb is *produce*.
 
 ## Course Material
 

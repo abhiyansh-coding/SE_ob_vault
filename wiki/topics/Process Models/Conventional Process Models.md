@@ -3,11 +3,12 @@ phase: Process Models
 topic: Conventional Process Models
 lectures: 6-7
 co: CSE3102.1
+asked_as: [scenario]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 2
-pyq_marks_latest: 2
+assignment_qs: 1
 attempts: 0
 last_practiced: null
 ---
@@ -107,14 +108,41 @@ environment · perfective — enhance on request · preventive — pre-empt prob
 | Prototyping | customer cannot state requirements up front | throwaway prototype mistaken for the product |
 | RAD | modular project, tight deadline, skilled teams available | needs enough people to staff parallel teams |
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | The classical waterfall model | **2** | carries B1 case 1; the baseline all models are compared to |
-| 2 | The iterative waterfall model | 0 | one change — feedback paths — and why it matters |
-| 3 | The prototyping model | 0 | the answer when the customer cannot say what they want |
-| 4 | Rapid Application Development (RAD) | 0 | parallel modular teams under a deadline |
+Generic skeleton on [[answer-patterns]] §1. **2 of 80, plus one assignment
+question.**
+
+### Scenario → identify & justify — B1 case 1, 2 marks
+
+- **Spot it:** a real-world, deliberately **non-software** scenario described
+  through the model's behaviour rather than named. Waterfall's tells: *"all
+  requirements collected first"*, strict stage order, a single final handover.
+- **Skeleton:** name the model in the first line → quote **two or three phrases
+  from the scenario** and map each to a property → say why the scenario's
+  conditions make it appropriate.
+- **Earns the marks:** the mapping. Marks are not for describing waterfall.
+- **Trap:** writing a generic waterfall essay. *"All requirements are collected
+  first, therefore requirements are frozen, which is what waterfall assumes"* is
+  the sentence that scores.
+- **Second trap:** answering with a **category** ("a conventional model") — your
+  handout and your deck group these differently, so **name the model**.
+
+### Compare — [[se-assign-1-2026]] Q8(i)
+
+Waterfall vs Agile as a table, then a recommendation. Worked there; the selection
+logic is on [[Evolutionary Process Models]].
+
+**Never asked as:** `numerical`, `draw`.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | The classical waterfall model | procedural | **scenario** | **2** | carries B1 case 1; the baseline all models are compared to |
+| 2 | The iterative waterfall model | procedural | — | 0 | one change — feedback paths — and why it matters |
+| 3 | The prototyping model | procedural | — | 0 | the answer when the customer cannot say what they want |
+| 4 | Rapid Application Development (RAD) | procedural | — | 0 | parallel modular teams under a deadline |
 
 ## Mindmap
 

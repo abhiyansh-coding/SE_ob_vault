@@ -3,11 +3,12 @@ phase: Design
 topic: Coupling & Cohesion
 lectures: 28
 co: CSE3102.2
+asked_as: [compare, scenario]
 mte: true
 studied: false
 status: not-started
 pyq_marks: 6
-pyq_marks_latest: 6
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -105,26 +106,57 @@ The deck's analysis: `Calculator` focuses only on mathematical operations
 They are independent and only share data — **Display can be replaced without
 affecting Calculator.**
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | Cohesion — the seven levels | 0 | the scale, and how to recognise each |
-| 2 | Coupling — the six levels | 0 | the other scale |
-| 3 | Reading code for cohesion and coupling | **6** | **carries B2**, both parts |
+Generic skeletons are on [[answer-patterns]]; this section carries only what is
+specific to this topic. **Both archetypes appear in one question — B2 is
+`compare` then `scenario`, 3 marks each.**
 
-## Mindmap
+### Compare & distinguish — B2(a), 3 marks
 
-```mermaid
-graph TD
-    S1["1 · Cohesion<br/>0 marks"]
-    S2["2 · Coupling<br/>0 marks"]
-    S3["3 · Reading code<br/>6 marks"]
+- **Spot it:** "Define **and** differentiate cohesion and coupling." Two
+  instructions, and the second is where the marks are.
+- **Skeleton:** a five-row table — scope · what it measures · desired direction ·
+  effect if wrong · number of levels — then **one closing line**: *cohesion is
+  intra-module and should be maximised; coupling is inter-module and should be
+  minimised.* That line is the mark.
+- **Earns the marks:** the contrast. Defining each separately and stopping earns
+  roughly half.
+- **Trap:** listing the seven and six levels instead of differentiating. The
+  levels are subtopics 1-2; part (a) wants the *distinction*.
 
-    S1 -->|"a module that does one job well<br/>still has to talk to others"| S2
-    S2 -->|"two scales are theory until<br/>you name them in real code"| S3
-    S3 -.->|"and the fix is always:<br/>split it, or pass less"| S1
-```
+### Scenario → identify & justify — B2(b), 3 marks
+
+- **Spot it:** a code snippet, usually two classes, and "identify the type of
+  cohesion and coupling **with justification**."
+- **Skeleton:**
+  1. Name the cohesion type and the coupling type — one line each.
+  2. **Point at specific lines.** *"`generateBill()` is a billing operation, a
+     different concern from `addBook()` and `issueBook()`"* — quote the method
+     names.
+  3. Say why the adjacent level is not it.
+  4. One line on how to fix it — split the class, or pass data instead.
+- **Earns the marks:** step 2. **An unsupported label earns almost nothing.**
+- **Trap:** the deck's own answer disagrees with standard theory on this snippet
+  — see subtopic 3, which carries both readings and which to write.
+
+**Never asked as:** `numerical`, `draw`, `explain`. Do not prepare a diagram for
+this topic.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | Cohesion — the seven levels | definitional | — | 0 | the scale, and how to recognise each |
+| 2 | Coupling — the six levels | definitional | — | 0 | the other scale |
+| 3 | Reading code for cohesion and coupling | procedural | scenario | **6** | **carries B2**, both parts |
+
+**The thread:** a module that does one job well still has to talk to others (1→2),
+and two scales stay theory until you name them in real code (2→3) — where the fix
+is always the same: **split it, or pass less**.
+
+*(Sections 1 and 2 carry no marks of their own — B2(a)'s 3 marks are counted in
+section 3, which is where the definition-and-differentiate answer is worked.)*
 
 ## 1 · Cohesion — the seven levels
 
@@ -148,9 +180,6 @@ tabulated in Quick Reference. The two most confusable pairs:
 The deck's coincidental example is deliberately absurd — *print the next line and
 reverse the characters of a string, in one component* — because the point is that
 there is no defensible reason for the pairing.
-
-**What gets asked.** Never examined alone. B2(a) asks for the *definition and
-differentiation*, which is subtopic 3's opening move.
 
 ## 2 · Coupling — the six levels
 
@@ -186,8 +215,6 @@ program, and its verdict is worth carrying:
 > exposing global state or modifying external structures.
 
 *(Deck illustration with a printed analysis; not a posed question, so no `✓`.)*
-
-**What gets asked.** Never examined alone. Feeds B2(a).
 
 ## 3 · Reading code for cohesion and coupling
 

@@ -3,11 +3,12 @@ phase: Quality & Maintenance
 topic: Software Reliability & ISO Standards
 lectures: 48
 co: CSE3102.5
+asked_as: [explain]
 mte: false
 studied: false
 status: not-started
 pyq_marks: 3
-pyq_marks_latest: 3
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -30,6 +31,16 @@ last_practiced: null
 > reading it as marks.
 
 Statistical SQA, reliability and availability measures (MTBF, MTTF, MTTR), and the ISO 9000/9001 approach to quality assurance systems.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §2. **3 of 80 — the ISO half of B4.**
+
+- **Spot it:** the same B4 as [[Software Quality Assurance]]; this half owns
+  **ISO 9001 adherence** and **reliability**.
+- **Skeleton:** what ISO 9001 requires → how conformance produces *consistency*
+  → how measured reliability (MTBF/MTTF/availability) produces confidence.
+- **Trap:** answering only the SQA half. B4 names two things; both are marked.
 
 ## Course Material
 

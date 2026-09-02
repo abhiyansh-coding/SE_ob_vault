@@ -109,3 +109,49 @@ The stale "deck not read" warning is removed.
 
 This is the closest thing in the vault to the prescribed Pressman 8e, and it
 confirms the instructor teaches straight from it.
+
+## [2026-09-03] rebuild | schema rewritten for SE — answer archetypes replace the CN template
+
+User: the page structure and the question-answering structure were optimised for
+CN, not for this subject. Rebuilt everything on evidence from the corpus.
+
+**The diagnosis, measured.** Classifying all 30 questions (15 End Term + 15
+assignment) by the shape of the answer rather than the topic gives five
+archetypes. Marks on the paper:
+
+  explain with reason  24/80  30%   <- largest earner
+  numerical            23/80  29%
+  scenario + justify   15/80  19%
+  draw and label       13/80  16%
+  compare              5/80    6%
+
+The CN-derived schema gave every subtopic a "Formulas and variables" part and a
+"Solved questions" part. That is the numerical archetype and nothing else -- 29%
+of the marks. The largest earner had no support at all, and the mismatch was
+already visible in the pages: every discursive topic had improvised a
+"Definitions and distinctions" fallback because the template did not fit.
+
+**What changed.**
+- New wiki/answer-patterns.md -- the five archetypes, each with spot-it, the
+  answer skeleton, what earns the marks, a worked exemplar from the corpus, and
+  its traps. It is now the fourth glance-reference alongside syllabus, weightage
+  and story, and the spine of the vault.
+- Frontmatter: added asked_as (the archetypes the corpus has used for this topic)
+  and assignment_qs (coursework count, evidence of emphasis, never marks).
+  Removed pyq_marks_latest -- the schema itself admitted it duplicates pyq_marks
+  while the corpus is one paper.
+- New "How it's asked" section on every page, near the top, organised by
+  archetype. It replaces the "What gets asked" part that was scattered across
+  every subtopic and repeated "never examined" a dozen times per page.
+- "Subtopic map" became "Contents", carrying content type and archetype
+  alongside marks.
+- The fixed four-part subtopic template is gone. Sections now take one of four
+  shapes chosen by content: definitional, procedural, numerical, notational.
+- Mindmap is now conditional -- kept only where the labelled edges carry an
+  argument, replaced by a one-line "The thread" elsewhere. Dropped on 6 pages.
+- Question Bank gained an assignment tier.
+- weightage.md gained a By answer archetype table.
+
+**Coverage.** All 15 built pages migrated. All 30 topic pages have the new
+frontmatter. The 7 unbuilt scaffolds that carry marks also got a How it's asked
+block, so the answer shape is known before the page is written.

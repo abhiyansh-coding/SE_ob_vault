@@ -20,6 +20,27 @@ split and the split is noted on both pages and on the paper page.
 > the same code as this year's handout. There is no syllabus drift to discount
 > (rule 4), so what it asked is what this course asks.
 
+## By answer archetype
+
+**Added 2026-09-03.** Marks split by the *shape* of the answer rather than the
+topic — see [[answer-patterns]] for each skeleton. This cuts across phases, and
+it is the cut that best predicts what you actually have to be able to *do*.
+
+| Archetype | Marks (of 80) | Share | Where |
+|---|---|---|---|
+| **Explain with reason** | **24** | **30.0%** | A3, B3, B4, B5, C2(b), C2(c) |
+| Numerical / derive | 23 | 28.8% | C1(b), C1(c), C2(a), D1 |
+| Scenario → identify & justify | 15 | 18.8% | A1, A2, A5, B1, B2(b) |
+| Draw & label | 13 | 16.3% | C1(a), D2 |
+| Compare & distinguish | 5 | 6.3% | A4, B2(a) |
+| **Total** | **80** | **100%** | |
+
+**Two things this table says that the phase table cannot:**
+- **Explain-with-reason is the biggest earner** and has no formula to fall back
+  on. It is also the archetype students prepare least.
+- **There is no "define X" question on the paper.** Every question is applied.
+  Memorising definitions without a skeleton to hang them on scores poorly.
+
 ## By phase
 
 | Phase | Lectures | Marks (of 80) | Share | In MTE window? |

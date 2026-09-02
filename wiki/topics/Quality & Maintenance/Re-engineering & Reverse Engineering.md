@@ -3,11 +3,12 @@ phase: Quality & Maintenance
 topic: Re-engineering & Reverse Engineering
 lectures: 44
 co: CSE3102.4
+asked_as: [scenario]
 mte: false
 studied: false
 status: not-started
 pyq_marks: 2
-pyq_marks_latest: 2
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -30,6 +31,21 @@ last_practiced: null
 > reading it as marks.
 
 The software re-engineering cycle: reverse engineering, restructuring and forward engineering — recovering a design from legacy code and rebuilding on it.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §1. **2 of 80 — A1.**
+
+- **Spot it:** a legacy scenario — *"a 15-year-old COBOL inventory system, docs
+  outdated, developers don't understand it"* — asking you to **select an approach
+  and explain**.
+- **Skeleton:** name the approach in the first line → map the scenario's phrases
+  ("docs outdated" → documentation must be recovered, so **reverse engineering**
+  first; "devs don't understand it" → restructuring, not replacement) → say why
+  the alternative (rewrite from scratch) is wrong here.
+- **Trap:** describing re-engineering generally instead of selecting for *this*
+  system. The legacy *definition* is on
+  [[Introduction to Software Engineering]]; the *method* is here.
 
 ## Course Material
 

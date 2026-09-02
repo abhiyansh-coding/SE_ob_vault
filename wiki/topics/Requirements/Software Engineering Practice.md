@@ -3,11 +3,12 @@ phase: Requirements
 topic: Software Engineering Practice
 lectures: 14
 co: CSE3102.2
+asked_as: []
 mte: true
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 0
 attempts: 0
 last_practiced: null
 ---
@@ -80,32 +81,32 @@ repeated here: communication · planning · modeling · construction · deployme
 | Prototyping | the customer cannot describe what they want — the *undreamed* case |
 | Workshops / brainstorming | stakeholders disagree and must converge |
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | Elicitation | 0 | the seven gathering techniques and when each fits |
-| 2 | Analysis | 0 | resolving conflicts, classifying, modeling |
-| 3 | Specification | 0 | producing the SRS — detail on [[Requirements Engineering]] |
-| 4 | Validation | 0 | checking before building; where V&V is introduced |
-| 5 | Management | 0 | change control and traceability |
+**Never asked, on the one paper in this vault** — `asked_as` is empty.
 
-## Mindmap
+**If it appears, the likely shape** (prediction, not evidence): an `explain`
+question naming one activity — *"explain the requirement elicitation techniques"*
+— or a `compare` between two techniques. The **seven elicitation techniques with
+when each fits** is the only part of this page with enough content to carry a
+6-marker. See [[answer-patterns]] §2 and §5.
 
-```mermaid
-graph TD
-    S1["1 · Elicitation<br/>0 marks"]
-    S2["2 · Analysis<br/>0 marks"]
-    S3["3 · Specification<br/>0 marks"]
-    S4["4 · Validation<br/>0 marks"]
-    S5["5 · Management<br/>0 marks"]
+**Note the overlap:** specification detail lives on [[Requirements Engineering]],
+which *is* examined. If a question names the SRS, answer from there.
 
-    S1 -->|"you have raw wants. some<br/>of them contradict each other"| S2
-    S2 -->|"agreed and classified.<br/>now it must survive the meeting"| S3
-    S3 -->|"written down is not the same<br/>as correct. check it"| S4
-    S4 -->|"correct today. the customer<br/>changes their mind tomorrow"| S5
-    S5 -.->|"every change re-enters<br/>at the top"| S1
-```
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | Elicitation | procedural | explain (likely) | 0 | the seven gathering techniques and when each fits |
+| 2 | Analysis | procedural | — | 0 | resolving conflicts, classifying, modeling |
+| 3 | Specification | procedural | — | 0 | producing the SRS — detail on [[Requirements Engineering]] |
+| 4 | Validation | procedural | — | 0 | checking before building; where V&V is introduced |
+| 5 | Management | procedural | — | 0 | change control and traceability |
+
+**The thread:** the five activities are a pipeline, and each answers a different
+failure — not knowing (1) · not agreeing (2) · not writing it down (3) · not
+checking (4) · not keeping up (5).
 
 ## 1 · Elicitation
 

@@ -3,11 +3,12 @@ phase: Analysis Modeling
 topic: Flow-Oriented Modeling & DFD
 lectures: 19, 21
 co: CSE3102.2
+asked_as: []
 mte: true
 studied: false
 status: not-started
 pyq_marks: 0
-pyq_marks_latest: 0
+assignment_qs: 3
 attempts: 0
 last_practiced: null
 ---
@@ -102,31 +103,67 @@ Context process is **0**. Its children are **1, 2, 3…**. Children of process 2
 | **Decision table** | represents complex processing logic in matrix form: upper rows are **conditions**, lower rows are **actions**, and each **column is a rule** — if the condition holds, the corresponding action executes |
 | **State transition diagram** | shows how an object changes state as actions are performed on it |
 
-## Subtopic map
+## How it's asked
 
-| # | Subtopic | Marks | Why it's here |
-|---|---|---|---|
-| 1 | What a DFD is, and its notation | 0 | the four symbols and the two conventions |
-| 2 | Levels and levelling balance | 0 | context vs level 1; the rule that makes a DFD checkable |
-| 3 | The Food Ordering System worked example | 0 | the deck's own running example, drawn out |
-| 4 | Data dictionary, process spec and control flow | 0 | what accompanies the diagram |
-| 5 | Decision tables and state transition diagrams | 0 | the other two analysis notations the deck teaches |
+Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — three
+assignment questions ([[se-assign-1-2026]] Q5(a), Q5(b), Q15).**
+
+> [!warning] DFD deserves specific suspicion for the Mid-Term
+> It scored zero on an End Term whose drawing question went to UML instead — but
+> it has **two full lectures, a dedicated deck, and three of the assignment's
+> fifteen questions**. A 30-mark paper drawn from 32 lectures is exactly where a
+> DFD question fits. Rule 2 says it earned nothing; rule 1 and the coursework say
+> prepare it. Both are stated, per rule 7.
+
+### Draw & label — the archetype to prepare
+
+- **Spot it:** *"Develop the Level-0 (Context Diagram)"* · *"Construct the Level-1
+  DFD showing processes, external entities, data stores and data flows."* The
+  question usually asks for **both levels**, and the pair is the point.
+- **Skeleton:**
+  1. **Legend** — circle = process, rectangle = external entity, open-ended pair
+     of lines = data store, named arrow = flow. **State the convention** (Yourdon
+     vs Gane-Sarson); the deck's wins.
+  2. **Context diagram:** exactly **one** bubble numbered 0, the external entities
+     around it, **and no data stores** — that omission is the most-penalised DFD
+     error.
+  3. **Level 1:** numbered processes 1.0, 2.0…, the data stores added, every flow
+     named.
+  4. **Reading**, including the validity rule: **levelling balance** — every flow
+     crossing the parent's boundary crosses the child's, unchanged in name.
+- **Earns the marks:** labelled arrows and the balance check. **Say in words that
+  you checked balance** — it demonstrates you know the rule exists.
+- **Trap:** drawing a flowchart with DFD symbols. **A DFD has no decisions, no
+  loops and no sequence** — it says what data goes where, never in what order.
+
+**Never asked as:** `numerical`, `compare`, `scenario`. An `explain` on the data
+dictionary or decision tables is plausible and unasked.
+
+## Contents
+
+| # | Section | Type | Archetype | Marks | Why it's here |
+|---|---|---|---|---|---|
+| 1 | What a DFD is, and its notation | notational | **draw** | 0 | the four symbols and the two conventions |
+| 2 | Levels and levelling balance | notational | **draw** | 0 | context vs level 1; the rule that makes a DFD checkable |
+| 3 | The Food Ordering System worked example | notational | **draw** | 0 | the deck's own running example, drawn out |
+| 4 | Data dictionary, process spec and control flow | definitional | — | 0 | what accompanies the diagram |
+| 5 | Decision tables and state transition diagrams | notational | — | 0 | the other two analysis notations the deck teaches |
 
 ## Mindmap
 
 ```mermaid
 graph TD
-    S1["1 · What a DFD is<br/>0 marks"]
+    S1["1 · Notation<br/>0 marks"]
     S2["2 · Levels & balance<br/>0 marks"]
-    S3["3 · Food Ordering example<br/>0 marks"]
-    S4["4 · Dictionary & P-spec<br/>0 marks"]
+    S3["3 · Worked example<br/>0 marks"]
+    S4["4 · Dictionary & spec<br/>0 marks"]
     S5["5 · Decision tables & STDs<br/>0 marks"]
 
-    S1 -->|"one bubble for the whole system<br/>says nothing. break it open"| S2
-    S2 -->|"the rules are abstract<br/>until you draw one"| S3
-    S3 -->|"the arrows are named — but<br/>what does each name mean?"| S4
-    S4 -->|"flows are data. some logic<br/>is conditions and states"| S5
-    S5 -.->|"and all of it feeds the<br/>structure chart later"| S2
+    S1 -->|"four symbols. but a whole system<br/>will not fit on one page"| S2
+    S2 -->|"the rule is only convincing<br/>when you see it hold"| S3
+    S3 -->|"the arrows carry names,<br/>and a name is not a definition"| S4
+    S4 -->|"some logic is neither flow<br/>nor definition — it is state"| S5
+    S5 -.->|"and all of it decomposes the<br/>same system, one lens at a time"| S1
 ```
 
 ## 1 · What a DFD is, and its notation
