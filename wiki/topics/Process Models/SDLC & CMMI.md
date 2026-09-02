@@ -44,82 +44,11 @@ last_practiced: null
 > textbook material and labelled unsourced**. It is the largest unsourced block
 > anywhere in the Mid-Term window, and the highest-value gap in this vault.
 
-## How it's asked
+## 1 · The SDLC and its phases
 
-Generic skeletons on [[answer-patterns]] §1 and §2. **This topic is asked in two
-different archetypes on the same paper — 8 of 80, third-heaviest in the window.**
-
-### Explain with reason — B3, 6 marks
-
-- **Spot it:** "Explain the distribution of effort … **by relating them to**
-  traditional, structured and CASE development environments." The words *relating
-  them to* mean a comparison is compulsory.
-- **Skeleton — the three components, and the third is the one candidates skip:**
-  1. **State** the 40-20-40 baseline with the finer percentages. (~2 marks)
-  2. **Apply** — a table of the three environments against the phases, showing
-     effort moving *earlier* as sophistication rises. (~2 marks)
-  3. **Mechanism** — the cost of fixing a defect rises steeply with the phase it
-     is found in, so early effort is **relocated**, not added. (~2 marks)
-- **Earns the marks:** component 3. Two candidates write the same table; the one
-  who explains *why* scores higher.
-- **Trap:** giving 40-20-40 and stopping — that is a third of the question.
-  Second trap: conflating *development* effort (40-20-40) with *lifetime* effort
-  (maintenance ≈ 60%). Say which you mean.
-
-### Scenario → identify & justify — A2, 2 marks
-
-- **Spot it:** a short organisational story ending "identify the CMMI maturity
-  level and justify".
-- **Skeleton:** name the level → map two or three of the scenario's own phrases
-  onto that level's characteristics → **say explicitly why the adjacent level is
-  wrong** → one line on what the level means.
-- **Earns the marks:** the mapping, and the exclusion of the neighbour.
-- **Trap:** matching one keyword. "Documented" → 3, "metrics" → 4, "improvement"
-  → 5, and scenarios contain several deliberately. Read for the **highest
-  capability demonstrated**, and let the outcome phrase ("predictable",
-  "continuously improving") break the tie.
-
-**Never asked as:** `numerical`, `draw`. The 40-20-40 percentages are quoted, not
-computed.
-
-## Quick Reference
-
-> [!abstract] The two things this topic is examined on
-> - **CMMI's five levels: Initial → Managed → Defined → Quantitatively Managed →
->   Optimizing.** The keyword identifying level 4 is **predictable**; level 5 is
->   **improving**.
-> - **The 40-20-40 rule.** ~40% of effort before coding, ~20% coding, ~40%
->   testing and after. Coding is the smallest phase — that is the whole point.
-
-### CMMI — the five maturity levels
-
-**CMMI** is a **process improvement framework that assesses the maturity of an
-organisation's software development process**: it measures how well an
-organisation develops software and suggests improvements.
-
-| Level | Name | Characteristic | Deck's analogy |
-|---|---|---|---|
-| **1** | Initial | ad-hoc, undocumented; success depends on individuals; no consistency | cooking with no recipe |
-| **2** | Managed | basic project management; requirements recorded and tracked; schedules, budgets, responsibilities; **still project-level** | writing the recipe down and following it |
-| **3** | Defined | **organisation-wide** standard processes, documented and shared; training; reuse of templates and best practice | a restaurant chain with one standard recipe book |
-| **4** | Quantitatively Managed | processes **measured and controlled with metrics**; decisions from data; variation tracked; focus = **predictability** | chefs measuring every ingredient precisely |
-| **5** | Optimizing | **continuous improvement**; innovation, feedback, lessons learned; problems addressed proactively | the chain experimenting with new dishes and techniques |
-
-**The three shifts to remember:**
-
-| Between | The shift |
-|---|---|
-| 2 → 3 | **project**-level process becomes **organisation**-level |
-| 3 → 4 | processes are followed → processes are **measured** |
-| 4 → 5 | measured and predictable → **continuously improved** |
-
-**The deck's level-1 example:** a startup building a Hospital Management System
-with no requirements documents or design blueprints; programmers code what they
-think the hospital wants; no testing standards, each developer testing on their
-own machine; each programmer's own coding style; no schedule. The result depends
-entirely on whether the individuals happen to be good.
-
-### SDLC phases and deliverables
+- **What it is:** the systematic process for planning, creating, testing,
+  deploying and maintaining software — six phases, each with a deliverable the
+  next phase consumes.
 
 | # | Phase | Deliverable |
 |---|---|---|
@@ -129,42 +58,6 @@ entirely on whether the individuals happen to be good.
 | 4 | Testing | test reports (unit, integration, system, UAT) |
 | 5 | Deployment | delivered/deployed system |
 | 6 | Maintenance | updates, fixes, new features |
-
-### Effort distribution
-
-**The 40-20-40 rule:**
-
-| Group | Share |
-|---|---|
-| Analysis and design (everything before coding) | ~40% |
-| Coding | ~20% |
-| Testing and debugging (everything after coding) | ~40% |
-
-- **Finer split**, often quoted for an organic project: planning 2-3% ·
-  requirements 10-25% · design 20-25% · coding 15-20% · testing 30-40%.
-- **Lifetime vs development:** maintenance alone is ~60% of *lifetime* effort;
-  40-20-40 describes *development* effort. Say which you mean.
-
-**Across development environments** *(unsourced — see the warning above)*:
-
-| Phase | Traditional | Structured | CASE |
-|---|---|---|---|
-| Analysis | low | higher | **highest** |
-| Design | low | higher | **highest** |
-| Coding | **highest** | lower | **lowest** |
-| Testing | high | lower | lower |
-| Maintenance | **highest** | lower | **lowest** |
-
-**The trend is the answer:** as environments become more sophisticated, effort
-shifts **earlier** — out of coding and maintenance, into analysis and design.
-Because a defect costs more the later it is found, front-loading reduces total
-effort.
-
-## 1 · The SDLC and its phases
-
-- **What it is:** the systematic process for planning, creating, testing,
-  deploying and maintaining software — six phases, each with a deliverable the
-  next phase consumes. Table: Quick Reference.
 - **Why it comes first:** it is the skeleton every process model rearranges.
   Waterfall runs the phases once, incremental per increment, agile per sprint.
   **The phases do not change; only their scheduling does.**
@@ -200,8 +93,30 @@ effort.
   cutting coding and maintenance hardest, because generated code is consistent and
   models stay in step with it.
 
-**Formula.** The 40-20-40 split, the finer percentages and the
-three-environment table: Quick Reference. The relationship that carries the marks:
+**The 40-20-40 rule:**
+
+| Group | Share |
+|---|---|
+| Analysis and design (everything before coding) | ~40% |
+| Coding | ~20% |
+| Testing and debugging (everything after coding) | ~40% |
+
+- **Finer split**, for an organic project: planning 2-3% · requirements 10-25% ·
+  design 20-25% · coding 15-20% · testing 30-40%.
+- **Lifetime vs development:** maintenance alone is ~60% of *lifetime* effort;
+  40-20-40 describes *development* effort. Say which you mean.
+
+**Across development environments** *(unsourced — see the warning above)*:
+
+| Phase | Traditional | Structured | CASE |
+|---|---|---|---|
+| Analysis | low | higher | **highest** |
+| Design | low | higher | **highest** |
+| Coding | **highest** | lower | **lowest** |
+| Testing | high | lower | lower |
+| Maintenance | **highest** | lower | **lowest** |
+
+The relationship that carries the marks:
 
 > **The more sophisticated the environment, the more effort moves into analysis
 > and design, and the less remains in coding and maintenance.** Total effort falls
@@ -266,9 +181,32 @@ deck; see the warning.)*
 - Each level's capability is built from the one below, **which is why they cannot
   be skipped**.
 
-**Terms and distinctions.** Five levels, characteristics, analogies, the three
-shift points and the deck's level-1 example: Quick Reference. The analogies are
-the instructor's own and worth keeping — they make the levels hard to confuse:
+**CMMI** is a **process improvement framework that assesses the maturity of an
+organisation's software development process.**
+
+| Level | Name | Characteristic | Deck's analogy |
+|---|---|---|---|
+| **1** | Initial | ad-hoc, undocumented; success depends on individuals | cooking with no recipe |
+| **2** | Managed | basic project management; requirements tracked; schedules, budgets; **still project-level** | writing the recipe down |
+| **3** | Defined | **organisation-wide** standard processes, documented and shared; training | one recipe book for the whole chain |
+| **4** | Quantitatively Managed | processes **measured and controlled with metrics**; decisions from data; focus = **predictability** | measuring every ingredient precisely |
+| **5** | Optimizing | **continuous improvement**; innovation, lessons learned; proactive | inventing new dishes |
+
+**The three shifts to remember:**
+
+| Between | The shift |
+|---|---|
+| 2 → 3 | **project**-level process becomes **organisation**-level |
+| 3 → 4 | processes are followed → processes are **measured** |
+| 4 → 5 | measured and predictable → **continuously improved** |
+
+**The deck's level-1 example:** a startup building a Hospital Management System
+with no requirements documents or design blueprints; programmers code what they
+think the hospital wants; no testing standards; each developer's own style; no
+schedule. The result depends entirely on whether the individuals happen to be
+good.
+
+The analogies are the instructor's own and worth keeping:
 
 > No recipe → write the recipe down → one recipe book for the whole chain →
 > measure every ingredient precisely → keep inventing better dishes.
@@ -307,6 +245,73 @@ process to make it predictable — not innovating beyond it.
 > a key that says 5.
 
 *(No solution key — unchecked, no `✓`.)*
+
+## How it's asked
+
+Generic skeletons on [[answer-patterns]] §1 and §2. **This topic is asked in two
+different archetypes on the same paper — 8 of 80, third-heaviest in the window.**
+
+### Explain with reason — B3, 6 marks
+
+- **Spot it:** "Explain the distribution of effort … **by relating them to**
+  traditional, structured and CASE development environments." The words *relating
+  them to* mean a comparison is compulsory.
+- **Skeleton — the three components, and the third is the one candidates skip:**
+  1. **State** the 40-20-40 baseline with the finer percentages. (~2 marks)
+  2. **Apply** — a table of the three environments against the phases, showing
+     effort moving *earlier* as sophistication rises. (~2 marks)
+  3. **Mechanism** — the cost of fixing a defect rises steeply with the phase it
+     is found in, so early effort is **relocated**, not added. (~2 marks)
+- **Earns the marks:** component 3. Two candidates write the same table; the one
+  who explains *why* scores higher.
+- **Trap:** giving 40-20-40 and stopping — that is a third of the question.
+  Second trap: conflating *development* effort (40-20-40) with *lifetime* effort
+  (maintenance ≈ 60%). Say which you mean.
+
+### Scenario → identify & justify — A2, 2 marks
+
+- **Spot it:** a short organisational story ending "identify the CMMI maturity
+  level and justify".
+- **Skeleton:** name the level → map two or three of the scenario's own phrases
+  onto that level's characteristics → **say explicitly why the adjacent level is
+  wrong** → one line on what the level means.
+- **Earns the marks:** the mapping, and the exclusion of the neighbour.
+- **Trap:** matching one keyword. "Documented" → 3, "metrics" → 4, "improvement"
+  → 5, and scenarios contain several deliberately. Read for the **highest
+  capability demonstrated**, and let the outcome phrase ("predictable",
+  "continuously improving") break the tie.
+
+**Never asked as:** `numerical`, `draw`. The 40-20-40 percentages are quoted, not
+computed.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+**The two examined things**
+- **CMMI's five levels: Initial → Managed → Defined → Quantitatively Managed →
+  Optimizing.** Level 4's keyword is **predictable**; level 5's is **improving**.
+- **40-20-40.** ~40% before coding, ~20% coding, ~40% testing and after. **Coding
+  is the smallest phase** — that is the whole point.
+
+| Ask | Answer |
+|---|---|
+| Six SDLC phases | requirements · design · implementation · testing · deployment · maintenance |
+| First deliverable | **SRS** |
+| 2 → 3 | project-level becomes organisation-wide |
+| 3 → 4 | followed becomes **measured** |
+| 4 → 5 | predictable becomes **continuously improved** |
+| Environment trend | more sophisticated → effort moves **earlier**, total effort falls |
+| Why | defect cost rises steeply with the phase it is found in |
+| Lifetime effort | maintenance alone ≈ **60%** |
+
+**A2 in one line:** Level 4 — documented (≥3) + metrics on defects and effort +
+adjusted on data + **"more predictable"**, which is level 4's stated focus. Not 5,
+which needs innovation.
+
+**B3 in one line:** state 40-20-40 → table the three environments → **explain the
+trend by the cost-of-change argument**. The third part is the one candidates skip.
 
 ## Practice
 

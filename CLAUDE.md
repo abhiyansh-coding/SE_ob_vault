@@ -243,12 +243,10 @@ its own entry conditions. Anything a page needs that has no topic of its own get
 **defined on the page that needs it**, not delegated to a topic the reader has not
 reached.
 
-### The page's shape — six sections, one job each
+### The page's shape — read it top to bottom and learn the topic
 
-Rebuilt again on 2026-09-03, after the first pass left **five preamble layers**
-(Overview → Quick Reference → How it's asked → Contents → Mindmap) stacked before
-any material. That is the same fault the compression pass diagnosed, reintroduced.
-The page is now:
+Settled 2026-09-03 after three passes. The ordering rule is simple: **the page
+teaches first and refers later.**
 
 ```
 ---
@@ -256,7 +254,7 @@ frontmatter
 ---
 # Topic
 
-- two to four orientation bullets: what this topic is, why it exists
+- two to four orientation bullets: what this is, why it exists
 
 **Prerequisites:** ...
 **Asked as:** <archetypes> — <marks> in [[se-ete-2025-26]] · <n> in [[se-assign-1-2026]]
@@ -266,31 +264,50 @@ frontmatter
 > [!info] What it asked — <question ref, and what it wanted>
 > [!warning] any scope, deck-gap or unsourced flag
 
-## How it's asked      ← exam-facing; leads the page
-## Quick Reference     ← the cram layer; tables only
-## 1 · … 2 · … N · …   ← the material, in deck order
+## 1 · … 2 · … N · …   ← THE MATERIAL. Teaching, in deck order.
+## How it's asked      ← now that you know it, here is how it is tested
+## Quick Reference     ← the ten-minute recall card
 ## Practice            ← worked answers, four tiers
 ## Traps               ← content confusions only
 ## Sources             ← decks read, gaps, related links
 ```
 
+**The material leads.** A reader starting at the top must be able to learn the
+topic by reading downward, without jumping. That is the constraint everything
+else bends to.
+
+**Quick Reference is a *compression of what is above it*, not the home of the
+content.** This is the rule that changed on 2026-09-03, and it reverses the
+earlier "say it once" instruction:
+
+- **The teaching table lives in its section** — the full seven-level cohesion
+  scale with the deck's examples, the full COCOMO coefficient tables, the ten
+  requirement types. That is where a reader meets it.
+- **Quick Reference carries the compressed form** — the names in order, the
+  mnemonic, the formula, the one-line verdict. Typically an *Ask / Answer* grid.
+- **This is not duplication.** A cram sheet is *supposed* to restate; the two
+  forms differ in density and in job. The earlier rule made sections point at
+  Quick Reference, which hollowed them out — eight pages had **zero tables in
+  their material** and taught nothing when read from the top.
+- **Target:** the material carries several times the table rows of the cram card.
+  If Quick Reference is bigger than the sections it summarises, the page is
+  inverted.
+
 **What was removed, and why:**
 
 | Gone | Replaced by |
 |---|---|
-| `## Overview` | the orientation bullets and the banners, directly under the H1. The section header was a wrapper around two things that stand on their own. |
-| `## Contents` | the section headings themselves. Its marks column was near-useless — with one paper, 11 of 15 pages had all-zero rows, so "do the heavy one first" had nothing to point at. Its "why it's here" column duplicated the headings. |
-| `## Mindmap` as a top-level layer | a one-line **The thread** under the metadata for short topics; for topics with **five or more sections** the mermaid moves inside Quick Reference, where a recall aid belongs. |
+| `## Overview` | the orientation bullets and the banners, directly under the H1 |
+| `## Contents` | the section headings themselves. Its marks column was near-useless — with one paper, 11 of 15 pages had all-zero rows |
+| `## Mindmap` as a top-level layer | a one-line **The thread** under the metadata; for topics with five or more sections the mermaid moves inside Quick Reference |
 
 **Renamed** for plain speech: `Question Bank` → **Practice** · `Mistakes & Traps`
-→ **Traps** · `Course Material` → **Sources`.
+→ **Traps** · `Course Material` → **Sources**.
 
 **The division of labour between How it's asked and Traps is strict:**
 **How it's asked owns answer-shape traps** (hedging, describing instead of
 justifying, stopping after component 1). **Traps owns content confusions** (unit
-errors, reversing verification and validation, LOC vs KLOC). If a trap is about
-*how you write the answer*, it belongs in the first; if it is about *what you
-believe about the material*, the second.
+errors, reversing verification and validation, LOC vs KLOC).
 
 ### How it's asked — the section that replaced "What gets asked"
 

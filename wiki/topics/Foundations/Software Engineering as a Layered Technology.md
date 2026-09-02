@@ -41,6 +41,100 @@ last_practiced: null
 > instructor's slides.** Rule 5: deck silence is not evidence of being out of
 > scope. **This is the page to fix first if you can get the lecture 4-5 slides.**
 
+## 1 · Software engineering as a layered technology
+
+- **The argument:** organisations buy tools and expect to become good at
+  software. Tools sit at the *top* of a stack — under them the **methods** that
+  say what to do, under that the **process** that decides when and in what order,
+  and at the bottom a **quality focus** giving all of it a reason to exist.
+- **Remove a lower layer and everything above has nothing to stand on.** A team
+  with tools but no process just makes mistakes faster.
+**The four layers, read bottom-up.** Drawing it upside down is the classic error:
+
+| Layer | What it is | If it is missing |
+|---|---|---|
+| **Tools** | automated or semi-automated support (CASE tools) | methods must be applied by hand |
+| **Methods** | the technical "how to": requirements analysis, design, coding, testing | the process has activities but no technique to perform them |
+| **Process** | the glue — holds methods and tools together, defines order and deliverables | methods are applied ad hoc; results are unrepeatable |
+| **Quality focus** | the organisational commitment to continuous improvement | there is no reason for any of the above to exist |
+
+**Direction is the content** — quality focus at the bottom, tools at the top.
+- **Never examined.** If it appears, most likely a 2-mark Section A "explain SE
+  as a layered technology" — four names bottom-up, one line each, and **draw the
+  stack**; it costs ten seconds and makes the ordering unambiguous.
+
+## 2 · The generic process framework
+
+- **The argument:** strip any process model down and the same five things happen
+  — someone talks to the customer, plans, models, builds, ships. **Waterfall does
+  each once, in order. Spiral does all five per loop. Agile does all five per
+  sprint.**
+- **What differs between models is the arrangement, never the ingredients** —
+  which is exactly why the comparison table on [[Evolutionary Process Models]] is
+  possible at all.
+**The five framework activities:**
+
+| Activity | What happens |
+|---|---|
+| Communication | talk to the customer; gather requirements |
+| Planning | define the work — tasks, risks, resources, schedule |
+| Modeling | build the analysis and design models |
+| Construction | code it and test it |
+| Deployment | deliver, get feedback, support |
+
+**Framework vs model** is the precise part — the framework is fixed and
+universal, the model is the choice you make for one project:
+
+| | Process framework | Process model |
+|---|---|---|
+| What it is | the set of activities every project performs | a specific arrangement of those activities |
+| Example | communication, planning, modeling, construction, deployment | waterfall, spiral, incremental |
+| Varies by project? | no | yes — this is the choice you make |
+- **Never examined.** Know the five names in order — they are the vocabulary of
+  every process-model answer, and using them makes those answers noticeably more
+  precise.
+
+## 3 · Umbrella activities
+
+- **The argument:** you cannot schedule risk management as week six, or do
+  configuration management on Tuesday and then stop. Some work runs continuously,
+  because the moment it stops the project degrades without anyone noticing.
+- Drawn as a **band across the whole timeline**, not a box within it.
+
+**The eight umbrella activities:** project tracking and control · risk management
+· quality assurance · technical reviews · measurement · configuration management
+· reusability management · work product preparation and production.
+
+| | Framework activity | Umbrella activity |
+|---|---|---|
+| When | happens in sequence, as a phase | runs continuously, across all phases |
+| Example | modeling | risk management |
+- **The examinable point is the contrast**, not the list: framework activities
+  are phases, umbrella activities are continuous.
+- Two get whole topics later — risk on [[Risk Analysis & Estimation]], QA and
+  technical reviews on [[Software Quality Assurance]].
+- **Never examined.** If asked, the distinction earns the marks; reciting all
+  eight without it does not.
+
+## 4 · The process, and software products
+
+- **A process** is a set of activities with an order and deliverables — what turns
+  "we built something" into "we can build another one the same way".
+- **What you build shapes it:** a product sold to thousands has no single customer
+  to consult, so the developing organisation invents the requirements itself. A
+  bespoke system has exactly one customer, the sole authority. That difference
+  propagates into which process model is even viable.
+
+| Product type | Built for | Requirements come from |
+|---|---|---|
+| Generic | the open market, sold to many customers | the developing organisation |
+| Customised (bespoke) | one specific customer | that customer |
+- **Handout vs deck:** the handout assigns *software products, characteristics and
+  applications* to lecture 5; the deck teaches all three in its opening run. Rule
+  8 — the deck sets teaching structure — so they live on
+  [[Introduction to Software Engineering]]. Revise them there.
+- **Never examined.**
+
 ## How it's asked
 
 **Never asked, on the one paper in this vault** — `asked_as` is empty. Rule 7
@@ -59,119 +153,29 @@ quality focus at the bottom, tools at the top.
 
 ## Quick Reference
 
-> [!abstract] The two structures that carry this topic
-> - **The four layers, bottom-up: quality focus → process → methods → tools.**
->   Each rests on the one beneath. Quality focus is the bedrock, not the top.
-> - **Five framework activities: communication, planning, modeling,
->   construction, deployment.** Every project does all five. What changes between
->   process models is *how often and in what order*, never *whether*.
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
 
-**The layered technology** — read bottom-up; drawing it upside down is the
-classic error:
+**The two structures that carry the topic**
+- **Four layers, bottom-up: quality focus → process → methods → tools.** Quality
+  focus is the bedrock, not the top.
+- **Five framework activities: communication, planning, modeling, construction,
+  deployment.** Every project does all five; models differ only in *how often and
+  in what order*.
 
-| Layer | What it is | If it is missing |
-|---|---|---|
-| **Tools** | automated or semi-automated support (CASE tools) | methods must be applied by hand |
-| **Methods** | the technical "how to": requirements analysis, design, coding, testing | the process has activities but no technique to perform them |
-| **Process** | the glue — holds methods and tools together, defines order and deliverables | methods are applied ad hoc; results are unrepeatable |
-| **Quality focus** | the organisational commitment to continuous improvement | there is no reason for any of the above to exist |
-
-**The five framework activities:**
-
-| Activity | What happens |
+| Ask | Answer |
 |---|---|
-| Communication | talk to the customer; gather requirements |
-| Planning | define the work — tasks, risks, resources, schedule |
-| Modeling | build the analysis and design models |
-| Construction | code it and test it |
-| Deployment | deliver, get feedback, support |
-
-**Umbrella activities** run *across* all five, throughout the project — not a
-phase: project tracking and control · risk management · quality assurance ·
-technical reviews · measurement · configuration management · reusability
-management · work product preparation and production.
-
-**Two distinctions that get confused:**
-
-| | Process framework | Process model |
-|---|---|---|
-| What it is | the set of activities every project performs | a specific arrangement of those activities |
-| Example | communication, planning, modeling, construction, deployment | waterfall, spiral, incremental |
-| Varies by project? | no | yes — this is the choice you make |
-
-| | Framework activity | Umbrella activity |
-|---|---|---|
-| When | happens in sequence, as a phase | runs continuously, across all phases |
-| Example | modeling | risk management |
-
-**Software products:**
-
-| Product type | Built for | Requirements come from |
-|---|---|---|
-| Generic | the open market, sold to many customers | the developing organisation |
-| Customised (bespoke) | one specific customer | that customer |
+| Four layers, bottom-up | quality focus · process · methods · tools |
+| Five framework activities | communication · planning · modeling · construction · deployment |
+| Eight umbrella activities | tracking · risk · QA · reviews · measurement · config mgmt · reusability · work products |
+| Framework vs model | what every project does / how one project arranges it |
+| Framework vs umbrella | a phase in sequence / continuous across all phases |
+| Generic vs customised | requirements from the developer / from the one customer |
 
 **Not repeated here:** software = program + documentation + operating procedures,
 the five characteristics, the eight application domains — all on
-[[Introduction to Software Engineering]]. The handout assigns them to lecture 5;
-the deck teaches them alongside lecture 1-3 material, so rule 8 keeps them there.
-
-## 1 · Software engineering as a layered technology
-
-- **The argument:** organisations buy tools and expect to become good at
-  software. Tools sit at the *top* of a stack — under them the **methods** that
-  say what to do, under that the **process** that decides when and in what order,
-  and at the bottom a **quality focus** giving all of it a reason to exist.
-- **Remove a lower layer and everything above has nothing to stand on.** A team
-  with tools but no process just makes mistakes faster.
-- Four layers and their failure modes: Quick Reference. **Direction is the
-  content** — quality focus at the bottom, tools at the top.
-- **Never examined.** If it appears, most likely a 2-mark Section A "explain SE
-  as a layered technology" — four names bottom-up, one line each, and **draw the
-  stack**; it costs ten seconds and makes the ordering unambiguous.
-
-## 2 · The generic process framework
-
-- **The argument:** strip any process model down and the same five things happen
-  — someone talks to the customer, plans, models, builds, ships. **Waterfall does
-  each once, in order. Spiral does all five per loop. Agile does all five per
-  sprint.**
-- **What differs between models is the arrangement, never the ingredients** —
-  which is exactly why the comparison table on [[Evolutionary Process Models]] is
-  possible at all.
-- **Framework vs model** is the precise part: the framework is fixed and
-  universal, the model is the choice you make. Both tables: Quick Reference.
-- **Never examined.** Know the five names in order — they are the vocabulary of
-  every process-model answer, and using them makes those answers noticeably more
-  precise.
-
-## 3 · Umbrella activities
-
-- **The argument:** you cannot schedule risk management as week six, or do
-  configuration management on Tuesday and then stop. Some work runs continuously,
-  because the moment it stops the project degrades without anyone noticing.
-- Drawn as a **band across the whole timeline**, not a box within it. All eight:
-  Quick Reference.
-- **The examinable point is the contrast**, not the list: framework activities
-  are phases, umbrella activities are continuous.
-- Two get whole topics later — risk on [[Risk Analysis & Estimation]], QA and
-  technical reviews on [[Software Quality Assurance]].
-- **Never examined.** If asked, the distinction earns the marks; reciting all
-  eight without it does not.
-
-## 4 · The process, and software products
-
-- **A process** is a set of activities with an order and deliverables — what turns
-  "we built something" into "we can build another one the same way".
-- **What you build shapes it:** a product sold to thousands has no single customer
-  to consult, so the developing organisation invents the requirements itself. A
-  bespoke system has exactly one customer, the sole authority. That difference
-  propagates into which process model is even viable. Split: Quick Reference.
-- **Handout vs deck:** the handout assigns *software products, characteristics and
-  applications* to lecture 5; the deck teaches all three in its opening run. Rule
-  8 — the deck sets teaching structure — so they live on
-  [[Introduction to Software Engineering]]. Revise them there.
-- **Never examined.**
+[[Introduction to Software Engineering]], where rule 8 puts them because that is
+where the deck teaches them.
 
 ## Practice
 

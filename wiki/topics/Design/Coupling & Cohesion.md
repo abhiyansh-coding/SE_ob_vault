@@ -39,55 +39,19 @@ last_practiced: null
 > The deck's answer is reproduced and examined in subtopic 3, **including where
 > it disagrees with standard theory.**
 
-## How it's asked
+## 1 · Cohesion — the seven levels
 
-Generic skeletons are on [[answer-patterns]]; this section carries only what is
-specific to this topic. **Both archetypes appear in one question — B2 is
-`compare` then `scenario`, 3 marks each.**
+- **Ask why a module's parts are in the same box.** "They all serve one
+  computation" is the best possible reason — **functional cohesion**. "They happen
+  at the same time" is weaker. "No reason, they were just typed near each other"
+  is the worst — **coincidental**.
+- The scale is a ranking of *reasons for togetherness*.
+- **The practical consequence is change:** a module with one reason to exist has
+  one reason to change; a module with three has three.
 
-### Compare & distinguish — B2(a), 3 marks
-
-- **Spot it:** "Define **and** differentiate cohesion and coupling." Two
-  instructions, and the second is where the marks are.
-- **Skeleton:** a five-row table — scope · what it measures · desired direction ·
-  effect if wrong · number of levels — then **one closing line**: *cohesion is
-  intra-module and should be maximised; coupling is inter-module and should be
-  minimised.* That line is the mark.
-- **Earns the marks:** the contrast. Defining each separately and stopping earns
-  roughly half.
-- **Trap:** listing the seven and six levels instead of differentiating. The
-  levels are subtopics 1-2; part (a) wants the *distinction*.
-
-### Scenario → identify & justify — B2(b), 3 marks
-
-- **Spot it:** a code snippet, usually two classes, and "identify the type of
-  cohesion and coupling **with justification**."
-- **Skeleton:**
-  1. Name the cohesion type and the coupling type — one line each.
-  2. **Point at specific lines.** *"`generateBill()` is a billing operation, a
-     different concern from `addBook()` and `issueBook()`"* — quote the method
-     names.
-  3. Say why the adjacent level is not it.
-  4. One line on how to fix it — split the class, or pass data instead.
-- **Earns the marks:** step 2. **An unsupported label earns almost nothing.**
-- **Trap:** the deck's own answer disagrees with standard theory on this snippet
-  — see subtopic 3, which carries both readings and which to write.
-
-**Never asked as:** `numerical`, `draw`, `explain`. Do not prepare a diagram for
-this topic.
-
-## Quick Reference
-
-> [!abstract] The one line that answers B2(a)
-> **Cohesion is *within* a module — how strongly its own elements belong
-> together. Coupling is *between* modules — how much they depend on each other.
-> Good design maximises cohesion and minimises coupling.**
-> Cohesion is intra-module, coupling is inter-module. That contrast is the mark.
-
-### Cohesion — seven levels, best to worst
-
-**Cohesion is the degree to which the elements of a module are functionally
-related** — the internal glue that keeps the module together.
+**The seven levels, best to worst.** Cohesion is **the degree to which the
+elements of a module are functionally related** — the internal glue holding it
+together.
 
 | Rank | Type | Elements are related by | Deck's example |
 |---|---|---|---|
@@ -102,60 +66,11 @@ related** — the internal glue that keeps the module together.
 **The deck's verdicts:** coincidental ❌ worst, avoid · logical ⚠ acceptable but
 not ideal · sequential ✅ recommended · functional = the ideal situation.
 
-### Coupling — six levels, best to worst
-
-**Coupling is the measure of the degree of interdependence between modules.**
-
-| Rank | Type | Modules communicate by | Deck's note |
-|---|---|---|---|
-| **1 best** | **Data** | passing **only data** as parameters | components independent; no tramp data. Example: customer billing system |
-| 2 | **Stamp** | passing a **whole data structure** | involves tramp data; may be justified for efficiency — "a choice made by the insightful designer, not a lazy programmer" |
-| 3 | **Control** | passing **control information** (a flag that selects behaviour) | bad if the parameter selects completely different behaviour; good if it enables reuse — e.g. a sort taking a comparison function |
-| 4 | **External** | dependence on something **outside** the software — hardware, protocol, file format | protocol, external file, device format |
-| 5 | **Common** | **shared global data** | any change means tracing every module that touches it; harms reuse, access control and maintainability |
-| **6 worst** | **Content** | one module **modifies another's data**, or control jumps between them | the worst form; should be avoided |
-
-**Tramp data** — data passed through a module that does not itself use it. It is
-what distinguishes stamp coupling from data coupling.
-
-### Mnemonics
-
-Coupling, worst → best: **C**ontent · **C**ommon · **E**xternal · **C**ontrol ·
-**S**tamp · **D**ata — *"Come Christmas Eve, Consider Stamping Data."*
-
-Cohesion, worst → best: **C**oincidental · **L**ogical · **T**emporal ·
+**Memory hook**, worst → best: **C**oincidental · **L**ogical · **T**emporal ·
 **P**rocedural · **C**ommunicational · **S**equential · **F**unctional —
 *"Cool Lemons Taste Pretty Cool, Says Fred."*
 
-### High cohesion, low coupling — the deck's model answer
-
-```java
-class Calculator {              // High cohesion: all methods are calculations
-    public int add(int a, int b)      { return a + b; }
-    public int multiply(int a, int b) { return a * b; }
-}
-class Display {                 // Low coupling: separate responsibility
-    public void showResult(int result) { System.out.println("Result: " + result); }
-}
-```
-
-The deck's analysis: `Calculator` focuses only on mathematical operations
-(**functional cohesion**); `Display` is responsible only for showing results.
-They are independent and only share data — **Display can be replaced without
-affecting Calculator.**
-
-## 1 · Cohesion — the seven levels
-
-- **Ask why a module's parts are in the same box.** "They all serve one
-  computation" is the best possible reason — **functional cohesion**. "They happen
-  at the same time" is weaker. "No reason, they were just typed near each other"
-  is the worst — **coincidental**.
-- The scale is a ranking of *reasons for togetherness*.
-- **The practical consequence is change:** a module with one reason to exist has
-  one reason to change; a module with three has three.
-
-**Terms and distinctions.** The seven levels with the deck's own examples are
-tabulated in Quick Reference. The two most confusable pairs:
+**The two most confusable pairs:**
 
 | Pair | Difference |
 |---|---|
@@ -175,8 +90,26 @@ there is no defensible reason for the pairing.
   checking a hundred modules.
 - **The scale ranks how far a change can propagate.**
 
-**Terms and distinctions.** All six with the deck's notes are in Quick
-Reference. Three points the deck stresses that improve an answer:
+**The six levels, best to worst.** Coupling is **the measure of the degree of
+interdependence between modules.**
+
+| Rank | Type | Modules communicate by | Deck's note |
+|---|---|---|---|
+| **1 best** | **Data** | passing **only data** as parameters | components independent; no tramp data. Example: customer billing system |
+| 2 | **Stamp** | passing a **whole data structure** | involves tramp data; may be justified for efficiency — "a choice made by the insightful designer, not a lazy programmer" |
+| 3 | **Control** | passing **control information** (a flag that selects behaviour) | bad if the parameter selects completely different behaviour; good if it enables reuse — e.g. a sort taking a comparison function |
+| 4 | **External** | dependence on something **outside** the software — hardware, protocol, file format | protocol, external file, device format |
+| 5 | **Common** | **shared global data** | any change means tracing every module that touches it; harms reuse, access control and maintainability |
+| **6 worst** | **Content** | one module **modifies another's data**, or control jumps between them | the worst form; should be avoided |
+
+**Tramp data** — data passed through a module that does not itself use it. It is
+what distinguishes stamp coupling from data coupling.
+
+**Memory hook**, worst → best: **C**ontent · **C**ommon · **E**xternal ·
+**C**ontrol · **S**tamp · **D**ata — *"Come Christmas Eve, Consider Stamping
+Data."*
+
+**Three points the deck stresses that improve an answer:**
 
 - **Control coupling is not automatically bad.** It is bad if the parameter
   selects completely different behaviour, but good if it enables factoring and
@@ -301,6 +234,93 @@ editing `Member`.
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`. The disagreement with the deck's printed reasoning is recorded above, as
 rule 8 requires.)*
+
+## How it's asked
+
+Generic skeletons are on [[answer-patterns]]; this section carries only what is
+specific to this topic. **Both archetypes appear in one question — B2 is
+`compare` then `scenario`, 3 marks each.**
+
+### Compare & distinguish — B2(a), 3 marks
+
+- **Spot it:** "Define **and** differentiate cohesion and coupling." Two
+  instructions, and the second is where the marks are.
+- **Skeleton:** a five-row table — scope · what it measures · desired direction ·
+  effect if wrong · number of levels — then **one closing line**: *cohesion is
+  intra-module and should be maximised; coupling is inter-module and should be
+  minimised.* That line is the mark.
+- **Earns the marks:** the contrast. Defining each separately and stopping earns
+  roughly half.
+- **Trap:** listing the seven and six levels instead of differentiating. The
+  levels are subtopics 1-2; part (a) wants the *distinction*.
+
+### Scenario → identify & justify — B2(b), 3 marks
+
+- **Spot it:** a code snippet, usually two classes, and "identify the type of
+  cohesion and coupling **with justification**."
+- **Skeleton:**
+  1. Name the cohesion type and the coupling type — one line each.
+  2. **Point at specific lines.** *"`generateBill()` is a billing operation, a
+     different concern from `addBook()` and `issueBook()`"* — quote the method
+     names.
+  3. Say why the adjacent level is not it.
+  4. One line on how to fix it — split the class, or pass data instead.
+- **Earns the marks:** step 2. **An unsupported label earns almost nothing.**
+- **Trap:** the deck's own answer disagrees with standard theory on this snippet
+  — see subtopic 3, which carries both readings and which to write.
+
+**Never asked as:** `numerical`, `draw`, `explain`. Do not prepare a diagram for
+this topic.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything below is taught in full above. This is the compressed form.
+
+**The one line that answers B2(a):** *Cohesion is **within** a module — how
+strongly its own elements belong together. Coupling is **between** modules — how
+much they depend on each other. Good design maximises cohesion and minimises
+coupling.* **Intra- versus inter- is the mark.**
+
+| | Cohesion | Coupling |
+|---|---|---|
+| Scope | within one module | between modules |
+| Want it | **high** | **low** |
+| Levels | 7 | 6 |
+| Best | Functional | Data |
+| Worst | Coincidental | Content |
+
+**Cohesion, worst → best** — *"Cool Lemons Taste Pretty Cool, Says Fred."*
+**C**oincidental · **L**ogical · **T**emporal · **P**rocedural ·
+**C**ommunicational · **S**equential · **F**unctional
+
+**Coupling, worst → best** — *"Come Christmas Eve, Consider Stamping Data."*
+**C**ontent · **C**ommon · **E**xternal · **C**ontrol · **S**tamp · **D**ata
+
+**Two definitions that decide questions:**
+- **Tramp data** — data passed through a module that does not use it. It is what
+  separates **stamp** from **data** coupling.
+- **Logical vs coincidental** — logical elements are the *same category* of task;
+  coincidental ones have **no** conceptual relationship at all.
+
+**The deck's model answer** — high cohesion, low coupling in six lines:
+
+```java
+class Calculator {              // High cohesion: all methods are calculations
+    public int add(int a, int b)      { return a + b; }
+    public int multiply(int a, int b) { return a * b; }
+}
+class Display {                 // Low coupling: separate responsibility
+    public void showResult(int result) { System.out.println("Result: " + result); }
+}
+```
+
+`Calculator` does only mathematics (**functional cohesion**); `Display` only
+shows results. They share data and nothing else — **Display can be replaced
+without touching Calculator.**
+
+**Section 3's method**, in one line: name the cohesion type, name the coupling
+type, **quote the lines that prove each**, say what to do instead.
 
 ## Practice
 

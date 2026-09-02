@@ -197,3 +197,38 @@ diffing token sets against the previous commit:
 
 Remaining diff is 62 distinct tokens, all from the deleted Contents "why it's
 here" column. Descriptive fragments, no facts.
+
+## [2026-09-03] rebuild | pages reordered to teach top-down; Quick Reference demoted to a cram card
+
+User: keep Quick Reference and the rest at the end, and make the page readable
+from the top.
+
+**Reordering alone would not have worked.** The compression pass on 2026-09-02
+had moved facts INTO Quick Reference and made sections point at it ("say it
+once"). Measured, **eight pages had zero table rows in their material** -- every
+teaching section was a pointer. Read from the top with Quick Reference at the
+bottom, those pages taught nothing.
+
+**So the rule was reversed.** The teaching table now lives in its section; Quick
+Reference carries the compressed form -- names in order, the mnemonic, the
+formula, the one-line verdict, usually as an Ask/Answer grid. That is not
+duplication: a cram sheet is supposed to restate, and the two forms differ in
+density and in job.
+
+**New order on all 15 built pages:**
+  material -> How it's asked -> Quick Reference -> Practice -> Traps -> Sources
+
+**Result:** material now carries 18-74 table rows per page against a 5-17 row
+cram card. Before this pass, eight pages carried zero.
+
+**Content restored during the migration.** Writing the compressed cards by hand
+dropped material that had not been moved into any section -- caught by diffing
+token sets against the previous commit, not by reading. Restored: the 12 Agile
+Alliance principles, the three agile assumptions and six human factors, XP's
+four-activity table with the CRC and spike definitions, UML's authorship and the
+circle-in-circle final-node symbol, the DFD definition and the data
+dictionary/P-spec/decision-table grid, the program-vs-software term table, the
+LOC counting definition, the CAF 0.65-1.35 sanity band, the static estimation
+models with productivity and manning, Risk's definition and the "tomorrow's
+problems are today's risks" hook, the four maintenance types on waterfall, and
+the five-activity elicitation table with its techniques column.

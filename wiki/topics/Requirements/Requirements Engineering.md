@@ -33,56 +33,30 @@ last_practiced: null
 > agile framing, so its marks sit here rather than on [[Agile Development]].
 > One paper only; see [[weightage]].
 
-## How it's asked
+## 1 · What requirements engineering is
 
-Generic skeleton on [[answer-patterns]] §2. **2 of 80.**
-
-### Explain with reason — A3, 2 marks
-
-- **Spot it:** any question contrasting formal documentation with agile practice,
-  or asking why a document is or is not needed. The stem *"illustrate with
-  reason"* is this instructor's phrasing for explain.
-- **Skeleton, for a 2-marker — one reason per side plus the principle:**
-  1. **Why large projects need it:** it is a **contract and shared reference** —
-     many stakeholders, distributed teams, and the basis for acceptance testing.
-  2. **Why agile avoids it:** requirements are expected to change, so a frozen SRS
-     is stale immediately; the manifesto trades it for working software.
-  3. **The principle underneath both:** an SRS is worth its cost when
-     communication cannot happen face to face and scope must be fixed in advance.
-     **Agile removes both conditions.**
-- **Earns the marks:** step 3, and saying agile **replaces** the SRS with stories,
-  a backlog and an on-site customer rather than abandoning specification.
-- **Trap:** writing "Agile has no documentation." It has less, and different.
-  *"Working software **over** comprehensive documentation"* is a priority, not a
-  prohibition.
-
-### Compare — [[se-assign-1-2026]] Q7(a)
-
-Functional vs non-functional from a scenario. Table it, and note that a
-non-functional requirement must be **measurable** to be verifiable.
-
-**Never asked as:** `numerical`, `draw`, `scenario`.
-
-## Quick Reference
-
-> [!abstract] The three that carry this topic
-> - **Functional = what the system does. Non-functional = how well it does it.**
->   The single most-used distinction in the whole module.
-> - **A good requirement (and a good SRS) is: correct, unambiguous, complete,
->   consistent, verifiable, feasible, traceable, modifiable.** Eight adjectives;
->   the SRS list drops *feasible*.
-> - **The SRS is a contract.** That one word explains why large projects need it
->   and agile projects can skip it.
-
-**Requirement engineering** — the systematic process of defining, documenting and
-maintaining requirements, ensuring the software meets user needs, business goals
-and technical feasibility. The deck's alternative phrasing: *the disciplined
-application of proven principles, methods, tools and notations to describe a
-proposed system's intended behaviour and its associated constraints.*
+- **The problem:** customers rarely know what they want in a form you can build
+  from. They know their problem, know their frustrations, and will happily
+  describe a solution that would not work.
+- **The discipline:** convert that into statements precise enough to design
+  against and testable enough to verify — while accepting requirements keep
+  changing underneath you.
+- **The three discovery classes:** **known** — the customer can state it ·
+  **unknown** — they would state it if prompted · **undreamed** — they cannot
+  conceive it until they see the system. The last is the honest admission that
+  some needs cannot be elicited at all.
+- **Stakeholder** — anyone with direct or indirect influence on the system
+  requirements, spanning users and merely affected persons. The breadth matters:
+  excluding an affected party is how requirements end up incomplete.
+**Definition.** The systematic process of defining, documenting and maintaining
+requirements, ensuring the software meets user needs, business goals and technical
+feasibility. The deck's alternative phrasing: *the disciplined application of
+proven principles, methods, tools and notations to describe a proposed system's
+intended behaviour and its associated constraints.*
 
 **Objectives:** understand what the customer really needs · avoid
-miscommunication · give a clear unambiguous specification · serve as the basis
-for design, coding and testing · handle changing requirements systematically.
+miscommunication · give a clear unambiguous specification · serve as the basis for
+design, coding and testing · handle changing requirements systematically.
 
 **Characteristics of a good requirement**
 
@@ -97,6 +71,30 @@ for design, coding and testing · handle changing requirements systematically.
 | Traceable | linked to its origin |
 | Modifiable | easy to change if needed |
 
+**Challenges:** ambiguity · changing business needs · stakeholder conflicts ·
+communication gaps · over- or under-specification. The deck's *state of practice*
+list adds: requirements change · over-reliance on CASE tools · tight schedules ·
+communication barriers · market-driven development · lack of resources.
+- **Not examined directly.** The definition is a serviceable opening line for A3
+  or any requirements question.
+
+## 2 · Types of requirements
+
+- **Why the split exists:** "the system shall let a doctor view patient history"
+  and "the system shall respond within two seconds" are both requirements, but
+  they fail differently. **Miss the first and a feature is absent; miss the second
+  and every feature is present and the system is still rejected.** That is why
+  non-functional requirements get their own name — they are the ones teams forget
+  until acceptance testing.
+- **The core pair**, in the deck's words:
+  > **Functional** requirements describe *what the software has to do* — often
+  > called product features, usually expressed as input → process → output.
+  > **Non-functional** requirements are mostly *quality* requirements: they
+  > stipulate *how well* the software does what it has to do.
+- **User vs system requirements** — the other distinction the deck stresses: user
+  requirements are written *for users* and include both functional and
+  non-functional; system requirements are **derived from** them and written
+  formally. Both are parts of the SRS.
 **Types of requirements** — the deck lists ten; the first two carry the marks:
 
 | # | Type | Defines | Example |
@@ -124,9 +122,21 @@ requirements — users and affected persons.
 
 **Three types of interface** in an interface specification: procedural interfaces
 (APIs) · data structures · representation of data.
+- **Not examined here**, but functional vs non-functional is assumed by A3 and by
+  every modeling topic downstream, so it is not optional.
 
-### The SRS
+## 3 · The SRS
 
+- Everything before this is conversation; **the SRS is the moment it becomes
+  binding**.
+- It is simultaneously a blueprint for developers, a test basis for testers, a
+  scope boundary for managers and — critically — **a contract between customer and
+  developer**.
+- **That contractual role is the whole of A3:** it makes the SRS indispensable
+  when many people must agree, and dispensable when a handful of people can simply
+  talk to each other.
+
+**Terms and distinctions.** Purpose list, the good-SRS characteristics, IEEE
 **Definition.** A detailed written document describing what a software system
 should do and the constraints under which it must operate. It **bridges
 stakeholders and developers** and **may act as a contract** between developer and
@@ -159,59 +169,7 @@ practice* list adds: requirements change · over-reliance on CASE tools · tight
 schedules · communication barriers · market-driven development · lack of
 resources.
 
-## 1 · What requirements engineering is
-
-- **The problem:** customers rarely know what they want in a form you can build
-  from. They know their problem, know their frustrations, and will happily
-  describe a solution that would not work.
-- **The discipline:** convert that into statements precise enough to design
-  against and testable enough to verify — while accepting requirements keep
-  changing underneath you.
-- **The three discovery classes:** **known** — the customer can state it ·
-  **unknown** — they would state it if prompted · **undreamed** — they cannot
-  conceive it until they see the system. The last is the honest admission that
-  some needs cannot be elicited at all.
-- **Stakeholder** — anyone with direct or indirect influence on the system
-  requirements, spanning users and merely affected persons. The breadth matters:
-  excluding an affected party is how requirements end up incomplete.
-- Definitions, objectives and challenge lists: Quick Reference.
-- **Not examined directly.** The definition is a serviceable opening line for A3
-  or any requirements question.
-
-## 2 · Types of requirements
-
-- **Why the split exists:** "the system shall let a doctor view patient history"
-  and "the system shall respond within two seconds" are both requirements, but
-  they fail differently. **Miss the first and a feature is absent; miss the second
-  and every feature is present and the system is still rejected.** That is why
-  non-functional requirements get their own name — they are the ones teams forget
-  until acceptance testing.
-- **The core pair**, in the deck's words:
-  > **Functional** requirements describe *what the software has to do* — often
-  > called product features, usually expressed as input → process → output.
-  > **Non-functional** requirements are mostly *quality* requirements: they
-  > stipulate *how well* the software does what it has to do.
-- **User vs system requirements** — the other distinction the deck stresses: user
-  requirements are written *for users* and include both functional and
-  non-functional; system requirements are **derived from** them and written
-  formally. Both are parts of the SRS.
-- All ten types with examples, and the users/developers split: Quick Reference.
-- **Not examined here**, but functional vs non-functional is assumed by A3 and by
-  every modeling topic downstream, so it is not optional.
-
-## 3 · The SRS
-
-- Everything before this is conversation; **the SRS is the moment it becomes
-  binding**.
-- It is simultaneously a blueprint for developers, a test basis for testers, a
-  scope boundary for managers and — critically — **a contract between customer and
-  developer**.
-- **That contractual role is the whole of A3:** it makes the SRS indispensable
-  when many people must agree, and dispensable when a handful of people can simply
-  talk to each other.
-
-**Terms and distinctions.** Purpose list, the good-SRS characteristics, IEEE
-830 structure, benefits by audience and common mistakes: Quick Reference. The deck
+The deck
 also carries a **full worked SRS for a Hospital Management System** (purpose,
 scope, definitions, references, overview, product perspective, features, user
 classes admin/doctor/patient, operating environment, design constraints) — worth
@@ -255,6 +213,64 @@ both conditions.**
 
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`.)*
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §2. **2 of 80.**
+
+### Explain with reason — A3, 2 marks
+
+- **Spot it:** any question contrasting formal documentation with agile practice,
+  or asking why a document is or is not needed. The stem *"illustrate with
+  reason"* is this instructor's phrasing for explain.
+- **Skeleton, for a 2-marker — one reason per side plus the principle:**
+  1. **Why large projects need it:** it is a **contract and shared reference** —
+     many stakeholders, distributed teams, and the basis for acceptance testing.
+  2. **Why agile avoids it:** requirements are expected to change, so a frozen SRS
+     is stale immediately; the manifesto trades it for working software.
+  3. **The principle underneath both:** an SRS is worth its cost when
+     communication cannot happen face to face and scope must be fixed in advance.
+     **Agile removes both conditions.**
+- **Earns the marks:** step 3, and saying agile **replaces** the SRS with stories,
+  a backlog and an on-site customer rather than abandoning specification.
+- **Trap:** writing "Agile has no documentation." It has less, and different.
+  *"Working software **over** comprehensive documentation"* is a priority, not a
+  prohibition.
+
+### Compare — [[se-assign-1-2026]] Q7(a)
+
+Functional vs non-functional from a scenario. Table it, and note that a
+non-functional requirement must be **measurable** to be verifiable.
+
+**Never asked as:** `numerical`, `draw`, `scenario`.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above. This is the compressed form.
+
+**The three that carry the topic**
+- **Functional = what the system does. Non-functional = how well.** The most-used
+  distinction in the module.
+- **A good requirement is:** correct · unambiguous · complete · consistent ·
+  verifiable · feasible · traceable · modifiable. *(The SRS list drops feasible.)*
+- **The SRS is a contract.** That word explains why large projects need it and
+  agile can skip it.
+
+| Ask | Answer |
+|---|---|
+| IEEE 830's four sections | introduction · overall description · specific requirements · appendices |
+| Ten requirement types | functional · non-functional · domain · user · system · business · regulatory · interface · transition · stakeholder |
+| NFRs for users | availability · reliability · usability · flexibility |
+| NFRs for developers | maintainability · portability · testability |
+| Three discovery classes | known · unknown · **undreamed** |
+| Stakeholder | anyone with direct or indirect influence on requirements |
+| Three interface types | procedural interfaces (APIs) · data structures · representation of data |
+
+**A3 in one line:** the SRS is a **contract and shared reference** — essential
+when many must agree and scope must be fixed; agile has a small co-located team,
+an on-site customer and changing requirements, so it **replaces** it with stories
+and a backlog rather than abandoning specification.
 
 ## Practice
 

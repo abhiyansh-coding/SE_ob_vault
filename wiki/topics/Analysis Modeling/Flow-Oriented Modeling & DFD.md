@@ -32,65 +32,23 @@ last_practiced: null
 > specific topic as the one whose zero is least trustworthy. Lectures 19 and 21
 > is *syllabus depth*; rule 3 forbids reading it as marks.
 
-## How it's asked
+## 1 · What a DFD is, and its notation
 
-Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — three
-assignment questions ([[se-assign-1-2026]] Q5(a), Q5(b), Q15).**
+**Definition.** A Data Flow Diagram provides a **visual representation of the flow
+of information within a system** — what information is provided by and delivered
+to it, where it comes from and goes to, and where it is stored.
 
-> [!warning] DFD deserves specific suspicion for the Mid-Term
-> It scored zero on an End Term whose drawing question went to UML instead — but
-> it has **two full lectures, a dedicated deck, and three of the assignment's
-> fifteen questions**. A 30-mark paper drawn from 32 lectures is exactly where a
-> DFD question fits. Rule 2 says it earned nothing; rule 1 and the coursework say
-> prepare it. Both are stated, per rule 7.
+- **Draw the system as plumbing.** Data enters from outside, passes through
+  processes that transform it, sometimes rests in a store, and eventually leaves.
+- **Four symbols, no more** — which is why the deck notes no technical knowledge
+  is needed to read one.
+- **The discipline is in what a DFD deliberately cannot express:** no decisions,
+  no loops, no sequence. It answers *what data goes where*, never *in what order*
+  or *under what condition*.
+- **Drawing a flowchart with DFD symbols is the standard mistake.**
 
-### Draw & label — the archetype to prepare
-
-- **Spot it:** *"Develop the Level-0 (Context Diagram)"* · *"Construct the Level-1
-  DFD showing processes, external entities, data stores and data flows."* The
-  question usually asks for **both levels**, and the pair is the point.
-- **Skeleton:**
-  1. **Legend** — circle = process, rectangle = external entity, open-ended pair
-     of lines = data store, named arrow = flow. **State the convention** (Yourdon
-     vs Gane-Sarson); the deck's wins.
-  2. **Context diagram:** exactly **one** bubble numbered 0, the external entities
-     around it, **and no data stores** — that omission is the most-penalised DFD
-     error.
-  3. **Level 1:** numbered processes 1.0, 2.0…, the data stores added, every flow
-     named.
-  4. **Reading**, including the validity rule: **levelling balance** — every flow
-     crossing the parent's boundary crosses the child's, unchanged in name.
-- **Earns the marks:** labelled arrows and the balance check. **Say in words that
-  you checked balance** — it demonstrates you know the rule exists.
-- **Trap:** drawing a flowchart with DFD symbols. **A DFD has no decisions, no
-  loops and no sequence** — it says what data goes where, never in what order.
-
-**Never asked as:** `numerical`, `compare`, `scenario`. An `explain` on the data
-dictionary or decision tables is plausible and unasked.
-**Also worth knowing:**
-- **The notation legend earns marks on its own.** State it before drawing, always.
-- *"A data dictionary contains metadata, i.e. data about the data"* is quotable
-  as-is for a 2-marker.
-- **Decision tables are examined machinery elsewhere.** They reappear as
-  decision-table-based testing on [[Black-Box Testing]] (lecture 37), so the
-  notation learned here is reused there.
-
-## Quick Reference
-
-> [!abstract] The three that carry this topic
-> - **A context diagram has exactly ONE process** — the whole system — plus its
->   external entities. It is Level 0.
-> - **Levelling balance:** a child diagram must consume and produce exactly the
->   flows its parent bubble does. This is the rule that makes a DFD checkable.
-> - **A DFD shows data flow, not control flow.** No decisions, no loops, no
->   sequence. That is the single most common misconception.
-
-**Definition.** A Data Flow Diagram provides a visual representation of the flow
-of information within a system — what information is provided by and delivered to
-each participant, what is needed to complete each process, and what needs to be
-stored and accessed.
-
-### Notation legend — state this before you draw
+**Legend.** The full symbol table, with both the Yourdon and Gane-Sarson
+conventions:
 
 | Element | Yourdon / DeMarco | Gane-Sarson | Means |
 |---|---|---|---|
@@ -108,73 +66,7 @@ that mark answers:
   missing its right edge) — not as a closed box, which would make it look like an
   entity.
 
-### The levels
-
-| Level | Also called | Contains |
-|---|---|---|
-| **0** | **context diagram** | **exactly one process** (the whole system) + all external entities + the flows between them. No data stores. |
-| **1** | | the context process decomposed into its major processes, now with data stores |
-| **2+** | | any level-1 process decomposed further |
-
-**Benefits of a context diagram**, from the deck: it shows the boundaries of the
-system at a glance · needs no technical knowledge to read, because the notation
-is so limited · is simple to draw, amend and elaborate.
-
-### Levelling balance
-
-> A child diagram must have **exactly the same** net inputs and outputs as the
-> parent bubble it decomposes.
-
-If the context diagram shows an `Order` entering the system and a `Bill` leaving,
-the level-1 diagram must show the same `Order` entering and the same `Bill`
-leaving — no more, no fewer. This is what stops a model quietly inventing data,
-and it is the property a marker checks first.
-
-### Process numbering
-
-Context process is **0**. Its children are **1, 2, 3…**. Children of process 2 are
-**2.1, 2.2, 2.3…**. The number says which level a bubble belongs to.
-
-### Companion notations
-
-| Notation | Purpose |
-|---|---|
-| **Data dictionary** | a repository storing information about **all data items defined in the DFD** — metadata, i.e. data about the data. It is what stops two readers interpreting the same flow name differently. |
-| **Process specification** (P-spec) | describes the logic inside a bubble that is not decomposed further |
-| **Control flow model** | the counterpart showing events and control rather than data |
-| **Decision table** | represents complex processing logic in matrix form: upper rows are **conditions**, lower rows are **actions**, and each **column is a rule** — if the condition holds, the corresponding action executes |
-| **State transition diagram** | shows how an object changes state as actions are performed on it |
-
-**How the sections connect:**
-
-```mermaid
-graph TD
-    S1["1 · Notation<br/>0 marks"]
-    S2["2 · Levels & balance<br/>0 marks"]
-    S3["3 · Worked example<br/>0 marks"]
-    S4["4 · Dictionary & spec<br/>0 marks"]
-    S5["5 · Decision tables & STDs<br/>0 marks"]
-
-    S1 -->|"four symbols. but a whole system<br/>will not fit on one page"| S2
-    S2 -->|"the rule is only convincing<br/>when you see it hold"| S3
-    S3 -->|"the arrows carry names,<br/>and a name is not a definition"| S4
-    S4 -->|"some logic is neither flow<br/>nor definition — it is state"| S5
-    S5 -.->|"and all of it decomposes the<br/>same system, one lens at a time"| S1
-```
-
-## 1 · What a DFD is, and its notation
-
-- **Draw the system as plumbing.** Data enters from outside, passes through
-  processes that transform it, sometimes rests in a store, and eventually leaves.
-- **Four symbols, no more** — which is why the deck notes no technical knowledge
-  is needed to read one.
-- **The discipline is in what a DFD deliberately cannot express:** no decisions,
-  no loops, no sequence. It answers *what data goes where*, never *in what order*
-  or *under what condition*.
-- **Drawing a flowchart with DFD symbols is the standard mistake.**
-
-**Legend.** The full symbol table, with both the Yourdon and Gane-Sarson
-conventions, is in Quick Reference. The deck uses **circles for processes**.
+**The deck uses circles for processes** — Yourdon/DeMarco.
 
 **Terms and distinctions.**
 
@@ -197,7 +89,34 @@ conventions, is in Quick Reference. The deck uses **circles for processes**.
 - **That check is why DFDs are worth drawing at all.**
 
 **Terms and distinctions.** The level table, the balance rule, the numbering
-scheme and the context-diagram benefits are all in Quick Reference.
+scheme:
+
+**The levels**
+
+| Level | Also called | Contains |
+|---|---|---|
+| **0** | **context diagram** | **exactly one process** (the whole system) + all external entities + the flows between them. No data stores. |
+| **1** | | the context process decomposed into its major processes, now with data stores |
+| **2+** | | any level-1 process decomposed further |
+
+**Benefits of a context diagram**, from the deck: it shows the boundaries of the
+system at a glance · needs no technical knowledge to read, because the notation
+is so limited · is simple to draw, amend and elaborate.
+
+**Levelling balance**
+
+> A child diagram must have **exactly the same** net inputs and outputs as the
+> parent bubble it decomposes.
+
+If the context diagram shows an `Order` entering the system and a `Bill` leaving,
+the level-1 diagram must show the same `Order` entering and the same `Bill`
+leaving — no more, no fewer. This is what stops a model quietly inventing data,
+and it is the property a marker checks first.
+
+**Process numbering**
+
+Context process is **0**. Its children are **1, 2, 3…**. Children of process 2 are
+**2.1, 2.2, 2.3…**. The number says which level a bubble belongs to.
 
 The context diagram's defining properties, worth stating exactly: **exactly one
 process node**, representing the functions of the complete system in terms of how
@@ -291,6 +210,14 @@ are exactly those on the context diagram. **Balanced.**
 
 ## 4 · Data dictionary, process specification and control flow
 
+| Notation | Purpose |
+|---|---|
+| **Data dictionary** | a repository storing information about **all data items defined in the DFD** — metadata, i.e. data about the data. It is what stops two readers interpreting the same flow name differently. |
+| **Process specification** (P-spec) | describes the logic inside a bubble that is not decomposed further |
+| **Control flow model** | the counterpart showing events and control rather than data |
+| **Decision table** | represents complex processing logic in matrix form: upper rows are **conditions**, lower rows are **actions**, and each **column is a rule** — if the condition holds, the corresponding action executes |
+| **State transition diagram** | shows how an object changes state as actions are performed on it |
+
 - **A DFD's arrows carry names, and a name is not a definition.** If one arrow
   says `Order details`, two readers imagine different things unless something pins
   it down.
@@ -348,6 +275,75 @@ succeeds (Friends) or fails (Declined) — and from Declined a further request m
 be sent, which is the loop the case study specifies. Blocking is reachable from
 any state. **The rule it must satisfy:** every transition is labelled with the
 event that causes it, and every state is reachable.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — three
+assignment questions ([[se-assign-1-2026]] Q5(a), Q5(b), Q15).**
+
+> [!warning] DFD deserves specific suspicion for the Mid-Term
+> It scored zero on an End Term whose drawing question went to UML instead — but
+> it has **two full lectures, a dedicated deck, and three of the assignment's
+> fifteen questions**. A 30-mark paper drawn from 32 lectures is exactly where a
+> DFD question fits. Rule 2 says it earned nothing; rule 1 and the coursework say
+> prepare it. Both are stated, per rule 7.
+
+### Draw & label — the archetype to prepare
+
+- **Spot it:** *"Develop the Level-0 (Context Diagram)"* · *"Construct the Level-1
+  DFD showing processes, external entities, data stores and data flows."* The
+  question usually asks for **both levels**, and the pair is the point.
+- **Skeleton:**
+  1. **Legend** — circle = process, rectangle = external entity, open-ended pair
+     of lines = data store, named arrow = flow. **State the convention** (Yourdon
+     vs Gane-Sarson); the deck's wins.
+  2. **Context diagram:** exactly **one** bubble numbered 0, the external entities
+     around it, **and no data stores** — that omission is the most-penalised DFD
+     error.
+  3. **Level 1:** numbered processes 1.0, 2.0…, the data stores added, every flow
+     named.
+  4. **Reading**, including the validity rule: **levelling balance** — every flow
+     crossing the parent's boundary crosses the child's, unchanged in name.
+- **Earns the marks:** labelled arrows and the balance check. **Say in words that
+  you checked balance** — it demonstrates you know the rule exists.
+- **Trap:** drawing a flowchart with DFD symbols. **A DFD has no decisions, no
+  loops and no sequence** — it says what data goes where, never in what order.
+
+**Never asked as:** `numerical`, `compare`, `scenario`. An `explain` on the data
+dictionary or decision tables is plausible and unasked.
+**Also worth knowing:**
+- **The notation legend earns marks on its own.** State it before drawing, always.
+- *"A data dictionary contains metadata, i.e. data about the data"* is quotable
+  as-is for a 2-marker.
+- **Decision tables are examined machinery elsewhere.** They reappear as
+  decision-table-based testing on [[Black-Box Testing]] (lecture 37), so the
+  notation learned here is reused there.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+**Four symbols, and no more:** circle = process · rectangle = external entity ·
+open-ended pair of lines = data store · named arrow = data flow.
+**State the convention before drawing** — Yourdon/DeMarco (circles, the deck's)
+or Gane-Sarson (rounded rectangles).
+
+| Ask | Answer |
+|---|---|
+| Level 0 / context | **one** bubble, numbered 0, externals around it, **no data stores** |
+| Level 1 | processes 1.0, 2.0…, data stores added, every flow named |
+| Levelling balance | every flow crossing the parent's boundary crosses the child's, **unchanged in name** |
+| Numbering | children of process 2.0 are 2.1, 2.2, 2.3 |
+| A DFD cannot show | decisions · loops · sequence |
+| Data dictionary | metadata — *data about the data* |
+| Process specification | the logic of a process not decomposed further |
+| Decision table | conditions above, actions below, **each column a rule** |
+
+**The most-penalised error:** data stores in the context diagram. There are none.
+
+**The second:** drawing a flowchart with DFD symbols. A DFD says *what data goes
+where*, never *in what order*.
 
 ## Practice
 

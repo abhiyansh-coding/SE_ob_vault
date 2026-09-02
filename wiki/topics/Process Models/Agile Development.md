@@ -35,6 +35,222 @@ last_practiced: null
 > form has never been examined. Both are worked in the Question Bank. If this
 > topic is ever examined numerically, that is what it will look like.
 
+## 1 · The Agile manifesto and its trade-offs
+
+**The 12 Agile Alliance principles** (Pressman ch. 4 deck) — the four values made
+operational. Condensed, in order: satisfy the customer through **early and
+continuous delivery** · **welcome changing requirements**, even late · deliver
+working software **frequently** (weeks, not months) · business people and
+developers work together **daily** · build projects around **motivated
+individuals** and trust them · **face-to-face conversation** is the most efficient
+method · **working software is the primary measure of progress** · sustainable
+development at a **constant pace** indefinitely · continuous attention to
+**technical excellence** · **simplicity** — maximising the work *not* done ·
+the best architectures emerge from **self-organizing teams** · the team
+**reflects and adjusts** at regular intervals.
+
+**The three assumptions every agile process addresses** (deck, §4.2):
+1. It is **difficult to predict** which requirements will persist and how customer
+   priorities will change.
+2. For many types of software, **design and construction are interleaved** — both
+   performed in tandem so models are proven as they are created.
+3. Analysis, design, construction and testing are **not as predictable** as we
+   would like, from a planning point of view.
+
+**The six human factors** an agile team needs (deck, §4.2.2): **competence** ·
+**common focus** · **collaboration** · **decision-making ability** · **fuzzy
+problem-solving ability** · **mutual trust and respect** · **self-organization**.
+The key point: *the process molds to the needs of the people and team*, not the
+other way around.
+
+- **Agile is not "less process".** It is a bet that where requirements change,
+  the cost of *predicting* exceeds the cost of *adapting*. It inverts four
+  priorities — not abolishing the right-hand side of each pair, but demoting it.
+- **The classic misreading:** "working solutions over detailed documentation"
+  does *not* mean no documentation. It means documentation that does not help
+  ship working software is waste.
+**The four values, which are the whole thing.**
+Each is "**A over B**" — B still has value, A has *more*.
+- **People over processes**
+- **Working solutions over detailed documentation**
+- **Customer collaboration over rigid contracts**
+- **Adapting to change over following a strict plan**
+
+**Benefits:** faster time to market · better stakeholder involvement · increased
+team productivity.
+
+**Disadvantages** — the deck's own table, and the likelier exam target because
+students only revise the benefits:
+
+| Challenge | Impact |
+|---|---|
+| Unclear scope and timelines | hard to predict deadlines and costs |
+| High stakeholder involvement | burnout and decision fatigue |
+| Risk of lost details | less documentation may lose information |
+| Harder to scale for large teams | coordination becomes complex |
+| Team discipline needed | self-managing teams may lack focus |
+
+**Agile vs traditional:** waterfall is strict and sequential and suits **stable
+requirements**; agile breaks work into repeatable phases, involves the customer
+throughout, and suits **fast-changing** projects where adaptability and speed
+matter.
+- **The framing worth carrying:** waterfall suits **stable** requirements, agile
+  suits **fast-changing** ones — the same requirement-stability question that
+  decides every model on [[Conventional Process Models]] and
+  [[Evolutionary Process Models]].
+- **Never examined here.** [[se-ete-2025-26]] Q A3 asks why an SRS is required in
+  large projects but often avoided in Agile — the *answer* is agile's second
+  value, but the marks sit on [[Requirements Engineering]].
+
+## 2 · Scrum
+
+- **What it adds:** agile's values do not tell anyone what to do on Monday. Scrum
+  does — a small self-organising team pulls a slice from a prioritised list,
+  commits to finishing it inside a fixed time box, meets briefly daily, shows the
+  result at the end.
+- **The time box is the trick.** It is never extended, so when work does not fit,
+  **scope gives rather than the date**. That single rule is what makes agile
+  plannable.
+| | |
+|---|---|
+| Created by | Jeff Sutherland and Ken Schwaber |
+| Principles | transparency · reflection · adaptation |
+| Values (5) | commitment · courage · focus · openness · respect |
+| Sprint length | a time-boxed period, typically **30 days** |
+| Team size | the **two-pizza rule** — small enough to share two pizzas |
+
+| Artifact | What it is |
+|---|---|
+| Product Backlog | dynamic prioritised list of **everything** needed; owned and reprioritised by the Product Owner |
+| Sprint Backlog | the slice chosen for the current sprint; may evolve during it |
+| Increment | the **usable** end product of a sprint — not a demo, not a branch |
+
+| Role | Responsible for |
+|---|---|
+| Product Owner | defines stories, prioritises the backlog, decides release timing |
+| Scrum leader / Master | sets up the team and sprint meetings, removes obstacles — **not a manager** |
+| Development Team | self-organising, cross-functional; plans and estimates its own sprint work |
+
+**Events:** Sprint Planning · Sprint (the work period) · Daily Scrum / stand-up ·
+Sprint Review · Sprint Retrospective. Deliberately short — the deck notes
+stand-ups are "sometimes conducted without chairs".
+
+**Scrum's four process patterns** (Pressman ch. 4 deck, Figure 4.3) — the wording
+that answers "how does the sprint contribute?":
+
+| Pattern | What it is |
+|---|---|
+| **Backlog** | prioritised list of requirements or features providing business value; items can be added **at any time** — this is how change is introduced |
+| **Sprints** | work units achieving a backlog requirement within a **predefined time-box (typically 30 days)**. During the sprint the backlog items it addresses are **frozen** — changes are not introduced — so "the sprint allows team members to work in a **short-term, but stable environment**" |
+| **Scrum meetings** | 15-minute daily meetings answering three questions: *What did you do since the last meeting? What obstacles are you encountering? What do you plan to accomplish by the next meeting?* Led by the Scrum master; produce "knowledge socialization" |
+| **Demos** | deliver the increment to the customer for evaluation. **May not contain all planned functionality** — only what fit the time-box |
+
+**Where change is absorbed:** *between* sprints, never inside one. That is how
+agile stays adaptive without becoming chaotic, and it is the answer to any "why
+is the sprint valuable" question.
+
+- The
+  Product-vs-Sprint Backlog distinction and "the Increment is usable" are the two
+  points that make an answer look informed.
+- **Never examined.** Most plausible form: a 2-marker on roles or artifacts — the
+  3-and-3 grid answers both. Sprint ≈ 30 days; Sutherland and Schwaber.
+
+## 3 · Extreme Programming
+
+The most specific agile framework on engineering practice. Four activities:
+
+| Activity | Practices |
+|---|---|
+| Planning | **user stories** on index cards, written by the customer; team assigns a cost to each; stories grouped into a deliverable increment; **project velocity** sets later delivery dates |
+| Design | KIS (keep it simple) · **CRC cards** (Class-Responsibility-Collaborator) · **spike solutions** for hard problems · **refactoring** |
+| Coding | write the **unit test before the code** · **pair programming** |
+| Testing | all unit tests run daily · **acceptance tests** defined by the customer |
+
+- **User story** — a simple, informal statement of a needed function, written by
+  the customer on an index card. Similar to a use case.
+- **Spike** — a very simple program built to explore whether a proposed solution
+  is suitable. Similar to a prototype.
+- **Project velocity** — measured after the first increment, then used to set
+  delivery dates for the rest. The link into the planning arithmetic below.
+
+- **The contrast with Scrum:** Scrum organises people and says nothing about the
+  code. XP is opinionated about engineering practice, and takes each practice to
+  an "extreme" — if code review is good, review continuously (**pair
+  programming**); if testing is good, test before there is anything to test
+  (**unit test first**); if simple design is good, never build for a future you
+  cannot see and restructure continuously (**refactoring**).
+- Four activities, their practices, and the definitions of *user story*, *spike*,
+  
+- **Never examined.** If it appears, **pair programming** and **test-before-code**
+  are the practices worth naming first.
+
+## 4 · The other agile models
+
+- **Each answers a different worry:** ASD worries about risk and learning · DSDM
+  about deadlines, and fixes them absolutely · FDD about losing track of what the
+  product does, so it organises around features · Crystal about **people**, and
+  uniquely grades its own ceremony by how much harm failure would cause.
+- Picking between them is picking which of those worries is yours.
+| Model | Proposed by | Distinguishing feature |
+|---|---|---|
+| **ASD** — Adaptive Software Development | Jim Highsmith | three phases: **speculation → collaboration → learning**; mission-driven planning, time-boxing, explicit risk consideration |
+| **DSDM** — Dynamic Systems Development Method | — | **timeboxing** with firm deadlines; deliver business benefit early and often |
+| **FDD** — Feature Driven Development | — | five iterative activities, organised around **features** |
+| **Crystal** | Cockburn and Highsmith | **colour-coded by risk to human life** (Crystal Clear → Crystal Sapphire); six aspects — people, interaction, community, communication, skills, talents; process is secondary |
+| **Agile Modeling (AM)** | — | values, principles and practices for effective modeling |
+| **Kanban** | — | named by the deck, not developed |
+
+- **"Speculation" rather than "planning"** in ASD is deliberate — it admits the
+  plan is a guess. Adaptive cycle planning uses the mission statement, project
+  constraints and basic requirements to produce a time-boxed release plan.
+- **Crystal Clear** = a six-developer project in one room; **Crystal Sapphire** =
+  where lives are at stake.
+- **Never examined.** One distinguishing feature each is the right depth — do not
+  learn these to the depth of Scrum or XP. **Crystal's colour-coding by risk to
+  human life** is the most memorable single fact here.
+
+## 5 · Agile planning arithmetic
+
+- **The objection agile always faces** is "so when will it be done?" The answer is
+  velocity: measure how many story points the team actually completed last
+  iteration, divide the remaining work by it, get a number of iterations.
+- **Because velocity is measured rather than promised, it is honest** — and
+  because it is a range, the answer is a range. Multiply iterations by burn rate
+  and you have a cost.
+
+| Symbol | Meaning | Units |
+|---|---|---|
+| *P* | total story points (or ideal days) in the release | points |
+| *V* | velocity — points completed per iteration | points/iteration |
+| *N* | number of iterations | iterations, **always rounded up** |
+| *L* | iteration length | weeks |
+| *C* | cost per iteration | currency |
+
+$$N = \lceil P / V \rceil \qquad \text{Duration} = N \times L \qquad \text{Cost} = N \times C$$
+
+**Sprint capacity**, per team member: **capacity = days available × hours per
+day**, summed across the team. Where hours/day is a range, team capacity is a
+range too.
+
+**How the sections connect:**
+
+```mermaid
+graph TD
+    S1["1 · Manifesto &<br/>trade-offs · 0 marks"]
+    S2["2 · Scrum<br/>0 marks"]
+    S3["3 · Extreme Programming<br/>0 marks"]
+    S4["4 · Other models<br/>0 marks"]
+    S5["5 · Planning arithmetic<br/>0 marks · 2 deck numericals"]
+
+    S1 -->|"values are not a process.<br/>who does what, when?"| S2
+    S2 -->|"Scrum manages the team.<br/>it says nothing about the code"| S3
+    S3 -->|"two answers exist. there are<br/>six more, each for a different fear"| S4
+    S4 -->|"whichever you pick, someone<br/>still asks: how long, how much?"| S5
+    S5 -.->|"and the answer is a range,<br/>because change is assumed"| S1
+```
+- **Solved questions:** both worked in full in the Question Bank — they are the
+  drill for this page.
+
 ## How it's asked
 
 **Zero marks on the one paper — and five of the assignment's fifteen questions.**
@@ -74,237 +290,39 @@ turns on agile's second value, its marks sit on [[Requirements Engineering]].
 
 ## Quick Reference
 
-> [!abstract] The four values, which are the whole thing
-> Each is "**A over B**" — B still has value, A has *more*.
-> - **People over processes**
-> - **Working solutions over detailed documentation**
-> - **Customer collaboration over rigid contracts**
-> - **Adapting to change over following a strict plan**
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above. This is the compressed form.
 
-**Benefits:** faster time to market · better stakeholder involvement · increased
-team productivity.
+**The four values** — each is *A over B*; B still has value, A has more.
+People over processes · working solutions over detailed documentation · customer
+collaboration over rigid contracts · adapting to change over following a plan.
 
-**Disadvantages** — the deck's own table, and the likelier exam target because
-students only revise the benefits:
-
-| Challenge | Impact |
+| Ask | Answer |
 |---|---|
-| Unclear scope and timelines | hard to predict deadlines and costs |
-| High stakeholder involvement | burnout and decision fatigue |
-| Risk of lost details | less documentation may lose information |
-| Harder to scale for large teams | coordination becomes complex |
-| Team discipline needed | self-managing teams may lack focus |
+| Eight models | Scrum · FDD · ASD · DSDM · XP · Crystal · Agile Modeling · Kanban |
+| Scrum's creators | Jeff Sutherland and Ken Schwaber |
+| Sprint length | time-boxed, typically **30 days** |
+| Three artifacts | Product Backlog · Sprint Backlog · Increment |
+| Three roles | Product Owner · Scrum leader/Master · Development Team |
+| Five events | Sprint Planning · Sprint · Daily Scrum · Review · Retrospective |
+| XP's four activities | planning · design · coding · testing |
+| XP's memorable four | user stories · pair programming · test-before-code · refactoring |
+| ASD's three phases | speculation → collaboration → learning |
+| Crystal's quirk | colour-coded by **risk to human life** |
+| Team size | the two-pizza rule |
 
-**Agile vs traditional:** waterfall is strict and sequential and suits **stable
-requirements**; agile breaks work into repeatable phases, involves the customer
-throughout, and suits **fast-changing** projects where adaptability and speed
-matter.
-
-**The eight models the deck names:** Scrum · FDD · ASD · DSDM · XP · Crystal ·
-Agile Modeling (AM) · Kanban.
-
-**The 12 Agile Alliance principles** (Pressman ch. 4 deck) — the four values made
-operational. Condensed, in order: satisfy the customer through **early and
-continuous delivery** · **welcome changing requirements**, even late · deliver
-working software **frequently** (weeks, not months) · business people and
-developers work together **daily** · build projects around **motivated
-individuals** and trust them · **face-to-face conversation** is the most efficient
-method · **working software is the primary measure of progress** · sustainable
-development at a **constant pace** indefinitely · continuous attention to
-**technical excellence** · **simplicity** — maximising the work *not* done ·
-the best architectures emerge from **self-organizing teams** · the team
-**reflects and adjusts** at regular intervals.
-
-**The three assumptions every agile process addresses** (deck, §4.2):
-1. It is **difficult to predict** which requirements will persist and how customer
-   priorities will change.
-2. For many types of software, **design and construction are interleaved** — both
-   performed in tandem so models are proven as they are created.
-3. Analysis, design, construction and testing are **not as predictable** as we
-   would like, from a planning point of view.
-
-**The six human factors** an agile team needs (deck, §4.2.2): **competence** ·
-**common focus** · **collaboration** · **decision-making ability** · **fuzzy
-problem-solving ability** · **mutual trust and respect** · **self-organization**.
-The key point: *the process molds to the needs of the people and team*, not the
-other way around.
-
-### Scrum
-
-| | |
-|---|---|
-| Created by | Jeff Sutherland and Ken Schwaber |
-| Principles | transparency · reflection · adaptation |
-| Values (5) | commitment · courage · focus · openness · respect |
-| Sprint length | a time-boxed period, typically **30 days** |
-| Team size | the **two-pizza rule** — small enough to share two pizzas |
-
-| Artifact | What it is |
-|---|---|
-| Product Backlog | dynamic prioritised list of **everything** needed; owned and reprioritised by the Product Owner |
-| Sprint Backlog | the slice chosen for the current sprint; may evolve during it |
-| Increment | the **usable** end product of a sprint — not a demo, not a branch |
-
-| Role | Responsible for |
-|---|---|
-| Product Owner | defines stories, prioritises the backlog, decides release timing |
-| Scrum leader / Master | sets up the team and sprint meetings, removes obstacles — **not a manager** |
-| Development Team | self-organising, cross-functional; plans and estimates its own sprint work |
-
-**Events:** Sprint Planning · Sprint (the work period) · Daily Scrum / stand-up ·
-Sprint Review · Sprint Retrospective. Deliberately short — the deck notes
-stand-ups are "sometimes conducted without chairs".
-
-**Scrum's four process patterns** (Pressman ch. 4 deck, Figure 4.3) — the wording
-that answers "how does the sprint contribute?":
-
-| Pattern | What it is |
-|---|---|
-| **Backlog** | prioritised list of requirements or features providing business value; items can be added **at any time** — this is how change is introduced |
-| **Sprints** | work units achieving a backlog requirement within a **predefined time-box (typically 30 days)**. During the sprint the backlog items it addresses are **frozen** — changes are not introduced — so "the sprint allows team members to work in a **short-term, but stable environment**" |
-| **Scrum meetings** | 15-minute daily meetings answering three questions: *What did you do since the last meeting? What obstacles are you encountering? What do you plan to accomplish by the next meeting?* Led by the Scrum master; produce "knowledge socialization" |
-| **Demos** | deliver the increment to the customer for evaluation. **May not contain all planned functionality** — only what fit the time-box |
-
-**Where change is absorbed:** *between* sprints, never inside one. That is how
-agile stays adaptive without becoming chaotic, and it is the answer to any "why
-is the sprint valuable" question.
-
-### Extreme Programming (XP)
-
-The most specific agile framework on engineering practice. Four activities:
-
-| Activity | Practices |
-|---|---|
-| Planning | **user stories** on index cards, written by the customer; team assigns a cost to each; stories grouped into a deliverable increment; **project velocity** sets later delivery dates |
-| Design | KIS (keep it simple) · **CRC cards** (Class-Responsibility-Collaborator) · **spike solutions** for hard problems · **refactoring** |
-| Coding | write the **unit test before the code** · **pair programming** |
-| Testing | all unit tests run daily · **acceptance tests** defined by the customer |
-
-- **User story** — a simple, informal statement of a needed function, written by
-  the customer on an index card. Similar to a use case.
-- **Spike** — a very simple program built to explore whether a proposed solution
-  is suitable. Similar to a prototype.
-- **Project velocity** — measured after the first increment, then used to set
-  delivery dates for the rest. The link into the planning arithmetic below.
-
-### The other models
-
-| Model | Proposed by | Distinguishing feature |
-|---|---|---|
-| **ASD** — Adaptive Software Development | Jim Highsmith | three phases: **speculation → collaboration → learning**; mission-driven planning, time-boxing, explicit risk consideration |
-| **DSDM** — Dynamic Systems Development Method | — | **timeboxing** with firm deadlines; deliver business benefit early and often |
-| **FDD** — Feature Driven Development | — | five iterative activities, organised around **features** |
-| **Crystal** | Cockburn and Highsmith | **colour-coded by risk to human life** (Crystal Clear → Crystal Sapphire); six aspects — people, interaction, community, communication, skills, talents; process is secondary |
-| **Agile Modeling (AM)** | — | values, principles and practices for effective modeling |
-| **Kanban** | — | named by the deck, not developed |
-
-- **"Speculation" rather than "planning"** in ASD is deliberate — it admits the
-  plan is a guess. Adaptive cycle planning uses the mission statement, project
-  constraints and basic requirements to produce a time-boxed release plan.
-- **Crystal Clear** = a six-developer project in one room; **Crystal Sapphire** =
-  where lives are at stake.
-
-### Planning arithmetic
-
-| Symbol | Meaning | Units |
-|---|---|---|
-| *P* | total story points (or ideal days) in the release | points |
-| *V* | velocity — points completed per iteration | points/iteration |
-| *N* | number of iterations | iterations, **always rounded up** |
-| *L* | iteration length | weeks |
-| *C* | cost per iteration | currency |
+**The arithmetic** — the page's real drill:
 
 $$N = \lceil P / V \rceil \qquad \text{Duration} = N \times L \qquad \text{Cost} = N \times C$$
 
-**Sprint capacity**, per team member: **capacity = days available × hours per
-day**, summed across the team. Where hours/day is a range, team capacity is a
-range too.
+- *P* total story points · *V* velocity (points/iteration) · *N* iterations,
+  **always rounded up** · *L* iteration length · *C* cost per iteration.
+- **Capacity = days available × hours per day**, summed across the team. A range
+  in, a range out.
+- **Commit by task hours, not story points.**
 
-**How the sections connect:**
-
-```mermaid
-graph TD
-    S1["1 · Manifesto &<br/>trade-offs · 0 marks"]
-    S2["2 · Scrum<br/>0 marks"]
-    S3["3 · Extreme Programming<br/>0 marks"]
-    S4["4 · Other models<br/>0 marks"]
-    S5["5 · Planning arithmetic<br/>0 marks · 2 deck numericals"]
-
-    S1 -->|"values are not a process.<br/>who does what, when?"| S2
-    S2 -->|"Scrum manages the team.<br/>it says nothing about the code"| S3
-    S3 -->|"two answers exist. there are<br/>six more, each for a different fear"| S4
-    S4 -->|"whichever you pick, someone<br/>still asks: how long, how much?"| S5
-    S5 -.->|"and the answer is a range,<br/>because change is assumed"| S1
-```
-
-## 1 · The Agile manifesto and its trade-offs
-
-- **Agile is not "less process".** It is a bet that where requirements change,
-  the cost of *predicting* exceeds the cost of *adapting*. It inverts four
-  priorities — not abolishing the right-hand side of each pair, but demoting it.
-- **The classic misreading:** "working solutions over detailed documentation"
-  does *not* mean no documentation. It means documentation that does not help
-  ship working software is waste.
-- Four values, benefits, disadvantages, agile-vs-traditional: Quick Reference.
-- **The framing worth carrying:** waterfall suits **stable** requirements, agile
-  suits **fast-changing** ones — the same requirement-stability question that
-  decides every model on [[Conventional Process Models]] and
-  [[Evolutionary Process Models]].
-- **Never examined here.** [[se-ete-2025-26]] Q A3 asks why an SRS is required in
-  large projects but often avoided in Agile — the *answer* is agile's second
-  value, but the marks sit on [[Requirements Engineering]].
-
-## 2 · Scrum
-
-- **What it adds:** agile's values do not tell anyone what to do on Monday. Scrum
-  does — a small self-organising team pulls a slice from a prioritised list,
-  commits to finishing it inside a fixed time box, meets briefly daily, shows the
-  result at the end.
-- **The time box is the trick.** It is never extended, so when work does not fit,
-  **scope gives rather than the date**. That single rule is what makes agile
-  plannable.
-- Artifacts, roles, events, principles, values: Quick Reference. The
-  Product-vs-Sprint Backlog distinction and "the Increment is usable" are the two
-  points that make an answer look informed.
-- **Never examined.** Most plausible form: a 2-marker on roles or artifacts — the
-  3-and-3 grid answers both. Sprint ≈ 30 days; Sutherland and Schwaber.
-
-## 3 · Extreme Programming
-
-- **The contrast with Scrum:** Scrum organises people and says nothing about the
-  code. XP is opinionated about engineering practice, and takes each practice to
-  an "extreme" — if code review is good, review continuously (**pair
-  programming**); if testing is good, test before there is anything to test
-  (**unit test first**); if simple design is good, never build for a future you
-  cannot see and restructure continuously (**refactoring**).
-- Four activities, their practices, and the definitions of *user story*, *spike*,
-  *CRC card* and *project velocity*: Quick Reference.
-- **Never examined.** If it appears, **pair programming** and **test-before-code**
-  are the practices worth naming first.
-
-## 4 · The other agile models
-
-- **Each answers a different worry:** ASD worries about risk and learning · DSDM
-  about deadlines, and fixes them absolutely · FDD about losing track of what the
-  product does, so it organises around features · Crystal about **people**, and
-  uniquely grades its own ceremony by how much harm failure would cause.
-- Picking between them is picking which of those worries is yours.
-- The comparison table, plus the ASD and Crystal details: Quick Reference.
-- **Never examined.** One distinguishing feature each is the right depth — do not
-  learn these to the depth of Scrum or XP. **Crystal's colour-coding by risk to
-  human life** is the most memorable single fact here.
-
-## 5 · Agile planning arithmetic
-
-- **The objection agile always faces** is "so when will it be done?" The answer is
-  velocity: measure how many story points the team actually completed last
-  iteration, divide the remaining work by it, get a number of iterations.
-- **Because velocity is measured rather than promised, it is honest** — and
-  because it is a range, the answer is a range. Multiply iterations by burn rate
-  and you have a cost.
-- Formulas, variables and capacity: Quick Reference.
-- **Solved questions:** both worked in full in the Question Bank — they are the
-  drill for this page.
+**The three traps:** rounding iterations down · giving one number when velocity is
+a range · committing a sprint by points instead of hours.
 
 ## Practice
 

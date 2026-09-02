@@ -40,136 +40,6 @@ last_practiced: null
 > page structure. Practical consequence: **answer by naming the model, not its
 > category** — that is precisely where your two sources disagree.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §1. **4 of 80 — two cases of the same
-question.**
-
-### Scenario → identify & justify — B1 cases 2 and 3, 2 marks each
-
-- **Spot it:** the same B1 form as [[Conventional Process Models]] — a scenario
-  described by behaviour, "identify the model and justify".
-  - **Incremental's tells:** "releases a basic version", "core features first",
-    then cycles that **add** functionality.
-  - **CBD's tell:** the phrase **"reusable components"**, which names a mechanism
-    no other model in the course is characterised by.
-- **Skeleton:** name → quote two or three phrases → map each → state the general
-  condition.
-- **Earns the marks:** the mapping, again.
-- **Trap:** answering "iterative" for an incremental scenario. **If each cycle
-  adds new features it is incremental; if each refines the same whole it is
-  iterative.** "Until all features are complete" settles it.
-- **The contested one:** case 2 fits **RAD** too. This vault answers CBD because
-  "reusable components" names a mechanism while "quickly" only names an outcome —
-  but **a well-justified RAD answer should score**. Justify from the scenario's
-  own words and the choice is defensible either way.
-
-### Compare — likeliest unasked form
-
-*Incremental vs iterative* is the most confusable pair on this page and the most
-plausible 2-mark `compare` question. Table it: **adds** versus **refines**, one
-example each. See [[answer-patterns]] §5.
-
-**Never asked as:** `numerical`, `draw`.
-
-## Quick Reference
-
-> [!abstract] The three that carry this topic
-> - **Incremental delivers working software early and repeatedly.** Requirements
->   prioritised; highest priority ships first; once an increment starts, its
->   requirements freeze.
-> - **Spiral is the risk model.** Four sectors per loop — planning, risk
->   analysis, development, evaluation — prototype at the end of the risk sector,
->   go/no-go each turn.
-> - **Verification: "are we building the product right?" Validation: "are we
->   building the right product?"** From the V-model, examined all through
->   [[Testing Fundamentals]].
-
-**Spiral — the four sectors of every loop:**
-
-| Sector | Activity |
-|---|---|
-| Planning | determine objectives, alternatives, constraints |
-| Risk analysis | analyse alternatives; identify and resolve risks; **prototype produced here** |
-| Development | build and test the product |
-| Evaluation | customer evaluates output before the next spiral |
-
-- **Boehm, 1988.** Combines prototyping with waterfall.
-- **Each loop is one *phase*;** the number of loops is not fixed, varying by
-  project.
-- Favoured for **large, expensive, complicated** projects. Distinguishing feature:
-  **explicit risk handling** — the thing every other model lacks.
-- **A go/no-go decision** is taken each loop, after evaluation.
-
-**Incremental vs iterative** — the distinction most often got wrong:
-
-| | Incremental | Iterative |
-|---|---|---|
-| Divides | requirements into stand-alone modules | the *work* into repeated cycles |
-| Each pass | **adds a new feature** to the previous release | **refines** the existing whole |
-| Analogy | building a house room by room | sketching the whole house, then adding detail each pass |
-
-**Incremental — key points:** development and delivery broken into increments,
-each delivering part of the functionality · requirements **prioritised**, highest
-priority in early increments · **once an increment starts, its requirements are
-frozen** (later increments' may keep evolving) · a "multi-waterfall" life cycle —
-each increment passes through requirements, design, implementation and testing.
-
-**Iterative — the deck's framing:** "the same phases as the waterfall model, but
-with fewer restrictions" — same order, conducted over several cycles, a reusable
-product released at the end of each. **Use when:** requirements clearly defined
-and easy to understand · the application is large · changes expected in future.
-
-**Component-Based Development (CBD)** — building from **reusable components**,
-with object-oriented technology as the technical framework. The deck's process:
-identify candidate classes → search the class library → if the class exists,
-**extract and reuse** it → if not, engineer it with OO methods. The benefit is
-measurable **reuse**.
-
-**V-model** — an extension of waterfall where "for each development activity,
-there is a testing activity corresponding to it": development stages descend the
-left arm, test stages ascend the right, joined at coding.
-
-| | Verification | Validation |
-|---|---|---|
-| Question | **Are we building the product right?** | **Are we building the right product?** |
-| Type | static testing — reviews, inspections | dynamic testing — executing code |
-| When | during each development phase | after development completes |
-
-**Model selection at a glance** — every "identify the model" question is this
-table applied backwards:
-
-| Model | Choose it when | Distinguishing feature |
-|---|---|---|
-| Waterfall | requirements stable, complete, well understood | strict sequence |
-| Iterative waterfall | as waterfall, but errors expected and must be correctable | feedback paths |
-| Prototyping | the customer cannot state requirements without seeing something | throwaway replica |
-| RAD | the project decomposes into modules and the deadline is tight | parallel teams |
-| Incremental | working software needed early; features can be prioritised | delivery in slices |
-| Iterative | requirements clear, system large, change expected | refinement each cycle |
-| Spiral | the project is large, expensive and risky | explicit risk analysis, go/no-go per loop |
-| Component-based | a component library exists and the domain is well understood | reuse |
-| V-model | requirements stable and testing rigour required | a test stage per development stage |
-
-**How the sections connect:**
-
-```mermaid
-graph TD
-    S1["1 · Incremental<br/>2 marks"]
-    S2["2 · Iterative<br/>0 marks"]
-    S3["3 · Spiral<br/>0 marks"]
-    S4["4 · Component-based<br/>2 marks"]
-    S5["5 · V-model<br/>0 marks"]
-    S6["6 · Comparison<br/>0 marks"]
-
-    S1 -->|"slices ship early. but is each pass<br/>a new feature or a better version?"| S2
-    S2 -->|"cycles handle change.<br/>they do not handle danger"| S3
-    S3 -->|"risk shrinks if you don't<br/>build it at all — buy it"| S4
-    S4 -->|"reuse needs trust:<br/>test every stage as you go"| S5
-    S5 -->|"five models, one question:<br/>which, and why?"| S6
-    S6 -.->|"and every answer traces back<br/>to requirement stability"| S1
-```
-
 ## 1 · The incremental model
 
 - Waterfall promises "wait nine months and get everything". Incremental promises
@@ -182,7 +52,16 @@ graph TD
   early**, while correcting is still cheap.
 
 **Terms and distinctions.** Key points and the incremental-vs-iterative table:
-Quick Reference. The easily-missed rule: **requirements are prioritised, and once
+development and delivery broken into increments,
+each delivering part of the functionality · requirements **prioritised**, highest
+priority in early increments · **once an increment starts, its requirements are
+frozen** (later increments' may keep evolving) · a "multi-waterfall" life cycle —
+each increment passes through requirements, design, implementation and testing.
+
+**Iterative — the deck's framing:** "the same phases as the waterfall model, but
+with fewer restrictions" — same order, conducted over several cycles, a reusable
+product released at the end of each. **Use when:** requirements clearly defined
+and easy to understand · the application is large · changes expected in future.
 an increment's development starts its requirements freeze** — that freeze is what
 stops the model degenerating into endless churn.
 
@@ -216,7 +95,13 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
   product at greater fidelity, like a sketch redrawn with more detail.
 - **The test:** after increment one you have a *part* of the system; after
   iteration one you have a *rough version of all* of it.
-- Comparison table, the deck's framing and the when-to-use list: Quick Reference.
+**Incremental vs iterative** — the distinction most often got wrong:
+
+| | Incremental | Iterative |
+|---|---|---|
+| Divides | requirements into stand-alone modules | the *work* into repeated cycles |
+| Each pass | **adds a new feature** to the previous release | **refines** the existing whole |
+| Analogy | building a house room by room | sketching the whole house, then adding detail each pass |
 - **Never examined directly** — but this is the likeliest 2-mark "differentiate"
   question on the page. Answer with *adds* versus *refines*, one example each.
 
@@ -229,8 +114,21 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
 - **The consequence:** the most dangerous unknown is always attacked first, while
   abandoning is still cheap. Hence large, expensive, complicated projects — and
   unnecessary overhead for small ones.
-- Four sectors, Boehm 1988, loop count, prototype placement, go/no-go: Quick
-  Reference.
+**Spiral — the four sectors of every loop:**
+
+| Sector | Activity |
+|---|---|
+| Planning | determine objectives, alternatives, constraints |
+| Risk analysis | analyse alternatives; identify and resolve risks; **prototype produced here** |
+| Development | build and test the product |
+| Evaluation | customer evaluates output before the next spiral |
+
+- **Boehm, 1988.** Combines prototyping with waterfall.
+- **Each loop is one *phase*;** the number of loops is not fixed, varying by
+  project.
+- Favoured for **large, expensive, complicated** projects. Distinguishing feature:
+  **explicit risk handling** — the thing every other model lacks.
+- **A go/no-go decision** is taken each loop, after evaluation.
 - **Never examined.** Most plausible form: "explain the spiral model with a
   diagram" — draw the four labelled sectors and name Boehm. **Risk** is the word
   that earns the marks.
@@ -242,7 +140,13 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
   search, evaluate and integrate — new code only for what the library lacks.
 - OO technology supplies the framework, because **classes are the natural unit of
   packaging**. Payoff: measurable reuse. Precondition: a library worth searching.
-- The deck's process: Quick Reference. The deck files CBD under **Specialized
+**Component-Based Development (CBD)** — building from **reusable components**,
+with object-oriented technology as the technical framework. The deck's process:
+identify candidate classes → search the class library → if the class exists,
+**extract and reuse** it → if not, engineer it with OO methods. The benefit is
+measurable **reuse**.
+
+- The deck files CBD under **Specialized
   Process Models**; the handout lists it at lecture 8 among the evolutionary ones.
 
 **Worked example.**
@@ -284,7 +188,17 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
 - **What it does not fix:** it is as sequential as waterfall — you still cannot
   start late stages early. What you can no longer do is defer thinking about
   verification.
-- The definition and the verification/validation table: Quick Reference. **Learn
+**V-model** — an extension of waterfall where "for each development activity,
+there is a testing activity corresponding to it": development stages descend the
+left arm, test stages ascend the right, joined at coding.
+
+| | Verification | Validation |
+|---|---|---|
+| Question | **Are we building the product right?** | **Are we building the right product?** |
+| Type | static testing — reviews, inspections | dynamic testing — executing code |
+| When | during each development phase | after development completes |
+
+- **Learn
   both questions verbatim.**
 - **Never examined *here*** — but verification vs validation is examined
   repeatedly across [[Testing Fundamentals]] and [[Levels of Testing & Tools]],
@@ -299,10 +213,109 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
   to *pick* a model and defend the pick.
 - **Every selection traces to one question** from [[story]]: **how stable are the
   requirements, and how much does being wrong cost?**
-- The nine-model selection table is in Quick Reference — not repeated here.
+**Model selection at a glance** — every "identify the model" question is this
+table applied backwards:
+
+| Model | Choose it when | Distinguishing feature |
+|---|---|---|
+| Waterfall | requirements stable, complete, well understood | strict sequence |
+| Iterative waterfall | as waterfall, but errors expected and must be correctable | feedback paths |
+| Prototyping | the customer cannot state requirements without seeing something | throwaway replica |
+| RAD | the project decomposes into modules and the deadline is tight | parallel teams |
+| Incremental | working software needed early; features can be prioritised | delivery in slices |
+| Iterative | requirements clear, system large, change expected | refinement each cycle |
+| Spiral | the project is large, expensive and risky | explicit risk analysis, go/no-go per loop |
+| Component-based | a component library exists and the domain is well understood | reuse |
+| V-model | requirements stable and testing rigour required | a test stage per development stage |
+
+**How the sections connect:**
+
+```mermaid
+graph TD
+    S1["1 · Incremental<br/>2 marks"]
+    S2["2 · Iterative<br/>0 marks"]
+    S3["3 · Spiral<br/>0 marks"]
+    S4["4 · Component-based<br/>2 marks"]
+    S5["5 · V-model<br/>0 marks"]
+    S6["6 · Comparison<br/>0 marks"]
+
+    S1 -->|"slices ship early. but is each pass<br/>a new feature or a better version?"| S2
+    S2 -->|"cycles handle change.<br/>they do not handle danger"| S3
+    S3 -->|"risk shrinks if you don't<br/>build it at all — buy it"| S4
+    S4 -->|"reuse needs trust:<br/>test every stage as you go"| S5
+    S5 -->|"five models, one question:<br/>which, and why?"| S6
+    S6 -.->|"and every answer traces back<br/>to requirement stability"| S1
+```
 - **Never examined as a table**, but B1's 6 marks are it used in reverse, and that
   is the single most likely form for this module to reappear in. Learn the
   *selection criterion* per model, not its full description.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §1. **4 of 80 — two cases of the same
+question.**
+
+### Scenario → identify & justify — B1 cases 2 and 3, 2 marks each
+
+- **Spot it:** the same B1 form as [[Conventional Process Models]] — a scenario
+  described by behaviour, "identify the model and justify".
+  - **Incremental's tells:** "releases a basic version", "core features first",
+    then cycles that **add** functionality.
+  - **CBD's tell:** the phrase **"reusable components"**, which names a mechanism
+    no other model in the course is characterised by.
+- **Skeleton:** name → quote two or three phrases → map each → state the general
+  condition.
+- **Earns the marks:** the mapping, again.
+- **Trap:** answering "iterative" for an incremental scenario. **If each cycle
+  adds new features it is incremental; if each refines the same whole it is
+  iterative.** "Until all features are complete" settles it.
+- **The contested one:** case 2 fits **RAD** too. This vault answers CBD because
+  "reusable components" names a mechanism while "quickly" only names an outcome —
+  but **a well-justified RAD answer should score**. Justify from the scenario's
+  own words and the choice is defensible either way.
+
+### Compare — likeliest unasked form
+
+*Incremental vs iterative* is the most confusable pair on this page and the most
+plausible 2-mark `compare` question. Table it: **adds** versus **refines**, one
+example each. See [[answer-patterns]] §5.
+
+**Never asked as:** `numerical`, `draw`.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above. This is the compressed form.
+
+**The three that carry the topic**
+- **Incremental delivers working software early and repeatedly.** Requirements
+  prioritised; once an increment starts, its requirements **freeze**.
+- **Spiral is the risk model.** Four sectors per loop, prototype at the end of the
+  **risk** sector, go/no-go each turn. Boehm, 1988.
+- **Verification: are we building the product right? Validation: are we building
+  the right product?** From the V-model; examined all through
+  [[Testing Fundamentals]].
+
+| Ask | Answer |
+|---|---|
+| Spiral's four sectors | planning · **risk analysis** · development · evaluation |
+| Where the spiral prototype is made | end of the **risk analysis** sector |
+| Number of spiral loops | not fixed — varies by project |
+| Incremental vs iterative | **adds** a feature / **refines** the whole |
+| CBD's benefit | measurable **reuse** |
+| V-model's shape | development down the left arm, testing up the right, joined at coding |
+| Verification | static — reviews, inspections, during each phase |
+| Validation | dynamic — executing code, after development |
+
+**Choose the model when:** waterfall — requirements stable · iterative waterfall —
+errors expected · prototyping — customer cannot state requirements · RAD — modular
+and deadline-tight · incremental — need working software early · iterative —
+large and change expected · spiral — large, expensive, risky · CBD — a component
+library exists · V-model — testing rigour required.
+
+**B1 in one line each:** case 2 = **Component-Based Development** ("reusable
+components" names the mechanism; RAD is a defensible alternative) · case 3 =
+**Incremental** ("basic version" then cycles that add features).
 
 ## Practice
 

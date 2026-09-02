@@ -37,69 +37,111 @@ last_practiced: null
 > numericals** plus a 61-item question bank from the Aggarwal & Singh text, which
 > rule 8 rates as the highest-value drill available.
 
-## How it's asked
+## 1 · Feasibility study and software scope
 
-**Zero marks on the one paper — and four of the assignment's fifteen questions.**
-Like [[Agile Development]], the coursework says what the exam did not.
+- **The deck opens with an uncomfortable question** — *is cancelling a project bad
+  news?* — and answers it with IBM's numbers: **nearly a third of projects are
+  cancelled anyway, and half of the survivors nearly triple their cost estimates.**
+- **So the useful question is not how to avoid cancellation but how to cancel with
+  the least work wasted.**
+- **That is the feasibility study:** a small, deliberate investigation run before
+  commitment, whose job is partly to kill projects cheaply.
 
-> [!warning] Do not read the zero as "skip it"
-> This page is the **prerequisite for [[Effort Estimation & COCOMO]]**, which is
-> the heaviest topic in the window. Function points and Halstead are also
-> examinable on their own — the handout names both, and rule 1 governs scope.
+**Terms and distinctions.** The three feasibility types and the IBM figures
+are:
 
-### Numerical — the archetype to prepare
+The IBM figures the deck uses to justify it: **31% of projects are cancelled
+before completion**, **53% over-run their cost estimates by an average of 189%**,
+and for every 100 projects there are **94 restarts**.
 
-Three distinct calculations live here, and the assignment used all three:
+| Type | Asks |
+|---|---|
+| Technical | can it be built with available technology? |
+| Economic | do the benefits exceed the costs? |
+| Operational | will it work in the organisation, and will people use it? |
 
-- **Function points** — count × weight per functional unit → UFP → optionally
-  × CAF. **Memorise the weighting table; it is rarely supplied.** *(Assignment
-  Q14 supplied it, the deck's own examples do not.)*
-- **Halstead** — four counts → vocabulary, length, volume, difficulty, effort,
-  time, defects. **Lower-case *n* is distinct, upper-case *N* is total**; confuse
-  them and every derived quantity is wrong. *(Assignment Q13.)*
-- **Static models** — *E* = *aL*<sup>b</sup>, SEL vs Walston-Felix.
-- **Cost from size** — FP ÷ productivity = effort, × rate = cost. *(Q10.)*
+The deck's own technical-feasibility examples are
+deliberately extreme — *is it technically feasible to provide direct
+communication connectivity through space between two points on the globe?*, *is
+it feasible to design a programming language using Sanskrit?* — to make the point
+that technical feasibility asks whether the thing is possible **with available
+technology and skills**, not whether it is imaginable.
 
-**Skeleton:** the standard Given → Steps → Answer of [[answer-patterns]] §3, with
-the log-antilog working shown for any fractional power.
+**Software scope** bounds what the system will and will not do: the functions and
+features delivered, the data in and out, the performance and constraints. It is
+the input to every estimate — you cannot size what you have not bounded.
 
-**Traps specific to this page:**
-- **Applying the CAF when the question says *Unadjusted*.** UFP stops before it.
-- **Confusing ILF and EIF** — maintained *inside* vs referenced from *elsewhere*.
-- **Using log₁₀ in Halstead.** It is base 2 throughout.
+> [!note] Where this is taught
+> The **L5 requirements deck** teaches feasibility inside the requirements
+> chapter, immediately after requirement types. The **handout** instead names
+> *Software Scope and Feasibility* under Module 5, Project Management. This vault
+> follows the handout and teaches it here; revising from the L5 deck, you will
+> meet it alongside [[Software Engineering Practice]].
 
-### Explain — assignment Q13 and Q14(b)
+## 2 · LOC estimation
 
-Both open with a written part: *"explain Halstead as a technique"*, *"explain how
-FPA assists estimation"*. **Lead with what the technique fixes about the
-alternative** — FPA can be counted before code exists and is language-independent;
-Halstead is objective where LOC is formatting-sensitive.
+**Definition.** A line of code includes all lines containing **program header,
+declaration, and executable and non-executable statements**. **Comments and blank
+lines are counted** under this definition — the predominant research definition,
+and the one the deck's worked figure of **17 LOC** uses.
 
-**Never asked as:** `draw`, `compare`, `scenario`.
-**Traps specific to function points, from the deck's three worked examples:**
-- **Using the wrong weight column.** The default is *Average*, not Low.
-- **"All factors average" means ΣF = 42**, not 14. CAF = 0.65 + 0.42 = 1.07.
-- **Classifying user files as EI rather than ILF.** The file types carry the
-  heaviest weights, so misclassifying one costs the most.
+- **The obvious way to measure a program is to count its lines** — simple,
+  automatable, directly comparable across projects in the same language, which is
+  why every static model and COCOMO takes KLOC as input.
+- **The problem is equally obvious.** You cannot count the lines of a program that
+  does not exist yet, so at estimation time **LOC is itself an estimate**.
+- **And it depends on the language:** the same functionality is more "lines" in C
+  than in Python. **Function points exist because of exactly that second
+  objection.**
 
-**Also worth knowing:**
-- **Feasibility study:** most plausible as a 2-mark "what is it / name its types".
-- **LOC's unit convention is load-bearing** — KLOC is the input to D1 on
-  [[Effort Estimation & COCOMO]], the paper's only numerical.
-- **Static models**, if asked, take the comparison form: given an effort, reverse
-  both models for size, then compute duration, productivity and manning for each.
-- **Halstead:** know the four counts, vocabulary, length and volume. Do not go
-  deeper until a deck or the textbook says to.
+**Formula.** The deck's definition:
 
-## Quick Reference
+> A line of code "includes all lines containing program header, declaration, and
+> executable and non-executable statements".
 
-> [!abstract] The two formulas everything here runs on
-> $$\text{UFP} = \sum_{i=1}^{5}\sum_{j=1}^{3} Z_{ij}\,w_{ij} \qquad \text{FP} = \text{UFP} \times \text{CAF}$$
-> $$\text{CAF} = 0.65 + 0.01 \sum_{i=1}^{14} F_i$$
-> Each *F<sub>i</sub>* is rated **0 to 5**, so ΣF<sub>i</sub> runs 0-70 and **CAF
-> runs 0.65 to 1.35**. If your CAF falls outside that, you have made an error.
+So comments and declarations count. The deck's worked figure is counted at **17
+LOC** under this rule.
 
-### Function point weighting factors
+**KLOC** = LOC ÷ 1000, and **KLOC is what every formula on this page and on
+[[Effort Estimation & COCOMO]] takes**. Substituting raw LOC into
+*E* = 1.4 *L*<sup>0.93</sup> gives an answer wrong by a factor of roughly a
+thousand.
+
+## 3 · Function point analysis
+
+> [!tip] The CAF sanity check
+> Each *F<sub>i</sub>* is rated **0 to 5**, so Σ*F<sub>i</sub>* runs 0-70 and
+> **CAF runs 0.65 to 1.35**. If your CAF falls outside that band you have made an
+> error — check it before going further.
+
+- **LOC measures what the *developer* writes; function points measure what the
+  *user* gets.**
+- **Alan Albrecht at IBM** recognised in the 1970s that the first is unusable at
+  estimation time — there is no code to count — and language-biased besides.
+- **So FPA counts externally visible functionality:** what information goes in,
+  what comes out, what can be asked, what the system stores, what it borrows from
+  other systems.
+- **Because all five can be read off the requirements, you can size a system
+  before writing a line of it.** Each count is weighted by complexity, and the
+  total adjusted by 14 environmental factors.
+
+**Formula.**
+
+$$\text{UFP} = \sum_{i=1}^{5}\sum_{j=1}^{3} Z_{ij}\,w_{ij}$$
+
+| Symbol | Meaning |
+|---|---|
+| *i* | row of the weight table — the five functional unit types |
+| *j* | column — Low, Average, High |
+| *w<sub>ij</sub>* | the weight at row *i*, column *j* |
+| *Z<sub>ij</sub>* | **count** of type-*i* units classified at complexity *j* |
+
+$$\text{FP} = \text{UFP} \times \text{CAF}, \qquad \text{CAF} = 0.65 + 0.01\sum_{i=1}^{14} F_i$$
+
+Each *F<sub>i</sub>* ∈ {0,…,5}, so ΣF<sub>i</sub> ∈ [0, 70] and **CAF ∈ [0.65,
+1.35]**. That range is a free self-check on every answer.
+
+**Function point weighting factors**
 
 | Functional unit | Low | Average | High |
 |---|---|---|---|
@@ -126,7 +168,7 @@ types are much heavier (7 and 5) because files represent stored data.
 An EIF for one system may be an ILF in another — the classification depends on
 which system you are counting.
 
-### The 14 complexity adjustment factors
+**The 14 complexity adjustment factors**
 
 Rated **0 = no influence · 1 = incidental · 2 = moderate · 3 = average ·
 4 = significant · 5 = essential**.
@@ -141,14 +183,14 @@ organisations · designed for change and ease of use.
 **Exam shortcut:** "assume all factors are average" means every *F<sub>i</sub>* =
 3, so ΣF<sub>i</sub> = 14 × 3 = 42 and **CAF = 0.65 + 0.42 = 1.07**.
 
-### LOC
+**Neither is supplied
+in an exam** — both must be memorised.
 
-**Definition:** a line of code includes all lines containing program header,
-declaration, and executable and non-executable statements. Comments and blank
-lines are counted under this definition — this is the predominant research
-definition, and the deck's worked figure counts **17 LOC**.
+**Worked example.** Three worked deck examples, in full in the Question Bank
+below. They escalate exactly as an exam would: all-average, mixed with a given
+CAF, then fully mixed with the CAF derived from stated conditions.
 
-### Static estimation models
+## 4 · Static estimation models
 
 **Static, single-variable** — one predictor, usually size:
 
@@ -182,126 +224,6 @@ $$C = a L^{b}$$
 
 **Unit trap:** 1 person-year = **12 person-months**. *L* is in **KLOC** in every
 formula above — substituting raw LOC is the single most common error here.
-
-### Feasibility
-
-The IBM figures the deck uses to justify it: **31% of projects are cancelled
-before completion**, **53% over-run their cost estimates by an average of 189%**,
-and for every 100 projects there are **94 restarts**.
-
-| Type | Asks |
-|---|---|
-| Technical | can it be built with available technology? |
-| Economic | do the benefits exceed the costs? |
-| Operational | will it work in the organisation, and will people use it? |
-
-**How the sections connect:**
-
-```mermaid
-graph TD
-    S1["1 · Feasibility & scope<br/>0 marks"]
-    S2["2 · LOC<br/>0 marks"]
-    S3["3 · Function points<br/>0 marks · 3 deck examples"]
-    S4["4 · Static models<br/>0 marks"]
-    S5["5 · Halstead<br/>0 marks · no deck"]
-
-    S1 -->|"decided to build it.<br/>now — how big is it?"| S2
-    S2 -->|"you cannot count lines<br/>that do not exist yet"| S3
-    S3 -->|"a size is only useful if it<br/>converts into effort"| S4
-    S4 -->|"both inputs are still<br/>partly subjective"| S5
-    S5 -.->|"whichever measure, it feeds<br/>the same estimation question"| S3
-```
-
-## 1 · Feasibility study and software scope
-
-- **The deck opens with an uncomfortable question** — *is cancelling a project bad
-  news?* — and answers it with IBM's numbers: **nearly a third of projects are
-  cancelled anyway, and half of the survivors nearly triple their cost estimates.**
-- **So the useful question is not how to avoid cancellation but how to cancel with
-  the least work wasted.**
-- **That is the feasibility study:** a small, deliberate investigation run before
-  commitment, whose job is partly to kill projects cheaply.
-
-**Terms and distinctions.** The three feasibility types and the IBM figures
-are in Quick Reference. The deck's own technical-feasibility examples are
-deliberately extreme — *is it technically feasible to provide direct
-communication connectivity through space between two points on the globe?*, *is
-it feasible to design a programming language using Sanskrit?* — to make the point
-that technical feasibility asks whether the thing is possible **with available
-technology and skills**, not whether it is imaginable.
-
-**Software scope** bounds what the system will and will not do: the functions and
-features delivered, the data in and out, the performance and constraints. It is
-the input to every estimate — you cannot size what you have not bounded.
-
-> [!note] Where this is taught
-> The **L5 requirements deck** teaches feasibility inside the requirements
-> chapter, immediately after requirement types. The **handout** instead names
-> *Software Scope and Feasibility* under Module 5, Project Management. This vault
-> follows the handout and teaches it here; revising from the L5 deck, you will
-> meet it alongside [[Software Engineering Practice]].
-
-## 2 · LOC estimation
-
-- **The obvious way to measure a program is to count its lines** — simple,
-  automatable, directly comparable across projects in the same language, which is
-  why every static model and COCOMO takes KLOC as input.
-- **The problem is equally obvious.** You cannot count the lines of a program that
-  does not exist yet, so at estimation time **LOC is itself an estimate**.
-- **And it depends on the language:** the same functionality is more "lines" in C
-  than in Python. **Function points exist because of exactly that second
-  objection.**
-
-**Formula.** The deck's definition:
-
-> A line of code "includes all lines containing program header, declaration, and
-> executable and non-executable statements".
-
-So comments and declarations count. The deck's worked figure is counted at **17
-LOC** under this rule.
-
-**KLOC** = LOC ÷ 1000, and **KLOC is what every formula on this page and on
-[[Effort Estimation & COCOMO]] takes**. Substituting raw LOC into
-*E* = 1.4 *L*<sup>0.93</sup> gives an answer wrong by a factor of roughly a
-thousand.
-
-## 3 · Function point analysis
-
-- **LOC measures what the *developer* writes; function points measure what the
-  *user* gets.**
-- **Alan Albrecht at IBM** recognised in the 1970s that the first is unusable at
-  estimation time — there is no code to count — and language-biased besides.
-- **So FPA counts externally visible functionality:** what information goes in,
-  what comes out, what can be asked, what the system stores, what it borrows from
-  other systems.
-- **Because all five can be read off the requirements, you can size a system
-  before writing a line of it.** Each count is weighted by complexity, and the
-  total adjusted by 14 environmental factors.
-
-**Formula.**
-
-$$\text{UFP} = \sum_{i=1}^{5}\sum_{j=1}^{3} Z_{ij}\,w_{ij}$$
-
-| Symbol | Meaning |
-|---|---|
-| *i* | row of the weight table — the five functional unit types |
-| *j* | column — Low, Average, High |
-| *w<sub>ij</sub>* | the weight at row *i*, column *j* |
-| *Z<sub>ij</sub>* | **count** of type-*i* units classified at complexity *j* |
-
-$$\text{FP} = \text{UFP} \times \text{CAF}, \qquad \text{CAF} = 0.65 + 0.01\sum_{i=1}^{14} F_i$$
-
-Each *F<sub>i</sub>* ∈ {0,…,5}, so ΣF<sub>i</sub> ∈ [0, 70] and **CAF ∈ [0.65,
-1.35]**. That range is a free self-check on every answer.
-
-The weight table and the 14 factors are in Quick Reference. **Neither is supplied
-in an exam** — both must be memorised.
-
-**Worked example.** Three worked deck examples, in full in the Question Bank
-below. They escalate exactly as an exam would: all-average, mixed with a given
-CAF, then fully mixed with the CAF derived from stated conditions.
-
-## 4 · Static estimation models
 
 - **Once you have a size, effort follows from an empirical power law** fitted to
   past projects: *E* = *aL*<sup>b</sup>.
@@ -368,6 +290,104 @@ people needed on the project per month.
 The distinction that carries any question here: **lower-case *n* counts distinct
 symbols, upper-case *N* counts total occurrences.** Confusing them makes every
 derived quantity wrong.
+
+## How it's asked
+
+**Zero marks on the one paper — and four of the assignment's fifteen questions.**
+Like [[Agile Development]], the coursework says what the exam did not.
+
+> [!warning] Do not read the zero as "skip it"
+> This page is the **prerequisite for [[Effort Estimation & COCOMO]]**, which is
+> the heaviest topic in the window. Function points and Halstead are also
+> examinable on their own — the handout names both, and rule 1 governs scope.
+
+### Numerical — the archetype to prepare
+
+Three distinct calculations live here, and the assignment used all three:
+
+- **Function points** — count × weight per functional unit → UFP → optionally
+  × CAF. **Memorise the weighting table; it is rarely supplied.** *(Assignment
+  Q14 supplied it, the deck's own examples do not.)*
+- **Halstead** — four counts → vocabulary, length, volume, difficulty, effort,
+  time, defects. **Lower-case *n* is distinct, upper-case *N* is total**; confuse
+  them and every derived quantity is wrong. *(Assignment Q13.)*
+- **Static models** — *E* = *aL*<sup>b</sup>, SEL vs Walston-Felix.
+- **Cost from size** — FP ÷ productivity = effort, × rate = cost. *(Q10.)*
+
+**Skeleton:** the standard Given → Steps → Answer of [[answer-patterns]] §3, with
+the log-antilog working shown for any fractional power.
+
+**Traps specific to this page:**
+- **Applying the CAF when the question says *Unadjusted*.** UFP stops before it.
+- **Confusing ILF and EIF** — maintained *inside* vs referenced from *elsewhere*.
+- **Using log₁₀ in Halstead.** It is base 2 throughout.
+
+### Explain — assignment Q13 and Q14(b)
+
+Both open with a written part: *"explain Halstead as a technique"*, *"explain how
+FPA assists estimation"*. **Lead with what the technique fixes about the
+alternative** — FPA can be counted before code exists and is language-independent;
+Halstead is objective where LOC is formatting-sensitive.
+
+**Never asked as:** `draw`, `compare`, `scenario`.
+**Traps specific to function points, from the deck's three worked examples:**
+- **Using the wrong weight column.** The default is *Average*, not Low.
+- **"All factors average" means ΣF = 42**, not 14. CAF = 0.65 + 0.42 = 1.07.
+- **Classifying user files as EI rather than ILF.** The file types carry the
+  heaviest weights, so misclassifying one costs the most.
+
+**Also worth knowing:**
+- **Feasibility study:** most plausible as a 2-mark "what is it / name its types".
+- **LOC's unit convention is load-bearing** — KLOC is the input to D1 on
+  [[Effort Estimation & COCOMO]], the paper's only numerical.
+- **Static models**, if asked, take the comparison form: given an effort, reverse
+  both models for size, then compute duration, productivity and manning for each.
+- **Halstead:** know the four counts, vocabulary, length and volume. Do not go
+  deeper until a deck or the textbook says to.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+**Function points** — memorise the weights; they are rarely supplied:
+
+| Functional unit | Low | **Average** | High |
+|---|---|---|---|
+| External Inputs (EI) | 3 | **4** | 6 |
+| External Outputs (EO) | 4 | **5** | 7 |
+| External Inquiries (EQ) | 3 | **4** | 6 |
+| Internal Logical Files (ILF) | 7 | **10** | 15 |
+| External Interface Files (EIF) | 5 | **7** | 10 |
+
+$$\text{UFP} = \sum(\text{count} \times \text{weight}) \qquad \text{CAF} = 0.65 + 0.01\sum F_i \qquad \text{FP} = \text{UFP} \times \text{CAF}$$
+
+- **"All factors average" ⇒ ΣF = 42**, so CAF = 0.65 + 0.42 = **1.07**.
+- **CAF always lies between 0.65 and 1.35.** Outside that, you erred.
+- **ILF is maintained inside** the system; **EIF is referenced but maintained
+  elsewhere.** Misclassifying costs most — the file weights are heaviest.
+- **"Unadjusted" means stop before the CAF.**
+
+**Halstead** — lower-case *n* is **distinct**, upper-case *N* is **total**:
+
+| Quantity | Formula |
+|---|---|
+| Vocabulary | *n* = *n*₁ + *n*₂ |
+| Length | *N* = *N*₁ + *N*₂ |
+| Estimated length | *N̂* = *n*₁log₂*n*₁ + *n*₂log₂*n*₂ |
+| Volume | *V* = *N* log₂ *n* |
+| Difficulty | *D* = (*n*₁/2) × (*N*₂/*n*₂) |
+| Effort | *E* = *D* × *V* |
+| Time | *T* = *E*/18 seconds |
+| Delivered defects | *B* = *V*/3000 |
+
+**Log base 2 throughout.**
+
+**Static models:** *E* = *aL*^b — SEL gives 1.4*L*^0.93, Walston-Felix 5.2*L*^0.91.
+The gap between them is the honest measure of how uncertain estimation is.
+
+**Feasibility:** technical · economic · operational. Its job is partly to **kill
+projects cheaply**.
 
 ## Practice
 

@@ -42,67 +42,22 @@ last_practiced: null
 > text. Where it disagrees with the 2025 decks, it wins. **Worth opening by eye
 > before the exam**; see Course Material.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §4. **Tied heaviest topic in the MTE
-window at 10 of 80, and the paper's largest single block — one drawing.**
-
-### Draw & label — D2, 10 marks
-
-- **Spot it:** a described workflow with two roles and, critically, **two things
-  happening at once** — "document verification **and** credit check". The word
-  *and* over two simultaneous activities is the question's whole point.
-- **Skeleton:**
-  1. **Legend first** — filled circle = initial node · rounded rectangle =
-     action · diamond = decision · **solid bar = fork/join** · bullseye = final
-     node · vertical partitions = swimlanes, one per role.
-  2. **Swimlanes labelled with the actors** named in the stem (Loan Officer,
-     Applicant). Put every action in the lane of whoever performs it.
-  3. **The diagram**, every action and every guard labelled.
-  4. **Reading** — two or three lines saying what it asserts, and the validity
-     rule: **every fork has a matching join**, and flow resumes only when all
-     parallel branches complete.
-- **Earns the marks:** the fork/join bar. **Drawing a decision diamond where the
-  question describes parallel work is the error the question exists to catch** —
-  a diamond means *choose one path*, a bar means *do both*.
-- **Trap:** omitting swimlanes when the stem names roles; leaving guards off
-  decision branches; forgetting the join.
-
-**A 10-mark drawing is worth planning on scrap first.** Identify actors → list
-actions in order → find the parallelism → place fork and join → then draw once.
-
-**Never asked as:** `numerical`, `compare`. A `scenario` or `explain` question on
-use cases is plausible but has never appeared — that is a prediction, not
-evidence (rule 7).
-**Also worth knowing:**
-- **"How many UML diagrams are there?"** is the classic 2-marker, and the honest
-  answer names **both counts** — 9 in UML 1.x, 13 in UML 2.x — and says which
-  version it is quoting.
-- **Use cases carry the strongest currency signal in the vault.** They are the
-  entire subject of the **only 2026-27 deck** in `raw/sources/ppts/`, which under
-  rule 8 is the best available evidence of what is being taught *now*. Do not skip
-  section 2 on the strength of one paper's silence.
-- **Class/object/sequence:** definition depth is the right stopping point given
-  the thin deck coverage. Spend the time on activity diagrams instead.
-
-## Quick Reference
-
-> [!abstract] The three that carry this topic
-> - **Activity diagram notation: filled circle = start · rounded rectangle =
->   action · diamond = decision · solid bar = fork or join · circle-in-circle =
->   end.** That is D2.
-> - **A fork splits into parallel flows; a join waits for all of them.** Both are
->   drawn as a solid bar. Every fork needs a matching join.
-> - **Use case = who (actor) does what (interaction).** Actors lie *outside* the
->   system boundary.
+## 1 · What UML is, and the diagram taxonomy
 
 **UML** was developed jointly by **Grady Booch, Ivar Jacobson and Jim Rumbaugh**.
-It provides the modeling language for: process modeling / requirement analysis
-with use cases · static design with class and object modeling · dynamic design
+It provides the modeling language for: process modeling · requirement analysis
 with sequence, collaboration and activity diagrams · real-time systems design ·
-distribution and deployment modeling.
+and database design.
 
-### The diagram taxonomy
+- **Before UML, every methodologist had their own notation**, so a diagram meant
+  one thing to its author and something else to everyone else.
+- **UML is the agreed vocabulary** — Booch, Jacobson and Rumbaugh combined their
+  notations so that a class diagram means the same thing everywhere.
+- **The practical consequence: the notation is the content.** Marks go to using
+  the right symbol, not to drawing neatly.
+
+**Terms and distinctions.** The five modeling roles, the two diagram counts
+and the structural/behavioral split:
 
 The deck gives two counts, from different UML versions — say which you are using:
 
@@ -117,32 +72,24 @@ Organised into two groups:
 |---|---|
 | class · package · object · component · composite structure · deployment | activity · sequence · use case · state · communication · interaction overview · timing |
 
-### Activity diagram notation — the D2 legend
+The grouping is worth understanding rather than memorising: **structural**
+diagrams show what the system *is* — the parts and their arrangement, frozen in
+time. **Behavioral** diagrams show what the system *does* — how it changes,
+responds and sequences. A class diagram is structural; an activity diagram is
+behavioral.
 
-| Symbol | Means |
-|---|---|
-| **Filled circle** ● | initial node — where the flow starts |
-| **Rounded rectangle** | action / activity |
-| **Diamond** ◇ | decision (branch) or merge |
-| **Solid horizontal bar** ▬ | **fork** (one flow in, many out) or **join** (many in, one out) |
-| **Arrow** | control flow |
-| **Circle containing a filled dot** ◉ | final node — where the flow ends |
-| **Swimlane / partition** | which actor performs the actions in that column |
+## 2 · The use case approach
 
-**An activity diagram illustrates the dynamic nature of a system by modeling the
-flow of control from activity to activity. An activity represents an operation on
-some class in the system that results in a change in the state of the system.**
+- **A use case is a story about someone trying to get something done with your
+  system:** who they are, what they want, what happens step by step, and what
+  happens when it goes wrong.
+- **Its value is that the customer can read it** — unlike a DFD or a class
+  diagram, a use case needs no technical training to validate.
+- Hence the deck's stress on validating **up front**, with the model presented and
+  discussed with customers as soon as it is ready.
 
-**Fork vs decision — the distinction that carries D2:**
-
-| | Fork (bar) | Decision (diamond) |
-|---|---|---|
-| Branches taken | **all of them, in parallel** | **exactly one**, by condition |
-| Drawn as | solid bar | diamond |
-| Closed by | a **join** bar — waits for **every** branch | a merge diamond |
-| Words that signal it | "two parallel activities start", "simultaneously", "at the same time" | "if", "either", "depending on" |
-
-### Use case approach
+**Terms and distinctions.** The term table, the actor definition and the use
+case template:
 
 Introduced by **Ivar Jacobson**. It gives the **functional view** of the system.
 
@@ -170,36 +117,7 @@ ready it is presented to customers. Use cases are **implementation-independent**
 descriptions of functionality, and are realized in later stages using, say, a
 class diagram.
 
-## 1 · What UML is, and the diagram taxonomy
-
-- **Before UML, every methodologist had their own notation**, so a diagram meant
-  one thing to its author and something else to everyone else.
-- **UML is the agreed vocabulary** — Booch, Jacobson and Rumbaugh combined their
-  notations so that a class diagram means the same thing everywhere.
-- **The practical consequence: the notation is the content.** Marks go to using
-  the right symbol, not to drawing neatly.
-
-**Terms and distinctions.** The five modeling roles, the two diagram counts
-and the structural/behavioral split are all in Quick Reference.
-
-The grouping is worth understanding rather than memorising: **structural**
-diagrams show what the system *is* — the parts and their arrangement, frozen in
-time. **Behavioral** diagrams show what the system *does* — how it changes,
-responds and sequences. A class diagram is structural; an activity diagram is
-behavioral.
-
-## 2 · The use case approach
-
-- **A use case is a story about someone trying to get something done with your
-  system:** who they are, what they want, what happens step by step, and what
-  happens when it goes wrong.
-- **Its value is that the customer can read it** — unlike a DFD or a class
-  diagram, a use case needs no technical training to validate.
-- Hence the deck's stress on validating **up front**, with the model presented and
-  discussed with customers as soon as it is ready.
-
-**Terms and distinctions.** The term table, the actor definition and the use
-case template are all in Quick Reference. Three points worth precision:
+**Three points worth precision:**
 
 - **An actor lies outside the system model** but interacts with it — and may be a
   person, a machine, or another information system. Drawing an actor inside the
@@ -294,7 +212,34 @@ scenario to illustrate the notation — not a deck figure.)*
 - **If a question says "two parallel activities start", it is asking for a fork.**
   Drawing a decision diamond instead is the error the question exists to catch.
 
-**Legend.** The full symbol table is in Quick Reference: ● initial · rounded
+**Legend.**
+
+| Symbol | Means |
+|---|---|
+| **Filled circle** ● | initial node — where the flow starts |
+| **Rounded rectangle** | action / activity |
+| **Diamond** ◇ | decision (branch) or merge |
+| **Solid horizontal bar** ▬ | **fork** (one flow in, many out) or **join** (many in, one out) |
+| **Arrow** | control flow |
+| **Circle containing a filled dot** ◉ | final node — where the flow ends |
+| **Swimlane / partition** | which actor performs the actions in that column |
+
+**An activity diagram illustrates the dynamic nature of a system by modeling the
+flow of control from activity to activity. An activity represents an operation on
+some class in the system that results in a change in the state of the system.**
+
+**Fork vs decision — the distinction that carries D2:**
+
+| | Fork (bar) | Decision (diamond) |
+|---|---|---|
+| Branches taken | **all of them, in parallel** | **exactly one**, by condition |
+| Drawn as | solid bar | diamond |
+| Closed by | a **join** bar — waits for **every** branch | a merge diamond |
+| Words that signal it | "two parallel activities start", "simultaneously", "at the same time" | "if", "either", "depending on" |
+
+*(In one line: filled circle = initial node · rounded rectangle = action ·
+diamond = decision · solid bar = fork or join · **circle-in-circle** = final node
+· vertical partitions = swimlanes. Or: ● initial · rounded
 rectangle action · ◇ decision · **solid bar fork/join** · ◉ final · swimlanes for
 actors. State it before drawing; notation is where the marks are.
 
@@ -407,6 +352,72 @@ logout.
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`. Mermaid cannot draw fork/join bars or swimlanes; **on paper, draw the
 bars as solid horizontal lines and the swimlanes as two labelled columns.**)*
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §4. **Tied heaviest topic in the MTE
+window at 10 of 80, and the paper's largest single block — one drawing.**
+
+### Draw & label — D2, 10 marks
+
+- **Spot it:** a described workflow with two roles and, critically, **two things
+  happening at once** — "document verification **and** credit check". The word
+  *and* over two simultaneous activities is the question's whole point.
+- **Skeleton:**
+  1. **Legend first** — filled circle = initial node · rounded rectangle =
+     action · diamond = decision · **solid bar = fork/join** · bullseye = final
+     node · vertical partitions = swimlanes, one per role.
+  2. **Swimlanes labelled with the actors** named in the stem (Loan Officer,
+     Applicant). Put every action in the lane of whoever performs it.
+  3. **The diagram**, every action and every guard labelled.
+  4. **Reading** — two or three lines saying what it asserts, and the validity
+     rule: **every fork has a matching join**, and flow resumes only when all
+     parallel branches complete.
+- **Earns the marks:** the fork/join bar. **Drawing a decision diamond where the
+  question describes parallel work is the error the question exists to catch** —
+  a diamond means *choose one path*, a bar means *do both*.
+- **Trap:** omitting swimlanes when the stem names roles; leaving guards off
+  decision branches; forgetting the join.
+
+**A 10-mark drawing is worth planning on scrap first.** Identify actors → list
+actions in order → find the parallelism → place fork and join → then draw once.
+
+**Never asked as:** `numerical`, `compare`. A `scenario` or `explain` question on
+use cases is plausible but has never appeared — that is a prediction, not
+evidence (rule 7).
+**Also worth knowing:**
+- **"How many UML diagrams are there?"** is the classic 2-marker, and the honest
+  answer names **both counts** — 9 in UML 1.x, 13 in UML 2.x — and says which
+  version it is quoting.
+- **Use cases carry the strongest currency signal in the vault.** They are the
+  entire subject of the **only 2026-27 deck** in `raw/sources/ppts/`, which under
+  rule 8 is the best available evidence of what is being taught *now*. Do not skip
+  section 2 on the strength of one paper's silence.
+- **Class/object/sequence:** definition depth is the right stopping point given
+  the thin deck coverage. Spend the time on activity diagrams instead.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+| Ask | Answer |
+|---|---|
+| UML's authors | Booch · Jacobson · Rumbaugh |
+| How many diagrams | **9 in UML 1.x, 13 in UML 2.x** — name both and say which you quote |
+| The two groups | **structural** (static) and **behavioral** (dynamic) |
+| Activity diagram symbols | ● initial · rounded rectangle action · ◆ decision · **▬ solid bar fork/join** · ◉ final |
+| Swimlanes | one vertical partition per actor named in the stem |
+| **Fork vs decision** | **bar = do both in parallel · diamond = choose one path** |
+| The validity rule | **every fork has a matching join**; flow resumes only when all branches finish |
+| Use case elements | actor · use case · system boundary · relationships (include, extend, generalisation) |
+
+**D2's whole point:** "document verification **and** credit check" describes
+**parallel** work. Drawing a decision diamond there is the error the question
+exists to catch, and it costs most of the 10 marks.
+
+**A 10-mark drawing is worth planning on scrap first:** actors → actions in order
+→ find the parallelism → place fork and join → then draw once.
 
 ## Practice
 

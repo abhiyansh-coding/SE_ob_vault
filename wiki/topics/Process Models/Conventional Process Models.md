@@ -39,42 +39,22 @@ last_practiced: null
 > disagree. If a question forces a category, the deck's grouping is the one
 > taught in your class.
 
-## How it's asked
+## 1 · The classical waterfall model
 
-Generic skeleton on [[answer-patterns]] §1. **2 of 80, plus one assignment
-question.**
+**The four maintenance types** — the deck introduces them here, inside waterfall's
+phase 6; they are examined on [[Software Maintenance]]: **corrective** — fix
+defects · **adaptive** — port to a new environment · **perfective** — enhance on
+request · **preventive** — pre-empt future problems.
 
-### Scenario → identify & justify — B1 case 1, 2 marks
+- Introduced by **Winston Royce, 1970**, named for the way the diagram cascades:
+  each phase's output flows into the next, and no phase begins until the one
+  above is complete.
+- **Plan-driven** — every activity planned and scheduled before work starts.
+- That makes it the **most disciplined and the most brittle** model: beautiful
+  when you know exactly what you are building, expensive the moment you do not,
+  because the model has no mechanism for discovering you were wrong.
 
-- **Spot it:** a real-world, deliberately **non-software** scenario described
-  through the model's behaviour rather than named. Waterfall's tells: *"all
-  requirements collected first"*, strict stage order, a single final handover.
-- **Skeleton:** name the model in the first line → quote **two or three phrases
-  from the scenario** and map each to a property → say why the scenario's
-  conditions make it appropriate.
-- **Earns the marks:** the mapping. Marks are not for describing waterfall.
-- **Trap:** writing a generic waterfall essay. *"All requirements are collected
-  first, therefore requirements are frozen, which is what waterfall assumes"* is
-  the sentence that scores.
-- **Second trap:** answering with a **category** ("a conventional model") — your
-  handout and your deck group these differently, so **name the model**.
-
-### Compare — [[se-assign-1-2026]] Q8(i)
-
-Waterfall vs Agile as a table, then a recommendation. Worked there; the selection
-logic is on [[Evolutionary Process Models]].
-
-**Never asked as:** `numerical`, `draw`.
-
-## Quick Reference
-
-> [!abstract] The one thing that decides everything
-> **How stable are the requirements?** Stable and well understood → waterfall.
-> Unclear to the customer → prototyping. Clear, and decomposable into modules
-> with a tight deadline → RAD. Every advantage and drawback below follows from
-> that single question.
-
-**Waterfall phases, in order** — the deck's own list:
+**The six phases, in order** — the deck's own list:
 
 | # | Phase | Aim |
 |---|---|---|
@@ -93,59 +73,13 @@ logic is on [[Evolutionary Process Models]].
 | Beta | a friendly set of customers |
 | Acceptance | the customer, after delivery, to accept or reject |
 
-**Waterfall shortcomings** — six, and the phrasing matters: assumes no error is
-ever committed · requirements hard to define fully at the start · cannot
-accommodate change · unsuitable for large projects · no working version until
-late · **big-bang** delivery carrying heavy risk · document-driven, formal
-sign-off at each phase.
+**Six shortcomings**, and the phrasing matters: assumes no error is ever
+committed · requirements hard to define fully at the start · cannot accommodate
+change · unsuitable for large projects · no working version until late ·
+**big-bang** delivery carrying heavy risk · document-driven, formal sign-off at
+each phase.
 
-**Classical vs iterative waterfall** — the single difference:
-
-| | Classical | Iterative |
-|---|---|---|
-| Feedback paths | **none** | from every phase to its predecessor |
-| Error correction | impossible within the model | rework the phase where the error was made |
-| Exception | — | **no feedback path to feasibility study** — a project once taken up is not abandoned lightly |
-
-**Iterative waterfall drawbacks:** change requests still hard to incorporate · no
-incremental delivery · phases cannot overlap · no risk handling · limited
-customer interaction (start and end only).
-
-**Prototyping cycle:** interview the customer → incomplete high-level paper model
-→ initial prototype with basic functionality only → customer identifies problems
-→ refine → repeat until satisfactory → *then* build the real product using the
-approved prototype as the specification. The system is **partially implemented
-before or during analysis**, which is what lets the customer see it early.
-
-**RAD:** proposed by **IBM in the 1980s**. Decompose into modules assignable
-independently to separate teams; each team runs the waterfall steps (analyse,
-design, code, test) in parallel; combine.
-
-**The four maintenance types** (deck teaches them here; examined on
-[[Software Maintenance]]): corrective — fix defects · adaptive — port to a new
-environment · perfective — enhance on request · preventive — pre-empt problems.
-
-**Model selection at a glance:**
-
-| Model | Use when | Key risk |
-|---|---|---|
-| Waterfall | requirements stable and fully understood | any late change is catastrophic |
-| Iterative waterfall | as above, but errors are expected | still no incremental delivery |
-| Prototyping | customer cannot state requirements up front | throwaway prototype mistaken for the product |
-| RAD | modular project, tight deadline, skilled teams available | needs enough people to staff parallel teams |
-
-## 1 · The classical waterfall model
-
-- Introduced by **Winston Royce, 1970**, named for the way the diagram cascades:
-  each phase's output flows into the next, and no phase begins until the one
-  above is complete.
-- **Plan-driven** — every activity planned and scheduled before work starts.
-- That makes it the **most disciplined and the most brittle** model: beautiful
-  when you know exactly what you are building, expensive the moment you do not,
-  because the model has no mechanism for discovering you were wrong.
-
-**Terms and distinctions.** Six phases and three system tests: Quick
-Reference. Two points the deck stresses:
+**Two points the deck stresses:**
 - **Maintenance is 60% of total effort** — more than everything else combined.
 - **The model is idealistic.** The deck's words: it "assumes that no development
   error is ever committed by the engineers during any of the life cycle phases".
@@ -190,7 +124,15 @@ this paper — unchecked, no `✓`.)*
 - **The deck's principle:** detect errors **in the same phase in which they are
   committed** — that minimises correction effort and time. This is the
   cost-of-change curve from [[story]] restated as a process rule.
-- Comparison table and drawbacks: Quick Reference.
+| | Classical | Iterative |
+|---|---|---|
+| Feedback paths | **none** | from every phase to its predecessor |
+| Error correction | impossible within the model | rework the phase where the error was made |
+| Exception | — | **no feedback path to feasibility study** — a project once taken up is not abandoned lightly |
+
+**Its own drawbacks:** change requests still hard to incorporate · no incremental
+delivery · phases cannot overlap · no risk handling · limited customer
+interaction (start and end only).
 - **Never examined.** If it appears, a "differentiate classical and iterative
   waterfall" 2-marker — answer with feedback paths and the feasibility exception.
 
@@ -200,7 +142,13 @@ this paper — unchecked, no `✓`.)*
   can tell you instantly what is wrong with what you show them. The obstacle is
   not disagreement but **ignorance** — nobody yet knows what the product should be.
 - **Definition:** "the process of developing a working replication of a product
-  or system that has to be engineered." Cycle: Quick Reference.
+  or system that has to be engineered."
+- **The cycle:** interview the customer → incomplete high-level paper model →
+  initial prototype with basic functionality only → customer identifies problems
+  → refine → repeat until satisfactory → *then* build the real product, using the
+  approved prototype as the specification.
+- The system is **partially implemented before or during analysis**, which is
+  what lets the customer see it early in the life cycle.
 - **Never examined.** Know the cycle and the trigger condition — customer cannot
   state requirements up front.
 
@@ -221,7 +169,8 @@ this paper — unchecked, no `✓`.)*
 - **The deck's precondition:** the project "can be broken down into small modules
   wherein each module can be assigned independently to separate teams", and each
   module's development "involves the various basic steps as in waterfall model,
-  i.e. analyzing, designing, coding and then testing". Origin: Quick Reference.
+  i.e. analyzing, designing, coding and then testing".
+- **First proposed by IBM in the 1980s.**
 - **Never examined here.** Relevant to B1 though: case 2 ("a working system using
   reusable components, quickly") is a plausible RAD reading, and this vault
   assigns it to component-based development instead — the disagreement is recorded
@@ -230,6 +179,69 @@ this paper — unchecked, no `✓`.)*
 > [!note] Deck placement
 > The deck lists RAD as **Incremental Process Model #2**, next to the Incremental
 > model. The handout groups it with the conventional models at lectures 6-7.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §1. **2 of 80, plus one assignment
+question.**
+
+### Scenario → identify & justify — B1 case 1, 2 marks
+
+- **Spot it:** a real-world, deliberately **non-software** scenario described
+  through the model's behaviour rather than named. Waterfall's tells: *"all
+  requirements collected first"*, strict stage order, a single final handover.
+- **Skeleton:** name the model in the first line → quote **two or three phrases
+  from the scenario** and map each to a property → say why the scenario's
+  conditions make it appropriate.
+- **Earns the marks:** the mapping. Marks are not for describing waterfall.
+- **Trap:** writing a generic waterfall essay. *"All requirements are collected
+  first, therefore requirements are frozen, which is what waterfall assumes"* is
+  the sentence that scores.
+- **Second trap:** answering with a **category** ("a conventional model") — your
+  handout and your deck group these differently, so **name the model**.
+
+### Compare — [[se-assign-1-2026]] Q8(i)
+
+Waterfall vs Agile as a table, then a recommendation. Worked there; the selection
+logic is on [[Evolutionary Process Models]].
+
+**Never asked as:** `numerical`, `draw`.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+**The one question that decides everything:** *how stable are the requirements?*
+Stable and understood → waterfall. Unclear to the customer → prototyping. Clear
+and decomposable with a tight deadline → RAD.
+
+| Ask | Answer |
+|---|---|
+| Waterfall's six phases | feasibility · requirements · design · coding+unit test · integration+system test · maintenance |
+| Largest phase | **maintenance, ~60% of total effort** |
+| Alpha / beta / acceptance | development team / friendly customers / the customer after delivery |
+| Classical vs iterative | no feedback paths / feedback to every predecessor |
+| The one missing arrow | **no feedback to the feasibility study** |
+| RAD's origin | IBM, 1980s |
+| Waterfall's author | Winston Royce, 1970 |
+
+**Model selection at a glance:**
+
+| Model | Use when | Key risk |
+|---|---|---|
+| Waterfall | requirements stable and fully understood | any late change is catastrophic |
+| Iterative waterfall | as above, but errors are expected | still no incremental delivery |
+| Prototyping | customer cannot state requirements up front | throwaway prototype mistaken for the product |
+| RAD | modular project, tight deadline, skilled teams | needs enough people for parallel teams |
+
+**The four maintenance types** (taught here, examined on
+[[Software Maintenance]]): corrective — fix defects · adaptive — port · perfective
+— enhance · preventive — pre-empt.
+
+**B1 case 1 in one line:** Waterfall — "all requirements collected first" =
+frozen requirements, strictly sequential irreversible stages, phase-end
+inspections, one final handover.
 
 ## Practice
 

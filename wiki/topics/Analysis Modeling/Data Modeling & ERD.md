@@ -34,117 +34,11 @@ last_practiced: null
 > on drawings**. Lectures 19-20 is *syllabus depth*; rule 3 forbids reading it
 > as marks.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — one
-assignment question ([[se-assign-1-2026]] Q5(c), a 12-entity clinic ERD).**
-
-### Draw & label — the archetype to prepare
-
-- **Spot it:** *"Draft an ERD (entities, keys, relationships) for…"* — usually
-  with the entities listed for you, which makes it a **notation** test rather than
-  a modelling one.
-- **Skeleton:**
-  1. **Legend** — which notation: crow's foot or Chen. State it.
-  2. **An entity table** — entity · **primary key** · attributes · foreign keys.
-     This earns marks the diagram alone does not, and it is fast to write.
-  3. **The diagram**, with **cardinality at both ends of every relationship**.
-  4. **Reading** — what it asserts, plus the validity rule: **every many-to-many
-     resolved into an associative entity**, every identifier underlined.
-- **Earns the marks:** cardinality markers and keys. **An unlabelled ERD is worth
-  close to zero.**
-- **Trap:** drawing a direct many-to-many. Resolve it through the entity that
-  already exists in the domain (patient↔provider resolves through *appointment*).
-- **Second trap:** answering *degree* when asked *cardinality*. Degree counts how
-  many **entity types** a relationship connects; cardinality counts **instances**
-  per side. They vary independently — see section 2.
-
-**Never asked as:** `numerical`, `explain`, `scenario`. `compare` is plausible for
-*degree vs cardinality*.
-**Also worth knowing, though never asked:**
-- The **candidate key vs identifier** distinction is the plausible 2-marker here.
-- **The drawing skill transfers.** [[UML & Use Case Modeling]] carries a 10-mark
-  drawing in Section D, which establishes that this instructor asks for diagrams
-  at long-answer length — even though ER was not the notation tested.
-
-## Quick Reference
-
-> [!abstract] The three that carry this topic
-> - **Degree = how many entity types take part.** Unary (1), binary (2),
->   ternary (3). Not the same as cardinality.
-> - **Cardinality = how many instances of B relate to each instance of A.**
->   One-to-one, one-to-many, many-to-many.
-> - **Minimum cardinality zero means optional participation.** That is the
->   difference between "may have" and "must have", and it is the detail most
->   answers drop.
+## 1 · Entities, attributes and keys
 
 **Data object / entity** — something the system needs to store information about.
-**Attribute** — a property or characteristic of an entity that is of interest to
-the organisation. **Relationship** — an association between entity types.
-
-### Degree of relationship
-
-The **number of entity types that participate** in the relationship.
-
-| Degree | Entity types | Deck's example |
-|---|---|---|
-| **Unary** (recursive) | 1 | PERSON *is married to* PERSON — one-to-one; EMPLOYEE *manages* EMPLOYEE — one-to-many |
-| **Binary** | 2 | the ordinary case — see below |
-| **Ternary** | 3 | VENDOR *ships* PART *to* WAREHOUSE |
-
-### Binary relationships by cardinality — the deck's three examples
-
-| Cardinality | Example | Reading |
-|---|---|---|
-| **One-to-one** | EMPLOYEE *is assigned* PARKING PLACE | each employee has one place, each place has one employee |
-| **One-to-many** | PRODUCT LINE *contains* PRODUCT | a line has many products, a product belongs to one line |
-| **Many-to-many** | STUDENT *registers for* COURSE | a student takes many courses, a course has many students |
-
-A fourth, from the training example: EMPLOYEE *completes* COURSE — many-to-many,
-because each employee may complete more than one course and each course may be
-completed by more than one employee.
-
-### Cardinality and optionality
-
-**Cardinality** of a relationship is *the number of instances of entity B that can
-be associated with each instance of entity A*.
-
-**Minimum cardinality** is the *minimum* number of instances of B that may be
-associated with each instance of A. If it is **zero**, B is an **optional
-participant**.
-
-> Deck example: MOVIE *is stocked as* VIDEO TAPE. The minimum number of tapes
-> available for a movie is zero, so **VIDEO TAPE is an optional participant** in
-> the *is-stocked-as* relationship.
-
-### Keys
-
-| Term | Definition |
-|---|---|
-| **Candidate key** | an attribute, or combination of attributes, that uniquely identifies each instance of an entity type |
-| **Identifier** | the candidate key chosen to be *the* unique characteristic for that entity type |
-
-Deck example: STUDENT has attributes Student_ID, Name, Address, Phone_No.
-**Student_ID is the candidate key**, and is chosen as the identifier.
-
-### Notation legend
-
-Read this before drawing anything — an unlabelled ER diagram scores near zero.
-
-| Symbol | Means |
-|---|---|
-| Rectangle | entity type |
-| Diamond | relationship |
-| Ellipse | attribute |
-| Underlined attribute | identifier / key |
-| Line | participation in the relationship |
-| **1** / **M** / **N** on a line | cardinality at that end |
-
-**Label both ends of every relationship.** Cardinality is a property of each
-direction separately, and a one-to-many drawn without the 1 and the M is
-indistinguishable from a many-to-many.
-
-## 1 · Entities, attributes and keys
+**Attribute** — a named property of an entity. **Relationship** — a named
+association between entities.
 
 - **Start by asking what the system has to remember.** A university remembers
   students and courses; a hotel remembers rooms and reservations.
@@ -175,7 +69,52 @@ ordinary attributes.
   exactly why they need separate names.
 
 **Terms and distinctions.** The degree table, the three binary cardinality
-examples, and the cardinality/optionality definitions are all in Quick Reference.
+examples:
+
+**Degree of relationship**
+
+The **number of entity types that participate** in the relationship.
+
+| Degree | Entity types | Deck's example |
+|---|---|---|
+| **Unary** (recursive) | 1 | PERSON *is married to* PERSON — one-to-one; EMPLOYEE *manages* EMPLOYEE — one-to-many |
+| **Binary** | 2 | the ordinary case — see below |
+| **Ternary** | 3 | VENDOR *ships* PART *to* WAREHOUSE |
+
+**Binary relationships by cardinality — the deck's three examples
+
+| Cardinality | Example | Reading |
+|---|---|---|
+| **One-to-one** | EMPLOYEE *is assigned* PARKING PLACE | each employee has one place, each place has one employee |
+| **One-to-many** | PRODUCT LINE *contains* PRODUCT | a line has many products, a product belongs to one line |
+| **Many-to-many** | STUDENT *registers for* COURSE | a student takes many courses, a course has many students |
+
+A fourth, from the training example: EMPLOYEE *completes* COURSE — many-to-many,
+because each employee may complete more than one course and each course may be
+completed by more than one employee.
+
+**Cardinality and optionality**
+
+**Cardinality** of a relationship is *the number of instances of entity B that can
+be associated with each instance of entity A*.
+
+**Minimum cardinality** is the *minimum* number of instances of B that may be
+associated with each instance of A. If it is **zero**, B is an **optional
+participant**.
+
+> Deck example: MOVIE *is stocked as* VIDEO TAPE. The minimum number of tapes
+> available for a movie is zero, so **VIDEO TAPE is an optional participant** in
+> the *is-stocked-as* relationship.
+
+**Keys**
+
+| Term | Definition |
+|---|---|
+| **Candidate key** | an attribute, or combination of attributes, that uniquely identifies each instance of an entity type |
+| **Identifier** | the candidate key chosen to be *the* unique characteristic for that entity type |
+
+Deck example: STUDENT has attributes Student_ID, Name, Address, Phone_No.
+**Student_ID is the candidate key**, and is chosen as the identifier.
 
 **Minimum cardinality** is the subtlety worth carrying. Ordinary cardinality says
 how many *can* be associated; minimum cardinality says how few *may* be. When the
@@ -207,7 +146,24 @@ several vendors.
 - Get the shapes right, **underline the identifier**, and put a cardinality marker
   at **both** ends of every relationship line.
 
-**Legend.** The symbol table is in Quick Reference — rectangle for entity, diamond
+**Legend.**
+
+Read this before drawing anything — an unlabelled ER diagram scores near zero.
+
+| Symbol | Means |
+|---|---|
+| Rectangle | entity type |
+| Diamond | relationship |
+| Ellipse | attribute |
+| Underlined attribute | identifier / key |
+| Line | participation in the relationship |
+| **1** / **M** / **N** on a line | cardinality at that end |
+
+**Label both ends of every relationship.** Cardinality is a property of each
+direction separately, and a one-to-many drawn without the 1 and the M is
+indistinguishable from a many-to-many.
+
+*(In one line: rectangle for entity, diamond
 for relationship, ellipse for attribute, underline for identifier, 1/M/N for
 cardinality. State which convention you are using if there is any doubt.
 
@@ -249,6 +205,60 @@ both ends, and every entity carries exactly one underlined identifier.
 > transcription of your instructor's slide.** Open
 > `L6 Requirement Analysis Diagrams.pdf` by eye to compare before relying on the
 > specific entities and attributes.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — one
+assignment question ([[se-assign-1-2026]] Q5(c), a 12-entity clinic ERD).**
+
+### Draw & label — the archetype to prepare
+
+- **Spot it:** *"Draft an ERD (entities, keys, relationships) for…"* — usually
+  with the entities listed for you, which makes it a **notation** test rather than
+  a modelling one.
+- **Skeleton:**
+  1. **Legend** — which notation: crow's foot or Chen. State it.
+  2. **An entity table** — entity · **primary key** · attributes · foreign keys.
+     This earns marks the diagram alone does not, and it is fast to write.
+  3. **The diagram**, with **cardinality at both ends of every relationship**.
+  4. **Reading** — what it asserts, plus the validity rule: **every many-to-many
+     resolved into an associative entity**, every identifier underlined.
+- **Earns the marks:** cardinality markers and keys. **An unlabelled ERD is worth
+  close to zero.**
+- **Trap:** drawing a direct many-to-many. Resolve it through the entity that
+  already exists in the domain (patient↔provider resolves through *appointment*).
+- **Second trap:** answering *degree* when asked *cardinality*. Degree counts how
+  many **entity types** a relationship connects; cardinality counts **instances**
+  per side. They vary independently — see section 2.
+
+**Never asked as:** `numerical`, `explain`, `scenario`. `compare` is plausible for
+*degree vs cardinality*.
+**Also worth knowing, though never asked:**
+- The **candidate key vs identifier** distinction is the plausible 2-marker here.
+- **The drawing skill transfers.** [[UML & Use Case Modeling]] carries a 10-mark
+  drawing in Section D, which establishes that this instructor asks for diagrams
+  at long-answer length — even though ER was not the notation tested.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+| Ask | Answer |
+|---|---|
+| **Degree** | how many **entity types** a relationship connects — unary, binary, ternary |
+| **Cardinality** | how many **instances** of one side attach to each of the other |
+| They vary | **independently** — a unary relationship can still be one-to-many |
+| Three binary cardinalities | 1:1 · 1:M · M:N |
+| **Identifier** | the candidate key actually chosen, **underlined** in the diagram |
+| Minimum cardinality | whether participation is optional (0) or mandatory (1) |
+| M:N must be | **resolved into an associative entity** |
+| Notation | rectangle = entity · diamond = relationship · ellipse = attribute · underline = identifier |
+
+**The rule that makes an ERD correct:** cardinality at **both** ends of every
+relationship line, every identifier underlined, no unresolved many-to-many.
+
+**An unlabelled ERD is worth close to zero.**
 
 ## Practice
 

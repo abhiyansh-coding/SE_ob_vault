@@ -38,145 +38,6 @@ last_practiced: null
 > **work the deck's example and you have worked the exam question.** It is
 > reproduced in full in the Question Bank, along with **an error it contains**.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §3. **This is the paper's only numerical
-long-answer and the heaviest topic in the MTE window — 10 of 80.**
-
-### Numerical — D1, 10 marks (4 + 4 + 2)
-
-- **Spot it:** a size in LOC, a mode named or implied, and a note supplying
-  *a, b, c, d*. **An *a* of 2.8 or 3.0/3.2 means Intermediate, not Basic** — the
-  coefficient set identifies the model, and the question will not say so.
-- **Skeleton, in this exact order:**
-  1. **Given block** — convert LOC → KLOC on the first line. State the mode and
-     which model the coefficients belong to.
-  2. **Nominal effort** *E* = *a* × KLOC<sup>*b*</sup>, showing the log-antilog
-     working for the power.
-  3. **EAF** = product of the cost-driver multipliers given.
-  4. **Adjusted effort** = nominal × EAF, then **duration** *D* = *c* × *E*<sup>*d*</sup>.
-  5. **Repeat for each case**, then compute what was actually asked — usually the
-     **variation between cases**, absolute and percentage.
-  6. Answer line **with units**: PM for effort, months for duration.
-- **Earns the marks:** the variation step. D1 gives 2 marks for it specifically,
-  and candidates who compute both cases correctly still lose those 2 by stopping.
-- **Trap:** forgetting to divide by 1000; using KLOC where effort belongs in the
-  duration formula; reporting person-months as months.
-
-**Also asked as a mode-selection sub-step.** Deck Example 4.6 gives a word problem
-with no mode stated ("average experience", "schedule not very tight") and expects
-you to pick semi-detached and justify. That is a `scenario` move embedded inside a
-`numerical` question — see section 1.
-
-**Never asked as:** `draw`, `compare`. `explain` appears only adjacent — B3's
-effort-distribution question is filed on [[SDLC & CMMI]] but its machinery is
-here.
-**Also worth knowing:**
-- **Section 1 is never examined alone, but every COCOMO question begins there** —
-  a wrong mode makes every subsequent number wrong. D1 removed the difficulty by
-  naming "embedded system" and supplying the coefficients. Do not count on that.
-- **If Basic COCOMO appears**, it will be the three-mode comparison (deck Example
-  4.5, reused verbatim as assignment Q6) or the staff-size-and-productivity form
-  (Example 4.6).
-- **Detailed COCOMO:** definition depth only — name the two additions and the
-  three-level hierarchy. It connects to B3's effort-distribution question on
-  [[SDLC & CMMI]], which asks the same idea non-numerically.
-
-## Quick Reference
-
-> [!abstract] The two equations, and the one thing that decides everything
-> $$E = a\,(\text{KLOC})^{b} \times \text{EAF} \qquad D = c\,(E)^{d}$$
-> **Identify the mode first** — organic, semi-detached or embedded — because it
-> selects every coefficient. Then read: is this Basic (no EAF) or Intermediate
-> (EAF from cost drivers)?
-> **Duration is computed from effort, never from KLOC.**
-
-### The three modes
-
-| Mode | Size | Nature | Innovation | Deadline | Environment |
-|---|---|---|---|---|---|
-| **Organic** | 2-50 KLOC | small, experienced developers, familiar environment — payroll, inventory | little | not tight | familiar, in-house |
-| **Semi-detached** | 50-300 KLOC | medium team, average prior experience — compilers, DBMS, editors | medium | medium | medium |
-| **Embedded** | over 300 KLOC | large, real-time, complex interfaces, little prior experience — ATMs, air traffic control | significant | tight | complex hardware/customer interfaces |
-
-**Mode selection is the first mark.** The size band is a guide, not a rule — the
-words *real-time*, *embedded*, *tight deadline* and *complex interfaces* override
-it. D1 says "embedded system" outright.
-
-### Coefficients — the two tables differ, and it matters
-
-**Basic COCOMO** — *E* = *a*(KLOC)<sup>*b*</sup>, *D* = *c*(*E*)<sup>*d*</sup>
-
-| Mode | *a<sub>b</sub>* | *b<sub>b</sub>* | *c<sub>b</sub>* | *d<sub>b</sub>* |
-|---|---|---|---|---|
-| Organic | **2.4** | 1.05 | 2.5 | 0.38 |
-| Semi-detached | 3.0 | 1.12 | 2.5 | 0.35 |
-| Embedded | **3.6** | 1.20 | 2.5 | 0.32 |
-
-**Intermediate COCOMO** — *E* = *a*(KLOC)<sup>*b*</sup> × EAF
-
-| Mode | *a<sub>i</sub>* | *b<sub>i</sub>* | *c<sub>i</sub>* | *d<sub>i</sub>* |
-|---|---|---|---|---|
-| Organic | **3.2** | 1.05 | 2.5 | 0.38 |
-| Semi-detached | 3.0 | 1.12 | 2.5 | 0.35 |
-| Embedded | **2.8** | 1.20 | 2.5 | 0.32 |
-
-> [!warning] Only *a* changes between Basic and Intermediate
-> *b*, *c* and *d* are identical in both tables. But *a* moves in **opposite
-> directions**: organic rises 2.4 → 3.2, embedded falls 3.6 → **2.8**,
-> semi-detached alone stays at 3.0. **Given *a* = 2.8 you are in Intermediate,
-> embedded** — which is exactly how D1 identifies itself without saying so.
-
-### Derived quantities
-
-| Quantity | Formula | Units |
-|---|---|---|
-| Average staff size | SS = *E* / *D* | persons |
-| Productivity | *P* = KLOC / *E* | KLOC per person-month |
-| EAF | product of all applicable cost-driver multipliers | dimensionless |
-
-### The 15 cost drivers, in four groups
-
-| Group | Drivers |
-|---|---|
-| **Product** | RELY (required reliability) · DATA (database size) · CPLX (product complexity) |
-| **Hardware/Computer** | TIME (runtime performance) · STOR (memory) · VIRT (virtual machine volatility) · TURN (turnaround time) |
-| **Personnel** | ACAP (analyst capability) · AEXP (application experience) · **PCAP (programmer capability)** · VEXP (virtual machine experience) · **LEXP (programming language experience)** |
-| **Project** | MODP (modern programming practices) · TOOL (software tools) · SCED (required schedule) |
-
-### Multiplier table
-
-| Driver | Very low | Low | Nominal | High | Very high | Extra high |
-|---|---|---|---|---|---|---|
-| RELY | 0.75 | 0.88 | 1.00 | 1.15 | 1.40 | — |
-| DATA | — | 0.94 | 1.00 | 1.08 | 1.16 | — |
-| CPLX | 0.70 | 0.85 | 1.00 | 1.15 | 1.30 | 1.65 |
-| TIME | — | — | 1.00 | 1.11 | 1.30 | 1.66 |
-| STOR | — | — | 1.00 | 1.06 | 1.21 | 1.56 |
-| VIRT | — | 0.87 | 1.00 | 1.15 | 1.30 | — |
-| TURN | — | 0.87 | 1.00 | 1.07 | 1.15 | — |
-| ACAP | 1.46 | 1.19 | 1.00 | 0.86 | 0.71 | — |
-| AEXP | 1.29 | 1.13 | 1.00 | 0.91 | 0.82 | — |
-| **PCAP** | 1.42 | **1.17** | 1.00 | **0.86** | 0.70 | — |
-| VEXP | 1.21 | 1.10 | 1.00 | 0.90 | — | — |
-| **LEXP** | **1.14** | 1.07 | 1.00 | **0.95** | — | — |
-| MODP | 1.24 | 1.10 | 1.00 | 0.91 | 0.82 | — |
-| TOOL | 1.24 | 1.10 | 1.00 | 0.91 | 0.83 | — |
-| SCED | 1.23 | 1.08 | 1.00 | 1.04 | 1.10 | — |
-
-**Bold entries are the four D1 uses.** Note the direction: for capability and
-experience drivers, **better people give a multiplier below 1** (less effort).
-For demand drivers like RELY, CPLX and TIME, **more demanding gives above 1**.
-SCED is the odd one — both ends exceed 1.00, because compressing *or* stretching
-a schedule costs effort.
-
-### Detailed COCOMO
-
-Adds **phase-sensitive effort multipliers** and a **three-level product
-hierarchy** (module / subsystem / system), allocating manpower per phase.
-Plan and requirements: **effort 6-8%**, development time **10-40%**, depending on
-mode and size.
-
 ## 1 · The three development modes
 
 - **A hundred thousand lines of payroll code and a hundred thousand lines of
@@ -187,7 +48,17 @@ mode and size.
 - **COCOMO's first move is to sort projects into three archetypes**, because the
   coefficients converting size into effort are wholly different for each.
 
-**Terms and distinctions.** The full comparison table is in Quick Reference.
+**The three modes:**
+
+| Mode | Size | Nature | Innovation | Deadline | Environment |
+|---|---|---|---|---|---|
+| **Organic** | 2-50 KLOC | small, experienced developers, familiar environment — payroll, inventory | little | not tight | familiar, in-house |
+| **Semi-detached** | 50-300 KLOC | medium team, average prior experience — compilers, DBMS, editors | medium | medium | medium |
+| **Embedded** | over 300 KLOC | large, real-time, complex interfaces, little prior experience — ATMs, air traffic control | significant | tight | complex hardware/customer interfaces |
+
+**Mode selection is the first mark.** The size band is a guide, not a rule — the
+words *real-time*, *embedded*, *tight deadline* and *complex interfaces* override
+it. D1 says "embedded system" outright.
 The examinable skill is **classification from a word problem**:
 
 | Signal in the question | Mode |
@@ -224,7 +95,37 @@ $$E = a_b\,(\text{KLOC})^{b_b} \qquad D = c_b\,(E)^{d_b}$$
 | *a<sub>b</sub>*, *b<sub>b</sub>* | effort coefficients, by mode | — |
 | *c<sub>b</sub>*, *d<sub>b</sub>* | duration coefficients, by mode | — |
 
-Basic coefficients are in Quick Reference. Two derived quantities defined here:
+**Coefficients — the two tables differ, and it matters**
+
+**Basic COCOMO** — *E* = *a*(KLOC)<sup>*b*</sup>, *D* = *c*(*E*)<sup>*d*</sup>
+
+| Mode | *a<sub>b</sub>* | *b<sub>b</sub>* | *c<sub>b</sub>* | *d<sub>b</sub>* |
+|---|---|---|---|---|
+| Organic | **2.4** | 1.05 | 2.5 | 0.38 |
+| Semi-detached | 3.0 | 1.12 | 2.5 | 0.35 |
+| Embedded | **3.6** | 1.20 | 2.5 | 0.32 |
+
+**Intermediate COCOMO** — *E* = *a*(KLOC)<sup>*b*</sup> × EAF
+
+| Mode | *a<sub>i</sub>* | *b<sub>i</sub>* | *c<sub>i</sub>* | *d<sub>i</sub>* |
+|---|---|---|---|---|
+| Organic | **3.2** | 1.05 | 2.5 | 0.38 |
+| Semi-detached | 3.0 | 1.12 | 2.5 | 0.35 |
+| Embedded | **2.8** | 1.20 | 2.5 | 0.32 |
+
+> [!warning] Only *a* changes between Basic and Intermediate
+> *b*, *c* and *d* are identical in both tables. But *a* moves in **opposite
+> directions**: organic rises 2.4 → 3.2, embedded falls 3.6 → **2.8**,
+> semi-detached alone stays at 3.0. **Given *a* = 2.8 you are in Intermediate,
+> embedded** — which is exactly how D1 identifies itself without saying so.
+
+**Derived quantities**
+
+| Quantity | Formula | Units |
+|---|---|---|
+| Average staff size | SS = *E* / *D* | persons |
+| Productivity | *P* = KLOC / *E* | KLOC per person-month |
+| EAF | product of all applicable cost-driver multipliers | dimensionless |
 
 $$\text{Average staff size} = \frac{E}{D} \text{ persons} \qquad \text{Productivity} = \frac{\text{KLOC}}{E} \text{ KLOC/PM}$$
 
@@ -261,7 +162,40 @@ $$\text{EAF} = \prod_{\text{applicable drivers}} (\text{multiplier})$$
 effort — so the EAF reaches duration indirectly, through *E*, and never by
 multiplying *D*.
 
-The 15 drivers and the full multiplier table are in Quick Reference.
+**The 15 cost drivers, in four groups**
+
+| Group | Drivers |
+|---|---|
+| **Product** | RELY (required reliability) · DATA (database size) · CPLX (product complexity) |
+| **Hardware/Computer** | TIME (runtime performance) · STOR (memory) · VIRT (virtual machine volatility) · TURN (turnaround time) |
+| **Personnel** | ACAP (analyst capability) · AEXP (application experience) · **PCAP (programmer capability)** · VEXP (virtual machine experience) · **LEXP (programming language experience)** |
+| **Project** | MODP (modern programming practices) · TOOL (software tools) · SCED (required schedule) |
+
+**Multiplier table**
+
+| Driver | Very low | Low | Nominal | High | Very high | Extra high |
+|---|---|---|---|---|---|---|
+| RELY | 0.75 | 0.88 | 1.00 | 1.15 | 1.40 | — |
+| DATA | — | 0.94 | 1.00 | 1.08 | 1.16 | — |
+| CPLX | 0.70 | 0.85 | 1.00 | 1.15 | 1.30 | 1.65 |
+| TIME | — | — | 1.00 | 1.11 | 1.30 | 1.66 |
+| STOR | — | — | 1.00 | 1.06 | 1.21 | 1.56 |
+| VIRT | — | 0.87 | 1.00 | 1.15 | 1.30 | — |
+| TURN | — | 0.87 | 1.00 | 1.07 | 1.15 | — |
+| ACAP | 1.46 | 1.19 | 1.00 | 0.86 | 0.71 | — |
+| AEXP | 1.29 | 1.13 | 1.00 | 0.91 | 0.82 | — |
+| **PCAP** | 1.42 | **1.17** | 1.00 | **0.86** | 0.70 | — |
+| VEXP | 1.21 | 1.10 | 1.00 | 0.90 | — | — |
+| **LEXP** | **1.14** | 1.07 | 1.00 | **0.95** | — | — |
+| MODP | 1.24 | 1.10 | 1.00 | 0.91 | 0.82 | — |
+| TOOL | 1.24 | 1.10 | 1.00 | 0.91 | 0.83 | — |
+| SCED | 1.23 | 1.08 | 1.00 | 1.04 | 1.10 | — |
+
+**Bold entries are the four D1 uses.** Note the direction: for capability and
+experience drivers, **better people give a multiplier below 1** (less effort).
+For demand drivers like RELY, CPLX and TIME, **more demanding gives above 1**.
+SCED is the odd one — both ends exceed 1.00, because compressing *or* stretching
+a schedule costs effort.
 
 **Worked example.**
 
@@ -364,6 +298,84 @@ no `✓`. All arithmetic independently verified.)*
 The deck's one concrete figure: for the **plan and requirements** phase, effort
 is **6-8%** and development time **10-40%** of the total, varying with mode and
 size.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §3. **This is the paper's only numerical
+long-answer and the heaviest topic in the MTE window — 10 of 80.**
+
+### Numerical — D1, 10 marks (4 + 4 + 2)
+
+- **Spot it:** a size in LOC, a mode named or implied, and a note supplying
+  *a, b, c, d*. **An *a* of 2.8 or 3.0/3.2 means Intermediate, not Basic** — the
+  coefficient set identifies the model, and the question will not say so.
+- **Skeleton, in this exact order:**
+  1. **Given block** — convert LOC → KLOC on the first line. State the mode and
+     which model the coefficients belong to.
+  2. **Nominal effort** *E* = *a* × KLOC<sup>*b*</sup>, showing the log-antilog
+     working for the power.
+  3. **EAF** = product of the cost-driver multipliers given.
+  4. **Adjusted effort** = nominal × EAF, then **duration** *D* = *c* × *E*<sup>*d*</sup>.
+  5. **Repeat for each case**, then compute what was actually asked — usually the
+     **variation between cases**, absolute and percentage.
+  6. Answer line **with units**: PM for effort, months for duration.
+- **Earns the marks:** the variation step. D1 gives 2 marks for it specifically,
+  and candidates who compute both cases correctly still lose those 2 by stopping.
+- **Trap:** forgetting to divide by 1000; using KLOC where effort belongs in the
+  duration formula; reporting person-months as months.
+
+**Also asked as a mode-selection sub-step.** Deck Example 4.6 gives a word problem
+with no mode stated ("average experience", "schedule not very tight") and expects
+you to pick semi-detached and justify. That is a `scenario` move embedded inside a
+`numerical` question — see section 1.
+
+**Never asked as:** `draw`, `compare`. `explain` appears only adjacent — B3's
+effort-distribution question is filed on [[SDLC & CMMI]] but its machinery is
+here.
+**Also worth knowing:**
+- **Section 1 is never examined alone, but every COCOMO question begins there** —
+  a wrong mode makes every subsequent number wrong. D1 removed the difficulty by
+  naming "embedded system" and supplying the coefficients. Do not count on that.
+- **If Basic COCOMO appears**, it will be the three-mode comparison (deck Example
+  4.5, reused verbatim as assignment Q6) or the staff-size-and-productivity form
+  (Example 4.6).
+- **Detailed COCOMO:** definition depth only — name the two additions and the
+  three-level hierarchy. It connects to B3's effort-distribution question on
+  [[SDLC & CMMI]], which asks the same idea non-numerically.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+$$E = a\,(\text{KLOC})^{b} \qquad D = c\,E^{d} \qquad \text{Staff} = E/D \qquad P = \text{KLOC}/E$$
+
+**Convert LOC → KLOC first. Duration takes *effort* as its input, never size.**
+
+| Mode | Basic *a*, *b* | Basic *c*, *d* | Size band | Team / setting |
+|---|---|---|---|---|
+| **Organic** | 2.4, 1.05 | 2.5, 0.38 | < 50 KLOC | small, experienced, familiar, flexible |
+| **Semi-detached** | 3.0, 1.12 | 2.5, 0.35 | 50-300 KLOC | mixed experience, some rigidity |
+| **Embedded** | 3.6, 1.20 | 2.5, 0.32 | > 300 KLOC | tight hardware/regulatory constraints |
+
+**Intermediate *a* differs:** 3.2 organic · 3.0 semi-detached · **2.8 embedded**.
+**An *a* of 2.8 tells you the question is Intermediate, not Basic** — the
+coefficient set identifies the model and the paper will not say so.
+
+$$E_{\text{adjusted}} = \text{EAF} \times a\,(\text{KLOC})^{b}, \qquad \text{EAF} = \prod \text{cost drivers}$$
+
+- **EAF is a product, never a sum.**
+- **Below 1.00 makes it easier** (capable people, good tools); **above 1.00 makes
+  it harder** (high reliability, tight memory, complex product).
+- **15 cost drivers in four groups:** product · hardware · personnel · project.
+- **Detailed COCOMO** adds **phase-sensitive** multipliers and a three-level
+  hierarchy: module, subsystem, system.
+
+**Show the log working for any fractional power** — it is method marks:
+`log₁₀400 = 2.60206 → × 1.05 = 2.732163 → antilog = 539.71`.
+
+**D1's last 2 marks are the *variation* between the two cases.** Candidates who
+compute both correctly still lose them by stopping.
 
 ## Practice
 

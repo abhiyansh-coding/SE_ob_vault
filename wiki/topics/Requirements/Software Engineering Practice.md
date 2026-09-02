@@ -31,33 +31,9 @@ last_practiced: null
 > A single paper cannot show a topic is unexamined. In syllabus and taught.
 > Lecture 14 is *syllabus depth* and rule 3 forbids reading it as marks.
 
-## How it's asked
+## 1 · Elicitation
 
-**Never asked, on the one paper in this vault** — `asked_as` is empty.
-
-**If it appears, the likely shape** (prediction, not evidence): an `explain`
-question naming one activity — *"explain the requirement elicitation techniques"*
-— or a `compare` between two techniques. The **seven elicitation techniques with
-when each fits** is the only part of this page with enough content to carry a
-6-marker. See [[answer-patterns]] §2 and §5.
-
-**Note the overlap:** specification detail lives on [[Requirements Engineering]],
-which *is* examined. If a question names the SRS, answer from there.
-**Also worth knowing:**
-- **Validation is where V&V enters the course.** *Verification vs validation* is
-  examined behaviour in the testing module ([[Testing Fundamentals]]), so get it
-  right the first time you meet it here.
-- **The traceability chain is management's one carryable fact** — and it explains
-  why [[Software Maintenance]] is expensive when it is absent.
-- Analysis's value is as the bridge into the analysis-modeling phase.
-
-## Quick Reference
-
-> [!abstract] The five activities, in order
-> **Elicitation → Analysis → Specification (documentation) → Validation →
-> Management.**
-> Gather it · make sense of it · write it down · check it is right · keep it
-> current. Each is defined by the failure it prevents.
+**The five activities in full, with their techniques:**
 
 | # | Activity | What happens | Techniques |
 |---|---|---|---|
@@ -78,32 +54,6 @@ with the V-model, and the reason activity 4 is called *validation*:
 | Verification | are we building the product **right**? |
 | **Validation** | are we building the **right** product? |
 
-**Tools named by the deck**
-
-| Tool | Used for |
-|---|---|
-| JIRA | agile requirement tracking |
-| IBM Rational DOORS | requirement management |
-| RequisitePro | requirement documentation |
-| StarUML / Enterprise Architect | modeling requirements |
-| Trello, Asana | task and requirement management |
-
-**The five framework activities** — the broader "software engineering practice"
-of Module 3, defined on [[Software Engineering as a Layered Technology]] and not
-repeated here: communication · planning · modeling · construction · deployment.
-
-**Elicitation technique selection**
-
-| Use | When |
-|---|---|
-| Interviews | few stakeholders, deep detail needed |
-| Questionnaires | many stakeholders, shallow breadth |
-| Observation | the stated process differs from the real one |
-| Prototyping | the customer cannot describe what they want — the *undreamed* case |
-| Workshops / brainstorming | stakeholders disagree and must converge |
-
-## 1 · Elicitation
-
 - **Requirements are not lying around waiting to be collected.** Users describe
   solutions rather than problems, omit everything they consider obvious, and
   cannot describe what they have never seen — the *undreamed* requirements from
@@ -115,7 +65,19 @@ repeated here: communication · planning · modeling · construction · deployme
   at all.
 
 **Terms and distinctions.** The seven techniques and the selection guide are
-in Quick Reference. **Prototyping appears here as an elicitation technique**, not
+here:
+
+**Elicitation technique selection**
+
+| Use | When |
+|---|---|
+| Interviews | few stakeholders, deep detail needed |
+| Questionnaires | many stakeholders, shallow breadth |
+| Observation | the stated process differs from the real one |
+| Prototyping | the customer cannot describe what they want — the *undreamed* case |
+| Workshops / brainstorming | stakeholders disagree and must converge |
+
+**Prototyping appears here as an elicitation technique**, not
 only as a process model — it is how you elicit requirements the customer cannot
 articulate, which is the same argument the prototyping model makes on
 [[Conventional Process Models]].
@@ -175,7 +137,68 @@ full on [[Evolutionary Process Models]] with the V-model.
 
 **Terms and distinctions.** Two responsibilities: **handle changes** during
 development, tracked in tools; and **maintain traceability** —
-*requirement → design → code → test*. The tools table is in Quick Reference.
+*requirement → design → code → test*.
+
+**Tools named by the deck**
+
+| Tool | Used for |
+|---|---|
+| JIRA | agile requirement tracking |
+| IBM Rational DOORS | requirement management |
+| RequisitePro | requirement documentation |
+| StarUML / Enterprise Architect | modeling requirements |
+| Trello, Asana | task and requirement management |
+
+**The five framework activities** — the broader "software engineering practice"
+of Module 3, defined on [[Software Engineering as a Layered Technology]] and not
+repeated here: communication · planning · modeling · construction · deployment.
+
+## How it's asked
+
+**Never asked, on the one paper in this vault** — `asked_as` is empty.
+
+**If it appears, the likely shape** (prediction, not evidence): an `explain`
+question naming one activity — *"explain the requirement elicitation techniques"*
+— or a `compare` between two techniques. The **seven elicitation techniques with
+when each fits** is the only part of this page with enough content to carry a
+6-marker. See [[answer-patterns]] §2 and §5.
+
+**Note the overlap:** specification detail lives on [[Requirements Engineering]],
+which *is* examined. If a question names the SRS, answer from there.
+**Also worth knowing:**
+- **Validation is where V&V enters the course.** *Verification vs validation* is
+  examined behaviour in the testing module ([[Testing Fundamentals]]), so get it
+  right the first time you meet it here.
+- **The traceability chain is management's one carryable fact** — and it explains
+  why [[Software Maintenance]] is expensive when it is absent.
+- Analysis's value is as the bridge into the analysis-modeling phase.
+
+## Quick Reference
+
+> [!abstract] The ten-minute recall card
+> Everything here is taught in full above.
+
+**The five activities, and the failure each prevents:**
+
+| # | Activity | Prevents |
+|---|---|---|
+| 1 | Elicitation | **not knowing** what is wanted |
+| 2 | Analysis | **not agreeing** — conflicts unresolved |
+| 3 | Specification | **not writing it down** — nothing to hand on |
+| 4 | Validation | **not checking** — the wrong system, built correctly |
+| 5 | Management | **not keeping up** — change silently invalidating everything |
+
+| Ask | Answer |
+|---|---|
+| Pick a technique by | how the knowledge is **distributed** — few experts → interview; many → survey; tacit → observe; unknown → prototype |
+| Validation's question | *are we building the **right product**?* |
+| Verification's question | *are we building the **product right**?* |
+| Traceability chain | requirement → design → code → test |
+| Where V&V is examined | [[Testing Fundamentals]] and [[Levels of Testing & Tools]] |
+
+**Specification detail** lives on [[Requirements Engineering]] — the SRS, IEEE
+830, the good-requirement characteristics. That page *is* examined; this one is
+the procedure around it.
 
 ## Practice
 
