@@ -160,6 +160,17 @@ actions in order → find the parallelism → place fork and join → then draw 
 **Never asked as:** `numerical`, `compare`. A `scenario` or `explain` question on
 use cases is plausible but has never appeared — that is a prediction, not
 evidence (rule 7).
+**Also worth knowing:**
+- **"How many UML diagrams are there?"** is the classic 2-marker, and the honest
+  answer names **both counts** — 9 in UML 1.x, 13 in UML 2.x — and says which
+  version it is quoting.
+- **Use cases carry the strongest currency signal in the vault.** They are the
+  entire subject of the **only 2026-27 deck** in `raw/sources/ppts/`, which under
+  rule 8 is the best available evidence of what is being taught *now*. Do not skip
+  section 2 on the strength of one paper's silence.
+- **Class/object/sequence:** definition depth is the right stopping point given
+  the thin deck coverage. Spend the time on activity diagrams instead.
+
 
 ## Contents
 
@@ -187,7 +198,6 @@ graph TD
 
 ## 1 · What UML is, and the diagram taxonomy
 
-**Intuition.**
 - **Before UML, every methodologist had their own notation**, so a diagram meant
   one thing to its author and something else to everyone else.
 - **UML is the agreed vocabulary** — Booch, Jacobson and Rumbaugh combined their
@@ -195,7 +205,7 @@ graph TD
 - **The practical consequence: the notation is the content.** Marks go to using
   the right symbol, not to drawing neatly.
 
-**Definitions & distinctions.** The five modeling roles, the two diagram counts
+**Terms and distinctions.** The five modeling roles, the two diagram counts
 and the structural/behavioral split are all in Quick Reference.
 
 The grouping is worth understanding rather than memorising: **structural**
@@ -204,12 +214,9 @@ time. **Behavioral** diagrams show what the system *does* — how it changes,
 responds and sequences. A class diagram is structural; an activity diagram is
 behavioral.
 
-**What gets asked.** Never examined on this paper. "How many UML diagrams are
-there" is the classic 2-marker, and the honest answer names both counts.
 
 ## 2 · The use case approach
 
-**Intuition.**
 - **A use case is a story about someone trying to get something done with your
   system:** who they are, what they want, what happens step by step, and what
   happens when it goes wrong.
@@ -218,7 +225,7 @@ there" is the classic 2-marker, and the honest answer names both counts.
 - Hence the deck's stress on validating **up front**, with the model presented and
   discussed with customers as soon as it is ready.
 
-**Definitions & distinctions.** The term table, the actor definition and the use
+**Terms and distinctions.** The term table, the actor definition and the use
 case template are all in Quick Reference. Three points worth precision:
 
 - **An actor lies outside the system model** but interacts with it — and may be a
@@ -230,7 +237,7 @@ case template are all in Quick Reference. Three points worth precision:
 - **Use cases are implementation-independent.** They say what the system does,
   never how — which is what lets them be realized later by a class diagram.
 
-**Solved questions.**
+**Worked example.**
 
 > **Deck exercise** — "Carry out a use-case analysis of the operations performed
 > by a parking ticket vending machine. Consider end-user (motorist), maintenance
@@ -250,10 +257,6 @@ Each actor sits outside the system boundary; each use case is an ellipse inside
 it; lines join an actor to every use case they initiate. *(Deck exercise with no
 printed solution — this is a worked approach, not a transcription, so no `✓`.)*
 
-**What gets asked.** Never examined on the one paper here — **but this is the
-entire subject of the only 2026-27 deck in the vault**, which under rule 8 is the
-strongest available signal about what is currently being taught. Do not skip it
-on the strength of one paper's silence.
 
 ## 3 · Class, object and sequence diagrams
 
@@ -264,7 +267,6 @@ on the strength of one paper's silence.
 > 2026-27 deck's middle 28 pages are images. Pressman 8e is not in the vault.
 > What follows is standard UML, held to definition depth.
 
-**Intuition.**
 - **Class diagram — the blueprint:** what types of thing exist, what each knows
   and can do, and how they relate.
 - **Object diagram — a snapshot:** one specific set of instances at one moment,
@@ -272,7 +274,7 @@ on the strength of one paper's silence.
 - **Sequence diagram — a timeline:** which object sends which message to which
   other object, in what order, read top to bottom.
 
-**Definitions & distinctions.**
+**Terms and distinctions.**
 
 | Diagram | Shows | Group |
 |---|---|---|
@@ -307,13 +309,9 @@ satisfy:** every message leaves one lifeline and arrives at another (or returns
 to itself), and a reply is drawn as a dashed arrow. *(Constructed from D2's
 scenario to illustrate the notation — not a deck figure.)*
 
-**What gets asked.** Never examined on this paper. Definition depth is the right
-stopping point given the deck gap — know what each diagram is for and its core
-notation, and spend the time on subtopic 4 instead.
 
 ## 4 · Activity diagrams
 
-**Intuition.**
 - **A flowchart shows one thread of control:** do this, then that, branch here.
 - **Real processes are not like that** — a bank verifying your documents *and*
   checking your credit history does both at once, and only proceeds when both
@@ -359,7 +357,7 @@ cannot close until the goods are delivered *and* the payment received. **The rul
 it must satisfy:** every fork has a matching join, and the join has as many
 incoming flows as the fork had outgoing.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q D2 (10 marks, CO2)** — "A Bank Loan Processing System
 > involves two actors: *Loan Officer* and *Applicant*.
@@ -439,20 +437,6 @@ logout.
 no `✓`. Mermaid cannot draw fork/join bars or swimlanes; **on paper, draw the
 bars as solid horizontal lines and the swimlanes as two labelled columns.**)*
 
-**What gets asked.** This subtopic carries the whole topic's marks. One form so
-far, and it is a big one:
-
-- **Spot it** — a numbered or bulleted case study naming two or more **actors**,
-  ending in *"draw an activity diagram"*. The giveaway phrase is "parallel" or
-  "at the same time".
-- **Method** — map each bullet to a symbol **before** drawing (step 1 above), then
-  draw. Use swimlanes when actors are named. Label every guard. Finish by writing
-  two lines saying what the diagram asserts.
-- **Trap** — four. Drawing a **decision diamond where a fork belongs** — the
-  single error this question is designed to catch. Forgetting the **join**, so
-  the parallel branches never reconverge. Leaving guards unlabelled. And drawing
-  a plain flowchart with no start or end nodes: an activity diagram without ● and
-  ◉ is incomplete notation, and this subject grades notation.
 
 ## Question Bank
 

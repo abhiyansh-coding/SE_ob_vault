@@ -160,7 +160,6 @@ section 3, which is where the definition-and-differentiate answer is worked.)*
 
 ## 1 · Cohesion — the seven levels
 
-**Intuition.**
 - **Ask why a module's parts are in the same box.** "They all serve one
   computation" is the best possible reason — **functional cohesion**. "They happen
   at the same time" is weaker. "No reason, they were just typed near each other"
@@ -169,7 +168,7 @@ section 3, which is where the definition-and-differentiate answer is worked.)*
 - **The practical consequence is change:** a module with one reason to exist has
   one reason to change; a module with three has three.
 
-**Definitions & distinctions.** The seven levels with the deck's own examples are
+**Terms and distinctions.** The seven levels with the deck's own examples are
 tabulated in Quick Reference. The two most confusable pairs:
 
 | Pair | Difference |
@@ -183,7 +182,6 @@ there is no defensible reason for the pairing.
 
 ## 2 · Coupling — the six levels
 
-**Intuition.**
 - **Coupling is the cost of changing something.** If A only receives data through
   parameters, you can rewrite A's insides freely.
 - If A reaches into B and modifies B's variables, neither can change without
@@ -191,7 +189,7 @@ there is no defensible reason for the pairing.
   checking a hundred modules.
 - **The scale ranks how far a change can propagate.**
 
-**Definitions & distinctions.** All six with the deck's notes are in Quick
+**Terms and distinctions.** All six with the deck's notes are in Quick
 Reference. Three points the deck stresses that improve an answer:
 
 - **Control coupling is not automatically bad.** It is bad if the parameter
@@ -204,7 +202,7 @@ Reference. Three points the deck stresses that improve an answer:
 - **Common coupling's real cost is traceability.** Changing global data means
   tracing back to *every* module that accesses it to evaluate the effect.
 
-**Solved questions.** The deck works three coupling types through one Java
+**Worked example.** The deck works three coupling types through one Java
 program, and its verdict is worth carrying:
 
 > **Deck, slides 7-9** — stamp coupling (passing an `Address` object where only
@@ -218,7 +216,6 @@ program, and its verdict is worth carrying:
 
 ## 3 · Reading code for cohesion and coupling
 
-**Intuition.**
 - **The exam form is not "define coupling"** but "here is a class, name what is
   wrong with it".
 - **The method is mechanical.** For **cohesion**: list what the methods in one
@@ -227,7 +224,7 @@ program, and its verdict is worth carrying:
 - **Then justify by pointing at specific lines. The justification is where the
   marks are** — an unsupported label earns almost nothing.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q B2 (3 + 3 = 6 marks, CO3)** —
 > **(a)** Define and differentiate Cohesion and Coupling in software design.
@@ -319,18 +316,6 @@ editing `Member`.
 no `✓`. The disagreement with the deck's printed reasoning is recorded above, as
 rule 8 requires.)*
 
-**What gets asked.** This subtopic carries all 6 marks, in one two-part form:
-
-- **Spot it** — "define and differentiate", followed by a short code listing and
-  "identify the type of cohesion and coupling **with justification**".
-- **Method** — part (a) is a table: scope, what it measures, whether you want it
-  high or low. Part (b): list what each method *does*, decide whether they serve
-  one purpose, then find every cross-class reference. **Name the level, quote the
-  line, say what to do instead.**
-- **Trap** — three. Giving the label without justification: "logical cohesion" on
-  its own is worth almost nothing when the question says *with justification*.
-  Confusing the directions — cohesion **high**, coupling **low**. And answering
-  with only one of the two when the question asks for both types.
 
 ## Question Bank
 

@@ -197,14 +197,13 @@ graph TD
 
 ## 2 · The software crisis
 
-**Intuition.**
 - By the late 1960s: **software behaves like nothing else engineers build**.
 - Projects ran late, and the obvious fix — more programmers — made them *later*.
 - Hardware got cheaper as software got bigger and costlier, so the thing **least
   under control became the thing that mattered most**.
 - It is the **problem statement the remaining 50 lectures answer**.
 
-**Definitions & distinctions.**
+**Terms and distinctions.**
 - Six causes and three named failures: Quick Reference.
 - **The deck's wording:** adding programmers late "does not always help speed up
   the development process. Instead, sometimes it may have negative impacts like
@@ -218,7 +217,7 @@ graph TD
      is on [[Effort Estimation & COCOMO]], where effort in person-months and
      duration in months are shown not to be interchangeable.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q A5 (2 marks, CO1)** — "A software development process is
 > delayed from its scheduled time. Is it possible to develop the software on time
@@ -230,15 +229,6 @@ at-best-linear output · sequential work cannot be compressed by parallelism.
 **Close with the real remedies:** reduce scope · extend the schedule · re-plan
 with the time remaining. *(No solution key for this paper — unchecked, no `✓`.)*
 
-**What gets asked.** A 2-marker, the whole topic's marks. One form:
-- **Spot it** — a project behind schedule, asking whether resources can fix it.
-  Any phrasing of "add more developers / employees / programmers".
-- **Method** — say **no** in the first line, justify with the mechanisms, close
-  with the remedies.
-- **Trap** — "yes, if added early" and stop; the project is *already* delayed.
-  Second trap: naming Brooks's Law alone — a 2-marker wants the reason, not the
-  eponym.
-- Six causes and three failures are plausible Section A material, not yet asked.
 
 ## 3 · Program vs software
 

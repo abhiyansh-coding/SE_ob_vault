@@ -93,6 +93,14 @@ when each fits** is the only part of this page with enough content to carry a
 
 **Note the overlap:** specification detail lives on [[Requirements Engineering]],
 which *is* examined. If a question names the SRS, answer from there.
+**Also worth knowing:**
+- **Validation is where V&V enters the course.** *Verification vs validation* is
+  examined behaviour in the testing module ([[Testing Fundamentals]]), so get it
+  right the first time you meet it here.
+- **The traceability chain is management's one carryable fact** — and it explains
+  why [[Software Maintenance]] is expensive when it is absent.
+- Analysis's value is as the bridge into the analysis-modeling phase.
+
 
 ## Contents
 
@@ -110,7 +118,6 @@ checking (4) · not keeping up (5).
 
 ## 1 · Elicitation
 
-**Intuition.**
 - **Requirements are not lying around waiting to be collected.** Users describe
   solutions rather than problems, omit everything they consider obvious, and
   cannot describe what they have never seen — the *undreamed* requirements from
@@ -121,19 +128,15 @@ checking (4) · not keeping up (5).
   what they say differs from what they do** · build something when they cannot say
   at all.
 
-**Definitions & distinctions.** The seven techniques and the selection guide are
+**Terms and distinctions.** The seven techniques and the selection guide are
 in Quick Reference. **Prototyping appears here as an elicitation technique**, not
 only as a process model — it is how you elicit requirements the customer cannot
 articulate, which is the same argument the prototyping model makes on
 [[Conventional Process Models]].
 
-**What gets asked.** Never examined on the one paper here. If asked, expect
-"explain any three requirement elicitation techniques" — give the technique, one
-line on how it works, and the situation it suits.
 
 ## 2 · Analysis
 
-**Intuition.**
 - **Elicitation produces a pile of wants, and some contradict each other** — the
   customer wants low cost, the developer maintainability, the manager speed.
 - **Analysis is where those get negotiated** into a consistent set, sorted into
@@ -143,30 +146,26 @@ line on how it works, and the situation it suits.
   the analysis notation — exactly what [[Data Modeling & ERD]],
   [[Flow-Oriented Modeling & DFD]] and [[UML & Use Case Modeling]] go on to teach.
 
-**Definitions & distinctions.** Analysis does three things: **understand, refine,
+**Terms and distinctions.** Analysis does three things: **understand, refine,
 resolve conflicts**; **classify** requirements as functional or non-functional;
 and **model** them. The classification is taught on [[Requirements Engineering]]
 and not repeated here.
 
-**What gets asked.** Never examined. Its value is as the bridge into the analysis
-modeling phase.
 
 ## 3 · Specification
 
-**Intuition.** The output of analysis lives in people's heads and in meeting
+The output of analysis lives in people's heads and in meeting
 notes. **Specification writes it down in a form that can be handed to someone who
 was not in the room** — which is the only way work can be divided at all.
 
-**Definitions & distinctions.** Formats: the **SRS to IEEE 830**, use cases, user
+**Terms and distinctions.** Formats: the **SRS to IEEE 830**, use cases, user
 stories and diagrams. The SRS's structure, purpose, characteristics and common
 mistakes are all on [[Requirements Engineering]], which is where A3's marks sit —
 they are not duplicated here.
 
-**What gets asked.** Never examined as a separate activity.
 
 ## 4 · Validation
 
-**Intuition.**
 - **A requirements document can be internally perfect and still specify the wrong
   system.**
 - **Validation is the check against reality:** show the specification back to
@@ -174,7 +173,7 @@ they are not duplicated here.
 - This is where the course introduces the question that recurs through the whole
   testing module: *are we building the right product?*
 
-**Definitions & distinctions.** Four techniques: **reviews, walkthroughs,
+**Terms and distinctions.** Four techniques: **reviews, walkthroughs,
 prototyping, test-case generation**. The last is the subtle one — if you cannot
 write a test case for a requirement, the requirement is not verifiable, so
 attempting the test cases validates the specification as a side effect.
@@ -182,13 +181,9 @@ attempting the test cases validates the specification as a side effect.
 The verification/validation pair is tabulated in Quick Reference and taught in
 full on [[Evolutionary Process Models]] with the V-model.
 
-**What gets asked.** Never examined here. But **verification vs validation is
-examined behaviour** in the testing module — [[Testing Fundamentals]] — so get it
-right the first time you meet it.
 
 ## 5 · Management
 
-**Intuition.**
 - **Requirements change during development; that is assumed, not exceptional.**
 - **Requirement management is the machinery that keeps change from silently
   invalidating everything downstream:** every change tracked, every requirement
@@ -196,13 +191,10 @@ right the first time you meet it.
 - **Without that chain**, a changed requirement leaves stale code and passing tests
   that verify the wrong thing.
 
-**Definitions & distinctions.** Two responsibilities: **handle changes** during
+**Terms and distinctions.** Two responsibilities: **handle changes** during
 development, tracked in tools; and **maintain traceability** —
 *requirement → design → code → test*. The tools table is in Quick Reference.
 
-**What gets asked.** Never examined. The traceability chain is the one fact worth
-carrying; it also explains why [[Software Maintenance]] is expensive when it is
-absent.
 
 ## Question Bank
 

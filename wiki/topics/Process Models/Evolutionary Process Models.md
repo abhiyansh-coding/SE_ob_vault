@@ -184,7 +184,6 @@ graph TD
 
 ## 1 · The incremental model
 
-**Intuition.**
 - Waterfall promises "wait nine months and get everything". Incremental promises
   "wait three weeks and get something that works".
 - No full specification up front: build a simple working system with a few basic
@@ -194,12 +193,12 @@ graph TD
 - The customer gets value early and, just as importantly, gets to **correct you
   early**, while correcting is still cheap.
 
-**Definitions & distinctions.** Key points and the incremental-vs-iterative table:
+**Terms and distinctions.** Key points and the incremental-vs-iterative table:
 Quick Reference. The easily-missed rule: **requirements are prioritised, and once
 an increment's development starts its requirements freeze** — that freeze is what
 stops the model degenerating into endless churn.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q B1, case 3 (2 marks, CO1)** — "A company releases a
 > basic version of an e-learning platform. Users test it and request changes. The
@@ -221,14 +220,6 @@ that can ship first, with secondary features prioritised and added later — exa
 the condition incremental delivery requires. *(No solution key — unchecked, no
 `✓`.)*
 
-**What gets asked.** 2 of this topic's 4 marks, in the B1 form:
-- **Spot it** — "basic version" / "first release" / "core features first",
-  followed by repeated cycles that *add* functionality.
-- **Method** — name it, then quote two or three scenario phrases and map each to a
-  property of the model.
-- **Trap** — answering "iterative". If each cycle **adds new features** it is
-  incremental; if each cycle **refines the same whole** it is iterative. "Until all
-  features are complete" settles it — features are being added.
 
 ## 2 · The iterative model, and incremental vs iterative
 
@@ -267,7 +258,7 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
 - The deck's process: Quick Reference. The deck files CBD under **Specialized
   Process Models**; the handout lists it at lecture 8 among the evolutionary ones.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q B1, case 2 (2 marks, CO1)** — "A retail company needs an
 > online inventory system quickly. Developers build a working system using
@@ -296,10 +287,6 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
 
 *(No solution key — unchecked, no `✓`.)*
 
-**What gets asked.** 2 of this topic's 4 marks, via the contested B1 case 2. The
-transferable lesson: **when two models fit, pick the one whose defining mechanism
-the scenario actually names, and justify from the scenario's wording.** Examiners
-award the justification.
 
 ## 5 · The V-model
 

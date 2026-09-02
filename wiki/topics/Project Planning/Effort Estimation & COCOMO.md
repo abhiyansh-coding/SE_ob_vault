@@ -166,6 +166,17 @@ you to pick semi-detached and justify. That is a `scenario` move embedded inside
 **Never asked as:** `draw`, `compare`. `explain` appears only adjacent — B3's
 effort-distribution question is filed on [[SDLC & CMMI]] but its machinery is
 here.
+**Also worth knowing:**
+- **Section 1 is never examined alone, but every COCOMO question begins there** —
+  a wrong mode makes every subsequent number wrong. D1 removed the difficulty by
+  naming "embedded system" and supplying the coefficients. Do not count on that.
+- **If Basic COCOMO appears**, it will be the three-mode comparison (deck Example
+  4.5, reused verbatim as assignment Q6) or the staff-size-and-productivity form
+  (Example 4.6).
+- **Detailed COCOMO:** definition depth only — name the two additions and the
+  three-level hierarchy. It connects to B3's effort-distribution question on
+  [[SDLC & CMMI]], which asks the same idea non-numerically.
+
 
 ## Contents
 
@@ -193,7 +204,6 @@ graph TD
 
 ## 1 · The three development modes
 
-**Intuition.**
 - **A hundred thousand lines of payroll code and a hundred thousand lines of
   air-traffic-control code are not the same project.**
 - One is written by people who have done it before, in a familiar environment,
@@ -202,7 +212,7 @@ graph TD
 - **COCOMO's first move is to sort projects into three archetypes**, because the
   coefficients converting size into effort are wholly different for each.
 
-**Definitions & distinctions.** The full comparison table is in Quick Reference.
+**Terms and distinctions.** The full comparison table is in Quick Reference.
 The examinable skill is **classification from a word problem**:
 
 | Signal in the question | Mode |
@@ -216,14 +226,9 @@ Deck Example 4.6 makes the point: a 200 KLOC project with an **average-experienc
 team** and a **schedule that is not very tight** is semi-detached, and the deck
 justifies the choice explicitly on those two phrases rather than on the size.
 
-**What gets asked.** Never examined alone, but **every COCOMO question begins
-here** and a wrong mode makes every subsequent number wrong. D1 removes the
-difficulty by saying "embedded system" and by supplying the coefficients — but do
-not count on that.
 
 ## 2 · Basic COCOMO
 
-**Intuition.**
 - **The simplest useful model:** assume effort depends only on size, fit a power
   law to historical projects, read effort off it.
 - **The exponent *b* is slightly greater than 1 in every mode**, which encodes
@@ -233,7 +238,7 @@ not count on that.
   which is why a project needing four times the effort does not take four times as
   long. **It takes more people instead.**
 
-**Formulas & variables.**
+**Formula.**
 
 $$E = a_b\,(\text{KLOC})^{b_b} \qquad D = c_b\,(E)^{d_b}$$
 
@@ -249,16 +254,12 @@ Basic coefficients are in Quick Reference. Two derived quantities defined here:
 
 $$\text{Average staff size} = \frac{E}{D} \text{ persons} \qquad \text{Productivity} = \frac{\text{KLOC}}{E} \text{ KLOC/PM}$$
 
-**Solved questions.** Deck Examples 4.5 and 4.6 are worked in full in the Question
+**Worked example.** Deck Examples 4.5 and 4.6 are worked in full in the Question
 Bank.
 
-**What gets asked.** Never examined on the one paper here. If Basic appears it
-will be the three-mode comparison (Example 4.5) or the staff-size-and-productivity
-form (Example 4.6).
 
 ## 3 · Intermediate COCOMO and the cost drivers
 
-**Intuition.**
 - **Basic COCOMO says a 100 KLOC embedded system costs a fixed amount**,
   regardless of who builds it, on what hardware, under what reliability
   requirement. **That is obviously false** — a team of experts and a team of
@@ -272,7 +273,7 @@ form (Example 4.6).
   anything making it **harder** (high reliability, tight memory, complex product)
   is **above 1.00**.
 
-**Formulas & variables.**
+**Formula.**
 
 $$E = a_i\,(\text{KLOC})^{b_i} \times \text{EAF} \qquad D = c_i\,(E)^{d_i}$$
 
@@ -289,7 +290,7 @@ multiplying *D*.
 
 The 15 drivers and the full multiplier table are in Quick Reference.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q D1 (4+4+2 = 10 marks, CO2)** — "For a project of 100000
 > LOC embedded system, compare the efforts and time duration and find out the
@@ -371,27 +372,9 @@ acquired; capability is not.
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`. All arithmetic independently verified.)*
 
-**What gets asked.** This subtopic carries the whole topic's marks and the whole
-paper's numerical content. One dominant form:
-
-- **Spot it** — a size in LOC or KLOC, a stated mode, and either cost-driver
-  ratings or explicit multipliers. If *a* = 2.8, 3.0 or 3.2 you are in
-  Intermediate; 2.4, 3.0 or 3.6 means Basic.
-- **Method** — five steps, in this order: convert to KLOC → compute nominal
-  effort → compute EAF as the **product** of the multipliers → adjusted effort →
-  duration **from the adjusted effort**. Show every substitution; the marks are
-  distributed across the steps, so a wrong final number with correct working
-  still scores.
-- **Trap** — six, in rough order of frequency. Forgetting to convert LOC to KLOC.
-  **Adding** the cost-driver multipliers instead of multiplying. Computing
-  duration from KLOC instead of from *E*. Using the Basic *a* (3.6) where
-  Intermediate (2.8) is meant. Reporting effort in "months" rather than
-  **person-months**. And giving the two cases without the **variation** — that is
-  the last 2 marks and it is the easiest part.
 
 ## 4 · Detailed COCOMO
 
-**Intuition.**
 - **Even the intermediate model applies one EAF across the entire project**, which
   is still too blunt: a demanding reliability requirement affects testing far more
   than preliminary design.
@@ -400,7 +383,7 @@ paper's numerical content. One dominant form:
   subsystem, system — so effort can be estimated where the work actually differs,
   then summed.
 
-**Definitions & distinctions.** Two additions over Intermediate:
+**Terms and distinctions.** Two additions over Intermediate:
 
 1. **Phase-sensitive effort multipliers** — each cost driver has a different
    multiplier for each development phase, and manpower is allocated per phase.
@@ -410,9 +393,6 @@ The deck's one concrete figure: for the **plan and requirements** phase, effort
 is **6-8%** and development time **10-40%** of the total, varying with mode and
 size.
 
-**What gets asked.** Never examined. Definition depth only — name the two
-additions and the one figure. This connects to B3's effort-distribution question
-on [[SDLC & CMMI]], which asks the same idea non-numerically.
 
 ## Question Bank
 

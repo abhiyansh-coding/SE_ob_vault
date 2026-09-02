@@ -135,6 +135,12 @@ assignment question ([[se-assign-1-2026]] Q5(c), a 12-entity clinic ERD).**
 
 **Never asked as:** `numerical`, `explain`, `scenario`. `compare` is plausible for
 *degree vs cardinality*.
+**Also worth knowing, though never asked:**
+- The **candidate key vs identifier** distinction is the plausible 2-marker here.
+- **The drawing skill transfers.** [[UML & Use Case Modeling]] carries a 10-mark
+  drawing in Section D, which establishes that this instructor asks for diagrams
+  at long-answer length — even though ER was not the notation tested.
+
 
 ## Contents
 
@@ -150,7 +156,6 @@ deliverable, graded on notation as much as content (3).
 
 ## 1 · Entities, attributes and keys
 
-**Intuition.**
 - **Start by asking what the system has to remember.** A university remembers
   students and courses; a hotel remembers rooms and reservations.
 - Each of those is an **entity type**; the facts kept about each — name, address,
@@ -158,7 +163,7 @@ deliverable, graded on notation as much as content (3).
 - **One attribute (or a combination) must tell two instances apart**, or the
   system cannot refer to anything reliably. That is the key.
 
-**Definitions & distinctions.** An **attribute** is a property or characteristic
+**Terms and distinctions.** An **attribute** is a property or characteristic
 of an entity that is *of interest to the organisation* — the qualifier matters,
 because it is what stops the model growing without limit.
 
@@ -167,12 +172,9 @@ is chosen as the **identifier**. In the deck's STUDENT example, Student_ID is th
 candidate key and becomes the identifier, with Name, Address and Phone_No as
 ordinary attributes.
 
-**What gets asked.** Never examined on the one paper here. The candidate
-key/identifier distinction is the plausible 2-marker.
 
 ## 2 · Relationships — degree and cardinality
 
-**Intuition.**
 - **Two different questions get asked about the same line on a diagram**, and
   students routinely answer one when asked the other.
 - **Degree** — how many *entity types* the relationship connects: one, two or
@@ -183,7 +185,7 @@ key/identifier distinction is the plausible 2-marker.
   itself) can still be one-to-many — an employee manages many employees. That is
   exactly why they need separate names.
 
-**Definitions & distinctions.** The degree table, the three binary cardinality
+**Terms and distinctions.** The degree table, the three binary cardinality
 examples, and the cardinality/optionality definitions are all in Quick Reference.
 
 **Minimum cardinality** is the subtlety worth carrying. Ordinary cardinality says
@@ -193,7 +195,7 @@ tapes, so VIDEO TAPE optionally participates. In an exam this is the difference
 between drawing "must have exactly one" and "may have none", and it is the detail
 that separates a careful diagram from an approximate one.
 
-**Solved questions.** The deck works several small ones:
+**Worked example.** The deck works several small ones:
 
 > **Deck** — "A training department is interested in tracking which training
 > courses each of its employees has completed."
@@ -209,13 +211,9 @@ relationship (it belongs to the pairing, not to either entity alone). Cardinalit
 is many-to-many: a vendor quotes for several parts, and a part may be quoted by
 several vendors.
 
-**What gets asked.** Never examined on this paper. If it appears, it will be
-either "differentiate degree and cardinality" as a 2-marker, or a small scenario
-to be drawn.
 
 ## 3 · Drawing the ER diagram
 
-**Intuition.**
 - **The diagram is the deliverable**, and in this subject it is graded on notation
   as much as on content.
 - Get the shapes right, **underline the identifier**, and put a cardinality marker
@@ -264,10 +262,6 @@ both ends, and every entity carries exactly one underlined identifier.
 > `L6 Requirement Analysis Diagrams.pdf` by eye to compare before relying on the
 > specific entities and attributes.
 
-**What gets asked.** Never examined on this paper. But
-[[UML & Use Case Modeling]] carries a 10-mark **drawing** question, which
-establishes that this instructor asks for diagrams in Section D — so the drawing
-skill transfers even though this notation was not the one tested.
 
 ## Question Bank
 

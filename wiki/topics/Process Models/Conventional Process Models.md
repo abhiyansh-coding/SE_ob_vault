@@ -161,7 +161,6 @@ graph TD
 
 ## 1 · The classical waterfall model
 
-**Intuition.**
 - Introduced by **Winston Royce, 1970**, named for the way the diagram cascades:
   each phase's output flows into the next, and no phase begins until the one
   above is complete.
@@ -170,7 +169,7 @@ graph TD
   when you know exactly what you are building, expensive the moment you do not,
   because the model has no mechanism for discovering you were wrong.
 
-**Definitions & distinctions.** Six phases and three system tests: Quick
+**Terms and distinctions.** Six phases and three system tests: Quick
 Reference. Two points the deck stresses:
 - **Maintenance is 60% of total effort** — more than everything else combined.
 - **The model is idealistic.** The deck's words: it "assumes that no development
@@ -178,7 +177,7 @@ Reference. Two points the deck stresses:
   A design defect may go unnoticed until coding or testing, at which point you
   return to the phase where it originated and redo everything after it.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q B1, case 1 (2 marks, CO1)** — "A family hires an
 > architect to build a house. All requirements are collected first. Blueprints
@@ -203,16 +202,6 @@ requirements** and a **physically irreversible order** — you cannot roof befor
 walling. Both are exactly what waterfall assumes. *(No solution key exists for
 this paper — unchecked, no `✓`.)*
 
-**What gets asked.** This subtopic carries the topic's only marks, one form:
-- **Spot it** — a real-world, deliberately non-software scenario described through
-  the model's behaviour rather than named. Waterfall's tells: "all requirements
-  collected first", strict stage order, single final handover.
-- **Method** — name the model in the first line, then justify with **two or three
-  phrases quoted from the scenario**. Marks are for the mapping, not for a general
-  description.
-- **Trap** — describing the model instead of justifying the match. A generic
-  waterfall essay earns little; "all requirements are collected first, therefore
-  requirements are frozen, which is what waterfall assumes" earns the marks.
 
 ## 2 · The iterative waterfall model
 

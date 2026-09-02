@@ -138,6 +138,14 @@ assignment questions ([[se-assign-1-2026]] Q5(a), Q5(b), Q15).**
 
 **Never asked as:** `numerical`, `compare`, `scenario`. An `explain` on the data
 dictionary or decision tables is plausible and unasked.
+**Also worth knowing:**
+- **The notation legend earns marks on its own.** State it before drawing, always.
+- *"A data dictionary contains metadata, i.e. data about the data"* is quotable
+  as-is for a 2-marker.
+- **Decision tables are examined machinery elsewhere.** They reappear as
+  decision-table-based testing on [[Black-Box Testing]] (lecture 37), so the
+  notation learned here is reused there.
+
 
 ## Contents
 
@@ -168,7 +176,6 @@ graph TD
 
 ## 1 · What a DFD is, and its notation
 
-**Intuition.**
 - **Draw the system as plumbing.** Data enters from outside, passes through
   processes that transform it, sometimes rests in a store, and eventually leaves.
 - **Four symbols, no more** — which is why the deck notes no technical knowledge
@@ -181,7 +188,7 @@ graph TD
 **Legend.** The full symbol table, with both the Yourdon and Gane-Sarson
 conventions, is in Quick Reference. The deck uses **circles for processes**.
 
-**Definitions & distinctions.**
+**Terms and distinctions.**
 
 | | Process | External entity | Data store |
 |---|---|---|---|
@@ -189,12 +196,9 @@ conventions, is in Quick Reference. The deck uses **circles for processes**.
 | Inside the system? | yes | **no** | yes |
 | Drawn as | circle | rectangle | open-ended parallel lines |
 
-**What gets asked.** Never examined on the one paper here. If asked, the notation
-legend earns marks on its own — state it before drawing.
 
 ## 2 · Levels and levelling balance
 
-**Intuition.**
 - **You cannot show a whole system at useful detail on one page, so you zoom.**
 - **The context diagram is maximum zoom-out:** one bubble for the entire system,
   surrounded by the outside world it talks to. It answers one question — *where
@@ -205,7 +209,7 @@ legend earns marks on its own — state it before drawing.
   the context diagram never showed leaving the system, one of the two is wrong.
 - **That check is why DFDs are worth drawing at all.**
 
-**Definitions & distinctions.** The level table, the balance rule, the numbering
+**Terms and distinctions.** The level table, the balance rule, the numbering
 scheme and the context-diagram benefits are all in Quick Reference.
 
 The context diagram's defining properties, worth stating exactly: **exactly one
@@ -214,13 +218,10 @@ it interacts with external entities; **all** external entities; the data flows
 between them; and **no data stores**, because stores are internal and the context
 diagram does not open the system up.
 
-**What gets asked.** Never examined on this paper. The plausible forms are "what
-is a context diagram" as a 2-marker, or "draw the level-0 and level-1 DFD for X"
-as a long question — which is exactly what subtopic 3 rehearses.
 
 ## 3 · The Food Ordering System worked example
 
-**Intuition.** The deck runs one example at both levels, and it is the right
+The deck runs one example at both levels, and it is the right
 template for any DFD you are asked to draw: small enough to fit on a page, big
 enough to need every symbol.
 
@@ -302,13 +303,9 @@ are exactly those on the context diagram. **Balanced.**
 > the slide's picture.** Compare against `DFD (2).pptx` and
 > `L6 Requirement Analysis Diagrams.pdf` by eye if the exact layout matters.
 
-**What gets asked.** Never examined on the one paper here. Treated as the
-template for a "draw the DFD for this system" question, which is the form a
-30-mark Mid-Term drawn from 32 lectures could plausibly use.
 
 ## 4 · Data dictionary, process specification and control flow
 
-**Intuition.**
 - **A DFD's arrows carry names, and a name is not a definition.** If one arrow
   says `Order details`, two readers imagine different things unless something pins
   it down.
@@ -317,17 +314,14 @@ template for a "draw the DFD for this system" question, which is the form a
 - **The process specification does the same job for bubbles:** when a process is
   not decomposed further, its logic has to be written down somewhere.
 
-**Definitions & distinctions.** The companion-notation table is in Quick
+**Terms and distinctions.** The companion-notation table is in Quick
 Reference. The **control flow model** is the DFD's counterpart for systems where
 events and control matter as much as data — the deck names it alongside the data
 flow model and the process specification as the contents of lecture 21.
 
-**What gets asked.** Never examined. One line each is the right depth. "A data
-dictionary contains metadata, i.e. data about the data" is quotable as-is.
 
 ## 5 · Decision tables and state transition diagrams
 
-**Intuition.**
 - **Not all logic is flow-shaped.** Some is a lookup: *given these conditions, do
   that*.
 - **A decision table** lays that out as a matrix — conditions in the upper rows,
@@ -336,7 +330,7 @@ dictionary contains metadata, i.e. data about the data" is quotable as-is.
   differently depending on what has happened to it, and a **state transition
   diagram** shows those states and the events that move between them.
 
-**Definitions & distinctions.**
+**Terms and distinctions.**
 
 **Decision table** — the upper rows specify the variables or conditions to be
 evaluated; the lower rows specify the actions to be taken when the corresponding
@@ -371,9 +365,6 @@ be sent, which is the loop the case study specifies. Blocking is reachable from
 any state. **The rule it must satisfy:** every transition is labelled with the
 event that causes it, and every state is reachable.
 
-**What gets asked.** Never examined on this topic. But **decision-table-based
-testing is examined machinery** on [[Black-Box Testing]] (lecture 37), so the
-table notation is worth learning here and reusing there.
 
 ## Question Bank
 

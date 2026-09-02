@@ -212,7 +212,6 @@ non-functional requirement must be **measurable** to be verifiable.
 
 ## 3 · The SRS
 
-**Intuition.**
 - Everything before this is conversation; **the SRS is the moment it becomes
   binding**.
 - It is simultaneously a blueprint for developers, a test basis for testers, a
@@ -222,7 +221,7 @@ non-functional requirement must be **measurable** to be verifiable.
   when many people must agree, and dispensable when a handful of people can simply
   talk to each other.
 
-**Definitions & distinctions.** Purpose list, the good-SRS characteristics, IEEE
+**Terms and distinctions.** Purpose list, the good-SRS characteristics, IEEE
 830 structure, benefits by audience and common mistakes: Quick Reference. The deck
 also carries a **full worked SRS for a Hospital Management System** (purpose,
 scope, definitions, references, overview, product perspective, features, user
@@ -230,7 +229,7 @@ classes admin/doctor/patient, operating environment, design constraints) — wor
 reading once end to end, because it shows the level of specificity IEEE 830
 expects, which the section headings alone do not convey.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q A3 (2 marks, CO2)** — "Illustrate with reason that SRS
 > document is required in large-scale projects but often avoided in Agile."
@@ -268,19 +267,6 @@ both conditions.**
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`.)*
 
-**What gets asked.** This subtopic carries the topic's only marks:
-
-- **Spot it** — any question contrasting formal documentation with agile
-  practice, or asking why a document is or is not needed.
-- **Method** — 2 marks means one reason per side plus the underlying principle.
-  Give the **contract / shared-reference** argument for large projects and the
-  **change-rate / working-software** argument for agile. Say explicitly that
-  agile *replaces* the SRS with stories and an on-site customer rather than
-  abandoning specification.
-- **Trap** — writing "Agile has no documentation". It does; it has *less*, and
-  different. The manifesto values are "A **over** B", not "A instead of B". A
-  answer that claims agile skips requirements entirely misreads the value and
-  loses the mark.
 
 ## Question Bank
 

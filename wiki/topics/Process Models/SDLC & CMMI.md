@@ -199,7 +199,6 @@ which is why a level-4 organisation redistributes effort deliberately.
 > standard textbook material. **If you can get the lecture 12 slides, this is the
 > single most valuable thing to add to this vault.**
 
-**Intuition.**
 - Ask anyone outside software where the effort goes and they say coding. **They
   are wrong by a factor of four** — coding is roughly a fifth of the work.
 - ~40% goes into understanding and designing before a line is written, another
@@ -212,14 +211,14 @@ which is why a level-4 organisation redistributes effort deliberately.
   cutting coding and maintenance hardest, because generated code is consistent and
   models stay in step with it.
 
-**Formulas & variables.** The 40-20-40 split, the finer percentages and the
+**Formula.** The 40-20-40 split, the finer percentages and the
 three-environment table: Quick Reference. The relationship that carries the marks:
 
 > **The more sophisticated the environment, the more effort moves into analysis
 > and design, and the less remains in coding and maintenance.** Total effort falls
 > because defects are caught when they are cheap.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q B3 (6 marks, CO1)** — "Explain the distribution of effort
 > in different phases of a SDLC model by relating them to traditional,
@@ -260,15 +259,6 @@ one glance, and 20 of this paper's 80 marks are on drawings.
 *(No solution key exists for this paper — unchecked, no `✓`. Also unsourced by any
 deck; see the warning.)*
 
-**What gets asked.** The topic's largest block, one form so far:
-- **Spot it** — any question naming effort, phases and environments together:
-  "distribution of effort", "phase-wise effort", "traditional / structured / CASE".
-- **Method** — three parts: state the baseline split with numbers, compare the
-  three environments phase by phase, explain the trend by the cost-of-change
-  argument. A table plus one paragraph of reasoning is the right shape for 6 marks.
-- **Trap** — giving 40-20-40 and stopping. Half the question is the *environment
-  comparison*, and the closing reasoning separates a recited answer from an
-  understood one. Second trap: conflating lifetime with development effort.
 
 > [!note] Where this content really lives
 > The vault files B3 here because the paper tags it **CO1** (lectures 1-12) and
@@ -279,7 +269,6 @@ deck; see the warning.)*
 
 ## 3 · CMMI and the five maturity levels
 
-**Intuition.**
 - Every earlier lecture asked which process to use. **CMMI asks whether the
   organisation can follow *any* process reliably**, and grades it on five levels.
 - **The progression is a story:** no process (1) → each project writes one down
@@ -289,14 +278,14 @@ deck; see the warning.)*
 - Each level's capability is built from the one below, **which is why they cannot
   be skipped**.
 
-**Definitions & distinctions.** Five levels, characteristics, analogies, the three
+**Terms and distinctions.** Five levels, characteristics, analogies, the three
 shift points and the deck's level-1 example: Quick Reference. The analogies are
 the instructor's own and worth keeping — they make the levels hard to confuse:
 
 > No recipe → write the recipe down → one recipe book for the whole chain →
 > measure every ingredient precisely → keep inventing better dishes.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q A2 (2 marks, CO5)** — "A company faces missed deadlines
 > and inconsistent quality. They document all processes and collect metrics like
@@ -331,18 +320,6 @@ process to make it predictable — not innovating beyond it.
 
 *(No solution key — unchecked, no `✓`.)*
 
-**What gets asked.** 2 marks, in a form that is clearly this instructor's habit —
-five of the paper's fifteen questions are scenario-plus-justify:
-- **Spot it** — a short organisational scenario describing how a company works,
-  ending in "identify the CMMI maturity level and justify".
-- **Method** — find the **highest** capability the scenario demonstrates, name that
-  level, justify by mapping two or three of the scenario's own phrases onto the
-  level's characteristics, and say explicitly why the adjacent level is wrong.
-- **Trap** — matching a single keyword. "Documented" alone suggests 3, "metrics"
-  alone suggests 4, "improvement" alone suggests 5 — and scenarios are written to
-  contain several. Read for the **highest** capability demonstrated, and let the
-  outcome phrase ("predictable", "consistent", "continuously improving") break the
-  tie.
 
 ## Question Bank
 

@@ -117,6 +117,14 @@ Generic skeleton on [[answer-patterns]] §5. **2 of 80.**
 **Never asked as:** `numerical`, `draw`, `scenario`, `explain`. Risk exposure
 (probability × magnitude) is a plausible small numerical and has not appeared —
 a prediction, not evidence.
+**The trap in full, because it is subtle:**
+- **Do not invent a false contrast** such as *"identification finds risks,
+  assessment evaluates them"*. That is half right and misses the structure the
+  deck actually teaches — **assessment contains identification**.
+- **Do not confuse risk *analysis* (one activity inside assessment) with risk
+  *assessment* (the group).** A4 names *assessment*, so answer about the group.
+- Drawing the small hierarchy from Quick Reference answers this faster than prose.
+
 
 ## Contents
 
@@ -132,7 +140,6 @@ ranks what could hurt (2) — and control is everything you do about it afterwar
 
 ## 1 · What risk is, and typical software risks
 
-**Intuition.**
 - **The deck's framing is unusually blunt:** software developers are extreme
   optimists who assume everything will go exactly as planned, and **software
   surprises are never good news**.
@@ -143,17 +150,14 @@ ranks what could hurt (2) — and control is everything you do about it afterwar
   it is not a risk; it is a problem, and you have lost the chance to have planned
   for it.
 
-**Definitions & distinctions.** The definition, the management definition and
+**Terms and distinctions.** The definition, the management definition and
 Capers Jones's five categories are in Quick Reference. The distinction worth
 holding: risk management deals with **potential** problems; project management
 deals with **current** ones. The deck draws exactly that contrast.
 
-**What gets asked.** Never examined directly. The definition makes a good opening
-line for A4.
 
 ## 2 · Risk assessment
 
-**Intuition.**
 - **Assessment is everything you do before acting:** **find** the risks,
   **understand** how they would move the project's outcomes, and **rank** them so
   limited attention goes where it does most good.
@@ -163,7 +167,7 @@ line for A4.
 - **The structural point A4 depends on: identification is not the opposite of
   assessment, it is the first step of it.**
 
-**Formulas & variables.**
+**Formula.**
 
 $$\text{Risk exposure} = P(\text{loss}) \times \text{magnitude of loss}$$
 
@@ -174,7 +178,7 @@ $$\text{Risk exposure} = P(\text{loss}) \times \text{magnitude of loss}$$
 
 The three activities are tabulated in Quick Reference.
 
-**Solved questions.**
+**Worked example.**
 
 > **[[se-ete-2025-26]] Q A4 (2 marks, CO5)** — "List the difference between risk
 > identification and risk assessment."
@@ -201,23 +205,9 @@ resolution) to make up risk management as a whole.
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`.)*
 
-**What gets asked.** This subtopic carries the topic's only marks:
-
-- **Spot it** — any question asking to distinguish two risk-management terms, or
-  to explain risk management activities.
-- **Method** — for a 2-marker, lead with the **containment relationship** (one is
-  part of the other), then give one distinguishing property each. Drawing the
-  small hierarchy from Quick Reference answers it faster than prose.
-- **Trap** — treating them as siblings and inventing a false contrast such as
-  "identification finds risks, assessment evaluates them". That is half right and
-  misses the structure the deck actually teaches, which is the point of the
-  question. Second trap: confusing risk **analysis** (one activity inside
-  assessment) with risk **assessment** (the group). The question names
-  *assessment*, so answer about the group.
 
 ## 3 · Risk control
 
-**Intuition.**
 - **Assessment tells you what will hurt and how much. Control is everything
   after:** write a plan for each significant risk and record the decision, watch
   the risks as the project runs, execute the plans when a risk starts to
@@ -228,7 +218,7 @@ no `✓`.)*
 - **Avoidance costs opportunity rather than effort**, which is why it is easy to
   forget it is on the menu.
 
-**Definitions & distinctions.** The three activities are in Quick Reference.
+**Terms and distinctions.** The three activities are in Quick Reference.
 
 **Risk management planning** produces a plan for dealing with each significant
 risk, and the decisions are **recorded in the plan** — a documentation
@@ -240,8 +230,6 @@ Risk management is an **umbrella activity** in the sense of
 [[Software Engineering as a Layered Technology]] — it runs across the whole
 project rather than occupying a phase. That is why monitoring exists at all.
 
-**What gets asked.** Never examined. Know the three activities and risk
-avoidance.
 
 ## Question Bank
 

@@ -180,6 +180,21 @@ alternative** — FPA can be counted before code exists and is language-independ
 Halstead is objective where LOC is formatting-sensitive.
 
 **Never asked as:** `draw`, `compare`, `scenario`.
+**Traps specific to function points, from the deck's three worked examples:**
+- **Using the wrong weight column.** The default is *Average*, not Low.
+- **"All factors average" means ΣF = 42**, not 14. CAF = 0.65 + 0.42 = 1.07.
+- **Classifying user files as EI rather than ILF.** The file types carry the
+  heaviest weights, so misclassifying one costs the most.
+
+**Also worth knowing:**
+- **Feasibility study:** most plausible as a 2-mark "what is it / name its types".
+- **LOC's unit convention is load-bearing** — KLOC is the input to D1 on
+  [[Effort Estimation & COCOMO]], the paper's only numerical.
+- **Static models**, if asked, take the comparison form: given an effort, reverse
+  both models for size, then compute duration, productivity and manning for each.
+- **Halstead:** know the four counts, vocabulary, length and volume. Do not go
+  deeper until a deck or the textbook says to.
+
 
 ## Contents
 
@@ -210,7 +225,6 @@ graph TD
 
 ## 1 · Feasibility study and software scope
 
-**Intuition.**
 - **The deck opens with an uncomfortable question** — *is cancelling a project bad
   news?* — and answers it with IBM's numbers: **nearly a third of projects are
   cancelled anyway, and half of the survivors nearly triple their cost estimates.**
@@ -219,7 +233,7 @@ graph TD
 - **That is the feasibility study:** a small, deliberate investigation run before
   commitment, whose job is partly to kill projects cheaply.
 
-**Definitions & distinctions.** The three feasibility types and the IBM figures
+**Terms and distinctions.** The three feasibility types and the IBM figures
 are in Quick Reference. The deck's own technical-feasibility examples are
 deliberately extreme — *is it technically feasible to provide direct
 communication connectivity through space between two points on the globe?*, *is
@@ -238,12 +252,9 @@ the input to every estimate — you cannot size what you have not bounded.
 > follows the handout and teaches it here; revising from the L5 deck, you will
 > meet it alongside [[Software Engineering Practice]].
 
-**What gets asked.** Never examined on the one paper here. Most plausible form is
-a 2-mark "what is a feasibility study / name its types".
 
 ## 2 · LOC estimation
 
-**Intuition.**
 - **The obvious way to measure a program is to count its lines** — simple,
   automatable, directly comparable across projects in the same language, which is
   why every static model and COCOMO takes KLOC as input.
@@ -253,7 +264,7 @@ a 2-mark "what is a feasibility study / name its types".
   than in Python. **Function points exist because of exactly that second
   objection.**
 
-**Formulas & variables.** The deck's definition:
+**Formula.** The deck's definition:
 
 > A line of code "includes all lines containing program header, declaration, and
 > executable and non-executable statements".
@@ -266,13 +277,9 @@ LOC** under this rule.
 *E* = 1.4 *L*<sup>0.93</sup> gives an answer wrong by a factor of roughly a
 thousand.
 
-**What gets asked.** Never examined alone on this paper. But KLOC is the input to
-D1 on [[Effort Estimation & COCOMO]] — the paper's only numerical — so the unit
-convention is load-bearing.
 
 ## 3 · Function point analysis
 
-**Intuition.**
 - **LOC measures what the *developer* writes; function points measure what the
   *user* gets.**
 - **Alan Albrecht at IBM** recognised in the 1970s that the first is unusable at
@@ -284,7 +291,7 @@ convention is load-bearing.
   before writing a line of it.** Each count is weighted by complexity, and the
   total adjusted by 14 environmental factors.
 
-**Formulas & variables.**
+**Formula.**
 
 $$\text{UFP} = \sum_{i=1}^{5}\sum_{j=1}^{3} Z_{ij}\,w_{ij}$$
 
@@ -303,26 +310,13 @@ Each *F<sub>i</sub>* ∈ {0,…,5}, so ΣF<sub>i</sub> ∈ [0, 70] and **CAF ∈
 The weight table and the 14 factors are in Quick Reference. **Neither is supplied
 in an exam** — both must be memorised.
 
-**Solved questions.** Three worked deck examples, in full in the Question Bank
+**Worked example.** Three worked deck examples, in full in the Question Bank
 below. They escalate exactly as an exam would: all-average, mixed with a given
 CAF, then fully mixed with the CAF derived from stated conditions.
 
-**What gets asked.** Never examined on this paper — but this is the densest
-worked-example cluster in the deck, and rule 8 rates deck examples as the
-highest-value drill available. Three forms:
-
-- **Spot it** — counts of inputs, outputs, enquiries, files and interfaces, with
-  or without complexity labels.
-- **Method** — build the UFP table row by row; sum; compute CAF from the stated
-  factors; multiply. **Show the table** — marks are per row.
-- **Trap** — three of them. Using the wrong weight column (the default is
-  *Average*, not Low). Forgetting that *all factors average* means ΣF = 42, not
-  14. And treating "user files" as EI rather than ILF — the file types carry the
-  heaviest weights, so misclassifying one costs the most.
 
 ## 4 · Static estimation models
 
-**Intuition.**
 - **Once you have a size, effort follows from an empirical power law** fitted to
   past projects: *E* = *aL*<sup>b</sup>.
 - **Different organisations measured different constants** — the Software
@@ -334,7 +328,7 @@ highest-value drill available. Three forms:
   cannot be compressed in proportion to effort. That is Brooks's Law from
   [[Introduction to Software Engineering]] appearing as arithmetic.
 
-**Formulas & variables.** All four equations, the reversal
+**Formula.** All four equations, the reversal
 *L* = (*E*/*a*)<sup>1/*b*</sup>, and the derived quantities are in Quick
 Reference.
 
@@ -349,11 +343,8 @@ Reference.
 **Average manning** = total effort ÷ duration, in persons — the average number of
 people needed on the project per month.
 
-**Solved questions.** Deck Example 4.4 is worked in full in the Question Bank.
+**Worked example.** Deck Example 4.4 is worked in full in the Question Bank.
 
-**What gets asked.** Never examined. If it appears it will be the model-comparison
-form: given an effort, reverse both models for size, then compute duration,
-productivity and manning for each.
 
 ## 5 · Halstead size estimation
 
@@ -364,7 +355,6 @@ productivity and manning for each.
 > the vault. What follows is standard textbook material. Rule 5: absence from the
 > decks is not evidence of being out of scope.
 
-**Intuition.**
 - **LOC can be inflated by formatting; function points depend on subjective
   complexity ratings.**
 - **Halstead's software science tries for something more intrinsic** by counting
@@ -372,7 +362,7 @@ productivity and manning for each.
   and how often.
 - **From four counts, everything else is derived by formula.**
 
-**Formulas & variables.**
+**Formula.**
 
 | Symbol | Meaning |
 |---|---|
@@ -394,9 +384,6 @@ The distinction that carries any question here: **lower-case *n* counts distinct
 symbols, upper-case *N* counts total occurrences.** Confusing them makes every
 derived quantity wrong.
 
-**What gets asked.** Never examined, and unsourced. Know the four counts, the
-vocabulary and length definitions, and volume. Do not go deeper until a deck or
-the textbook says to.
 
 ## Question Bank
 

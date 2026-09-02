@@ -317,17 +317,6 @@ graph TD
 - **Solved questions:** both worked in full in the Question Bank — they are the
   drill for this page.
 
-**What gets asked.** Never examined on the one paper here. But these are **deck
-questions**, which rule 8 rates as the highest-value drill available. Two forms:
-- **Spot it** — a backlog table with estimates plus a velocity (or velocity range)
-  and an iteration length; or a capacity table with days and hours per day.
-- **Method** — sum the points, divide by velocity, **round up**, multiply out for
-  duration and cost. For capacity: compute per person, sum, then take stories in
-  priority order until the next one does not fit.
-- **Trap** — rounding iterations *down*, or reporting a single number when
-  velocity is a range; both lose the marks the range was there to test. Second
-  trap: sprint commitment is decided by **task hours against capacity**, not by
-  story points.
 
 ## Question Bank
 
