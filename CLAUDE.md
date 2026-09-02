@@ -4,13 +4,15 @@ Second-brain database for **Software Engineering**, Manipal University Jaipur.
 Maintained on the same LLM Wiki pattern as the CN vault (`../CN_ob_vault`) and
 the CAT prep vault. Read this file at the start of every session.
 
-> [!warning] Bootstrap state — the vault is empty
-> As of 2026-09-02 `raw/sources/` contains **nothing**. No syllabus, no past
-> papers, no lecture decks, no textbook. Every rule below names a source of
-> truth that does not exist here yet, so **no topic page can be written and no
-> weightage can be derived.** See *Bootstrap* at the bottom for exactly what to
-> ingest and in what order. Delete this callout once the syllabus and at least
-> one paper are in.
+> [!info] State as of 2026-09-02
+> Ingested: the **CSE3102 handout** (scope), **one End Term paper** (weightage),
+> and **24 lecture decks**. All 30 topic pages exist as **scaffolds** —
+> frontmatter, Prerequisites, Overview and deck list, but no subtopics, Quick
+> Reference or Question Bank. Building those is the work; see [[SE Roadmap]].
+>
+> Still missing: **the Pressman textbook** (rule 6 has no fallback), **any
+> Mid-Term paper** (the MTE's format is unknown), and **more End Term papers** —
+> the corpus is one sitting, which is barely a corpus at all.
 
 ## Prime directive
 
@@ -130,12 +132,14 @@ ranking, and collapsing these into one is how the rules get broken:
     they answer.
 - `wiki/` — everything the LLM writes and maintains.
   - `wiki/topics/{phase}/` — one page per syllabus topic, nested by **lifecycle
-    phase**. The phase folders are **set on syllabus ingest, not guessed now** —
-    they must come from the handout's own unit structure. The expected shape,
-    to be confirmed or replaced: `Foundations` (what SE is, process models),
-    `Requirements`, `Design`, `Construction`, `Testing`, `Project Management`,
-    `Quality & Maintenance`. Wikilinks resolve by filename regardless of folder,
-    so the nesting is free.
+    phase**. Set on ingest from the handout's **53-lecture plan**, not from its
+    five-module grouping: the two disagree on ordering (module 4 pairs modeling
+    with quality management; the lecture plan teaches them 25 lectures apart)
+    and the lecture plan is the order you meet the material. The ten phases, in
+    lecture order: `Foundations` · `Process Models` · `Requirements` ·
+    `Project Planning` · `Analysis Modeling` · `Design` · `Construction` ·
+    `Testing` · `Quality & Maintenance` · `DevOps`. Wikilinks resolve by
+    filename regardless of folder, so the nesting is free.
   - `wiki/topics/SE Roadmap.md` — `type: plan`, not a topic (no status/attempts).
     The ordered study queue with a single mutable *Next up* callout. Read it when
     the user asks what to study next. A second `MTE Roadmap.md` is added when a
@@ -173,19 +177,23 @@ ranking, and collapsing these into one is how the rules get broken:
 ---
 phase: Requirements          # the lifecycle-phase folder
 topic: Requirements Elicitation
-lectures: 9-11               # of the handout's lecture plan — depth, NOT weightage
-co: SE.2                     # course outcome, as printed in the handout
+lectures: 9-11               # of the handout's 53-lecture plan — depth, NOT weightage
+co: CSE3102.2                # course outcome, as printed in the handout
+mte: true                    # inside lectures 1-32 — see the override on [[syllabus]]
 studied: false               # user's manual "finished learning this" signal
 status: not-started          # not-started | weak | developing | strong | mastered
-pyq_marks: 0                 # of {N papers × 100} across the corpus — the rule-2 figure
-pyq_marks_latest: 0          # of {max} in the most recent paper under this year's code
+pyq_marks: 0                 # of 80 across the corpus — the rule-2 figure
+pyq_marks_latest: 0          # of 80 in the most recent paper; identical while the corpus is one paper
 attempts: 0                  # activity volume, not a performance verdict
 last_practiced: null         # YYYY-MM-DD
 ---
 ```
 
-Both `pyq_marks` denominators are set on first paper ingest and stated on
-[[weightage]]. The filename is the topic name verbatim so `[[Topic Name]]`-style
+Both `pyq_marks` denominators are stated on [[weightage]] and change when a
+paper is ingested. **While the corpus is a single paper the two fields are
+always equal** — keep them so, and split them only when a second paper lands.
+`mte` is derived from `lectures`, not judged: true iff the topic's highest
+lecture is ≤ 32. The filename is the topic name verbatim so `[[Topic Name]]`-style
 wikilinks resolve — keep them in sync on any rename. `status` is a qualitative
 judgment maintained from graded papers, Personal Notes, and conversation — not a
 formula. Both `pyq_marks` fields are factual counts from the corpus and change
@@ -423,7 +431,7 @@ id: se-ete-2025-26
 type: pyq                # pyq | mock | worksheet
 exam: Odd Semester End Term Examination, November 2025
 course_code: <as printed on the paper>
-max_marks: 100
+max_marks: 80
 topics: ["[[Requirements Elicitation]]", ...]
 status: unattempted      # unattempted | graded
 score: null
@@ -483,21 +491,26 @@ failure. Graph view should show a connected web, not islands.
   no longer reconcile, ungraded submissions, wrapped wikilinks, links inside
   mermaid.
 
-## Bootstrap — what this vault still needs
+## What this vault still needs
 
-In this order. Nothing below step 1 can be done honestly before step 1.
+| Want | Why it matters |
+|---|---|
+| **More End Term papers** | The corpus is **one paper**. Every number on [[weightage]] rests on a single sitting, where "scored zero" and "not asked that day" are the same observation. Two more papers would change that table more than any reasoning about it can. |
+| **Any Mid-Term paper** | The handout sets the MTE at 30 marks and says nothing about its sections. The *content* ranking on [[MTE Roadmap]] is evidence-based; the *format* is a guess. |
+| **Pressman 8e** → `raw/sources/` | Rule 6's fallback, currently unavailable. Every page must come from decks alone until it lands. |
+| **A solution key** | Nothing in this vault is checked against a printed answer, so no `✓` marks exist yet. |
 
-| # | Drop in | Unlocks |
-|---|---|---|
-| 1 | **Course handout / syllabus** → `raw/sources/` | rule 1. The phase folders, the topic list, the lecture plan, the COs, the assessment split. Until this lands there is no scope and no topic pages. |
-| 2 | **Past papers** (as many as exist) → `raw/sources/` | rule 2. [[weightage]], the paper structure, `pyq_marks` on every topic. One paper is enough to start; the CN vault ran on four. |
-| 3 | **Lecture decks** → `raw/sources/ppts/` | rule 8. The subtopic divisions, the notation the course actually uses, and the worked examples that mirror the paper. |
-| 4 | **Textbook** (Pressman or Sommerville) → `raw/sources/` | rule 6. The fallback for gaps, reached for last. |
+### The image-only deck problem
 
-Steps 1 and 2 can arrive together. Step 3 is what makes the pages good rather
-than merely correct. If only some of these ever arrive, say on each page which
-sources were available — a page built without a deck is a rule-5 gap and should
-declare itself as one.
+Ten of the 24 decks are images rather than text — five yield nothing at all,
+five yield fragments. Three of the silent ones sit on Mid-Term topics: the agile
+models deck, the DFD question sheet, and the design case study. They are listed
+in [[index]] with page counts.
+
+**They are readable — by eye, not by extraction.** Read them with the Read tool's
+`pages` parameter at build time (max 20 pages per call). Never write a worked
+example "from" one of these decks without having actually looked at the slide;
+constructed replacements get labelled as constructed.
 
 ## Git
 
