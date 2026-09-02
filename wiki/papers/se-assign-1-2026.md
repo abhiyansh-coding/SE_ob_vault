@@ -78,27 +78,41 @@ the answer is cross-checked against the deck's own printed figure.)*
 
 ## Question map
 
-| Q | What it asks | Topic | Source |
-|---|---|---|---|
-| 1 | Release duration and cost from velocity | [[Agile Development]] | **deck, numbers changed** |
-| 2 | User story map — mobile banking | [[Agile Development]] | **out of syllabus** |
-| 3 | User story map — e-commerce | [[Agile Development]] | **out of syllabus** |
-| 4 | Sprint commitment from capacity | [[Agile Development]] | **deck, verbatim** |
-| 5 | Context DFD, Level-1 DFD, ERD — clinic | [[Flow-Oriented Modeling & DFD]] · [[Data Modeling & ERD]] | scenario, new |
-| 6 | Basic COCOMO, 400 KLOC, three modes | [[Effort Estimation & COCOMO]] | **deck Ex 4.5 verbatim** |
-| 7 | Functional vs non-functional; sprint's value | [[Requirements Engineering]] · [[Agile Development]] | scenario, new |
-| 8 | Waterfall vs Agile, and recommend one | [[Conventional Process Models]] · [[Agile Development]] | scenario, new |
-| 9 | Basic COCOMO embedded + cost + manpower | [[Effort Estimation & COCOMO]] | deck Ex 4.6 form |
-| 10 | FP → effort → project cost | [[Software Size Estimation]] | deck cost-question form |
-| 11 | (i) organic COCOMO duration (ii) L1/L2 break-even | [[Effort Estimation & COCOMO]] · [[Software Size Estimation]] | (ii) is a classic GATE item |
-| 12 | Conduct a CMMI assessment | [[SDLC & CMMI]] | partly beyond vault |
-| 13 | Halstead metrics, full derivation | [[Software Size Estimation]] | textbook-standard |
-| 14 | Unadjusted Function Points | [[Software Size Estimation]] | deck Ex 4.1-4.3 form |
-| 15 | Context + Level-1 DFD — library | [[Flow-Oriented Modeling & DFD]] | scenario, new |
+| Q | What it asks | Archetype | Topic | Source |
+|---|---|---|---|---|
+| 1 | Release duration and cost from velocity | **numerical** | [[Agile Development]] | **deck, numbers changed** |
+| 2 | User story map — mobile banking | **draw** | [[Agile Development]] | **out of syllabus** |
+| 3 | User story map — e-commerce | **draw** | [[Agile Development]] | **out of syllabus** |
+| 4 | Sprint commitment from capacity | **numerical** | [[Agile Development]] | **deck, verbatim** |
+| 5 | Context DFD, Level-1 DFD, ERD — clinic | **draw** | [[Flow-Oriented Modeling & DFD]] · [[Data Modeling & ERD]] | scenario, new |
+| 6 | Basic COCOMO, 400 KLOC, three modes | **numerical** | [[Effort Estimation & COCOMO]] | **deck Ex 4.5 verbatim** |
+| 7 | Functional vs non-functional; sprint's value | **compare + explain** | [[Requirements Engineering]] · [[Agile Development]] | scenario, new |
+| 8 | Waterfall vs Agile, and recommend one | **compare + scenario** | [[Conventional Process Models]] · [[Agile Development]] | scenario, new |
+| 9 | Basic COCOMO embedded + cost + manpower | **numerical** | [[Effort Estimation & COCOMO]] | deck Ex 4.6 form |
+| 10 | FP → effort → project cost | **numerical** | [[Software Size Estimation]] | deck cost-question form |
+| 11 | (i) organic COCOMO duration (ii) L1/L2 break-even | **numerical** | [[Effort Estimation & COCOMO]] · [[Software Size Estimation]] | (ii) is a classic GATE item |
+| 12 | Conduct a CMMI assessment | **explain** | [[SDLC & CMMI]] | partly beyond vault |
+| 13 | Halstead metrics, full derivation | **explain + numerical** | [[Software Size Estimation]] | textbook-standard |
+| 14 | Unadjusted Function Points | **numerical + explain** | [[Software Size Estimation]] | deck Ex 4.1-4.3 form |
+| 15 | Context + Level-1 DFD — library | **draw** | [[Flow-Oriented Modeling & DFD]] | scenario, new |
 
-**Concentration:** 6 of 15 questions are [[Software Size Estimation]] or
+**Concentration by topic:** 6 of 15 are [[Software Size Estimation]] or
 [[Effort Estimation & COCOMO]]; 5 are [[Agile Development]]. Those three pages
 carry 11 of the 15.
+
+**Concentration by archetype** — see [[answer-patterns]] for each skeleton:
+
+| Archetype | Questions | Note |
+|---|---|---|
+| **numerical** | 9 | Q1, Q4, Q6, Q9, Q10, Q11, Q13(a-f), Q14(a) — and Q4, Q6 are deck questions |
+| **draw** | 7 sub-parts | Q2, Q3, Q5(a)(b)(c), Q15(a)(b) |
+| **explain** | 5 | Q7(b), Q12, Q13 intro, Q13(g), Q14(b) |
+| **compare** | 2 | Q7(a), Q8(i) |
+| **scenario** | 1 | Q8(ii) |
+
+**The assignment is numerical-heavy where the exam was explain-heavy.** Coursework
+drills the calculations; the End Term put 24 of 80 on explain-with-reason. Do not
+let this assignment set your revision priorities — [[weightage]] does that.
 
 ---
 
