@@ -16,24 +16,424 @@ last_practiced: null
 
 **Prerequisites:** [[Data Modeling & ERD]]
 
-> [!warning] Page not built
-> Scaffolded on 2026-09-02 from the handout's lecture plan. No subtopics, Quick
-> Reference or Question Bank yet — those come from reading the decks below
-> (rule 8). **In MTE scope** (lectures 1–32).
-
 ## Overview
 
-> [!warning] 0 of 80 in [[se-ete-2025-26]] — never examined, on one paper
-> A single paper cannot show that a topic is unexamined, only that it was
-> not asked **once**. In syllabus, so still fully examinable — treat this
-> as an absence of evidence, not evidence of absence. Lectures 19, 21 is
-> *syllabus depth* and rule 3 forbids reading it as marks.
+> [!warning] 0 of 80 in [[se-ete-2025-26]] — but treat this zero with suspicion
+> Two full lectures, a dedicated deck, and it is a **drawing** topic on a paper
+> that put 20 of 80 marks on drawings. On a single paper, "scored zero" and "not
+> asked that day" are the same observation — and [[MTE Roadmap]] flags this
+> specific topic as the one whose zero is least trustworthy. Lectures 19 and 21
+> is *syllabus depth*; rule 3 forbids reading it as marks.
 
-The DFD at context, level-0 and level-1, levelling balance, the control flow model, process specification and the data dictionary. The vault's most drawing-heavy topic.
+The second modeling lens. [[Data Modeling & ERD]] asked what the system
+remembers; this asks **what the system does to data** — where information enters,
+which processes transform it, where it is stored, and where it leaves. It is also
+the one topic whose output feeds a later topic mechanically:
+[[Transform & Transaction Mapping]] turns a DFD into a program structure chart
+by procedure.
+
+## Quick Reference
+
+> [!abstract] The three that carry this topic
+> - **A context diagram has exactly ONE process** — the whole system — plus its
+>   external entities. It is Level 0.
+> - **Levelling balance:** a child diagram must consume and produce exactly the
+>   flows its parent bubble does. This is the rule that makes a DFD checkable.
+> - **A DFD shows data flow, not control flow.** No decisions, no loops, no
+>   sequence. That is the single most common misconception.
+
+**Definition.** A Data Flow Diagram provides a visual representation of the flow
+of information within a system — what information is provided by and delivered to
+each participant, what is needed to complete each process, and what needs to be
+stored and accessed.
+
+### Notation legend — state this before you draw
+
+| Element | Yourdon / DeMarco | Gane-Sarson | Means |
+|---|---|---|---|
+| **Process** | circle (bubble) | rounded rectangle | transforms input data into output data |
+| **External entity** | rectangle | rectangle | a source or sink outside the system boundary |
+| **Data store** | **two parallel lines**, open-ended | open-ended rectangle | where data rests between processes |
+| **Data flow** | named arrow | named arrow | data in motion |
+
+The deck uses the **circle-for-process** convention. Two rules of the notation
+that mark answers:
+
+- **Every flow is named.** An unlabelled arrow carries no information and earns
+  no marks.
+- **A data store is drawn open-ended** (two parallel lines, or a rectangle
+  missing its right edge) — not as a closed box, which would make it look like an
+  entity.
+
+### The levels
+
+| Level | Also called | Contains |
+|---|---|---|
+| **0** | **context diagram** | **exactly one process** (the whole system) + all external entities + the flows between them. No data stores. |
+| **1** | | the context process decomposed into its major processes, now with data stores |
+| **2+** | | any level-1 process decomposed further |
+
+**Benefits of a context diagram**, from the deck: it shows the boundaries of the
+system at a glance · needs no technical knowledge to read, because the notation
+is so limited · is simple to draw, amend and elaborate.
+
+### Levelling balance
+
+> A child diagram must have **exactly the same** net inputs and outputs as the
+> parent bubble it decomposes.
+
+If the context diagram shows an `Order` entering the system and a `Bill` leaving,
+the level-1 diagram must show the same `Order` entering and the same `Bill`
+leaving — no more, no fewer. This is what stops a model quietly inventing data,
+and it is the property a marker checks first.
+
+### Process numbering
+
+Context process is **0**. Its children are **1, 2, 3…**. Children of process 2 are
+**2.1, 2.2, 2.3…**. The number says which level a bubble belongs to.
+
+### Companion notations
+
+| Notation | Purpose |
+|---|---|
+| **Data dictionary** | a repository storing information about **all data items defined in the DFD** — metadata, i.e. data about the data. It is what stops two readers interpreting the same flow name differently. |
+| **Process specification** (P-spec) | describes the logic inside a bubble that is not decomposed further |
+| **Control flow model** | the counterpart showing events and control rather than data |
+| **Decision table** | represents complex processing logic in matrix form: upper rows are **conditions**, lower rows are **actions**, and each **column is a rule** — if the condition holds, the corresponding action executes |
+| **State transition diagram** | shows how an object changes state as actions are performed on it |
+
+## Subtopic map
+
+| # | Subtopic | Marks | Why it's here |
+|---|---|---|---|
+| 1 | What a DFD is, and its notation | 0 | the four symbols and the two conventions |
+| 2 | Levels and levelling balance | 0 | context vs level 1; the rule that makes a DFD checkable |
+| 3 | The Food Ordering System worked example | 0 | the deck's own running example, drawn out |
+| 4 | Data dictionary, process spec and control flow | 0 | what accompanies the diagram |
+| 5 | Decision tables and state transition diagrams | 0 | the other two analysis notations the deck teaches |
+
+## Mindmap
+
+```mermaid
+graph TD
+    S1["1 · What a DFD is<br/>0 marks"]
+    S2["2 · Levels & balance<br/>0 marks"]
+    S3["3 · Food Ordering example<br/>0 marks"]
+    S4["4 · Dictionary & P-spec<br/>0 marks"]
+    S5["5 · Decision tables & STDs<br/>0 marks"]
+
+    S1 -->|"one bubble for the whole system<br/>says nothing. break it open"| S2
+    S2 -->|"the rules are abstract<br/>until you draw one"| S3
+    S3 -->|"the arrows are named — but<br/>what does each name mean?"| S4
+    S4 -->|"flows are data. some logic<br/>is conditions and states"| S5
+    S5 -.->|"and all of it feeds the<br/>structure chart later"| S2
+```
+
+**1 · What a DFD is, and its notation — 0 marks**
+- **What:** a picture of information moving through a system: processes,
+  external entities, data stores and named flows.
+- **Why:** prose hides gaps; a diagram makes a missing input visible as a bubble
+  with nothing entering it.
+- **Important:** never examined on this paper. **A DFD shows data flow, not
+  control flow** — no decisions, no loops, no ordering. Data stores are drawn
+  **open-ended**.
+
+**2 · Levels and levelling balance — 0 marks**
+- **What:** context (level 0) has exactly one process; level 1 decomposes it;
+  balance requires the child's flows to match the parent's.
+- **Why:** balance is the rule that makes a DFD verifiable rather than
+  decorative.
+- **Important:** never examined, but this is where marks would be. **Context
+  diagram = one process, no data stores.** Balance = same net inputs and outputs.
+
+**3 · The Food Ordering System worked example — 0 marks**
+- **What:** the deck's running example — 3 processes, 4 external entities, 2 data
+  stores.
+- **Why:** it is the only complete DFD in the vault's sources, at both levels.
+- **Important:** never examined. Learn it as the template: if asked to draw a
+  DFD, this is the shape and density expected.
+
+**4 · Data dictionary, process spec and control flow — 0 marks**
+- **What:** the supporting notations — metadata for every flow, logic for
+  undecomposed bubbles, and the control-flow counterpart.
+- **Why:** a diagram alone does not say what `Order details` actually contains.
+- **Important:** never examined. One line each. The **data dictionary is
+  metadata — data about the data**.
+
+**5 · Decision tables and state transition diagrams — 0 marks**
+- **What:** two further analysis notations from the same deck.
+- **Why:** some logic is conditional rather than flow-shaped, and some behaviour
+  is about states rather than data.
+- **Important:** never examined *here* — but decision-table **testing** is
+  examined on [[Black-Box Testing]], so the notation is worth knowing once.
+  Conditions on top, actions below, **each column is a rule**.
+
+## 1 · What a DFD is, and its notation
+
+**Intuition.** Draw the system as plumbing. Data enters from outside, passes
+through processes that transform it, sometimes rests in a store, and eventually
+leaves. Four symbols, no more — which is why the deck notes that no technical
+knowledge is needed to read one. The discipline is in what a DFD deliberately
+**cannot** express: there are no decisions, no loops and no sequence. It answers
+*what data goes where*, never *in what order* or *under what condition*. Students
+who draw a flowchart with DFD symbols have made the standard mistake.
+
+**Legend.** The full symbol table, with both the Yourdon and Gane-Sarson
+conventions, is in Quick Reference. The deck uses **circles for processes**.
+
+**Definitions & distinctions.**
+
+| | Process | External entity | Data store |
+|---|---|---|---|
+| Represents | a transformation | a source or sink **outside** the boundary | data at rest |
+| Inside the system? | yes | **no** | yes |
+| Drawn as | circle | rectangle | open-ended parallel lines |
+
+**What gets asked.** Never examined on the one paper here. If asked, the notation
+legend earns marks on its own — state it before drawing.
+
+## 2 · Levels and levelling balance
+
+**Intuition.** You cannot show a whole system at useful detail on one page, so you
+zoom. The **context diagram** is maximum zoom-out: one bubble representing the
+entire system, surrounded by the outside world it talks to. It answers one
+question — *where does the system stop and the world begin?* Then each level down
+opens one bubble into the processes inside it.
+
+The rule that makes this trustworthy is **balance**: whatever crossed the
+parent's boundary must cross the child's. If a level-1 diagram produces a report
+that the context diagram never showed leaving the system, one of the two is
+wrong. That check is why DFDs are worth drawing at all.
+
+**Definitions & distinctions.** The level table, the balance rule, the numbering
+scheme and the context-diagram benefits are all in Quick Reference.
+
+The context diagram's defining properties, worth stating exactly: **exactly one
+process node**, representing the functions of the complete system in terms of how
+it interacts with external entities; **all** external entities; the data flows
+between them; and **no data stores**, because stores are internal and the context
+diagram does not open the system up.
+
+**What gets asked.** Never examined on this paper. The plausible forms are "what
+is a context diagram" as a 2-marker, or "draw the level-0 and level-1 DFD for X"
+as a long question — which is exactly what subtopic 3 rehearses.
+
+## 3 · The Food Ordering System worked example
+
+**Intuition.** The deck runs one example at both levels, and it is the right
+template for any DFD you are asked to draw: small enough to fit on a page, big
+enough to need every symbol.
+
+**The context diagram (Level 0).**
+
+One process — *Food Ordering System* — and four external entities: **Customer,
+Kitchen, Manager, Supplier**. Flows run between the system and each entity. No
+data stores appear.
+
+```
+        Customer ──── Order ────►┌─────────────────────┐
+        Customer ◄─── Bill ──────│                     │
+                                 │        0            │
+        Kitchen  ◄─── Order ─────│  Food Ordering      │
+                                 │      System         │
+        Manager  ──── Inventory ►│                     │
+                      order      │                     │
+        Manager  ◄─── Reports ───│                     │
+                                 │                     │
+        Supplier ◄─── Inventory ─└─────────────────────┘
+                      order
+```
+
+*(Processes are circles in the deck's convention; boxes are used here only
+because the vault renders in plain text. Draw them as circles.)*
+
+**The Level 1 DFD.** The single bubble opens into **three processes**, keeping the
+same four external entities and adding **two data stores**:
+
+| Process | Reads from | Writes to | Talks to |
+|---|---|---|---|
+| **1 Order Food** | — | Order store, Inventory store | receives `Order` from Customer; forwards it to Kitchen; delivers `Bill` to Customer |
+| **2 Generate Reports** | Inventory store, Order store | — | delivers `Reports` to Manager |
+| **3 Order Inventory** | — | Inventory store | receives `Inventory order` from Manager; forwards it to Supplier |
+
+Data stores: **D1 Order**, **D2 Inventory**.
+
+```mermaid
+graph LR
+    CUST["Customer<br/>(external entity)"]
+    KIT["Kitchen<br/>(external entity)"]
+    MGR["Manager<br/>(external entity)"]
+    SUP["Supplier<br/>(external entity)"]
+    P1(("1<br/>Order Food"))
+    P2(("2<br/>Generate Reports"))
+    P3(("3<br/>Order Inventory"))
+    D1[/"D1  Order"/]
+    D2[/"D2  Inventory"/]
+
+    CUST -->|Order| P1
+    P1 -->|Bill| CUST
+    P1 -->|Order| KIT
+    P1 -->|Order details| D1
+    P1 -->|Inventory details| D2
+    D2 -->|Inventory details| P2
+    D1 -->|Orders| P2
+    P2 -->|Reports| MGR
+    MGR -->|Inventory order| P3
+    P3 -->|Inventory order| SUP
+    P3 -->|Inventory details| D2
+```
+
+**Reading.** A Customer places an `Order`; *Order Food* receives it, forwards it
+to the Kitchen, stores it in the Order store, updates the Inventory store, and
+returns a `Bill` to the Customer. The Manager receives `Reports` from *Generate
+Reports*, which reads from both stores. The Manager also initiates *Order
+Inventory* by supplying an `Inventory order`, which is forwarded to the Supplier
+and recorded in the Inventory store.
+
+**The rule it must satisfy:** the level-1 diagram's net external flows —
+`Order` and `Inventory order` in, `Bill`, `Order`-to-Kitchen and `Reports` out —
+are exactly those on the context diagram. **Balanced.**
+
+> [!note] Source honesty
+> The deck's own diagrams are **images with no extractable text**. The structure
+> above is reconstructed from the deck's written descriptions, which are unusually
+> complete — they name all three processes, all four entities, both data stores
+> and every flow. It is faithful to that text, but **it is not a transcription of
+> the slide's picture.** Compare against `DFD (2).pptx` and
+> `L6 Requirement Analysis Diagrams.pdf` by eye if the exact layout matters.
+
+**What gets asked.** Never examined on the one paper here. Treated as the
+template for a "draw the DFD for this system" question, which is the form a
+30-mark Mid-Term drawn from 32 lectures could plausibly use.
+
+## 4 · Data dictionary, process specification and control flow
+
+**Intuition.** A DFD's arrows carry names, and a name is not a definition. If one
+arrow says `Order details`, two readers will imagine different things unless
+something pins it down. The **data dictionary** is that something — a repository
+of every data item in the diagram, holding metadata: *data about the data*. The
+**process specification** does the same job for bubbles: when a process is not
+decomposed further, its logic has to be written down somewhere.
+
+**Definitions & distinctions.** The companion-notation table is in Quick
+Reference. The **control flow model** is the DFD's counterpart for systems where
+events and control matter as much as data — the deck names it alongside the data
+flow model and the process specification as the contents of lecture 21.
+
+**What gets asked.** Never examined. One line each is the right depth. "A data
+dictionary contains metadata, i.e. data about the data" is quotable as-is.
+
+## 5 · Decision tables and state transition diagrams
+
+**Intuition.** Not all logic is flow-shaped. Some is a lookup: *given these
+conditions, do that*. A **decision table** lays that out as a matrix — conditions
+in the upper rows, actions in the lower rows, and **each column a rule**. Some
+behaviour is neither flow nor lookup but **state**: an object behaves differently
+depending on what has happened to it, and a **state transition diagram** shows
+those states and the events that move between them.
+
+**Definitions & distinctions.**
+
+**Decision table** — the upper rows specify the variables or conditions to be
+evaluated; the lower rows specify the actions to be taken when the corresponding
+conditions are satisfied. A **column is a rule**: if its condition combination
+holds, the corresponding action executes. The deck's example is a Library
+Management System: *if the valid-selection condition is false, the action is
+'display error message'.*
+
+**State transition diagram** — objects change state as functions are performed on
+them. The deck's case study: a web application where a user can search for other
+users, send a friend request, have it accepted (both users added to each other's
+friend lists) or declined (the second user may send another request), and where
+users can block each other. Each of those is a state, and each action is a
+transition.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Searching
+    Searching --> RequestSent : send friend request
+    RequestSent --> Friends : request accepted
+    RequestSent --> Declined : request not accepted
+    Declined --> RequestSent : send another request
+    Friends --> Blocked : block user
+    RequestSent --> Blocked : block user
+    Searching --> Blocked : block user
+    Blocked --> [*]
+```
+
+**Reading.** A user begins by searching, sends a request, and the request either
+succeeds (Friends) or fails (Declined) — and from Declined a further request may
+be sent, which is the loop the case study specifies. Blocking is reachable from
+any state. **The rule it must satisfy:** every transition is labelled with the
+event that causes it, and every state is reachable.
+
+**What gets asked.** Never examined on this topic. But **decision-table-based
+testing is examined machinery** on [[Black-Box Testing]] (lecture 37), so the
+table notation is worth learning here and reusing there.
+
+## Question Bank
+
+**PYQ questions — none.** No question on [[se-ete-2025-26]] tests this topic.
+
+**Deck questions — none, but one complete worked example.** The Food Ordering
+System is worked at both levels in subtopic 3, from
+`raw/sources/ppts/2025/DFD (2).pptx` and
+`raw/sources/ppts/2025/L6 Requirement Analysis Diagrams.pdf`. It is an
+*illustration*, not a posed question, so no `✓`.
+
+**Textbook questions — unavailable for this topic.** Pressman 8e is not in
+`raw/sources/`.
+
+> [!warning] The file that looked like this topic's question bank is not
+> `Flowdiagram Ques.pdf` was catalogued at ingest as a DFD question sheet on the
+> strength of its filename. **Read by eye on 2026-09-02, it is not.** It is
+> Aggarwal & Singh chapter 8, *Software Testing*, pages 416-422: two fully worked
+> **control flow graph / DD path graph / independent path** problems — the
+> quadratic-equation program and the triangle-classification program. Both belong
+> to [[White-Box Testing]] and [[Cyclomatic Complexity & Graph Matrices]], where
+> they are worked in full. *Control flow graph* and *data flow diagram* are
+> different things, and the filename conflated them.
+>
+> **Consequence: this topic has no drill at all beyond the Food Ordering
+> example.** That is stated rather than papered over with invented questions.
+
+## Mistakes & Traps
+
+- **Drawing control flow in a DFD.** No decisions, no loops, no sequence. A DFD
+  shows *what data goes where*, never *when* or *under what condition*.
+- **Putting more than one process on a context diagram.** Level 0 has exactly
+  **one** bubble.
+- **Putting data stores on a context diagram.** Stores are internal; the context
+  diagram does not open the system.
+- **Unbalanced levels.** The child's net inputs and outputs must equal the
+  parent's. Markers check this first.
+- **Unnamed data flows.** An unlabelled arrow earns nothing.
+- **Drawing a data store as a closed box.** It is open-ended; a closed rectangle
+  reads as an external entity.
+- **Confusing a data flow diagram with a control flow graph.** The first models a
+  system's data; the second models one program's execution paths and lives on
+  [[Cyclomatic Complexity & Graph Matrices]]. The vault's own source filenames
+  got this wrong — do not repeat it in an exam.
 
 ## Course Material
 
-- `raw/sources/ppts/2025/DFD (2).pptx`
-- `raw/sources/ppts/2025/L6 Requirement Analysis Diagrams.pdf` — **IMAGE-HEAVY**
-- `raw/sources/ppts/2025/Flowdiagram Ques.pdf` — **IMAGE-ONLY**
-- `raw/sources/ppts/2025/L5 Chapter 3 Software Requirements_2.pdf`
+- `raw/sources/ppts/2025/DFD (2).pptx` — the DFD definition, the context diagram
+  with its three stated benefits, and the **Food Ordering System** at context and
+  level 1, described in full text across slides 15-20. **The diagrams themselves
+  are images.**
+- `raw/sources/ppts/2025/L6 Requirement Analysis Diagrams.pdf` — the same Food
+  Ordering example at level 0 and level 1, plus the **data dictionary**
+  definition, an **ER diagram** for a Hotel Reservation System, a **decision
+  table** for a Library Management System, a **state transition diagram** with
+  the friend-request case study, and a use-case template. **Image-heavy** (10 pp)
+  — the diagrams have no extractable text.
+- `raw/sources/ppts/2025/L5 Chapter 3 Software Requirements_2.pdf` — supporting
+  analysis-modeling material.
+
+**Filename correction recorded:** `Flowdiagram Ques.pdf` is testing content, not
+flow-diagram content. See the warning in the Question Bank and the entry in
+[[index]].
+
+**Related:** [[story]] · [[syllabus]] · [[weightage]] · [[MTE Roadmap]] ·
+previous [[Data Modeling & ERD]] · next [[UML & Use Case Modeling]] ·
+feeds [[Transform & Transaction Mapping]]

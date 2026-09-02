@@ -132,7 +132,7 @@ Where they disagree, 2026-27 wins.
 | `2025/L5 Chapter 3 Software Requirements_2.pdf` | requirements, SRS, UML | yes |
 | `2025/L6 Requirement Analysis Diagrams.pdf` | DFD, ERD | image-heavy (10 pp) |
 | `2025/DFD (2).pptx` | data flow diagrams | image-heavy |
-| `2025/Flowdiagram Ques.pdf` | **DFD practice questions** | **image-only** (7 pp) |
+| `2025/Flowdiagram Ques.pdf` | **misnamed — it is Aggarwal & Singh ch. 8 *Software Testing*, pp. 416-422: two worked control-flow-graph / DD-path / independent-path problems.** Belongs to [[White-Box Testing]] and [[Cyclomatic Complexity & Graph Matrices]], **not** to DFD | image-only (7 pp), **read by eye 2026-09-02** |
 | `2025/UML.pdf` | UML diagrams | partial |
 | `2025/Case study Student Result Management System.pdf` | design case study (lecture 23) | **image-only** (37 pp) |
 | `2025/L7 Software Project planning_6.pdf` | estimation, COCOMO, risk | yes |
@@ -164,7 +164,8 @@ Where they disagree, 2026-27 wins.
 >   Unified Process.
 > - **One paper only.** Read [[weightage]]'s caveat before trusting any mark.
 > - **No Mid-Term paper**, so the MTE's section structure is guesswork.
-> - **Five decks are image-only, five more image-heavy.** Three of the
->   image-only ones sit on Mid-Term topics (agile models, DFD questions, the
->   design case study). They are readable by eye at build time, not by text
->   extraction.
+> - **Five decks are image-only, five more image-heavy.** They are readable by
+>   eye at build time, not by text extraction. `Flowdiagram Ques.pdf` has now
+>   been read and turned out to be **testing** content, not DFD content — see
+>   the table above. Still unread: the agile models deck (17 pp) and the design
+>   case study (37 pp), both on Mid-Term topics, plus the two SQA decks.
