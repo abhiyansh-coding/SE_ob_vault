@@ -40,3 +40,30 @@ Format: `## [YYYY-MM-DD] <op> | <description>` — greppable via `grep "^## \[" 
 ## [2026-09-02] find | Rule 8 confirmed for this vault: question D1 is the COCOMO deck's own Example 4.7 with the numbers changed. Same embedded mode, same two developer pools, same question about the impact of hiring from one or the other — 400 KLOC in the deck, 100 KLOC on the paper. Working the deck example is working the exam question.
 
 ## [2026-09-02] correct | The COCOMO deck carries an error on Example 4.7, already flagged on its own slide with the note "EAF is wrong, please check" but not diagnosed. Cause identified: the multipliers 0.82 and 1.29 are read off the AEXP row (application experience) where the question asks about PCAP (programmer capability), whose correct values are 0.70 very high and 1.17 low. Corrected working recorded alongside the deck's; the conclusion is unchanged and in fact strengthened, the effort gap widening from 1058 to 1164 person-months. Worth noting that the exam question supplies 0.86 and 1.17, both genuine PCAP entries, so whoever set D1 appears to have known about the error.
+
+## [2026-09-02] build | Coupling & Cohesion (step 16), built ahead of step 15
+
+## [2026-09-02] lint | compressed all 15 built topic pages to bullet form
+
+User: "the notes are unnecessarily long". Measured before touching anything —
+46,976 words across the built pages with **no correlation to marks**: the longest
+page in the vault (Software Size Estimation, 4,613 words) was worth zero, and 39%
+of every word sat above the first subtopic in four layers that each re-summarised
+the topic.
+
+Changes, nothing deleted:
+- **CLAUDE.md** gains a "Bullets, not prose" rule; the Mindmap section loses its
+  per-subtopic capsules; Intuition is capped at 3-5 bullets instead of ~150 words.
+- **Mindmap capsules stripped from all 15 pages** — 2,079 words that restated
+  Quick Reference and the Subtopic map.
+- **32 Intuition paragraphs converted to bullets** across the 8 pages not fully
+  rewritten.
+- **7 pages rewritten end to end**, moving every fact into Quick Reference so it
+  is carried once: Introduction, Layered Technology, Conventional, Evolutionary,
+  Agile, SDLC & CMMI, Requirements Engineering.
+- **Worked numericals, drawn answers and Quick Reference tables untouched** —
+  they are where the marks are.
+
+Result: 46,976 to 40,762 words, 6,214 removed. Two paragraphs of 60+ words remain
+vault-wide, both inside worked answers. Also restored the accidentally deleted
+Design Concepts and Principles scaffold, which ten live wikilinks point at.

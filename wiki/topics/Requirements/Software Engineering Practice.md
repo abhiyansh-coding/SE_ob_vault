@@ -22,12 +22,12 @@ last_practiced: null
 > A single paper cannot show a topic is unexamined. In syllabus and taught.
 > Lecture 14 is *syllabus depth* and rule 3 forbids reading it as marks.
 
-[[Requirements Engineering]] said *what* a requirement is. This topic is the
-**procedure** for getting them: the five activities of requirements practice —
-elicitation, analysis, documentation, validation and management — which is how the
-handout words lecture 14. Each has its own techniques, and each answers a
-different failure: not knowing, not agreeing, not writing it down, not checking,
-and not keeping up.
+- **[[Requirements Engineering]] said *what* a requirement is. This topic is the
+  *procedure* for getting them** — the five activities of requirements practice:
+  elicitation, analysis, documentation, validation and management, as the handout
+  words lecture 14.
+- **Each answers a different failure:** not knowing · not agreeing · not writing
+  it down · not checking · not keeping up.
 
 ## Quick Reference
 
@@ -107,52 +107,18 @@ graph TD
     S5 -.->|"every change re-enters<br/>at the top"| S1
 ```
 
-**1 · Elicitation — 0 marks**
-- **What:** collecting requirements from stakeholders, by seven named techniques.
-- **Why:** customers cannot simply hand you a specification; requirements must be
-  drawn out, and some must be discovered.
-- **Important:** never examined. Know the seven techniques and **one situation
-  each fits** — the selection logic is what a question would test, not the list.
-
-**2 · Analysis — 0 marks**
-- **What:** understand, refine and resolve conflicts among gathered requirements,
-  then classify them.
-- **Why:** raw stakeholder input contradicts itself; someone must negotiate before
-  anything is written down.
-- **Important:** never examined. Its output feeds the modeling topics — UML and
-  ER diagrams are named here as the analysis notation.
-
-**3 · Specification — 0 marks**
-- **What:** documenting the agreed requirements, normally as an SRS to IEEE 830.
-- **Why:** an unwritten agreement cannot be traced, tested or contracted on.
-- **Important:** never examined here. The SRS itself carries A3's 2 marks and is
-  taught on [[Requirements Engineering]] — revise it there.
-
-**4 · Validation — 0 marks**
-- **What:** checking that the specified requirements are correct, complete and
-  what the user actually needs.
-- **Why:** it is the last checkpoint before mistakes get expensive.
-- **Important:** never examined. **Validation = are we building the right
-  product?** The four techniques are reviews, walkthroughs, prototyping and
-  test-case generation.
-
-**5 · Management — 0 marks**
-- **What:** handling requirement change during development and maintaining
-  traceability.
-- **Why:** requirements change; without change control the SRS silently stops
-  describing the system being built.
-- **Important:** never examined. The **traceability chain — requirement → design
-  → code → test** — is the one examinable idea here.
-
 ## 1 · Elicitation
 
-**Intuition.** Requirements are not lying around waiting to be collected. Users
-describe solutions rather than problems, omit everything they consider obvious,
-and cannot describe what they have never seen — the *undreamed* requirements from
-[[Requirements Engineering]]. Elicitation is therefore an active technique
-problem: pick the method that suits how the knowledge is distributed. Ask a few
-experts in depth, survey many shallowly, watch people work when what they say
-differs from what they do, and build something when they cannot say at all.
+**Intuition.**
+- **Requirements are not lying around waiting to be collected.** Users describe
+  solutions rather than problems, omit everything they consider obvious, and
+  cannot describe what they have never seen — the *undreamed* requirements from
+  [[Requirements Engineering]].
+- **Elicitation is therefore an active technique problem:** pick the method that
+  suits how the knowledge is distributed.
+- Ask a few experts in depth · survey many shallowly · **watch people work when
+  what they say differs from what they do** · build something when they cannot say
+  at all.
 
 **Definitions & distinctions.** The seven techniques and the selection guide are
 in Quick Reference. **Prototyping appears here as an elicitation technique**, not
@@ -166,14 +132,15 @@ line on how it works, and the situation it suits.
 
 ## 2 · Analysis
 
-**Intuition.** Elicitation produces a pile of wants, and some of them contradict
-each other — the customer wants low cost, the developer wants maintainability, the
-manager wants speed. Analysis is where those get negotiated into a consistent set,
-sorted into functional and non-functional, and expressed in a notation precise
-enough to check. It is where the modeling topics enter: the deck names UML and ER
-diagrams as the analysis notation, which is exactly what
-[[Data Modeling & ERD]], [[Flow-Oriented Modeling & DFD]] and
-[[UML & Use Case Modeling]] go on to teach.
+**Intuition.**
+- **Elicitation produces a pile of wants, and some contradict each other** — the
+  customer wants low cost, the developer maintainability, the manager speed.
+- **Analysis is where those get negotiated** into a consistent set, sorted into
+  functional and non-functional, and expressed in a notation precise enough to
+  check.
+- **It is where the modeling topics enter:** the deck names UML and ER diagrams as
+  the analysis notation — exactly what [[Data Modeling & ERD]],
+  [[Flow-Oriented Modeling & DFD]] and [[UML & Use Case Modeling]] go on to teach.
 
 **Definitions & distinctions.** Analysis does three things: **understand, refine,
 resolve conflicts**; **classify** requirements as functional or non-functional;
@@ -186,8 +153,8 @@ modeling phase.
 ## 3 · Specification
 
 **Intuition.** The output of analysis lives in people's heads and in meeting
-notes. Specification writes it down in a form that can be handed to someone who
-was not in the room — which is the only way work can be divided at all.
+notes. **Specification writes it down in a form that can be handed to someone who
+was not in the room** — which is the only way work can be divided at all.
 
 **Definitions & distinctions.** Formats: the **SRS to IEEE 830**, use cases, user
 stories and diagrams. The SRS's structure, purpose, characteristics and common
@@ -198,11 +165,13 @@ they are not duplicated here.
 
 ## 4 · Validation
 
-**Intuition.** A requirements document can be internally perfect and still specify
-the wrong system. Validation is the check against reality: show the specification
-back to stakeholders and confirm it is what they meant — before anyone builds
-anything. This is where the course introduces the question that recurs through the
-whole testing module: *are we building the right product?*
+**Intuition.**
+- **A requirements document can be internally perfect and still specify the wrong
+  system.**
+- **Validation is the check against reality:** show the specification back to
+  stakeholders and confirm it is what they meant — before anyone builds anything.
+- This is where the course introduces the question that recurs through the whole
+  testing module: *are we building the right product?*
 
 **Definitions & distinctions.** Four techniques: **reviews, walkthroughs,
 prototyping, test-case generation**. The last is the subtle one — if you cannot
@@ -218,12 +187,13 @@ right the first time you meet it.
 
 ## 5 · Management
 
-**Intuition.** Requirements change during development; that is assumed, not
-exceptional. Requirement management is the machinery that keeps change from
-silently invalidating everything downstream: every change is tracked, and every
-requirement stays linked to the design, code and tests that implement it. Without
-that chain, a changed requirement leaves stale code and passing tests that verify
-the wrong thing.
+**Intuition.**
+- **Requirements change during development; that is assumed, not exceptional.**
+- **Requirement management is the machinery that keeps change from silently
+  invalidating everything downstream:** every change tracked, every requirement
+  linked to the design, code and tests that implement it.
+- **Without that chain**, a changed requirement leaves stale code and passing tests
+  that verify the wrong thing.
 
 **Definitions & distinctions.** Two responsibilities: **handle changes** during
 development, tracked in tools; and **maintain traceability** —

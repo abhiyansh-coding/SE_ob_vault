@@ -167,57 +167,16 @@ graph TD
     S5 -.->|"every measure feeds<br/>the same effort equation"| S4
 ```
 
-**1 · Feasibility study and software scope — 0 marks**
-- **What:** deciding whether the project should exist at all, on technical,
-  economic and operational grounds.
-- **Why:** 31% of projects are cancelled — the cheapest cancellation is the one
-  that happens before the money is spent.
-- **Important:** never examined. Know the three feasibility types and one IBM
-  statistic. The deck's framing: *how do we cancel a project with the least
-  work?*
-
-**2 · LOC estimation — 0 marks**
-- **What:** measuring size by counting lines of code, headers, declarations and
-  non-executable statements included.
-- **Why:** it is the input every static model and COCOMO takes.
-- **Important:** never examined alone, but **KLOC is COCOMO's input** — get the
-  definition and remember the count is in **thousands**.
-
-**3 · Function point analysis — 0 marks**
-- **What:** size measured from the user's view: five functional unit types,
-  weighted by complexity, then adjusted by 14 factors.
-- **Why:** it can be computed **from the requirements**, before any code exists —
-  which is exactly when you are asked for an estimate.
-- **Important:** never examined on this paper. **Memorise the 3/4/6, 4/5/7,
-  3/4/6, 7/10/15, 5/7/10 weight table** and CAF = 0.65 + 0.01ΣF<sub>i</sub>.
-  Three fully worked deck examples in the Question Bank.
-
-**4 · Static estimation models — 0 marks**
-- **What:** power-law equations converting size to effort, duration and
-  documentation — SEL and Walston-Felix.
-- **Why:** they are COCOMO's simpler ancestors and show the same
-  size→effort→duration chain.
-- **Important:** never examined. One worked comparison in the Question Bank.
-  Remember **1 PY = 12 PM** and that *L* is in **KLOC**.
-
-**5 · Halstead size estimation — 0 marks**
-- **What:** size derived from counts of distinct and total operators and
-  operands.
-- **Why:** it measures the program's vocabulary rather than its line count, so
-  formatting cannot inflate it.
-- **Important:** never examined, **and no deck teaches it** — it appears in the
-  corpus only as MCQ options. Named by the handout at lecture 16, so it is in
-  scope. See the warning on the subtopic.
-
 ## 1 · Feasibility study and software scope
 
-**Intuition.** The deck opens with an uncomfortable question — *is cancelling a
-project bad news?* — and answers it with IBM's numbers: nearly a third of
-projects are cancelled anyway, and half of the survivors nearly triple their cost
-estimates. Given that, the useful question is not how to avoid cancellation but
-**how to cancel with the least work wasted**. That is the feasibility study: a
-small, deliberate investigation, run before commitment, whose job is partly to
-kill projects cheaply.
+**Intuition.**
+- **The deck opens with an uncomfortable question** — *is cancelling a project bad
+  news?* — and answers it with IBM's numbers: **nearly a third of projects are
+  cancelled anyway, and half of the survivors nearly triple their cost estimates.**
+- **So the useful question is not how to avoid cancellation but how to cancel with
+  the least work wasted.**
+- **That is the feasibility study:** a small, deliberate investigation run before
+  commitment, whose job is partly to kill projects cheaply.
 
 **Definitions & distinctions.** The three feasibility types and the IBM figures
 are in Quick Reference. The deck's own technical-feasibility examples are
@@ -243,13 +202,15 @@ a 2-mark "what is a feasibility study / name its types".
 
 ## 2 · LOC estimation
 
-**Intuition.** The obvious way to measure a program is to count its lines. It is
-simple, automatable and directly comparable across projects in the same language
-— which is why every static model and COCOMO takes KLOC as input. The problem is
-equally obvious: you cannot count the lines of a program that does not exist yet,
-so at estimation time LOC is itself an estimate; and it depends on the language,
-so the same functionality is more "lines" in C than in Python. Function points
-exist because of exactly that second objection.
+**Intuition.**
+- **The obvious way to measure a program is to count its lines** — simple,
+  automatable, directly comparable across projects in the same language, which is
+  why every static model and COCOMO takes KLOC as input.
+- **The problem is equally obvious.** You cannot count the lines of a program that
+  does not exist yet, so at estimation time **LOC is itself an estimate**.
+- **And it depends on the language:** the same functionality is more "lines" in C
+  than in Python. **Function points exist because of exactly that second
+  objection.**
 
 **Formulas & variables.** The deck's definition:
 
@@ -270,15 +231,17 @@ convention is load-bearing.
 
 ## 3 · Function point analysis
 
-**Intuition.** LOC measures what the *developer* writes; function points measure
-what the *user* gets. Alan Albrecht at IBM recognised in the 1970s that the first
-is unusable at estimation time — there is no code to count — and language-biased
-besides. So FPA counts the system's externally visible functionality: what
-information goes in, what comes out, what can be asked, what the system stores,
-and what it borrows from other systems. Because all five can be read off the
-requirements, you can size a system before writing a line of it. Each count is
-then weighted by complexity, and the total is adjusted by 14 environmental
-factors.
+**Intuition.**
+- **LOC measures what the *developer* writes; function points measure what the
+  *user* gets.**
+- **Alan Albrecht at IBM** recognised in the 1970s that the first is unusable at
+  estimation time — there is no code to count — and language-biased besides.
+- **So FPA counts externally visible functionality:** what information goes in,
+  what comes out, what can be asked, what the system stores, what it borrows from
+  other systems.
+- **Because all five can be read off the requirements, you can size a system
+  before writing a line of it.** Each count is weighted by complexity, and the
+  total adjusted by 14 environmental factors.
 
 **Formulas & variables.**
 
@@ -318,15 +281,17 @@ highest-value drill available. Three forms:
 
 ## 4 · Static estimation models
 
-**Intuition.** Once you have a size, effort follows from an empirical power law
-fitted to past projects: *E* = *aL*<sup>b</sup>. Different organisations measured
-different constants — the Software Engineering Laboratory got *E* =
-1.4*L*<sup>0.93</sup>, Walston and Felix got *E* = 5.2*L*<sup>0.91</sup> — and the
-gap between them is the honest measure of how uncertain this all is. Because *b*
-is close to 1 in both, effort scales nearly linearly with size; duration uses a
-much smaller exponent, which is the formal reason schedule cannot be compressed
-in proportion to effort. That is Brooks's Law from
-[[Introduction to Software Engineering]] appearing as arithmetic.
+**Intuition.**
+- **Once you have a size, effort follows from an empirical power law** fitted to
+  past projects: *E* = *aL*<sup>b</sup>.
+- **Different organisations measured different constants** — the Software
+  Engineering Laboratory got *E* = 1.4*L*<sup>0.93</sup>, Walston and Felix got
+  *E* = 5.2*L*<sup>0.91</sup>. **The gap between them is the honest measure of how
+  uncertain this all is.**
+- **Because *b* is close to 1 in both, effort scales nearly linearly with size.**
+- **Duration uses a much smaller exponent** — which is the formal reason schedule
+  cannot be compressed in proportion to effort. That is Brooks's Law from
+  [[Introduction to Software Engineering]] appearing as arithmetic.
 
 **Formulas & variables.** All four equations, the reversal
 *L* = (*E*/*a*)<sup>1/*b*</sup>, and the derived quantities are in Quick
@@ -358,11 +323,13 @@ productivity and manning for each.
 > the vault. What follows is standard textbook material. Rule 5: absence from the
 > decks is not evidence of being out of scope.
 
-**Intuition.** LOC can be inflated by formatting; function points depend on
-subjective complexity ratings. Halstead's software science tries for something
-more intrinsic by counting the program's **vocabulary** — how many distinct
-operators and operands it uses, and how often. From four counts, everything else
-is derived by formula.
+**Intuition.**
+- **LOC can be inflated by formatting; function points depend on subjective
+  complexity ratings.**
+- **Halstead's software science tries for something more intrinsic** by counting
+  the program's **vocabulary** — how many distinct operators and operands it uses,
+  and how often.
+- **From four counts, everything else is derived by formula.**
 
 **Formulas & variables.**
 

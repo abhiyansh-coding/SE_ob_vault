@@ -128,39 +128,15 @@ graph TD
     S3 -.->|"and every box needs<br/>an underlined identifier"| S1
 ```
 
-**1 · Entities, attributes and keys — 0 marks**
-- **What:** entities are what the system stores; attributes are their properties;
-  a candidate key identifies an instance uniquely.
-- **Why:** without an identifier you cannot tell two instances apart, and the
-  model cannot become a database.
-- **Important:** never examined. **Candidate key vs identifier**: several
-  attributes may be candidates; the identifier is the one chosen. Underline it.
-
-**2 · Relationships — degree and cardinality — 0 marks**
-- **What:** degree counts participating **entity types**; cardinality counts
-  **instances** on each side.
-- **Why:** they are two different questions about the same line, and confusing
-  them makes the diagram wrong rather than merely untidy.
-- **Important:** never examined, but this is where any question here would land.
-  Unary/binary/ternary vs 1:1, 1:M, M:N. **Minimum cardinality zero = optional
-  participation.**
-
-**3 · Drawing the ER diagram — 0 marks**
-- **What:** rendering entities, relationships, attributes and cardinalities in
-  standard notation.
-- **Why:** the paper puts 20 of 80 marks on drawings, and drawn answers are
-  graded on notation.
-- **Important:** never examined *on this paper*. Label both ends of every
-  relationship and underline every identifier.
-
 ## 1 · Entities, attributes and keys
 
-**Intuition.** Start by asking what the system has to remember. A university
-remembers students and courses; a hotel remembers rooms and reservations. Each of
-those is an **entity type**, and the facts you keep about each — a name, an
-address, a phone number — are its **attributes**. One attribute (or a combination)
-has to be capable of telling two instances apart, or the system cannot refer to
-anything reliably; that is the key.
+**Intuition.**
+- **Start by asking what the system has to remember.** A university remembers
+  students and courses; a hotel remembers rooms and reservations.
+- Each of those is an **entity type**; the facts kept about each — name, address,
+  phone number — are its **attributes**.
+- **One attribute (or a combination) must tell two instances apart**, or the
+  system cannot refer to anything reliably. That is the key.
 
 **Definitions & distinctions.** An **attribute** is a property or characteristic
 of an entity that is *of interest to the organisation* — the qualifier matters,
@@ -176,19 +152,21 @@ key/identifier distinction is the plausible 2-marker.
 
 ## 2 · Relationships — degree and cardinality
 
-**Intuition.** Two different questions get asked about the same line on a
-diagram, and students routinely answer one when asked the other. **Degree** asks
-how many *entity types* the relationship connects — one, two or three boxes.
-**Cardinality** asks, for a given relationship, how many *instances* of one side
-attach to each instance of the other. A unary relationship (one entity type,
-related to itself) can still be one-to-many: an employee manages many employees.
-So degree and cardinality vary independently, which is exactly why they need
-separate names.
+**Intuition.**
+- **Two different questions get asked about the same line on a diagram**, and
+  students routinely answer one when asked the other.
+- **Degree** — how many *entity types* the relationship connects: one, two or
+  three boxes.
+- **Cardinality** — for a given relationship, how many *instances* of one side
+  attach to each instance of the other.
+- **They vary independently:** a unary relationship (one entity type related to
+  itself) can still be one-to-many — an employee manages many employees. That is
+  exactly why they need separate names.
 
 **Definitions & distinctions.** The degree table, the three binary cardinality
 examples, and the cardinality/optionality definitions are all in Quick Reference.
 
-The subtlety worth carrying is **minimum cardinality**. Ordinary cardinality says
+**Minimum cardinality** is the subtlety worth carrying. Ordinary cardinality says
 how many *can* be associated; minimum cardinality says how few *may* be. When the
 minimum is zero the participation is **optional** — a movie may be stocked as zero
 tapes, so VIDEO TAPE optionally participates. In an exam this is the difference
@@ -217,9 +195,11 @@ to be drawn.
 
 ## 3 · Drawing the ER diagram
 
-**Intuition.** The diagram is the deliverable, and in this subject it is graded on
-notation as much as on content. Get the shapes right, underline the identifier,
-and put a cardinality marker at **both** ends of every relationship line.
+**Intuition.**
+- **The diagram is the deliverable**, and in this subject it is graded on notation
+  as much as on content.
+- Get the shapes right, **underline the identifier**, and put a cardinality marker
+  at **both** ends of every relationship line.
 
 **Legend.** The symbol table is in Quick Reference — rectangle for entity, diamond
 for relationship, ellipse for attribute, underline for identifier, 1/M/N for

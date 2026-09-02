@@ -156,49 +156,16 @@ graph TD
     S4 -.->|"every variant needs the mode<br/>decided first"| S1
 ```
 
-**1 · The three development modes — 0 marks**
-- **What:** organic, semi-detached and embedded — three project archetypes by
-  size, novelty, deadline pressure and environment.
-- **Why:** the same 100 KLOC costs wildly different amounts depending on whether
-  it is a payroll system or an air-traffic controller.
-- **Important:** never examined alone, **but it is step one of every question
-  here.** Words beat size bands: *real-time*, *tight deadline*, *complex
-  interfaces* mean embedded regardless of KLOC.
-
-**2 · Basic COCOMO — 0 marks**
-- **What:** effort and duration from size alone, no adjustment.
-- **Why:** it establishes the size→effort→duration chain that everything else
-  refines.
-- **Important:** never examined, but two worked deck examples drill it, and
-  **average staff size = E/D** and **productivity = KLOC/E** are defined here.
-  Basic organic *a* = 2.4, embedded *a* = 3.6.
-
-**3 · Intermediate COCOMO and the cost drivers — 10 marks**
-- **What:** Basic COCOMO multiplied by an **EAF** built from 15 cost drivers.
-- **Why:** two teams of the same size on the same problem do not cost the same,
-  and the EAF is where that enters the arithmetic.
-- **Important:** **D1, 10 marks — the whole paper's numerical content.**
-  *E* = *a*(KLOC)<sup>*b*</sup> × EAF, *D* = *c*(*E*)<sup>*d*</sup>. Embedded
-  intermediate: *a* = **2.8**, *b* = 1.20, *c* = 2.5, *d* = 0.32.
-
-**4 · Detailed COCOMO — 0 marks**
-- **What:** phase-sensitive effort multipliers plus a three-level product
-  hierarchy.
-- **Why:** a single EAF for a whole project is still coarse — cost drivers do not
-  affect design and testing equally.
-- **Important:** never examined. Definition depth only: phase-sensitive
-  multipliers, module/subsystem/system hierarchy, plan-and-requirements effort
-  6-8%.
-
 ## 1 · The three development modes
 
-**Intuition.** A hundred thousand lines of payroll code and a hundred thousand
-lines of air-traffic-control code are not the same project. One is written by
-people who have done it before, in a familiar environment, with a deadline that
-can slip. The other is real-time, safety-critical, interfaces with hardware
-nobody has used before, and ships on a fixed date. COCOMO's first move is to sort
-projects into three archetypes, because the coefficients that convert size into
-effort are wholly different for each.
+**Intuition.**
+- **A hundred thousand lines of payroll code and a hundred thousand lines of
+  air-traffic-control code are not the same project.**
+- One is written by people who have done it before, in a familiar environment,
+  with a deadline that can slip. The other is real-time, safety-critical,
+  interfaces with hardware nobody has used before, and ships on a fixed date.
+- **COCOMO's first move is to sort projects into three archetypes**, because the
+  coefficients converting size into effort are wholly different for each.
 
 **Definitions & distinctions.** The full comparison table is in Quick Reference.
 The examinable skill is **classification from a word problem**:
@@ -221,13 +188,15 @@ not count on that.
 
 ## 2 · Basic COCOMO
 
-**Intuition.** The simplest useful model: assume effort depends only on size, fit
-a power law to historical projects, and read effort off it. The exponent *b* is
-slightly greater than 1 in every mode, which encodes something real —
-**effort grows faster than size**, because bigger systems have more interactions
-to coordinate. Duration then comes from effort, with a much smaller exponent
-(0.32-0.38), which is why a project needing four times the effort does not take
-four times as long: it takes more people instead.
+**Intuition.**
+- **The simplest useful model:** assume effort depends only on size, fit a power
+  law to historical projects, read effort off it.
+- **The exponent *b* is slightly greater than 1 in every mode**, which encodes
+  something real — **effort grows faster than size**, because bigger systems have
+  more interactions to coordinate.
+- **Duration then comes from effort, with a much smaller exponent (0.32-0.38)** —
+  which is why a project needing four times the effort does not take four times as
+  long. **It takes more people instead.**
 
 **Formulas & variables.**
 
@@ -254,19 +223,19 @@ form (Example 4.6).
 
 ## 3 · Intermediate COCOMO and the cost drivers
 
-**Intuition.** Basic COCOMO says a 100 KLOC embedded system costs a fixed amount,
-regardless of who builds it, on what hardware, under what reliability
-requirement. That is obviously false — a team of experts and a team of novices do
-not cost the same. Intermediate COCOMO fixes it with **15 cost drivers**, each
-rated on a scale from very low to extra high, each contributing a multiplier.
-Their product is the **Effort Adjustment Factor**, and multiplying the nominal
-effort by it produces an estimate that accounts for the actual project
-conditions.
-
-The direction of each multiplier is the intuitive part: anything that makes the
-job **easier** (capable people, good tools) is **below 1.00** and reduces effort;
-anything that makes it **harder** (high reliability, tight memory, complex
-product) is **above 1.00**.
+**Intuition.**
+- **Basic COCOMO says a 100 KLOC embedded system costs a fixed amount**,
+  regardless of who builds it, on what hardware, under what reliability
+  requirement. **That is obviously false** — a team of experts and a team of
+  novices do not cost the same.
+- **Intermediate COCOMO fixes it with 15 cost drivers**, each rated very low to
+  extra high, each contributing a multiplier. Their product is the **Effort
+  Adjustment Factor**; multiplying nominal effort by it accounts for actual
+  project conditions.
+- **The direction of each multiplier is the intuitive part.** Anything making the
+  job **easier** (capable people, good tools) is **below 1.00** and reduces effort;
+  anything making it **harder** (high reliability, tight memory, complex product)
+  is **above 1.00**.
 
 **Formulas & variables.**
 
@@ -387,12 +356,14 @@ paper's numerical content. One dominant form:
 
 ## 4 · Detailed COCOMO
 
-**Intuition.** Even the intermediate model applies one EAF across the entire
-project, which is still too blunt: a demanding reliability requirement affects
-testing far more than it affects preliminary design. Detailed COCOMO makes the
-multipliers **phase-sensitive**, and decomposes the product into a three-level
-hierarchy — module, subsystem and system — so effort can be estimated where the
-work actually differs and then summed.
+**Intuition.**
+- **Even the intermediate model applies one EAF across the entire project**, which
+  is still too blunt: a demanding reliability requirement affects testing far more
+  than preliminary design.
+- **Detailed COCOMO makes the multipliers phase-sensitive.**
+- **And it decomposes the product into a three-level hierarchy** — module,
+  subsystem, system — so effort can be estimated where the work actually differs,
+  then summed.
 
 **Definitions & distinctions.** Two additions over Intermediate:
 

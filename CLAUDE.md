@@ -226,19 +226,10 @@ with its marks on it, and **labelled edges** carrying the reason one subtopic
 leads to the next. The edges are the point: a bare tree of headings adds nothing
 the Subtopic map does not already give.
 
-Under the diagram, **one capsule per subtopic** — numbered and marked to match,
-**three labelled lines and no more**:
-
-- **What:** the thing itself, in one sentence.
-- **Why:** the intuition — what problem it solves, or what breaks without it.
-- **Important:** the formula, the number, the diagram convention, or the
-  examinable fact. For a subtopic the corpus has never touched, this line says
-  **"never examined"** and names the depth to stop at. It is where the marks
-  live, so it is the line that earns the section.
-
-Together the capsules are the topic compressed — enough to revise the shape of
-the page without reading it, and enough to decide which subtopic to reread. If a
-capsule needs a fourth line, the subtopic is doing two jobs and should be split.
+**The diagram and nothing else.** No per-subtopic capsules under it — they were
+a third restatement of what Quick Reference tabulates and the Subtopic map
+lists, and they were cut on 2026-09-02 for exactly that reason. If a fact is
+worth carrying, it belongs in Quick Reference, where it is carried once.
 
 Use `graph TD`/`graph LR` rather than mermaid's `mindmap` type — the flowchart
 renderer is the one Obsidian is known to handle here, and labelled edges need it.
@@ -254,15 +245,11 @@ and add anything the syllabus names that the deck skipped. The deck decides the
 boundaries, the shape below is fixed, and each subtopic gets four parts in this
 order:
 
-1. **Intuition** — what the thing is *for*, in plain language, before any
-   notation. Why it exists, what breaks without it, the mental picture.
-   **Capped at roughly one paragraph (~150 words) by default.** Length is
-   earned by PYQ marks and by nothing else: a heavy subtopic may run longer, a
-   never-examined one gets two or three sentences, because for those the
-   Mindmap capsule is already doing the teaching. This cap exists because
-   without it the CN schema applied a ~5,000-word floor to every page
-   regardless of weight. Never repeat a table that Quick Reference already
-   carries; point at it.
+1. **Intuition** — what the thing is *for*, before any notation: why it
+   exists, what breaks without it, the mental picture. **Bullets, three to
+   five, one idea each — never a paragraph.** A heavy subtopic may run to
+   seven, a never-examined one gets two. Never repeat a table Quick Reference
+   already carries; point at it.
 2. **Formulas & variables** — the formulas *and* what every variable ranges
    over, the constants worth memorizing, the tables. Never a bare formula. For
    a subtopic whose content is definitional rather than numerical, this part
@@ -288,6 +275,31 @@ order:
 
 Per-subtopic marks must **reconcile to the topic's `pyq_marks`**, with rider
 parts counted inside the question that carried them rather than double-counted.
+
+### Bullets, not prose
+
+**Learned 2026-09-02, from the user, after the first fifteen pages were built:
+the pages were unnecessarily long.** Measured, they came to ~48,000 words with
+*no* correlation to marks — the longest page in the vault (Software Size
+Estimation, 4,613 words) was worth zero, and 39% of every word sat above the
+first subtopic in four layers that each re-summarised the topic.
+
+The fix is not to drop content. It is to stop writing content as prose:
+
+- **Every explanatory section is bullets.** Intuition, What gets asked,
+  Mistakes & Traps, Course Material, the Overview body. One idea per bullet,
+  bolded lead-in, no connective paragraph around them.
+- **Prose survives in exactly three places:** the Overview weightage banner,
+  the *Reading* lines under a diagram, and the narrative steps of a worked
+  solution. Everywhere else, bullets or a table.
+- **Nothing is deleted, only compressed.** Every fact, every deck verdict,
+  every definition pair keeps its line. If a rewrite loses a fact, it is wrong.
+- **Say it once.** A fact belongs to Quick Reference *or* to its subtopic, not
+  both. A subtopic that needs the table points at Quick Reference by name.
+- **Length is earned by marks and by method, in that order.** A 10-mark topic
+  may run long; a 0-mark topic is tight *unless* it carries a worked numerical
+  or a drawing convention, which are never compressed away — those are the
+  method, and method is what the marks are actually paid for.
 
 ### Quick Reference
 

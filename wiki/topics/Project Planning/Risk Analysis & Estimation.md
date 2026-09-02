@@ -117,39 +117,18 @@ graph TD
     S3 -.->|"and monitoring surfaces<br/>risks nobody listed"| S1
 ```
 
-**1 · What risk is, and typical software risks — 0 marks**
-- **What:** a problem that may cause loss or threaten the project but **has not
-  happened yet**, plus Capers Jones's five categories.
-- **Why:** naming the usual suspects is how you find risks on a real project
-  instead of waiting for them.
-- **Important:** never examined. Know the one-line definition — *tomorrow's
-  problems are today's risks* — and two or three of the five categories.
-
-**2 · Risk assessment — 2 marks**
-- **What:** the first half of risk management: identification, analysis and
-  prioritization.
-- **Why:** you cannot plan against risks you have not listed, ranked and
-  understood.
-- **Important:** **A4, 2 marks.** The examinable fact is the **hierarchy** —
-  identification is one of the three activities *within* assessment. Plus
-  **risk exposure = probability × magnitude**.
-
-**3 · Risk control — 0 marks**
-- **What:** the second half: management planning, monitoring and resolution.
-- **Why:** assessment produces knowledge; control is what converts it into
-  action.
-- **Important:** never examined. Know the three activities and that **risk
-  avoidance** — not doing the risky thing — is a legitimate strategy.
-
 ## 1 · What risk is, and typical software risks
 
-**Intuition.** The deck's framing is unusually blunt: software developers are
-extreme optimists who assume everything will go exactly as planned, and software
-surprises are never good news. Risk management is the correction — dealing with a
-concern *before* it becomes a crisis, by quantifying both the probability of
-failure and its consequences. The definition turns on one word: a risk **has not
-happened yet**. Once it has, it is not a risk; it is a problem, and you have lost
-the chance to have planned for it.
+**Intuition.**
+- **The deck's framing is unusually blunt:** software developers are extreme
+  optimists who assume everything will go exactly as planned, and **software
+  surprises are never good news**.
+- **Risk management is the correction** — dealing with a concern *before* it
+  becomes a crisis, by quantifying both the probability of failure and its
+  consequences.
+- **The definition turns on one word: a risk has not happened yet.** Once it has,
+  it is not a risk; it is a problem, and you have lost the chance to have planned
+  for it.
 
 **Definitions & distinctions.** The definition, the management definition and
 Capers Jones's five categories are in Quick Reference. The distinction worth
@@ -161,15 +140,15 @@ line for A4.
 
 ## 2 · Risk assessment
 
-**Intuition.** Assessment is everything you do before acting: **find** the risks,
-**understand** how they would move the project's outcomes, and **rank** them so
-that limited attention goes where it does most good. Ranking needs a common
-currency, and that is risk exposure — probability times magnitude — which lets a
-likely-but-minor risk and an unlikely-but-catastrophic one be compared on one
-scale.
-
-The structural point A4 depends on: **identification is not the opposite of
-assessment, it is the first step of it.**
+**Intuition.**
+- **Assessment is everything you do before acting:** **find** the risks,
+  **understand** how they would move the project's outcomes, and **rank** them so
+  limited attention goes where it does most good.
+- **Ranking needs a common currency** — risk exposure, probability × magnitude —
+  which lets a likely-but-minor risk and an unlikely-but-catastrophic one be
+  compared on one scale.
+- **The structural point A4 depends on: identification is not the opposite of
+  assessment, it is the first step of it.**
 
 **Formulas & variables.**
 
@@ -225,14 +204,16 @@ no `✓`.)*
 
 ## 3 · Risk control
 
-**Intuition.** Assessment tells you what will hurt and how much. Control is
-everything after: write a plan for each significant risk and record the decision,
-watch the risks as the project runs, and execute the plans when a risk starts to
-materialise. Its most under-rated option is **avoidance** — the deck's blunt
-phrasing is *do not do the risky things*, achieved by not undertaking certain
-projects at all or by choosing proven technology over cutting-edge. Avoidance
-costs opportunity rather than effort, which is why it is easy to forget it is on
-the menu.
+**Intuition.**
+- **Assessment tells you what will hurt and how much. Control is everything
+  after:** write a plan for each significant risk and record the decision, watch
+  the risks as the project runs, execute the plans when a risk starts to
+  materialise.
+- **Its most under-rated option is avoidance** — the deck's blunt phrasing is *do
+  not do the risky things*, achieved by not undertaking certain projects at all or
+  by choosing proven technology over cutting-edge.
+- **Avoidance costs opportunity rather than effort**, which is why it is easy to
+  forget it is on the menu.
 
 **Definitions & distinctions.** The three activities are in Quick Reference.
 

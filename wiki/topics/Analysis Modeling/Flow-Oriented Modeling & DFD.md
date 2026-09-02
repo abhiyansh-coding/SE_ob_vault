@@ -25,12 +25,12 @@ last_practiced: null
 > specific topic as the one whose zero is least trustworthy. Lectures 19 and 21
 > is *syllabus depth*; rule 3 forbids reading it as marks.
 
-The second modeling lens. [[Data Modeling & ERD]] asked what the system
-remembers; this asks **what the system does to data** — where information enters,
-which processes transform it, where it is stored, and where it leaves. It is also
-the one topic whose output feeds a later topic mechanically:
-[[Transform & Transaction Mapping]] turns a DFD into a program structure chart
-by procedure.
+- **The second modeling lens.** [[Data Modeling & ERD]] asked what the system
+  remembers; this asks **what the system does to data** — where information
+  enters, which processes transform it, where it is stored, where it leaves.
+- **The one topic whose output feeds a later topic mechanically:**
+  [[Transform & Transaction Mapping]] turns a DFD into a program structure chart
+  by procedure.
 
 ## Quick Reference
 
@@ -129,54 +129,17 @@ graph TD
     S5 -.->|"and all of it feeds the<br/>structure chart later"| S2
 ```
 
-**1 · What a DFD is, and its notation — 0 marks**
-- **What:** a picture of information moving through a system: processes,
-  external entities, data stores and named flows.
-- **Why:** prose hides gaps; a diagram makes a missing input visible as a bubble
-  with nothing entering it.
-- **Important:** never examined on this paper. **A DFD shows data flow, not
-  control flow** — no decisions, no loops, no ordering. Data stores are drawn
-  **open-ended**.
-
-**2 · Levels and levelling balance — 0 marks**
-- **What:** context (level 0) has exactly one process; level 1 decomposes it;
-  balance requires the child's flows to match the parent's.
-- **Why:** balance is the rule that makes a DFD verifiable rather than
-  decorative.
-- **Important:** never examined, but this is where marks would be. **Context
-  diagram = one process, no data stores.** Balance = same net inputs and outputs.
-
-**3 · The Food Ordering System worked example — 0 marks**
-- **What:** the deck's running example — 3 processes, 4 external entities, 2 data
-  stores.
-- **Why:** it is the only complete DFD in the vault's sources, at both levels.
-- **Important:** never examined. Learn it as the template: if asked to draw a
-  DFD, this is the shape and density expected.
-
-**4 · Data dictionary, process spec and control flow — 0 marks**
-- **What:** the supporting notations — metadata for every flow, logic for
-  undecomposed bubbles, and the control-flow counterpart.
-- **Why:** a diagram alone does not say what `Order details` actually contains.
-- **Important:** never examined. One line each. The **data dictionary is
-  metadata — data about the data**.
-
-**5 · Decision tables and state transition diagrams — 0 marks**
-- **What:** two further analysis notations from the same deck.
-- **Why:** some logic is conditional rather than flow-shaped, and some behaviour
-  is about states rather than data.
-- **Important:** never examined *here* — but decision-table **testing** is
-  examined on [[Black-Box Testing]], so the notation is worth knowing once.
-  Conditions on top, actions below, **each column is a rule**.
-
 ## 1 · What a DFD is, and its notation
 
-**Intuition.** Draw the system as plumbing. Data enters from outside, passes
-through processes that transform it, sometimes rests in a store, and eventually
-leaves. Four symbols, no more — which is why the deck notes that no technical
-knowledge is needed to read one. The discipline is in what a DFD deliberately
-**cannot** express: there are no decisions, no loops and no sequence. It answers
-*what data goes where*, never *in what order* or *under what condition*. Students
-who draw a flowchart with DFD symbols have made the standard mistake.
+**Intuition.**
+- **Draw the system as plumbing.** Data enters from outside, passes through
+  processes that transform it, sometimes rests in a store, and eventually leaves.
+- **Four symbols, no more** — which is why the deck notes no technical knowledge
+  is needed to read one.
+- **The discipline is in what a DFD deliberately cannot express:** no decisions,
+  no loops, no sequence. It answers *what data goes where*, never *in what order*
+  or *under what condition*.
+- **Drawing a flowchart with DFD symbols is the standard mistake.**
 
 **Legend.** The full symbol table, with both the Yourdon and Gane-Sarson
 conventions, is in Quick Reference. The deck uses **circles for processes**.
@@ -194,16 +157,16 @@ legend earns marks on its own — state it before drawing.
 
 ## 2 · Levels and levelling balance
 
-**Intuition.** You cannot show a whole system at useful detail on one page, so you
-zoom. The **context diagram** is maximum zoom-out: one bubble representing the
-entire system, surrounded by the outside world it talks to. It answers one
-question — *where does the system stop and the world begin?* Then each level down
-opens one bubble into the processes inside it.
-
-The rule that makes this trustworthy is **balance**: whatever crossed the
-parent's boundary must cross the child's. If a level-1 diagram produces a report
-that the context diagram never showed leaving the system, one of the two is
-wrong. That check is why DFDs are worth drawing at all.
+**Intuition.**
+- **You cannot show a whole system at useful detail on one page, so you zoom.**
+- **The context diagram is maximum zoom-out:** one bubble for the entire system,
+  surrounded by the outside world it talks to. It answers one question — *where
+  does the system stop and the world begin?*
+- Each level down opens one bubble into the processes inside it.
+- **The rule that makes this trustworthy is balance:** whatever crossed the
+  parent's boundary must cross the child's. If a level-1 diagram produces a report
+  the context diagram never showed leaving the system, one of the two is wrong.
+- **That check is why DFDs are worth drawing at all.**
 
 **Definitions & distinctions.** The level table, the balance rule, the numbering
 scheme and the context-diagram benefits are all in Quick Reference.
@@ -308,12 +271,14 @@ template for a "draw the DFD for this system" question, which is the form a
 
 ## 4 · Data dictionary, process specification and control flow
 
-**Intuition.** A DFD's arrows carry names, and a name is not a definition. If one
-arrow says `Order details`, two readers will imagine different things unless
-something pins it down. The **data dictionary** is that something — a repository
-of every data item in the diagram, holding metadata: *data about the data*. The
-**process specification** does the same job for bubbles: when a process is not
-decomposed further, its logic has to be written down somewhere.
+**Intuition.**
+- **A DFD's arrows carry names, and a name is not a definition.** If one arrow
+  says `Order details`, two readers imagine different things unless something pins
+  it down.
+- **The data dictionary is that something** — a repository of every data item in
+  the diagram, holding metadata: *data about the data*.
+- **The process specification does the same job for bubbles:** when a process is
+  not decomposed further, its logic has to be written down somewhere.
 
 **Definitions & distinctions.** The companion-notation table is in Quick
 Reference. The **control flow model** is the DFD's counterpart for systems where
@@ -325,12 +290,14 @@ dictionary contains metadata, i.e. data about the data" is quotable as-is.
 
 ## 5 · Decision tables and state transition diagrams
 
-**Intuition.** Not all logic is flow-shaped. Some is a lookup: *given these
-conditions, do that*. A **decision table** lays that out as a matrix — conditions
-in the upper rows, actions in the lower rows, and **each column a rule**. Some
-behaviour is neither flow nor lookup but **state**: an object behaves differently
-depending on what has happened to it, and a **state transition diagram** shows
-those states and the events that move between them.
+**Intuition.**
+- **Not all logic is flow-shaped.** Some is a lookup: *given these conditions, do
+  that*.
+- **A decision table** lays that out as a matrix — conditions in the upper rows,
+  actions in the lower rows, and **each column a rule**.
+- **Some behaviour is neither flow nor lookup but state:** an object behaves
+  differently depending on what has happened to it, and a **state transition
+  diagram** shows those states and the events that move between them.
 
 **Definitions & distinctions.**
 

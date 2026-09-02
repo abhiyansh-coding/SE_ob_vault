@@ -151,46 +151,15 @@ graph TD
     S4 -.->|"and every action traces back<br/>to a use case step"| S2
 ```
 
-**1 · What UML is, and the diagram taxonomy — 0 marks**
-- **What:** a modeling language from Booch, Jacobson and Rumbaugh, with 13
-  diagram types in two groups.
-- **Why:** each diagram answers a different question, and picking the wrong one
-  is how a modeling answer goes wrong before it starts.
-- **Important:** never examined. Know the **three authors** and the
-  structural/behavioral split. If asked "how many diagrams", say **13 in the
-  current standard** and note the older 9.
-
-**2 · The use case approach — 0 marks**
-- **What:** actors outside the system, use cases describing goal-driven
-  interactions, and a template for writing them.
-- **Why:** it is requirements analysis that non-technical stakeholders can read
-  and validate.
-- **Important:** never examined, **but it is this year's deck's entire subject**,
-  which is a signal. **Actors lie outside the system boundary.** Use case
-  captures *who does what*.
-
-**3 · Class, object and sequence diagrams — 0 marks**
-- **What:** the static structure (classes, objects) and the time-ordered
-  interaction (sequence).
-- **Why:** they are how a use case gets realized in design.
-- **Important:** never examined, and **deck coverage is thin** — mostly naming
-  rather than notation. Know what each is *for*; see the gap note in subtopic 3.
-
-**4 · Activity diagrams — 10 marks**
-- **What:** flow of control from activity to activity, including parallel flows.
-- **Why:** it is the only UML diagram that expresses *things happening at the
-  same time*, which is exactly what D2 tests.
-- **Important:** **D2, 10 marks.** Notation: ● start, rounded rectangle action,
-  ◇ decision, **solid bar fork/join**, ◉ end. **Every fork needs a join.**
-
 ## 1 · What UML is, and the diagram taxonomy
 
-**Intuition.** Before UML, every methodologist had their own notation, so a
-diagram meant one thing to its author and something else to everyone else. UML is
-the agreed vocabulary — three of the leading methodologists (Booch, Jacobson,
-Rumbaugh) combined their notations so that a class diagram means the same thing
-everywhere. The practical consequence for you: **the notation is the content**.
-Marks in this topic go to using the right symbol, not to drawing neatly.
+**Intuition.**
+- **Before UML, every methodologist had their own notation**, so a diagram meant
+  one thing to its author and something else to everyone else.
+- **UML is the agreed vocabulary** — Booch, Jacobson and Rumbaugh combined their
+  notations so that a class diagram means the same thing everywhere.
+- **The practical consequence: the notation is the content.** Marks go to using
+  the right symbol, not to drawing neatly.
 
 **Definitions & distinctions.** The five modeling roles, the two diagram counts
 and the structural/behavioral split are all in Quick Reference.
@@ -206,12 +175,14 @@ there" is the classic 2-marker, and the honest answer names both counts.
 
 ## 2 · The use case approach
 
-**Intuition.** A use case is a story about someone trying to get something done
-with your system: who they are, what they want, what happens step by step, and
-what happens when it goes wrong. Its value is that the *customer can read it* —
-unlike a DFD or a class diagram, a use case needs no technical training to
-validate, which is why the deck stresses that validation happens up front, with
-the model presented and discussed with customers as soon as it is ready.
+**Intuition.**
+- **A use case is a story about someone trying to get something done with your
+  system:** who they are, what they want, what happens step by step, and what
+  happens when it goes wrong.
+- **Its value is that the customer can read it** — unlike a DFD or a class
+  diagram, a use case needs no technical training to validate.
+- Hence the deck's stress on validating **up front**, with the model presented and
+  discussed with customers as soon as it is ready.
 
 **Definitions & distinctions.** The term table, the actor definition and the use
 case template are all in Quick Reference. Three points worth precision:
@@ -259,12 +230,13 @@ on the strength of one paper's silence.
 > 2026-27 deck's middle 28 pages are images. Pressman 8e is not in the vault.
 > What follows is standard UML, held to definition depth.
 
-**Intuition.** A **class diagram** is the blueprint: what types of thing exist,
-what each knows and can do, and how they relate. An **object diagram** is a
-snapshot: one specific set of instances at one moment, useful for showing that a
-tricky structure is actually realisable. A **sequence diagram** is a timeline:
-which object sends which message to which other object, in what order, read top
-to bottom.
+**Intuition.**
+- **Class diagram — the blueprint:** what types of thing exist, what each knows
+  and can do, and how they relate.
+- **Object diagram — a snapshot:** one specific set of instances at one moment,
+  useful for showing a tricky structure is actually realisable.
+- **Sequence diagram — a timeline:** which object sends which message to which
+  other object, in what order, read top to bottom.
 
 **Definitions & distinctions.**
 
@@ -307,15 +279,17 @@ notation, and spend the time on subtopic 4 instead.
 
 ## 4 · Activity diagrams
 
-**Intuition.** A flowchart shows one thread of control: do this, then that, branch
-here. Real processes are not like that — a bank verifying your documents *and*
-checking your credit history does both at once, and only proceeds when both
-finish. The activity diagram's contribution over a flowchart is exactly this: the
-**fork** bar splits one flow into several that run in parallel, and the **join**
-bar waits for all of them before continuing. Everything else — start, actions,
-decisions, end — is familiar. If a question says "two parallel activities start",
-it is asking for a fork, and drawing a decision diamond instead is the error the
-question exists to catch.
+**Intuition.**
+- **A flowchart shows one thread of control:** do this, then that, branch here.
+- **Real processes are not like that** — a bank verifying your documents *and*
+  checking your credit history does both at once, and only proceeds when both
+  finish.
+- **The activity diagram's contribution over a flowchart is exactly this:** the
+  **fork** bar splits one flow into several running in parallel, and the **join**
+  bar waits for all of them before continuing. Everything else — start, actions,
+  decisions, end — is familiar.
+- **If a question says "two parallel activities start", it is asking for a fork.**
+  Drawing a decision diamond instead is the error the question exists to catch.
 
 **Legend.** The full symbol table is in Quick Reference: ● initial · rounded
 rectangle action · ◇ decision · **solid bar fork/join** · ◉ final · swimlanes for

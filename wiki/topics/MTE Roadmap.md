@@ -10,8 +10,10 @@ The queue for the **30-mark Mid-Term**, close book, covering **lectures 1-32**
 per the override recorded on [[syllabus]] — not the handout's 1-34.
 
 > [!tip] Next up
-> **Session 7, step 15 — [[Design Concepts & Principles]].** Steps 1-14 are
-> built — 44 of the 46 in-window marks. Move this callout as each step completes.
+> **Session 7, step 15 — [[Design Concepts & Principles]].** Steps 1-14 and 16
+> are built — 44 of the 46 in-window marks, plus Coupling's 6. Step 16 was built
+> ahead of 15; 15 is the remaining gap in session 7. Move this callout as each
+> step completes.
 
 ## What the Mid-Term covers
 
@@ -94,7 +96,7 @@ Marks are from [[se-ete-2025-26]].
 | 13 | 5 | [[Flow-Oriented Modeling & DFD]] | 19, 21 | 0 | 1.5 | **yes** | drawing; **prerequisite for step 18** |
 | 14 | 6 | [[UML & Use Case Modeling]] | 22-23 | 10 | 2.5 | **yes** | drawing; only topic with a 2026-27 deck |
 | 15 | 7 | [[Design Concepts & Principles]] | 24-26 | 0 | 1.0 | no | |
-| 16 | 7 | [[Coupling & Cohesion]] | 28 | 6 | 1.5 | no | |
+| 16 | 7 | [[Coupling & Cohesion]] | 28 | 6 | 1.5 | **yes** | built ahead of step 15 |
 | 17 | 8 | [[Software Architecture]] | 27, 29-30 | 0 | 1.0 | no | |
 | 18 | 8 | [[Transform & Transaction Mapping]] | 31-32 | 0 | 1.25 | no | drawing; needs step 13 |
 

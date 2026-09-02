@@ -20,8 +20,8 @@ last_practiced: null
 
 > [!warning] 0 of 80 in [[se-ete-2025-26]] — not asked once, on one paper
 > A single paper cannot show a topic is unexamined. In syllabus, taught across
-> **three lectures**, and it is the module's longest deck treatment. Lectures 9-11
-> is *syllabus depth* and rule 3 forbids reading it as marks.
+> **three lectures**, and the module's longest deck treatment. Lectures 9-11 is
+> *syllabus depth* and rule 3 forbids reading it as marks.
 
 > [!tip] Zero marks, but the richest question supply on any page in this vault
 > The deck carries **two full numericals** — release planning and sprint capacity
@@ -29,11 +29,11 @@ last_practiced: null
 > form has never been examined. Both are worked in the Question Bank. If this
 > topic is ever examined numerically, that is what it will look like.
 
-Agile takes the evolutionary argument to its conclusion. If requirements will
-change anyway, stop treating change as failure and build the process to absorb
-it: short iterations, working software over documents, the customer in the room.
-Three lectures cover the manifesto, then the model zoo — Scrum, XP, ASD, DSDM,
-FDD, Crystal, Agile Modeling, Kanban.
+- **The argument:** if requirements will change anyway, stop treating change as
+  failure and build the process to absorb it — short iterations, working software
+  over documents, the customer in the room.
+- **Three lectures:** the manifesto, then the model zoo — Scrum, XP, ASD, DSDM,
+  FDD, Crystal, Agile Modeling, Kanban.
 
 ## Quick Reference
 
@@ -74,27 +74,23 @@ Agile Modeling (AM) · Kanban.
 | Principles | transparency · reflection · adaptation |
 | Values (5) | commitment · courage · focus · openness · respect |
 | Sprint length | a time-boxed period, typically **30 days** |
-
-**Three artifacts**
+| Team size | the **two-pizza rule** — small enough to share two pizzas |
 
 | Artifact | What it is |
 |---|---|
-| Product Backlog | dynamic prioritised list of everything needed; owned by the Product Owner |
-| Sprint Backlog | the items chosen for the current sprint; may evolve during it |
-| Increment | the usable end product of a sprint |
-
-**Three roles**
+| Product Backlog | dynamic prioritised list of **everything** needed; owned and reprioritised by the Product Owner |
+| Sprint Backlog | the slice chosen for the current sprint; may evolve during it |
+| Increment | the **usable** end product of a sprint — not a demo, not a branch |
 
 | Role | Responsible for |
 |---|---|
 | Product Owner | defines stories, prioritises the backlog, decides release timing |
-| Scrum leader / Master | sets up the team and sprint meetings, removes obstacles |
+| Scrum leader / Master | sets up the team and sprint meetings, removes obstacles — **not a manager** |
 | Development Team | self-organising, cross-functional; plans and estimates its own sprint work |
 
 **Events:** Sprint Planning · Sprint (the work period) · Daily Scrum / stand-up ·
-Sprint Review · Sprint Retrospective.
-
-Team size heuristic: the **two-pizza rule** — small enough to share two pizzas.
+Sprint Review · Sprint Retrospective. Deliberately short — the deck notes
+stand-ups are "sometimes conducted without chairs".
 
 ### Extreme Programming (XP)
 
@@ -107,8 +103,12 @@ The most specific agile framework on engineering practice. Four activities:
 | Coding | write the **unit test before the code** · **pair programming** |
 | Testing | all unit tests run daily · **acceptance tests** defined by the customer |
 
-A **spike** is a very simple program built to explore whether a proposed solution
-is suitable — similar to a prototype.
+- **User story** — a simple, informal statement of a needed function, written by
+  the customer on an index card. Similar to a use case.
+- **Spike** — a very simple program built to explore whether a proposed solution
+  is suitable. Similar to a prototype.
+- **Project velocity** — measured after the first increment, then used to set
+  delivery dates for the rest. The link into the planning arithmetic below.
 
 ### The other models
 
@@ -121,16 +121,27 @@ is suitable — similar to a prototype.
 | **Agile Modeling (AM)** | — | values, principles and practices for effective modeling |
 | **Kanban** | — | named by the deck, not developed |
 
+- **"Speculation" rather than "planning"** in ASD is deliberate — it admits the
+  plan is a guess. Adaptive cycle planning uses the mission statement, project
+  constraints and basic requirements to produce a time-boxed release plan.
+- **Crystal Clear** = a six-developer project in one room; **Crystal Sapphire** =
+  where lives are at stake.
+
 ### Planning arithmetic
 
-| Term | Meaning |
-|---|---|
-| Story point / ideal day | relative size estimate for a user story |
-| **Velocity** | story points a team completes per iteration |
-| Iteration / sprint | fixed time box (2 weeks in the deck's example) |
-| **Iterations = ceil(total points ÷ velocity)** | round **up** — a partial iteration is still an iteration |
-| **Cost = iterations × cost per iteration** | |
-| **Capacity (hrs) = days available × hours per day**, summed over the team | |
+| Symbol | Meaning | Units |
+|---|---|---|
+| *P* | total story points (or ideal days) in the release | points |
+| *V* | velocity — points completed per iteration | points/iteration |
+| *N* | number of iterations | iterations, **always rounded up** |
+| *L* | iteration length | weeks |
+| *C* | cost per iteration | currency |
+
+$$N = \lceil P / V \rceil \qquad \text{Duration} = N \times L \qquad \text{Cost} = N \times C$$
+
+**Sprint capacity**, per team member: **capacity = days available × hours per
+day**, summed across the team. Where hours/day is a range, team capacity is a
+range too.
 
 ## Subtopic map
 
@@ -159,187 +170,93 @@ graph TD
     S5 -.->|"and the answer is a range,<br/>because change is assumed"| S1
 ```
 
-**1 · The Agile manifesto and its trade-offs — 0 marks**
-- **What:** four "A over B" values, plus agile's benefits and its real costs.
-- **Why:** every agile practice downstream is one of these four values made
-  operational.
-- **Important:** never examined. Know all four values **in the A-over-B form** —
-  "documentation has no value" is the classic misreading. Know three
-  disadvantages too.
-
-**2 · Scrum — 0 marks**
-- **What:** a management framework of three artifacts, three roles and five
-  events, run in time-boxed sprints.
-- **Why:** it is how agile becomes an actual schedule with accountable people.
-- **Important:** never examined. If asked, the **3 artifacts / 3 roles** grid is
-  the answer. Sprint ≈ 30 days; Sutherland and Schwaber.
-
-**3 · Extreme Programming — 0 marks**
-- **What:** the agile model that prescribes engineering practice — user stories,
-  pair programming, test-first, refactoring, CRC cards, spikes.
-- **Why:** Scrum organises people; XP is the one that says how to write the code.
-- **Important:** never examined. The memorable four: **user stories, pair
-  programming, test-before-code, refactoring**. Know what a *spike* is.
-
-**4 · The other agile models — 0 marks**
-- **What:** ASD, DSDM, FDD, Crystal, Agile Modeling, Kanban.
-- **Why:** each optimises for a different fear — risk, deadlines, features, human
-  safety.
-- **Important:** never examined. One distinguishing feature each is enough; the
-  table in Quick Reference is the whole subtopic. **Crystal's colour-coding by
-  risk to human life** is the most memorable single fact here.
-
-**5 · Agile planning arithmetic — 0 marks**
-- **What:** velocity, release duration and cost; sprint capacity and commitment.
-- **Why:** it is the one part of agile that produces a number, and numbers are
-  what long questions are built from.
-- **Important:** never examined — **but the deck carries two worked numericals**,
-  which rule 8 rates as the highest-value drill available. **Always round
-  iterations up**, and always give the answer as a **range** when velocity is
-  given as a range.
-
 ## 1 · The Agile manifesto and its trade-offs
 
-**Intuition.** Agile is not "less process". It is a bet that in a world where
-requirements change, the cost of *predicting* exceeds the cost of *adapting*. So
-it inverts four priorities — not abolishing the right-hand side of each pair, but
-demoting it. The most common exam error is reading "working solutions over
-detailed documentation" as "no documentation"; it means documentation that does
-not help ship working software is waste.
-
-**Definitions & distinctions.** The four values, the benefits and the
-disadvantages table are in Quick Reference, along with the agile-vs-traditional
-comparison. The framing worth carrying: waterfall suits **stable requirements**;
-agile suits **fast-changing** ones. That is the same requirement-stability
-question that decides every model on [[Conventional Process Models]] and
-[[Evolutionary Process Models]].
-
-**What gets asked.** Never examined on the one paper here. Note though that
-[[se-ete-2025-26]] Q A3 asks why an SRS is required in large projects but often
-avoided in Agile — the *answer* is agile's second value, but the marks sit on
-[[Requirements Engineering]].
+- **Agile is not "less process".** It is a bet that where requirements change,
+  the cost of *predicting* exceeds the cost of *adapting*. It inverts four
+  priorities — not abolishing the right-hand side of each pair, but demoting it.
+- **The classic misreading:** "working solutions over detailed documentation"
+  does *not* mean no documentation. It means documentation that does not help
+  ship working software is waste.
+- Four values, benefits, disadvantages, agile-vs-traditional: Quick Reference.
+- **The framing worth carrying:** waterfall suits **stable** requirements, agile
+  suits **fast-changing** ones — the same requirement-stability question that
+  decides every model on [[Conventional Process Models]] and
+  [[Evolutionary Process Models]].
+- **Never examined here.** [[se-ete-2025-26]] Q A3 asks why an SRS is required in
+  large projects but often avoided in Agile — the *answer* is agile's second
+  value, but the marks sit on [[Requirements Engineering]].
 
 ## 2 · Scrum
 
-**Intuition.** Agile's values do not tell anyone what to do on Monday. Scrum
-does: a small self-organising team pulls a slice of work from a prioritised list,
-commits to finishing it inside a fixed time box, meets briefly every day, and
-shows the result at the end. The time box is the trick — it is never extended,
-so when work does not fit, *scope* gives rather than the date. That single rule is
-what makes agile plannable.
-
-**Definitions & distinctions.** Artifacts, roles, events, principles and values
-are all tabulated in Quick Reference. Points that make an answer look informed:
-
-- **Product Backlog vs Sprint Backlog.** The product backlog is everything, owned
-  and reprioritised by the Product Owner. The sprint backlog is the slice chosen
-  for the current sprint.
-- **The Increment is usable.** Not a demo, not a branch — the usable end product
-  of the sprint.
-- **The Scrum leader is not a manager.** They remove obstacles and coach; the
-  team plans and estimates its own work.
-- Meetings are deliberately short — the deck notes stand-ups are "sometimes
-  conducted without chairs".
-
-**What gets asked.** Never examined. Most plausible form is a 2-marker on the
-roles or the artifacts. The 3-and-3 grid answers both.
+- **What it adds:** agile's values do not tell anyone what to do on Monday. Scrum
+  does — a small self-organising team pulls a slice from a prioritised list,
+  commits to finishing it inside a fixed time box, meets briefly daily, shows the
+  result at the end.
+- **The time box is the trick.** It is never extended, so when work does not fit,
+  **scope gives rather than the date**. That single rule is what makes agile
+  plannable.
+- Artifacts, roles, events, principles, values: Quick Reference. The
+  Product-vs-Sprint Backlog distinction and "the Increment is usable" are the two
+  points that make an answer look informed.
+- **Never examined.** Most plausible form: a 2-marker on roles or artifacts — the
+  3-and-3 grid answers both. Sprint ≈ 30 days; Sutherland and Schwaber.
 
 ## 3 · Extreme Programming
 
-**Intuition.** Scrum tells you how to organise people and says nothing about the
-code. XP is the opposite: it is opinionated about engineering practice, and takes
-each practice to an "extreme". If code review is good, review continuously — pair
-programming. If testing is good, test before there is anything to test — write
-the unit test first. If simple design is good, never build for a future you
-cannot see, and restructure continuously — refactoring.
-
-**Definitions & distinctions.** The four activities and their practices are in
-Quick Reference. Terms worth defining precisely:
-
-- **User story** — a simple, informal statement of a needed function, written by
-  the customer on an index card. Similar to a use case.
-- **Spike** — a very simple program built to explore whether a proposed solution
-  is suitable. Similar to a prototype.
-- **CRC card** — Class-Responsibility-Collaborator, XP's design notation.
-- **Project velocity** — measured after the first increment, then used to set
-  delivery dates for the rest. This is the link into subtopic 5.
-
-**What gets asked.** Never examined. If it appears, pair programming and
-test-before-code are the practices worth naming first.
+- **The contrast with Scrum:** Scrum organises people and says nothing about the
+  code. XP is opinionated about engineering practice, and takes each practice to
+  an "extreme" — if code review is good, review continuously (**pair
+  programming**); if testing is good, test before there is anything to test
+  (**unit test first**); if simple design is good, never build for a future you
+  cannot see and restructure continuously (**refactoring**).
+- Four activities, their practices, and the definitions of *user story*, *spike*,
+  *CRC card* and *project velocity*: Quick Reference.
+- **Never examined.** If it appears, **pair programming** and **test-before-code**
+  are the practices worth naming first.
 
 ## 4 · The other agile models
 
-**Intuition.** The remaining models each answer a different worry. ASD worries
-about risk and learning. DSDM worries about deadlines and fixes them absolutely.
-FDD worries about losing track of what the product actually does, so it organises
-everything around features. Crystal worries about *people* — and, uniquely,
-grades its own ceremony by how much harm failure would cause. Picking between
-them is picking which of those worries is yours.
-
-**Definitions & distinctions.** The comparison table is in Quick Reference. Two
-details worth holding:
-
-- **ASD's three phases: speculation → collaboration → learning.** "Speculation"
-  rather than "planning" is deliberate — it admits the plan is a guess. Adaptive
-  cycle planning uses the mission statement, project constraints and basic
-  requirements to produce a time-boxed release plan.
-- **Crystal is colour-coded by risk to human life.** Crystal Clear for a
-  six-developer project in one room; Crystal Sapphire where lives are at stake.
-  Process is explicitly secondary to people.
-
-**What gets asked.** Never examined. One distinguishing feature each is the right
-depth — do not learn these in the detail of Scrum or XP.
+- **Each answers a different worry:** ASD worries about risk and learning · DSDM
+  about deadlines, and fixes them absolutely · FDD about losing track of what the
+  product does, so it organises around features · Crystal about **people**, and
+  uniquely grades its own ceremony by how much harm failure would cause.
+- Picking between them is picking which of those worries is yours.
+- The comparison table, plus the ASD and Crystal details: Quick Reference.
+- **Never examined.** One distinguishing feature each is the right depth — do not
+  learn these to the depth of Scrum or XP. **Crystal's colour-coding by risk to
+  human life** is the most memorable single fact here.
 
 ## 5 · Agile planning arithmetic
 
-**Intuition.** The objection to agile is always "so when will it be done?" The
-answer is velocity: measure how many story points the team actually completed
-last iteration, divide the remaining work by it, and you get a number of
-iterations. Because velocity is measured rather than promised, it is honest — and
-because it is a range, the answer is a range. Multiply iterations by the team's
-burn rate and you have a cost.
+- **The objection agile always faces** is "so when will it be done?" The answer is
+  velocity: measure how many story points the team actually completed last
+  iteration, divide the remaining work by it, get a number of iterations.
+- **Because velocity is measured rather than promised, it is honest** — and
+  because it is a range, the answer is a range. Multiply iterations by burn rate
+  and you have a cost.
+- Formulas, variables and capacity: Quick Reference.
+- **Solved questions:** both worked in full in the Question Bank — they are the
+  drill for this page.
 
-**Formulas & variables.**
-
-| Symbol | Meaning | Units |
-|---|---|---|
-| *P* | total story points (or ideal days) in the release | points |
-| *V* | velocity — points completed per iteration | points/iteration |
-| *N* | number of iterations | iterations, **always rounded up** |
-| *L* | iteration length | weeks |
-| *C* | cost per iteration | currency |
-
-$$N = \lceil P / V \rceil \qquad \text{Duration} = N \times L \qquad \text{Cost} = N \times C$$
-
-For sprint capacity, per team member: **capacity = days available × hours per
-day**, summed across the team. Where hours per day is a range, the team capacity
-is a range too.
-
-**Solved questions.** Both worked in full in the Question Bank below — they are
-the drill for this page.
-
-**What gets asked.** Never examined on the one paper in this vault. But these are
-**deck questions**, which rule 8 rates as the highest-value drill available,
-because deck examples have repeatedly turned out to be exam questions with the
-numbers changed. Two forms:
-
-- **Spot it** — a backlog table with estimates, plus a velocity (or a velocity
-  range) and an iteration length. Or a capacity table with days and hours per day.
-- **Method** — sum the points; divide by velocity; **round up**; multiply out for
-  duration and cost. For capacity, compute per person, sum, then take stories in
+**What gets asked.** Never examined on the one paper here. But these are **deck
+questions**, which rule 8 rates as the highest-value drill available. Two forms:
+- **Spot it** — a backlog table with estimates plus a velocity (or velocity range)
+  and an iteration length; or a capacity table with days and hours per day.
+- **Method** — sum the points, divide by velocity, **round up**, multiply out for
+  duration and cost. For capacity: compute per person, sum, then take stories in
   priority order until the next one does not fit.
-- **Trap** — rounding iterations *down*, or reporting a single number when the
-  velocity is given as a range. Both lose the marks that the range was there to
-  test. Second trap: in the sprint question, commitment is decided by **task
-  hours against capacity**, not by story points.
+- **Trap** — rounding iterations *down*, or reporting a single number when
+  velocity is a range; both lose the marks the range was there to test. Second
+  trap: sprint commitment is decided by **task hours against capacity**, not by
+  story points.
 
 ## Question Bank
 
-**PYQ questions — none.** No question on [[se-ete-2025-26]] tests this topic.
-A3 mentions Agile but tests the SRS; its marks are on [[Requirements Engineering]].
+**PYQ — none.** No question on [[se-ete-2025-26]] tests this topic. A3 mentions
+Agile but tests the SRS; its marks are on [[Requirements Engineering]].
 
-**Deck questions — 2**, both from
-`raw/sources/ppts/2025/L4 Print Questions Agile.pdf`.
+**Deck — 2**, both from `raw/sources/ppts/2025/L4 Print Questions Agile.pdf`.
 
 ### Deck Q1 — release planning duration and cost
 
@@ -375,13 +292,9 @@ A3 mentions Agile but tests the SRS; its marks are on [[Requirements Engineering
 Rounding **up** in both cases: a release needing 2.64 iterations of capacity
 still occupies three iterations, because iterations are not divisible.
 
-**Step 4 — convert to duration.**
+**Step 4 — convert to duration.** 3 × 2 = 6 weeks · 4 × 2 = 8 weeks
 
-3 × 2 = 6 weeks · 4 × 2 = 8 weeks
-
-**Step 5 — convert to cost.**
-
-3 × $50,000 = $150,000 · 4 × $50,000 = $200,000
+**Step 5 — convert to cost.** 3 × $50,000 = $150,000 · 4 × $50,000 = $200,000
 
 **Answer: 6 to 8 weeks (3 to 4 iterations), costing $150,000 to $200,000.**
 
@@ -418,7 +331,7 @@ unchecked against a key, so no `✓`.)*
 
 **Find:** team capacity, and the stories to commit to.
 
-**Step 1 — compute each member's capacity as a range.**
+**Step 1 — each member's capacity as a range.**
 
 | Member | Low | High |
 |---|---|---|
@@ -441,24 +354,24 @@ Midpoint capacity = **61 hrs**.
 
 **Step 3 — apply the stopping rule at each capacity bound.**
 
-- At the **conservative** 52 hrs: stories 1 and 2 fit (32 hrs). Story 3 would take
-  the total to 56 > 52, so stop. **Commit stories 1-2**, 32 hrs, 13 points.
-- At the **midpoint** 61 hrs: stories 1-3 fit (56 hrs). Story 4 would take it to
-  72 > 61, so stop. **Commit stories 1-3**, 56 hrs, 18 points.
-- At the **optimistic** 70 hrs: same as midpoint — stories 1-3 fit at 56 hrs;
-  story 4 reaches 72 > 70. **Commit stories 1-3.**
+- **Conservative 52 hrs:** stories 1-2 fit (32 hrs); story 3 would reach 56 > 52,
+  so stop. **Commit 1-2** — 32 hrs, 13 points.
+- **Midpoint 61 hrs:** stories 1-3 fit (56 hrs); story 4 would reach 72 > 61, so
+  stop. **Commit 1-3** — 56 hrs, 18 points.
+- **Optimistic 70 hrs:** same as midpoint — 1-3 fit at 56 hrs; story 4 reaches
+  72 > 70. **Commit 1-3.**
 
 **Answer: commit to Stories 1, 2 and 3 — 56 hours of task estimates against a
-team capacity of 52-70 hours (midpoint 61).** Stop there: Story 4 would need 72
-hours, exceeding even the optimistic capacity. If the team plans strictly against
-the conservative 52-hour bound, commit only Stories 1 and 2.
+team capacity of 52-70 hours (midpoint 61).** Story 4 would need 72 hours,
+exceeding even the optimistic capacity. If the team plans strictly against the
+conservative 52-hour bound, commit only Stories 1 and 2.
 
 *(Deck question with no printed solution — arithmetic independently verified,
 unchecked against a key, so no `✓`.)*
 
-**Textbook questions — unavailable for this topic.** Pressman 8e is not in
-`raw/sources/`. The two Aggarwal & Singh chapters that *are* in the vault cover
-project planning and design, not agile.
+**Textbook — unavailable for this topic.** Pressman 8e is not in `raw/sources/`.
+The two Aggarwal & Singh chapters that *are* in the vault cover project planning
+and design, not agile.
 
 ## Mistakes & Traps
 
@@ -466,7 +379,7 @@ project planning and design, not agile.
   *A instead of B*. Agile teams do document — just not for its own sake.
 - **Rounding iterations down.** ⌈58/22⌉ = 3, not 2. A partial iteration still
   costs a whole iteration.
-- **Giving one number when velocity is a range.** The range is the question. Two
+- **Giving one number when velocity is a range.** The range is the question — two
   bounds, two durations, two costs.
 - **Committing a sprint by story points instead of task hours.** Capacity is in
   hours; the stopping rule compares task estimates against it.
