@@ -15,21 +15,57 @@ last_practiced: null
 
 # Data Modeling & ERD
 
+- **The first of three modeling lenses.** Requirements written in prose are
+  ambiguous; redrawn as a diagram with rules, **the ambiguity becomes a missing
+  arrow**.
+- **This one asks: what does the system remember?** — entities, their attributes,
+  and the relationships between them.
+- The other two: [[Flow-Oriented Modeling & DFD]] asks what the system *does*;
+  [[UML & Use Case Modeling]] asks what *objects* exist.
+
 **Prerequisites:** [[Software Engineering Practice]]
+**Asked as:** — — **0 marks** on the one paper · **1** in [[se-assign-1-2026]]
 
-## Overview
+**The thread:** ask what the system must remember (1) — then how those things relate, which is two questions students merge (2) — and the diagram is the deliverable, graded on notation as much as content (3).
 
-> [!warning] 0 of 80 in [[se-ete-2025-26]] — not asked once, on one paper
+> [!warning] Never asked — on one paper, which is nearly no evidence
 > A single paper cannot show a topic is unexamined. In syllabus, taught across
 > two lectures, and **it is a drawing topic on a paper that put 20 of 80 marks
 > on drawings**. Lectures 19-20 is *syllabus depth*; rule 3 forbids reading it
 > as marks.
 
-The first of three modeling lenses. Requirements written in prose are ambiguous;
-redrawn as a diagram with rules, the ambiguity becomes a missing arrow. This one
-asks **what does the system remember?** — entities, their attributes, and the
-relationships between them. [[Flow-Oriented Modeling & DFD]] asks what the system
-*does*; [[UML & Use Case Modeling]] asks what *objects* exist.
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — one
+assignment question ([[se-assign-1-2026]] Q5(c), a 12-entity clinic ERD).**
+
+### Draw & label — the archetype to prepare
+
+- **Spot it:** *"Draft an ERD (entities, keys, relationships) for…"* — usually
+  with the entities listed for you, which makes it a **notation** test rather than
+  a modelling one.
+- **Skeleton:**
+  1. **Legend** — which notation: crow's foot or Chen. State it.
+  2. **An entity table** — entity · **primary key** · attributes · foreign keys.
+     This earns marks the diagram alone does not, and it is fast to write.
+  3. **The diagram**, with **cardinality at both ends of every relationship**.
+  4. **Reading** — what it asserts, plus the validity rule: **every many-to-many
+     resolved into an associative entity**, every identifier underlined.
+- **Earns the marks:** cardinality markers and keys. **An unlabelled ERD is worth
+  close to zero.**
+- **Trap:** drawing a direct many-to-many. Resolve it through the entity that
+  already exists in the domain (patient↔provider resolves through *appointment*).
+- **Second trap:** answering *degree* when asked *cardinality*. Degree counts how
+  many **entity types** a relationship connects; cardinality counts **instances**
+  per side. They vary independently — see section 2.
+
+**Never asked as:** `numerical`, `explain`, `scenario`. `compare` is plausible for
+*degree vs cardinality*.
+**Also worth knowing, though never asked:**
+- The **candidate key vs identifier** distinction is the plausible 2-marker here.
+- **The drawing skill transfers.** [[UML & Use Case Modeling]] carries a 10-mark
+  drawing in Section D, which establishes that this instructor asks for diagrams
+  at long-answer length — even though ER was not the notation tested.
 
 ## Quick Reference
 
@@ -108,52 +144,6 @@ Read this before drawing anything — an unlabelled ER diagram scores near zero.
 direction separately, and a one-to-many drawn without the 1 and the M is
 indistinguishable from a many-to-many.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — one
-assignment question ([[se-assign-1-2026]] Q5(c), a 12-entity clinic ERD).**
-
-### Draw & label — the archetype to prepare
-
-- **Spot it:** *"Draft an ERD (entities, keys, relationships) for…"* — usually
-  with the entities listed for you, which makes it a **notation** test rather than
-  a modelling one.
-- **Skeleton:**
-  1. **Legend** — which notation: crow's foot or Chen. State it.
-  2. **An entity table** — entity · **primary key** · attributes · foreign keys.
-     This earns marks the diagram alone does not, and it is fast to write.
-  3. **The diagram**, with **cardinality at both ends of every relationship**.
-  4. **Reading** — what it asserts, plus the validity rule: **every many-to-many
-     resolved into an associative entity**, every identifier underlined.
-- **Earns the marks:** cardinality markers and keys. **An unlabelled ERD is worth
-  close to zero.**
-- **Trap:** drawing a direct many-to-many. Resolve it through the entity that
-  already exists in the domain (patient↔provider resolves through *appointment*).
-- **Second trap:** answering *degree* when asked *cardinality*. Degree counts how
-  many **entity types** a relationship connects; cardinality counts **instances**
-  per side. They vary independently — see section 2.
-
-**Never asked as:** `numerical`, `explain`, `scenario`. `compare` is plausible for
-*degree vs cardinality*.
-**Also worth knowing, though never asked:**
-- The **candidate key vs identifier** distinction is the plausible 2-marker here.
-- **The drawing skill transfers.** [[UML & Use Case Modeling]] carries a 10-mark
-  drawing in Section D, which establishes that this instructor asks for diagrams
-  at long-answer length — even though ER was not the notation tested.
-
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | Entities, attributes and keys | definitional | — | 0 | the building blocks; candidate key vs identifier |
-| 2 | Relationships — degree and cardinality | definitional | compare (likely) | 0 | the pair students merge; where all the marks would be |
-| 3 | Drawing the ER diagram | notational | **draw** | 0 | notation and worked examples |
-
-**The thread:** ask what the system must remember (1) — then how those things
-relate, which is two questions students merge (2) — and the diagram is the
-deliverable, graded on notation as much as content (3).
-
 ## 1 · Entities, attributes and keys
 
 - **Start by asking what the system has to remember.** A university remembers
@@ -171,7 +161,6 @@ A **candidate key** uniquely identifies each instance. When there are several, o
 is chosen as the **identifier**. In the deck's STUDENT example, Student_ID is the
 candidate key and becomes the identifier, with Name, Address and Phone_No as
 ordinary attributes.
-
 
 ## 2 · Relationships — degree and cardinality
 
@@ -210,7 +199,6 @@ VENDOR —*quote-price*— PARTS, with **quantity** as an attribute of the
 relationship (it belongs to the pairing, not to either entity alone). Cardinality
 is many-to-many: a vendor quotes for several parts, and a part may be quoted by
 several vendors.
-
 
 ## 3 · Drawing the ER diagram
 
@@ -262,8 +250,7 @@ both ends, and every entity carries exactly one underlined identifier.
 > `L6 Requirement Analysis Diagrams.pdf` by eye to compare before relying on the
 > specific entities and attributes.
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — none.** No question on [[se-ete-2025-26]] tests this topic.
 
@@ -297,7 +284,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Confusing degree with cardinality.** Degree counts entity *types*;
   cardinality counts *instances*. A unary relationship can be one-to-many.
@@ -311,7 +298,7 @@ considers important.
 - **Leaving a many-to-many unresolved when the model needs data about the
   pairing.** If the association itself has attributes, it needs its own box.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L5 Chapter 3 Software Requirements_2.pdf` — the main
   source. Degree of relationship with unary, binary and ternary examples; the

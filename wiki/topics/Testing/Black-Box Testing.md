@@ -15,22 +15,21 @@ last_practiced: null
 
 # Black-Box Testing
 
+- Functional testing without seeing the code: boundary value analysis, equivalence class partitioning and decision-table-based testing.
+
 **Prerequisites:** [[Testing Fundamentals]]
+**Asked as:** numerical, explain — **10 of 80** in [[se-ete-2025-26]]
 
 > [!warning] Page not built
 > Scaffolded on 2026-09-02 from the handout's lecture plan. No subtopics, Quick
 > Reference or Question Bank yet — those come from reading the decks below
 > (rule 8). Out of MTE scope; End Term only.
 
-## Overview
-
-> [!info] 10 of 80 in [[se-ete-2025-26]] — question C2
+> [!info] What it asked — question C2
 > The vault's **only** paper, so this is the whole of rule 2's evidence:
 > one sitting, not a trend. See [[weightage]] for what that can and
 > cannot tell you. Lectures 36-37 is *syllabus depth* and rule 3 forbids
 > reading it as marks.
-
-Functional testing without seeing the code: boundary value analysis, equivalence class partitioning and decision-table-based testing.
 
 ## How it's asked
 
@@ -58,6 +57,6 @@ two archetypes.
 
 See [[answer-patterns]] §2 and §3.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L11 Software Testing_5.pdf`

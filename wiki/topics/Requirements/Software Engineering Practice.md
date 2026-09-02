@@ -15,20 +15,41 @@ last_practiced: null
 
 # Software Engineering Practice
 
-**Prerequisites:** [[Requirements Engineering]]
-
-## Overview
-
-> [!warning] 0 of 80 in [[se-ete-2025-26]] — not asked once, on one paper
-> A single paper cannot show a topic is unexamined. In syllabus and taught.
-> Lecture 14 is *syllabus depth* and rule 3 forbids reading it as marks.
-
 - **[[Requirements Engineering]] said *what* a requirement is. This topic is the
   *procedure* for getting them** — the five activities of requirements practice:
   elicitation, analysis, documentation, validation and management, as the handout
   words lecture 14.
 - **Each answers a different failure:** not knowing · not agreeing · not writing
   it down · not checking · not keeping up.
+
+**Prerequisites:** [[Requirements Engineering]]
+**Asked as:** — — **0 marks** on the one paper
+
+**The thread:** the five activities are a pipeline, and each answers a different failure — not knowing (1) · not agreeing (2) · not writing it down (3) · not checking (4) · not keeping up (5).
+
+> [!warning] Never asked — on one paper, which is nearly no evidence
+> A single paper cannot show a topic is unexamined. In syllabus and taught.
+> Lecture 14 is *syllabus depth* and rule 3 forbids reading it as marks.
+
+## How it's asked
+
+**Never asked, on the one paper in this vault** — `asked_as` is empty.
+
+**If it appears, the likely shape** (prediction, not evidence): an `explain`
+question naming one activity — *"explain the requirement elicitation techniques"*
+— or a `compare` between two techniques. The **seven elicitation techniques with
+when each fits** is the only part of this page with enough content to carry a
+6-marker. See [[answer-patterns]] §2 and §5.
+
+**Note the overlap:** specification detail lives on [[Requirements Engineering]],
+which *is* examined. If a question names the SRS, answer from there.
+**Also worth knowing:**
+- **Validation is where V&V enters the course.** *Verification vs validation* is
+  examined behaviour in the testing module ([[Testing Fundamentals]]), so get it
+  right the first time you meet it here.
+- **The traceability chain is management's one carryable fact** — and it explains
+  why [[Software Maintenance]] is expensive when it is absent.
+- Analysis's value is as the bridge into the analysis-modeling phase.
 
 ## Quick Reference
 
@@ -81,41 +102,6 @@ repeated here: communication · planning · modeling · construction · deployme
 | Prototyping | the customer cannot describe what they want — the *undreamed* case |
 | Workshops / brainstorming | stakeholders disagree and must converge |
 
-## How it's asked
-
-**Never asked, on the one paper in this vault** — `asked_as` is empty.
-
-**If it appears, the likely shape** (prediction, not evidence): an `explain`
-question naming one activity — *"explain the requirement elicitation techniques"*
-— or a `compare` between two techniques. The **seven elicitation techniques with
-when each fits** is the only part of this page with enough content to carry a
-6-marker. See [[answer-patterns]] §2 and §5.
-
-**Note the overlap:** specification detail lives on [[Requirements Engineering]],
-which *is* examined. If a question names the SRS, answer from there.
-**Also worth knowing:**
-- **Validation is where V&V enters the course.** *Verification vs validation* is
-  examined behaviour in the testing module ([[Testing Fundamentals]]), so get it
-  right the first time you meet it here.
-- **The traceability chain is management's one carryable fact** — and it explains
-  why [[Software Maintenance]] is expensive when it is absent.
-- Analysis's value is as the bridge into the analysis-modeling phase.
-
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | Elicitation | procedural | explain (likely) | 0 | the seven gathering techniques and when each fits |
-| 2 | Analysis | procedural | — | 0 | resolving conflicts, classifying, modeling |
-| 3 | Specification | procedural | — | 0 | producing the SRS — detail on [[Requirements Engineering]] |
-| 4 | Validation | procedural | — | 0 | checking before building; where V&V is introduced |
-| 5 | Management | procedural | — | 0 | change control and traceability |
-
-**The thread:** the five activities are a pipeline, and each answers a different
-failure — not knowing (1) · not agreeing (2) · not writing it down (3) · not
-checking (4) · not keeping up (5).
-
 ## 1 · Elicitation
 
 - **Requirements are not lying around waiting to be collected.** Users describe
@@ -134,7 +120,6 @@ only as a process model — it is how you elicit requirements the customer canno
 articulate, which is the same argument the prototyping model makes on
 [[Conventional Process Models]].
 
-
 ## 2 · Analysis
 
 - **Elicitation produces a pile of wants, and some contradict each other** — the
@@ -151,7 +136,6 @@ resolve conflicts**; **classify** requirements as functional or non-functional;
 and **model** them. The classification is taught on [[Requirements Engineering]]
 and not repeated here.
 
-
 ## 3 · Specification
 
 The output of analysis lives in people's heads and in meeting
@@ -162,7 +146,6 @@ was not in the room** — which is the only way work can be divided at all.
 stories and diagrams. The SRS's structure, purpose, characteristics and common
 mistakes are all on [[Requirements Engineering]], which is where A3's marks sit —
 they are not duplicated here.
-
 
 ## 4 · Validation
 
@@ -181,7 +164,6 @@ attempting the test cases validates the specification as a side effect.
 The verification/validation pair is tabulated in Quick Reference and taught in
 full on [[Evolutionary Process Models]] with the V-model.
 
-
 ## 5 · Management
 
 - **Requirements change during development; that is assumed, not exceptional.**
@@ -195,8 +177,7 @@ full on [[Evolutionary Process Models]] with the V-model.
 development, tracked in tools; and **maintain traceability** —
 *requirement → design → code → test*. The tools table is in Quick Reference.
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — none.** No question on [[se-ete-2025-26]] tests this topic
 directly. A3 tests the SRS and its marks sit on [[Requirements Engineering]].
@@ -211,7 +192,7 @@ planning and design.
 **This topic has no questions in any of the three tiers.** Stated rather than
 filled with invented drill.
 
-## Mistakes & Traps
+## Traps
 
 - **Reversing verification and validation.** *Right product* is validation.
   This costs marks repeatedly in the testing module.
@@ -223,7 +204,7 @@ filled with invented drill.
   as an elicitation technique. Same idea, two roles.
 - **Ignoring traceability.** It is the reason requirement management exists.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L2 Lec (9 - 14).pdf` — the main source. All five RE
   phases with their technique lists, the traceability chain, the RE tools table,

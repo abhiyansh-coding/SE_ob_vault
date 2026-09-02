@@ -15,9 +15,15 @@ last_practiced: null
 
 # Flow-Oriented Modeling & DFD
 
-**Prerequisites:** [[Data Modeling & ERD]]
+- **The second modeling lens.** [[Data Modeling & ERD]] asked what the system
+  remembers; this asks **what the system does to data** — where information
+  enters, which processes transform it, where it is stored, where it leaves.
+- **The one topic whose output feeds a later topic mechanically:**
+  [[Transform & Transaction Mapping]] turns a DFD into a program structure chart
+  by procedure.
 
-## Overview
+**Prerequisites:** [[Data Modeling & ERD]]
+**Asked as:** — — **0 marks** on the one paper · **3** in [[se-assign-1-2026]]
 
 > [!warning] 0 of 80 in [[se-ete-2025-26]] — but treat this zero with suspicion
 > Two full lectures, a dedicated deck, and it is a **drawing** topic on a paper
@@ -26,12 +32,48 @@ last_practiced: null
 > specific topic as the one whose zero is least trustworthy. Lectures 19 and 21
 > is *syllabus depth*; rule 3 forbids reading it as marks.
 
-- **The second modeling lens.** [[Data Modeling & ERD]] asked what the system
-  remembers; this asks **what the system does to data** — where information
-  enters, which processes transform it, where it is stored, where it leaves.
-- **The one topic whose output feeds a later topic mechanically:**
-  [[Transform & Transaction Mapping]] turns a DFD into a program structure chart
-  by procedure.
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — three
+assignment questions ([[se-assign-1-2026]] Q5(a), Q5(b), Q15).**
+
+> [!warning] DFD deserves specific suspicion for the Mid-Term
+> It scored zero on an End Term whose drawing question went to UML instead — but
+> it has **two full lectures, a dedicated deck, and three of the assignment's
+> fifteen questions**. A 30-mark paper drawn from 32 lectures is exactly where a
+> DFD question fits. Rule 2 says it earned nothing; rule 1 and the coursework say
+> prepare it. Both are stated, per rule 7.
+
+### Draw & label — the archetype to prepare
+
+- **Spot it:** *"Develop the Level-0 (Context Diagram)"* · *"Construct the Level-1
+  DFD showing processes, external entities, data stores and data flows."* The
+  question usually asks for **both levels**, and the pair is the point.
+- **Skeleton:**
+  1. **Legend** — circle = process, rectangle = external entity, open-ended pair
+     of lines = data store, named arrow = flow. **State the convention** (Yourdon
+     vs Gane-Sarson); the deck's wins.
+  2. **Context diagram:** exactly **one** bubble numbered 0, the external entities
+     around it, **and no data stores** — that omission is the most-penalised DFD
+     error.
+  3. **Level 1:** numbered processes 1.0, 2.0…, the data stores added, every flow
+     named.
+  4. **Reading**, including the validity rule: **levelling balance** — every flow
+     crossing the parent's boundary crosses the child's, unchanged in name.
+- **Earns the marks:** labelled arrows and the balance check. **Say in words that
+  you checked balance** — it demonstrates you know the rule exists.
+- **Trap:** drawing a flowchart with DFD symbols. **A DFD has no decisions, no
+  loops and no sequence** — it says what data goes where, never in what order.
+
+**Never asked as:** `numerical`, `compare`, `scenario`. An `explain` on the data
+dictionary or decision tables is plausible and unasked.
+**Also worth knowing:**
+- **The notation legend earns marks on its own.** State it before drawing, always.
+- *"A data dictionary contains metadata, i.e. data about the data"* is quotable
+  as-is for a 2-marker.
+- **Decision tables are examined machinery elsewhere.** They reappear as
+  decision-table-based testing on [[Black-Box Testing]] (lecture 37), so the
+  notation learned here is reused there.
 
 ## Quick Reference
 
@@ -103,61 +145,7 @@ Context process is **0**. Its children are **1, 2, 3…**. Children of process 2
 | **Decision table** | represents complex processing logic in matrix form: upper rows are **conditions**, lower rows are **actions**, and each **column is a rule** — if the condition holds, the corresponding action executes |
 | **State transition diagram** | shows how an object changes state as actions are performed on it |
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §4. **Zero marks on the paper — three
-assignment questions ([[se-assign-1-2026]] Q5(a), Q5(b), Q15).**
-
-> [!warning] DFD deserves specific suspicion for the Mid-Term
-> It scored zero on an End Term whose drawing question went to UML instead — but
-> it has **two full lectures, a dedicated deck, and three of the assignment's
-> fifteen questions**. A 30-mark paper drawn from 32 lectures is exactly where a
-> DFD question fits. Rule 2 says it earned nothing; rule 1 and the coursework say
-> prepare it. Both are stated, per rule 7.
-
-### Draw & label — the archetype to prepare
-
-- **Spot it:** *"Develop the Level-0 (Context Diagram)"* · *"Construct the Level-1
-  DFD showing processes, external entities, data stores and data flows."* The
-  question usually asks for **both levels**, and the pair is the point.
-- **Skeleton:**
-  1. **Legend** — circle = process, rectangle = external entity, open-ended pair
-     of lines = data store, named arrow = flow. **State the convention** (Yourdon
-     vs Gane-Sarson); the deck's wins.
-  2. **Context diagram:** exactly **one** bubble numbered 0, the external entities
-     around it, **and no data stores** — that omission is the most-penalised DFD
-     error.
-  3. **Level 1:** numbered processes 1.0, 2.0…, the data stores added, every flow
-     named.
-  4. **Reading**, including the validity rule: **levelling balance** — every flow
-     crossing the parent's boundary crosses the child's, unchanged in name.
-- **Earns the marks:** labelled arrows and the balance check. **Say in words that
-  you checked balance** — it demonstrates you know the rule exists.
-- **Trap:** drawing a flowchart with DFD symbols. **A DFD has no decisions, no
-  loops and no sequence** — it says what data goes where, never in what order.
-
-**Never asked as:** `numerical`, `compare`, `scenario`. An `explain` on the data
-dictionary or decision tables is plausible and unasked.
-**Also worth knowing:**
-- **The notation legend earns marks on its own.** State it before drawing, always.
-- *"A data dictionary contains metadata, i.e. data about the data"* is quotable
-  as-is for a 2-marker.
-- **Decision tables are examined machinery elsewhere.** They reappear as
-  decision-table-based testing on [[Black-Box Testing]] (lecture 37), so the
-  notation learned here is reused there.
-
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | What a DFD is, and its notation | notational | **draw** | 0 | the four symbols and the two conventions |
-| 2 | Levels and levelling balance | notational | **draw** | 0 | context vs level 1; the rule that makes a DFD checkable |
-| 3 | The Food Ordering System worked example | notational | **draw** | 0 | the deck's own running example, drawn out |
-| 4 | Data dictionary, process spec and control flow | definitional | — | 0 | what accompanies the diagram |
-| 5 | Decision tables and state transition diagrams | notational | — | 0 | the other two analysis notations the deck teaches |
-
-## Mindmap
+**How the sections connect:**
 
 ```mermaid
 graph TD
@@ -196,7 +184,6 @@ conventions, is in Quick Reference. The deck uses **circles for processes**.
 | Inside the system? | yes | **no** | yes |
 | Drawn as | circle | rectangle | open-ended parallel lines |
 
-
 ## 2 · Levels and levelling balance
 
 - **You cannot show a whole system at useful detail on one page, so you zoom.**
@@ -217,7 +204,6 @@ process node**, representing the functions of the complete system in terms of ho
 it interacts with external entities; **all** external entities; the data flows
 between them; and **no data stores**, because stores are internal and the context
 diagram does not open the system up.
-
 
 ## 3 · The Food Ordering System worked example
 
@@ -303,7 +289,6 @@ are exactly those on the context diagram. **Balanced.**
 > the slide's picture.** Compare against `DFD (2).pptx` and
 > `L6 Requirement Analysis Diagrams.pdf` by eye if the exact layout matters.
 
-
 ## 4 · Data dictionary, process specification and control flow
 
 - **A DFD's arrows carry names, and a name is not a definition.** If one arrow
@@ -318,7 +303,6 @@ are exactly those on the context diagram. **Balanced.**
 Reference. The **control flow model** is the DFD's counterpart for systems where
 events and control matter as much as data — the deck names it alongside the data
 flow model and the process specification as the contents of lecture 21.
-
 
 ## 5 · Decision tables and state transition diagrams
 
@@ -365,8 +349,7 @@ be sent, which is the loop the case study specifies. Blocking is reachable from
 any state. **The rule it must satisfy:** every transition is labelled with the
 event that causes it, and every state is reachable.
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — none.** No question on [[se-ete-2025-26]] tests this topic.
 
@@ -398,7 +381,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Drawing control flow in a DFD.** No decisions, no loops, no sequence. A DFD
   shows *what data goes where*, never *when* or *under what condition*.
@@ -416,7 +399,7 @@ considers important.
   [[Cyclomatic Complexity & Graph Matrices]]. The vault's own source filenames
   got this wrong — do not repeat it in an exam.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/DFD (2).pptx` — the DFD definition, the context diagram
   with its three stated benefits, and the **Food Ordering System** at context and

@@ -155,3 +155,45 @@ already visible in the pages: every discursive topic had improvised a
 **Coverage.** All 15 built pages migrated. All 30 topic pages have the new
 frontmatter. The 7 unbuilt scaffolds that carry marks also got a How it's asked
 block, so the answer shape is known before the page is written.
+
+## [2026-09-03] rebuild | every topic page restructured — six sections, one job each
+
+User: change every page's complete structure, whatever is best for this subject.
+
+**The fault.** The previous pass changed the scaffolding but left five preamble
+layers stacked before any material: Overview, Quick Reference, How it's asked,
+Contents, Mindmap. That is the same problem the 2026-09-02 compression pass
+diagnosed (39% of words above the first subtopic), reintroduced.
+
+**The new shape, on all 30 pages:**
+
+  H1 + orientation bullets + Prerequisites/Asked-as line + banners
+  ## How it's asked      exam-facing, leads
+  ## Quick Reference     cram layer
+  ## 1..N                the material, deck order
+  ## Practice            worked answers
+  ## Traps               content confusions only
+  ## Sources             decks, gaps, links
+
+**Removed.** Overview (its bullets and banners stand alone under the H1).
+Contents (the headings are the contents; its marks column was near-useless when
+11 of 15 pages had all-zero rows). Mindmap as a top-level layer -- now a one-line
+"The thread" for short topics, or folded into Quick Reference for topics with
+five or more sections.
+
+**Renamed** for plain speech: Question Bank -> Practice, Mistakes & Traps ->
+Traps, Course Material -> Sources. Banner titles no longer repeat the marks now
+that the Asked-as line carries them.
+
+**Two content-loss bugs found and fixed during the migration**, both caught by
+diffing token sets against the previous commit:
+- Multi-line orientation bullets were truncated mid-sentence on 10 pages. Repaired
+  from git.
+- Five pages had prose Overviews rather than bullets, and the extractor dropped
+  them entirely -- COCOMO lost the Boehm expansion, Risk lost the deck's
+  extreme-optimists diagnosis, Size Estimation lost the "someone will ask for a
+  date" framing, ERD and UML lost their modeling-lens chains. All restored as
+  bullets.
+
+Remaining diff is 62 distinct tokens, all from the deleted Contents "why it's
+here" column. Descriptive fragments, no facts.

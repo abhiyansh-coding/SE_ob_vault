@@ -15,21 +15,51 @@ last_practiced: null
 
 # Risk Analysis & Estimation
 
+- **Estimation produces a number and pretends to certainty.** Risk management is
+  the discipline that **admits the number is a guess** and plans for the ways it
+  could be wrong.
+- **The deck opens with the honest diagnosis:** *software developers are extreme
+  optimists — we assume everything will go exactly as planned.* Risk management
+  exists to reduce the surprise factor.
+
 **Prerequisites:** [[Effort Estimation & COCOMO]]
+**Asked as:** compare — **2 of 80** in [[se-ete-2025-26]]
 
-## Overview
+**The thread:** a risk has not happened yet (1) — assessment finds, analyses and ranks what could hurt (2) — and control is everything you do about it afterwards (3), whose most under-rated option is simply **not doing the risky thing**.
 
-> [!info] 2 of 80 in [[se-ete-2025-26]] — question A4
+> [!info] What it asked — question A4
 > A4: *"List the difference between risk identification and risk assessment."*
 > The deck's own activity diagram answers it in a way most students get wrong —
 > **identification is a sub-activity of assessment**, not its sibling. One paper
 > only; see [[weightage]].
 
-Estimation produces a number and pretends to certainty. Risk management is the
-discipline that admits the number is a guess and plans for the ways it could be
-wrong. The deck opens with the honest diagnosis: *software developers are extreme
-optimists — we assume everything will go exactly as planned.* Risk management
-exists to reduce the surprise factor.
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §5. **2 of 80.**
+
+### Compare & distinguish — A4, 2 marks
+
+- **Spot it:** *"Difference between risk identification and risk assessment."*
+- **The structural point the question turns on:** **identification is not the
+  opposite of assessment — it is the first step of it.** Say this explicitly; it
+  is what separates a correct answer from a plausible-sounding wrong one.
+- **Skeleton:** a short table — what each does · where it sits in the sequence ·
+  its output — then the one line above.
+- **Earns the marks:** naming the containment relationship, not just listing two
+  definitions.
+- **Trap:** treating them as two parallel phases. Assessment = identification +
+  analysis + prioritisation.
+
+**Never asked as:** `numerical`, `draw`, `scenario`, `explain`. Risk exposure
+(probability × magnitude) is a plausible small numerical and has not appeared —
+a prediction, not evidence.
+**The trap in full, because it is subtle:**
+- **Do not invent a false contrast** such as *"identification finds risks,
+  assessment evaluates them"*. That is half right and misses the structure the
+  deck actually teaches — **assessment contains identification**.
+- **Do not confuse risk *analysis* (one activity inside assessment) with risk
+  *assessment* (the group).** A4 names *assessment*, so answer about the group.
+- Drawing the small hierarchy from Quick Reference answers this faster than prose.
 
 ## Quick Reference
 
@@ -97,47 +127,6 @@ the right product built badly.**
 > the category most likely to be under-reported — a nice point to make in any
 > longer risk answer.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §5. **2 of 80.**
-
-### Compare & distinguish — A4, 2 marks
-
-- **Spot it:** *"Difference between risk identification and risk assessment."*
-- **The structural point the question turns on:** **identification is not the
-  opposite of assessment — it is the first step of it.** Say this explicitly; it
-  is what separates a correct answer from a plausible-sounding wrong one.
-- **Skeleton:** a short table — what each does · where it sits in the sequence ·
-  its output — then the one line above.
-- **Earns the marks:** naming the containment relationship, not just listing two
-  definitions.
-- **Trap:** treating them as two parallel phases. Assessment = identification +
-  analysis + prioritisation.
-
-**Never asked as:** `numerical`, `draw`, `scenario`, `explain`. Risk exposure
-(probability × magnitude) is a plausible small numerical and has not appeared —
-a prediction, not evidence.
-**The trap in full, because it is subtle:**
-- **Do not invent a false contrast** such as *"identification finds risks,
-  assessment evaluates them"*. That is half right and misses the structure the
-  deck actually teaches — **assessment contains identification**.
-- **Do not confuse risk *analysis* (one activity inside assessment) with risk
-  *assessment* (the group).** A4 names *assessment*, so answer about the group.
-- Drawing the small hierarchy from Quick Reference answers this faster than prose.
-
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | What risk is, and typical software risks | definitional | — | 0 | the definition and Capers Jones's five categories |
-| 2 | Risk assessment | procedural | **compare** | **2** | carries A4 — identification, analysis, prioritization |
-| 3 | Risk control | procedural | — | 0 | planning, monitoring, resolution — the other half |
-
-**The thread:** a risk has not happened yet (1) — assessment finds, analyses and
-ranks what could hurt (2) — and control is everything you do about it afterwards
-(3), whose most under-rated option is simply **not doing the risky thing**.
-
 ## 1 · What risk is, and typical software risks
 
 - **The deck's framing is unusually blunt:** software developers are extreme
@@ -154,7 +143,6 @@ ranks what could hurt (2) — and control is everything you do about it afterwar
 Capers Jones's five categories are in Quick Reference. The distinction worth
 holding: risk management deals with **potential** problems; project management
 deals with **current** ones. The deck draws exactly that contrast.
-
 
 ## 2 · Risk assessment
 
@@ -205,7 +193,6 @@ resolution) to make up risk management as a whole.
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`.)*
 
-
 ## 3 · Risk control
 
 - **Assessment tells you what will hurt and how much. Control is everything
@@ -230,8 +217,7 @@ Risk management is an **umbrella activity** in the sense of
 [[Software Engineering as a Layered Technology]] — it runs across the whole
 project rather than occupying a phase. That is why monitoring exists at all.
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — 1.**
 
@@ -259,7 +245,7 @@ risk. No answer key.
 > this topic and has **never appeared** in this corpus. Worth ten minutes if you
 > have them, no more.
 
-## Mistakes & Traps
+## Traps
 
 - **Treating identification and assessment as parallel.** Identification is
   *inside* assessment. This is the whole of A4.
@@ -272,7 +258,7 @@ risk. No answer key.
 - **Ranking by probability alone.** Exposure is probability **×** magnitude — a
   rare catastrophe can outrank a frequent nuisance.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L7 Software Project planning_6.pdf` — the source for all
   of this topic. The optimism diagnosis; the definition of risk and of risk

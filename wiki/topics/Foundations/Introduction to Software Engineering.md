@@ -15,20 +15,19 @@ last_practiced: null
 
 # Introduction to Software Engineering
 
-**Prerequisites:** none — this is the entry point of the course.
-
-## Overview
-
-> [!info] 2 of 80 in [[se-ete-2025-26]] — question A5
-> A5 asks whether a late project can be rescued by adding people. The deck plants
-> that answer in its **software crisis** slide, and the paper tags it **CO1**
-> (lectures 1-12) — so it is examined here, not on [[Effort Estimation & COCOMO]]
-> where the person-month arithmetic lives. One paper only; see [[weightage]].
-
 - **The course justifies its own existence here:** what software is · what went
   wrong when industry treated it like manufacturing · which beliefs still make
   projects fail.
 - Everything in [[story]] hangs off this page.
+
+**Prerequisites:** none — this is the entry point of the course.
+**Asked as:** scenario — **2 of 80** in [[se-ete-2025-26]]
+
+> [!info] What it asked — question A5
+> A5 asks whether a late project can be rescued by adding people. The deck plants
+> that answer in its **software crisis** slide, and the paper tags it **CO1**
+> (lectures 1-12) — so it is examined here, not on [[Effort Estimation & COCOMO]]
+> where the person-month arithmetic lives. One paper only; see [[weightage]].
 
 > [!warning] Two subtopics have no source in this vault
 > **Legacy software** and **software myths** are named in the handout (lecture 3)
@@ -36,6 +35,27 @@ last_practiced: null
 > lecture-3 treatment of "legacy". Pressman 8e is not in `raw/sources/`, so rule
 > 6's fallback is unavailable. Subtopics 6-7 are standard Pressman material,
 > **labelled unsourced** — indicative, not your instructor's wording.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §1. **2 of 80, all of it in one 2-marker.**
+
+### Scenario → identify & justify — A5, 2 marks
+
+- **Spot it:** a project behind schedule, asking whether adding people can rescue
+  it. Any phrasing of "add more developers / employees / programmers".
+- **Skeleton:** answer **no in the first line** → give two of the three mechanisms
+  (training diverts your best people · communication paths grow as *n(n−1)/2*
+  against at-best-linear output · sequential work cannot be parallelised) → close
+  by naming the real remedies: reduce scope, extend the schedule, re-plan.
+- **Earns the marks:** the mechanism. A 2-marker wants the *reason*.
+- **Trap:** "yes, if they are added early" — the question says the project is
+  *already* late. Second trap: naming Brooks's Law and stopping. **The eponym
+  earns nothing on its own.**
+
+**Never asked as:** `numerical`, `draw`, `compare`, `explain`. The six crisis
+causes and three named failures are plausible Section A material and have not been
+asked — a prediction, not evidence (rule 7).
 
 ## Quick Reference
 
@@ -133,40 +153,7 @@ person sincerely believes:
 | "Until the program runs, quality can't be assessed" | practitioner | reviews and inspections find defects earlier and cheaper |
 | "The only deliverable is the working program" | practitioner | software = program + documentation + operating procedures |
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §1. **2 of 80, all of it in one 2-marker.**
-
-### Scenario → identify & justify — A5, 2 marks
-
-- **Spot it:** a project behind schedule, asking whether adding people can rescue
-  it. Any phrasing of "add more developers / employees / programmers".
-- **Skeleton:** answer **no in the first line** → give two of the three mechanisms
-  (training diverts your best people · communication paths grow as *n(n−1)/2*
-  against at-best-linear output · sequential work cannot be parallelised) → close
-  by naming the real remedies: reduce scope, extend the schedule, re-plan.
-- **Earns the marks:** the mechanism. A 2-marker wants the *reason*.
-- **Trap:** "yes, if they are added early" — the question says the project is
-  *already* late. Second trap: naming Brooks's Law and stopping. **The eponym
-  earns nothing on its own.**
-
-**Never asked as:** `numerical`, `draw`, `compare`, `explain`. The six crisis
-causes and three named failures are plausible Section A material and have not been
-asked — a prediction, not evidence (rule 7).
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | What software engineering is | definitional | — | 0 | the definition every other page assumes |
-| 2 | The software crisis | definitional | **scenario** | **2** | the only examined part — carries A5 |
-| 3 | Program vs software | definitional | — | 0 | the distinction the whole course rests on |
-| 4 | Software characteristics and the deterioration curve | notational | — | 0 | the diagram that explains why maintenance dominates |
-| 5 | The changing nature of software | definitional | — | 0 | the eight application domains, a listing answer |
-| 6 | Legacy software | definitional | — | 0 | **no deck covers this** |
-| 7 | Software myths | definitional | — | 0 | **no deck covers this** |
-
-## Mindmap
+**How the sections connect:**
 
 ```mermaid
 graph TD
@@ -228,7 +215,6 @@ the staff you can least spare · communication paths grow as *n(n−1)/2* agains
 at-best-linear output · sequential work cannot be compressed by parallelism.
 **Close with the real remedies:** reduce scope · extend the schedule · re-plan
 with the time remaining. *(No solution key for this paper — unchecked, no `✓`.)*
-
 
 ## 3 · Program vs software
 
@@ -294,7 +280,7 @@ with the time remaining. *(No solution key for this paper — unchecked, no `✓
   adding programmers deserves extra attention — same content as A5, so it is the
   one already proven examinable.
 
-## Question Bank
+## Practice
 
 **PYQ — 1.**
 
@@ -314,7 +300,7 @@ partitionable. Remedies: scope reduction, schedule extension, re-planning.
 - **Total drill supply: one question, one paper.** Stated rather than padded out
   with invented questions.
 
-## Mistakes & Traps
+## Traps
 
 - **Answering A5 "yes, if added early enough."** The project is already delayed.
   Answer no, then justify.
@@ -326,7 +312,7 @@ partitionable. Remedies: scope reduction, schedule extension, re-planning.
 - **Treating documentation as optional.** It is one of the three components of
   software by definition.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L1 PPT from 1 to 8.pdf` — covers lectures 1-8. For this
   topic: the definition, SE vs CS, the crisis with its six causes and three

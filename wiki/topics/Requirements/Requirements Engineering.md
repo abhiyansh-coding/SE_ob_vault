@@ -15,22 +15,53 @@ last_practiced: null
 
 # Requirements Engineering
 
-**Prerequisites:** [[SDLC & CMMI]]
-
-## Overview
-
-> [!info] 2 of 80 in [[se-ete-2025-26]] — question A3
-> A3: *"Illustrate with reason that SRS document is required in large-scale
-> projects but often avoided in Agile."* It is a **requirements** question with an
-> agile framing, so its marks sit here rather than on [[Agile Development]].
-> One paper only; see [[weightage]].
-
 - **The cheapest place in the entire lifecycle to be wrong.** RE is the
   systematic process of defining, documenting and maintaining what a system must
   do; the **SRS** is its output — the document that becomes a contract between
   customer and developer.
 - Get this wrong and every later phase amplifies the error — the cost-of-change
   curve from [[story]] applied at its steepest point.
+
+**Prerequisites:** [[SDLC & CMMI]]
+**Asked as:** explain — **2 of 80** in [[se-ete-2025-26]] · **1** in [[se-assign-1-2026]]
+
+**The thread:** you must collect requirements, but they are not all one kind (1→2); and sorted requirements are still only notes until they are written down (2→3) — and the written contract is what makes the next phase possible at all.
+
+> [!info] What it asked — question A3
+> A3: *"Illustrate with reason that SRS document is required in large-scale
+> projects but often avoided in Agile."* It is a **requirements** question with an
+> agile framing, so its marks sit here rather than on [[Agile Development]].
+> One paper only; see [[weightage]].
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §2. **2 of 80.**
+
+### Explain with reason — A3, 2 marks
+
+- **Spot it:** any question contrasting formal documentation with agile practice,
+  or asking why a document is or is not needed. The stem *"illustrate with
+  reason"* is this instructor's phrasing for explain.
+- **Skeleton, for a 2-marker — one reason per side plus the principle:**
+  1. **Why large projects need it:** it is a **contract and shared reference** —
+     many stakeholders, distributed teams, and the basis for acceptance testing.
+  2. **Why agile avoids it:** requirements are expected to change, so a frozen SRS
+     is stale immediately; the manifesto trades it for working software.
+  3. **The principle underneath both:** an SRS is worth its cost when
+     communication cannot happen face to face and scope must be fixed in advance.
+     **Agile removes both conditions.**
+- **Earns the marks:** step 3, and saying agile **replaces** the SRS with stories,
+  a backlog and an on-site customer rather than abandoning specification.
+- **Trap:** writing "Agile has no documentation." It has less, and different.
+  *"Working software **over** comprehensive documentation"* is a priority, not a
+  prohibition.
+
+### Compare — [[se-assign-1-2026]] Q7(a)
+
+Functional vs non-functional from a scenario. Table it, and note that a
+non-functional requirement must be **measurable** to be verifiable.
+
+**Never asked as:** `numerical`, `draw`, `scenario`.
 
 ## Quick Reference
 
@@ -127,48 +158,6 @@ handling) · ignoring non-functional requirements.
 practice* list adds: requirements change · over-reliance on CASE tools · tight
 schedules · communication barriers · market-driven development · lack of
 resources.
-
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §2. **2 of 80.**
-
-### Explain with reason — A3, 2 marks
-
-- **Spot it:** any question contrasting formal documentation with agile practice,
-  or asking why a document is or is not needed. The stem *"illustrate with
-  reason"* is this instructor's phrasing for explain.
-- **Skeleton, for a 2-marker — one reason per side plus the principle:**
-  1. **Why large projects need it:** it is a **contract and shared reference** —
-     many stakeholders, distributed teams, and the basis for acceptance testing.
-  2. **Why agile avoids it:** requirements are expected to change, so a frozen SRS
-     is stale immediately; the manifesto trades it for working software.
-  3. **The principle underneath both:** an SRS is worth its cost when
-     communication cannot happen face to face and scope must be fixed in advance.
-     **Agile removes both conditions.**
-- **Earns the marks:** step 3, and saying agile **replaces** the SRS with stories,
-  a backlog and an on-site customer rather than abandoning specification.
-- **Trap:** writing "Agile has no documentation." It has less, and different.
-  *"Working software **over** comprehensive documentation"* is a priority, not a
-  prohibition.
-
-### Compare — [[se-assign-1-2026]] Q7(a)
-
-Functional vs non-functional from a scenario. Table it, and note that a
-non-functional requirement must be **measurable** to be verifiable.
-
-**Never asked as:** `numerical`, `draw`, `scenario`.
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | What requirements engineering is | definitional | — | 0 | the definition and why RE is hard |
-| 2 | Types of requirements | definitional | compare | 0 | functional vs non-functional, plus eight more |
-| 3 | The SRS | definitional | **explain** | **2** | carries A3; the document everything downstream reads |
-
-**The thread:** you must collect requirements, but they are not all one kind
-(1→2); and sorted requirements are still only notes until they are written down
-(2→3) — and the written contract is what makes the next phase possible at all.
 
 ## 1 · What requirements engineering is
 
@@ -267,8 +256,7 @@ both conditions.**
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`.)*
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — 1.**
 
@@ -305,7 +293,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Claiming agile has no documentation.** It has less, and different. "Working
   software **over** comprehensive documentation" is a priority, not a prohibition.
@@ -318,7 +306,7 @@ considers important.
 - **Confusing user and system requirements.** User requirements are written for
   users; system requirements are derived from them and written formally.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L2 Lec (9 - 14).pdf` — the main source. RE definition and
   objectives, the eight good-requirement characteristics, all ten requirement

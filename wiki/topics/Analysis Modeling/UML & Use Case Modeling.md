@@ -15,11 +15,15 @@ last_practiced: null
 
 # UML & Use Case Modeling
 
+- **The third and last modeling lens.** [[Data Modeling & ERD]] asked what the
+  system remembers, [[Flow-Oriented Modeling & DFD]] what it does to data.
+- **UML asks what objects exist and how they collaborate** — and, in the activity
+  diagram, **in what order and in parallel**.
+
 **Prerequisites:** [[Flow-Oriented Modeling & DFD]]
+**Asked as:** draw — **10 of 80** in [[se-ete-2025-26]]
 
-## Overview
-
-> [!info] 10 of 80 in [[se-ete-2025-26]] — question D2
+> [!info] What it asked — question D2
 > **The second-heaviest topic in the MTE window, and the paper's biggest
 > drawing.** D2 is a 10-mark Section D question: a Bank Loan Processing System
 > described in six bullets, ending *"Task: Draw an Activity Diagram for given
@@ -32,16 +36,54 @@ last_practiced: null
 > structure exactly, with different labels. Rule 8 again: the deck's figure is
 > the exam question with the content changed. It is reproduced in subtopic 4.
 
-The third and last modeling lens. [[Data Modeling & ERD]] asked what the system
-remembers, [[Flow-Oriented Modeling & DFD]] what it does to data; UML asks **what
-objects exist and how they collaborate** — and, in the activity diagram, **in what
-order and in parallel**.
-
 > [!note] This is the only topic with a deck from this year's session
 > `ppts/2026-27/UML & UseCase Diagram.pdf` is the sole 2026-27 file in the vault.
 > It is **33 pages and almost entirely images** — only slides 1 and 30-33 yield
 > text. Where it disagrees with the 2025 decks, it wins. **Worth opening by eye
 > before the exam**; see Course Material.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §4. **Tied heaviest topic in the MTE
+window at 10 of 80, and the paper's largest single block — one drawing.**
+
+### Draw & label — D2, 10 marks
+
+- **Spot it:** a described workflow with two roles and, critically, **two things
+  happening at once** — "document verification **and** credit check". The word
+  *and* over two simultaneous activities is the question's whole point.
+- **Skeleton:**
+  1. **Legend first** — filled circle = initial node · rounded rectangle =
+     action · diamond = decision · **solid bar = fork/join** · bullseye = final
+     node · vertical partitions = swimlanes, one per role.
+  2. **Swimlanes labelled with the actors** named in the stem (Loan Officer,
+     Applicant). Put every action in the lane of whoever performs it.
+  3. **The diagram**, every action and every guard labelled.
+  4. **Reading** — two or three lines saying what it asserts, and the validity
+     rule: **every fork has a matching join**, and flow resumes only when all
+     parallel branches complete.
+- **Earns the marks:** the fork/join bar. **Drawing a decision diamond where the
+  question describes parallel work is the error the question exists to catch** —
+  a diamond means *choose one path*, a bar means *do both*.
+- **Trap:** omitting swimlanes when the stem names roles; leaving guards off
+  decision branches; forgetting the join.
+
+**A 10-mark drawing is worth planning on scrap first.** Identify actors → list
+actions in order → find the parallelism → place fork and join → then draw once.
+
+**Never asked as:** `numerical`, `compare`. A `scenario` or `explain` question on
+use cases is plausible but has never appeared — that is a prediction, not
+evidence (rule 7).
+**Also worth knowing:**
+- **"How many UML diagrams are there?"** is the classic 2-marker, and the honest
+  answer names **both counts** — 9 in UML 1.x, 13 in UML 2.x — and says which
+  version it is quoting.
+- **Use cases carry the strongest currency signal in the vault.** They are the
+  entire subject of the **only 2026-27 deck** in `raw/sources/ppts/`, which under
+  rule 8 is the best available evidence of what is being taught *now*. Do not skip
+  section 2 on the strength of one paper's silence.
+- **Class/object/sequence:** definition depth is the right stopping point given
+  the thin deck coverage. Spend the time on activity diagrams instead.
 
 ## Quick Reference
 
@@ -128,74 +170,6 @@ ready it is presented to customers. Use cases are **implementation-independent**
 descriptions of functionality, and are realized in later stages using, say, a
 class diagram.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §4. **Tied heaviest topic in the MTE
-window at 10 of 80, and the paper's largest single block — one drawing.**
-
-### Draw & label — D2, 10 marks
-
-- **Spot it:** a described workflow with two roles and, critically, **two things
-  happening at once** — "document verification **and** credit check". The word
-  *and* over two simultaneous activities is the question's whole point.
-- **Skeleton:**
-  1. **Legend first** — filled circle = initial node · rounded rectangle =
-     action · diamond = decision · **solid bar = fork/join** · bullseye = final
-     node · vertical partitions = swimlanes, one per role.
-  2. **Swimlanes labelled with the actors** named in the stem (Loan Officer,
-     Applicant). Put every action in the lane of whoever performs it.
-  3. **The diagram**, every action and every guard labelled.
-  4. **Reading** — two or three lines saying what it asserts, and the validity
-     rule: **every fork has a matching join**, and flow resumes only when all
-     parallel branches complete.
-- **Earns the marks:** the fork/join bar. **Drawing a decision diamond where the
-  question describes parallel work is the error the question exists to catch** —
-  a diamond means *choose one path*, a bar means *do both*.
-- **Trap:** omitting swimlanes when the stem names roles; leaving guards off
-  decision branches; forgetting the join.
-
-**A 10-mark drawing is worth planning on scrap first.** Identify actors → list
-actions in order → find the parallelism → place fork and join → then draw once.
-
-**Never asked as:** `numerical`, `compare`. A `scenario` or `explain` question on
-use cases is plausible but has never appeared — that is a prediction, not
-evidence (rule 7).
-**Also worth knowing:**
-- **"How many UML diagrams are there?"** is the classic 2-marker, and the honest
-  answer names **both counts** — 9 in UML 1.x, 13 in UML 2.x — and says which
-  version it is quoting.
-- **Use cases carry the strongest currency signal in the vault.** They are the
-  entire subject of the **only 2026-27 deck** in `raw/sources/ppts/`, which under
-  rule 8 is the best available evidence of what is being taught *now*. Do not skip
-  section 2 on the strength of one paper's silence.
-- **Class/object/sequence:** definition depth is the right stopping point given
-  the thin deck coverage. Spend the time on activity diagrams instead.
-
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | What UML is, and the diagram taxonomy | definitional | — | 0 | the three authors, the two groups, the 9-vs-13 count |
-| 2 | The use case approach | procedural | — | 0 | actors, use cases, the template — lecture 22's other half |
-| 3 | Class, object and sequence diagrams | notational | — | 0 | named by the handout; thin deck coverage |
-| 4 | Activity diagrams | notational | **draw** | **10** | **carries D2** — the paper's biggest drawing |
-
-## Mindmap
-
-```mermaid
-graph TD
-    S1["1 · UML & taxonomy<br/>0 marks"]
-    S2["2 · Use case approach<br/>0 marks"]
-    S3["3 · Class, object, sequence<br/>0 marks"]
-    S4["4 · Activity diagrams<br/>10 marks"]
-
-    S1 -->|"thirteen diagrams is a menu.<br/>start where requirements are"| S2
-    S2 -->|"use cases say what the system<br/>does, not what it is made of"| S3
-    S3 -->|"structure is settled. what about<br/>order — and things at once?"| S4
-    S4 -.->|"and every action traces back<br/>to a use case step"| S2
-```
-
 ## 1 · What UML is, and the diagram taxonomy
 
 - **Before UML, every methodologist had their own notation**, so a diagram meant
@@ -213,7 +187,6 @@ diagrams show what the system *is* — the parts and their arrangement, frozen i
 time. **Behavioral** diagrams show what the system *does* — how it changes,
 responds and sequences. A class diagram is structural; an activity diagram is
 behavioral.
-
 
 ## 2 · The use case approach
 
@@ -256,7 +229,6 @@ organised by actor:
 Each actor sits outside the system boundary; each use case is an ellipse inside
 it; lines join an actor to every use case they initiate. *(Deck exercise with no
 printed solution — this is a worked approach, not a transcription, so no `✓`.)*
-
 
 ## 3 · Class, object and sequence diagrams
 
@@ -308,7 +280,6 @@ sequenceDiagram
 satisfy:** every message leaves one lifeline and arrives at another (or returns
 to itself), and a reply is drawn as a dashed arrow. *(Constructed from D2's
 scenario to illustrate the notation — not a deck figure.)*
-
 
 ## 4 · Activity diagrams
 
@@ -437,8 +408,7 @@ logout.
 no `✓`. Mermaid cannot draw fork/join bars or swimlanes; **on paper, draw the
 bars as solid horizontal lines and the swimlanes as two labelled columns.**)*
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — 1.**
 
@@ -464,7 +434,7 @@ Neither carries a printed solution, so neither is `✓`-checked.
 `raw/sources/`. The Aggarwal & Singh design chapter supplies Fig. 26 but no
 end-of-chapter UML exercises within the extracted range.
 
-## Mistakes & Traps
+## Traps
 
 - **Using a decision diamond where a fork belongs.** "Two parallel activities
   start" means **both** run — that is a fork bar, not a branch. This is D2's
@@ -481,7 +451,7 @@ end-of-chapter UML exercises within the extracted range.
 - **Ignoring named actors.** If a question names two actors, swimlanes are the
   expected structure.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2026-27/UML & UseCase Diagram.pdf` — **this year's session,
   the only 2026-27 file in the vault.** Text yields the UML authorship and the

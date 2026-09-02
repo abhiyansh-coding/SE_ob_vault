@@ -15,14 +15,15 @@ last_practiced: null
 
 # Design Concepts & Principles
 
+- The design process and its quality criteria, then the core concepts: abstraction, refinement, modularity and information hiding.
+
 **Prerequisites:** [[UML & Use Case Modeling]]
+**Asked as:** — — **0 marks** on the one paper
 
 > [!warning] Page not built
 > Scaffolded on 2026-09-02 from the handout's lecture plan. No subtopics, Quick
 > Reference or Question Bank yet — those come from reading the decks below
 > (rule 8). **In MTE scope** (lectures 1–32).
-
-## Overview
 
 > [!warning] 0 of 80 in [[se-ete-2025-26]] — never examined, on one paper
 > A single paper cannot show that a topic is unexamined, only that it was
@@ -30,8 +31,6 @@ last_practiced: null
 > as an absence of evidence, not evidence of absence. Lectures 24-26 is
 > *syllabus depth* and rule 3 forbids reading it as marks.
 
-The design process and its quality criteria, then the core concepts: abstraction, refinement, modularity and information hiding.
-
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L8 Chapter 5 Software Design_3.pdf`

@@ -15,21 +15,20 @@ last_practiced: null
 
 # Conventional Process Models
 
+- **The prescriptive models:** waterfall · iterative waterfall · prototyping · RAD.
+- **They all answer one question:** *how much do you commit before you start
+  building?* Waterfall makes the maximum bet and wins big when requirements hold
+  still; the rest are hedges against that bet failing.
+
 **Prerequisites:** [[Software Engineering as a Layered Technology]]
+**Asked as:** scenario — **2 of 80** in [[se-ete-2025-26]] · **1** in [[se-assign-1-2026]]
 
-## Overview
-
-> [!info] 2 of 80 in [[se-ete-2025-26]] — question B1, case 1
+> [!info] What it asked — question B1, case 1
 > B1 gives three scenarios and asks you to name the process model and justify.
 > Case 1 — a family hires an architect, all requirements collected first, plans
 > drawn, construction step by step with inspections at each stage — is
 > **waterfall**, worth 2. The other two cases are on
 > [[Evolutionary Process Models]]. One paper only; see [[weightage]].
-
-- **The prescriptive models:** waterfall · iterative waterfall · prototyping · RAD.
-- **They all answer one question:** *how much do you commit before you start
-  building?* Waterfall makes the maximum bet and wins big when requirements hold
-  still; the rest are hedges against that bet failing.
 
 > [!warning] The deck and the handout group these differently
 > The handout puts **prototype** and **RAD** in "conventional process models"
@@ -39,6 +38,33 @@ last_practiced: null
 > the model, not its category** — the category is exactly where your two sources
 > disagree. If a question forces a category, the deck's grouping is the one
 > taught in your class.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §1. **2 of 80, plus one assignment
+question.**
+
+### Scenario → identify & justify — B1 case 1, 2 marks
+
+- **Spot it:** a real-world, deliberately **non-software** scenario described
+  through the model's behaviour rather than named. Waterfall's tells: *"all
+  requirements collected first"*, strict stage order, a single final handover.
+- **Skeleton:** name the model in the first line → quote **two or three phrases
+  from the scenario** and map each to a property → say why the scenario's
+  conditions make it appropriate.
+- **Earns the marks:** the mapping. Marks are not for describing waterfall.
+- **Trap:** writing a generic waterfall essay. *"All requirements are collected
+  first, therefore requirements are frozen, which is what waterfall assumes"* is
+  the sentence that scores.
+- **Second trap:** answering with a **category** ("a conventional model") — your
+  handout and your deck group these differently, so **name the model**.
+
+### Compare — [[se-assign-1-2026]] Q8(i)
+
+Waterfall vs Agile as a table, then a recommendation. Worked there; the selection
+logic is on [[Evolutionary Process Models]].
+
+**Never asked as:** `numerical`, `draw`.
 
 ## Quick Reference
 
@@ -108,57 +134,6 @@ environment · perfective — enhance on request · preventive — pre-empt prob
 | Prototyping | customer cannot state requirements up front | throwaway prototype mistaken for the product |
 | RAD | modular project, tight deadline, skilled teams available | needs enough people to staff parallel teams |
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §1. **2 of 80, plus one assignment
-question.**
-
-### Scenario → identify & justify — B1 case 1, 2 marks
-
-- **Spot it:** a real-world, deliberately **non-software** scenario described
-  through the model's behaviour rather than named. Waterfall's tells: *"all
-  requirements collected first"*, strict stage order, a single final handover.
-- **Skeleton:** name the model in the first line → quote **two or three phrases
-  from the scenario** and map each to a property → say why the scenario's
-  conditions make it appropriate.
-- **Earns the marks:** the mapping. Marks are not for describing waterfall.
-- **Trap:** writing a generic waterfall essay. *"All requirements are collected
-  first, therefore requirements are frozen, which is what waterfall assumes"* is
-  the sentence that scores.
-- **Second trap:** answering with a **category** ("a conventional model") — your
-  handout and your deck group these differently, so **name the model**.
-
-### Compare — [[se-assign-1-2026]] Q8(i)
-
-Waterfall vs Agile as a table, then a recommendation. Worked there; the selection
-logic is on [[Evolutionary Process Models]].
-
-**Never asked as:** `numerical`, `draw`.
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | The classical waterfall model | procedural | **scenario** | **2** | carries B1 case 1; the baseline all models are compared to |
-| 2 | The iterative waterfall model | procedural | — | 0 | one change — feedback paths — and why it matters |
-| 3 | The prototyping model | procedural | — | 0 | the answer when the customer cannot say what they want |
-| 4 | Rapid Application Development (RAD) | procedural | — | 0 | parallel modular teams under a deadline |
-
-## Mindmap
-
-```mermaid
-graph TD
-    S1["1 · Classical waterfall<br/>2 marks"]
-    S2["2 · Iterative waterfall<br/>0 marks"]
-    S3["3 · Prototyping<br/>0 marks"]
-    S4["4 · RAD<br/>0 marks"]
-
-    S1 -->|"it assumes nobody ever errs.<br/>people err — let them go back"| S2
-    S2 -->|"feedback fixes mistakes, not<br/>ignorance. what if nobody knows?"| S3
-    S3 -->|"requirements now clear.<br/>the deadline is not"| S4
-    S4 -.->|"parallel teams still each run<br/>a small waterfall inside"| S1
-```
-
 ## 1 · The classical waterfall model
 
 - Introduced by **Winston Royce, 1970**, named for the way the diagram cascades:
@@ -201,7 +176,6 @@ Reference. Two points the deck stresses:
 requirements** and a **physically irreversible order** — you cannot roof before
 walling. Both are exactly what waterfall assumes. *(No solution key exists for
 this paper — unchecked, no `✓`.)*
-
 
 ## 2 · The iterative waterfall model
 
@@ -257,7 +231,7 @@ this paper — unchecked, no `✓`.)*
 > The deck lists RAD as **Incremental Process Model #2**, next to the Incremental
 > model. The handout groups it with the conventional models at lectures 6-7.
 
-## Question Bank
+## Practice
 
 **PYQ — 1.**
 
@@ -283,7 +257,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Describing the model instead of justifying the match.** B1 gives 2 marks per
   case for *identify + justify*. Quote the scenario back.
@@ -298,7 +272,7 @@ considers important.
 - **Answering with a category ("conventional") when the deck uses a different
   one.** Name the model.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L1 PPT from 1 to 8.pdf` — covers lectures 1-8. For this
   topic: the full SDLC model list, waterfall with all six phases and the three

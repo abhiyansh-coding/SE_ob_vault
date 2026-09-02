@@ -15,11 +15,16 @@ last_practiced: null
 
 # Agile Development
 
+- **The argument:** if requirements will change anyway, stop treating change as
+  failure and build the process to absorb it — short iterations, working software
+  over documents, the customer in the room.
+- **Three lectures:** the manifesto, then the model zoo — Scrum, XP, ASD, DSDM,
+  FDD, Crystal, Agile Modeling, Kanban.
+
 **Prerequisites:** [[Evolutionary Process Models]]
+**Asked as:** — — **0 marks** on the one paper · **5** in [[se-assign-1-2026]]
 
-## Overview
-
-> [!warning] 0 of 80 in [[se-ete-2025-26]] — not asked once, on one paper
+> [!warning] Never asked — on one paper, which is nearly no evidence
 > A single paper cannot show a topic is unexamined. In syllabus, taught across
 > **three lectures**, and the module's longest deck treatment. Lectures 9-11 is
 > *syllabus depth* and rule 3 forbids reading it as marks.
@@ -30,11 +35,42 @@ last_practiced: null
 > form has never been examined. Both are worked in the Question Bank. If this
 > topic is ever examined numerically, that is what it will look like.
 
-- **The argument:** if requirements will change anyway, stop treating change as
-  failure and build the process to absorb it — short iterations, working software
-  over documents, the customer in the room.
-- **Three lectures:** the manifesto, then the model zoo — Scrum, XP, ASD, DSDM,
-  FDD, Crystal, Agile Modeling, Kanban.
+## How it's asked
+
+**Zero marks on the one paper — and five of the assignment's fifteen questions.**
+That gap is the most interesting thing about this page.
+
+> [!tip] Rule 2 and rule 8 point in opposite directions here, so both are stated
+> **Rule 2 says this topic earned nothing.** On one sitting, which is nearly no
+> evidence. **Rule 8 and the coursework say the opposite:** the deck carries two
+> full numericals, and [[se-assign-1-2026]] used **one of them verbatim (Q4) and
+> the other with the numbers changed (Q1)**. Coursework never moves `pyq_marks`
+> — but as evidence of the instructor's hand it is as direct as it gets.
+
+### Numerical — the archetype to prepare
+
+- **Spot it:** a backlog table with estimates plus a velocity (or velocity
+  **range**) and an iteration length; or a capacity table with days and hours/day.
+- **Skeleton — release planning:** sum the points → *N* = ⌈*P*/*V*⌉ at **each**
+  bound → duration = *N* × iteration length → cost = *N* × cost per iteration →
+  **report as a range**.
+- **Skeleton — sprint capacity:** per person, days × hours/day as a low and a high
+  → sum → walk the backlog **in priority order accumulating task hours** → stop at
+  the first story that does not fit.
+- **Earns the marks:** rounding **up**, and giving both bounds.
+- **Trap:** rounding iterations down; reporting one number when velocity is a
+  range; **committing a sprint by story points instead of task hours** — capacity
+  is in hours.
+
+### Explain — [[se-assign-1-2026]] Q7(b)
+
+"How does the Sprint contribute to the success of an Agile project?" Answer
+through the **time box with frozen scope**: the date never moves so scope gives ·
+backlog items freeze during the sprint, giving a stable environment · it forces a
+working increment · it creates the feedback loop · it yields velocity.
+
+**Never asked as:** `draw`, `compare`, `scenario` — though [[se-ete-2025-26]] A3
+turns on agile's second value, its marks sit on [[Requirements Engineering]].
 
 ## Quick Reference
 
@@ -184,54 +220,7 @@ $$N = \lceil P / V \rceil \qquad \text{Duration} = N \times L \qquad \text{Cost}
 day**, summed across the team. Where hours/day is a range, team capacity is a
 range too.
 
-## How it's asked
-
-**Zero marks on the one paper — and five of the assignment's fifteen questions.**
-That gap is the most interesting thing about this page.
-
-> [!tip] Rule 2 and rule 8 point in opposite directions here, so both are stated
-> **Rule 2 says this topic earned nothing.** On one sitting, which is nearly no
-> evidence. **Rule 8 and the coursework say the opposite:** the deck carries two
-> full numericals, and [[se-assign-1-2026]] used **one of them verbatim (Q4) and
-> the other with the numbers changed (Q1)**. Coursework never moves `pyq_marks`
-> — but as evidence of the instructor's hand it is as direct as it gets.
-
-### Numerical — the archetype to prepare
-
-- **Spot it:** a backlog table with estimates plus a velocity (or velocity
-  **range**) and an iteration length; or a capacity table with days and hours/day.
-- **Skeleton — release planning:** sum the points → *N* = ⌈*P*/*V*⌉ at **each**
-  bound → duration = *N* × iteration length → cost = *N* × cost per iteration →
-  **report as a range**.
-- **Skeleton — sprint capacity:** per person, days × hours/day as a low and a high
-  → sum → walk the backlog **in priority order accumulating task hours** → stop at
-  the first story that does not fit.
-- **Earns the marks:** rounding **up**, and giving both bounds.
-- **Trap:** rounding iterations down; reporting one number when velocity is a
-  range; **committing a sprint by story points instead of task hours** — capacity
-  is in hours.
-
-### Explain — [[se-assign-1-2026]] Q7(b)
-
-"How does the Sprint contribute to the success of an Agile project?" Answer
-through the **time box with frozen scope**: the date never moves so scope gives ·
-backlog items freeze during the sprint, giving a stable environment · it forces a
-working increment · it creates the feedback loop · it yields velocity.
-
-**Never asked as:** `draw`, `compare`, `scenario` — though [[se-ete-2025-26]] A3
-turns on agile's second value, its marks sit on [[Requirements Engineering]].
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | The Agile manifesto and its trade-offs | definitional | explain | 0 | the four values, and the disadvantages students skip |
-| 2 | Scrum | definitional | explain | 0 | the most detailed model in the deck |
-| 3 | Extreme Programming | definitional | — | 0 | the engineering-practice model — pair programming, TDD, refactoring |
-| 4 | The other agile models | definitional | — | 0 | ASD, DSDM, FDD, Crystal, AM, Kanban |
-| 5 | Agile planning arithmetic | numerical | **numerical** | 0 | **two deck numericals, both reused in the assignment** — the page's real drill |
-
-## Mindmap
+**How the sections connect:**
 
 ```mermaid
 graph TD
@@ -317,8 +306,7 @@ graph TD
 - **Solved questions:** both worked in full in the Question Bank — they are the
   drill for this page.
 
-
-## Question Bank
+## Practice
 
 **PYQ — none.** No question on [[se-ete-2025-26]] tests this topic. A3 mentions
 Agile but tests the SRS; its marks are on [[Requirements Engineering]].
@@ -446,7 +434,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Reading the manifesto as "B has no value".** Every value is *A over B*, not
   *A instead of B*. Agile teams do document — just not for its own sake.
@@ -461,7 +449,7 @@ considers important.
 - **Calling the Scrum leader a project manager.** They remove obstacles; the team
   self-organises.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L2 Lec (9 - 14).pdf` — the main source. Manifesto, four
   values, benefits, the disadvantages table, agile vs traditional, the eight

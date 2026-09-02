@@ -243,42 +243,71 @@ its own entry conditions. Anything a page needs that has no topic of its own get
 **defined on the page that needs it**, not delegated to a topic the reader has not
 reached.
 
-### The page's sections, in order
+### The page's shape — six sections, one job each
 
-| Section | Required? | What it is |
-|---|---|---|
-| **Overview** | yes | the weightage banner and two or three bullets of orientation |
-| **Quick Reference** | **yes** | the one-page cram sheet — every subtopic represented |
-| **How it's asked** | **yes** | per archetype: spot it, the answer skeleton for *this topic*, the trap |
-| **Contents** | yes | one row per section, carrying **archetype and marks** |
-| **Mindmap** | **only when earned** | see below |
-| the numbered sections | yes | shaped by content type, not by a fixed template |
-| **Personal Notes** · **Practice History** | when there is content | the user's own material |
-| **Mistakes & Traps** | yes | |
-| **Question Bank** | **yes** | worked answers, four tiers |
-| **Course Material** | yes | decks read, gaps found |
+Rebuilt again on 2026-09-03, after the first pass left **five preamble layers**
+(Overview → Quick Reference → How it's asked → Contents → Mindmap) stacked before
+any material. That is the same fault the compression pass diagnosed, reintroduced.
+The page is now:
 
-**Quick Reference, How it's asked and Question Bank are the three that carry the
-page.** They answer the three questions a reader actually arrives with: *what do
-I need to know* · *what shape will the question be* · *let me practise*.
+```
+---
+frontmatter
+---
+# Topic
+
+- two to four orientation bullets: what this topic is, why it exists
+
+**Prerequisites:** ...
+**Asked as:** <archetypes> — <marks> in [[se-ete-2025-26]] · <n> in [[se-assign-1-2026]]
+
+**The thread:** one line on how the sections connect   (optional, short topics)
+
+> [!info] What it asked — <question ref, and what it wanted>
+> [!warning] any scope, deck-gap or unsourced flag
+
+## How it's asked      ← exam-facing; leads the page
+## Quick Reference     ← the cram layer; tables only
+## 1 · … 2 · … N · …   ← the material, in deck order
+## Practice            ← worked answers, four tiers
+## Traps               ← content confusions only
+## Sources             ← decks read, gaps, related links
+```
+
+**What was removed, and why:**
+
+| Gone | Replaced by |
+|---|---|
+| `## Overview` | the orientation bullets and the banners, directly under the H1. The section header was a wrapper around two things that stand on their own. |
+| `## Contents` | the section headings themselves. Its marks column was near-useless — with one paper, 11 of 15 pages had all-zero rows, so "do the heavy one first" had nothing to point at. Its "why it's here" column duplicated the headings. |
+| `## Mindmap` as a top-level layer | a one-line **The thread** under the metadata for short topics; for topics with **five or more sections** the mermaid moves inside Quick Reference, where a recall aid belongs. |
+
+**Renamed** for plain speech: `Question Bank` → **Practice** · `Mistakes & Traps`
+→ **Traps** · `Course Material` → **Sources`.
+
+**The division of labour between How it's asked and Traps is strict:**
+**How it's asked owns answer-shape traps** (hedging, describing instead of
+justifying, stopping after component 1). **Traps owns content confusions** (unit
+errors, reversing verification and validation, LOC vs KLOC). If a trap is about
+*how you write the answer*, it belongs in the first; if it is about *what you
+believe about the material*, the second.
 
 ### How it's asked — the section that replaced "What gets asked"
 
-The old schema scattered a *What gets asked* part across every subtopic, which
-fragmented the one thing a reader most needs in one place, and repeated "never
-examined" a dozen times per page.
+The old schema scattered a *What gets asked* part across every subtopic. That
+fragmented the one thing a reader most needs into a dozen pieces and repeated
+"never examined" 38 times across the vault. **It is now one section, near the top,
+organised by archetype:**
 
-**It is now one section near the top of the page**, organised by archetype:
-
-- **One block per archetype in `asked_as`.** Nothing for archetypes the corpus
-  has not used — say so once, in a line, rather than per subtopic.
-- Each block: **Spot it** (the phrasing) · **Skeleton** (this topic's version of
-  the generic skeleton on [[answer-patterns]], not a restatement of it) ·
-  **Earns the marks** · **Trap**.
-- **Link to [[answer-patterns]] for the generic shape and do not repeat it.**
-  The topic page carries only what is specific to this topic.
-- For a topic the corpus has never asked: one honest paragraph naming the most
-  likely archetype **and saying it is a prediction**, per rule 7.
+- **One block per archetype in `asked_as`.** Nothing for archetypes the corpus has
+  not used — say so once, in a line.
+- Each block: **Spot it** (the phrasing) · **Skeleton** (this topic's version, not
+  a restatement of the generic one) · **Earns the marks** · **Trap**.
+- **Link to [[answer-patterns]] for the generic shape and never repeat it.**
+- For a topic the corpus has never asked: name the most likely archetype **and say
+  it is a prediction**, per rule 7.
+- Anything worth knowing that is not tied to an archetype goes in a short **Also
+  worth knowing** list at the end of the section.
 
 ### The numbered sections — shaped by type, not by template
 

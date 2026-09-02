@@ -15,22 +15,21 @@ last_practiced: null
 
 # Software Reliability & ISO Standards
 
+- Statistical SQA, reliability and availability measures (MTBF, MTTF, MTTR), and the ISO 9000/9001 approach to quality assurance systems.
+
 **Prerequisites:** [[Software Quality Assurance]]
+**Asked as:** explain — **3 of 80** in [[se-ete-2025-26]]
 
 > [!warning] Page not built
 > Scaffolded on 2026-09-02 from the handout's lecture plan. No subtopics, Quick
 > Reference or Question Bank yet — those come from reading the decks below
 > (rule 8). Out of MTE scope; End Term only.
 
-## Overview
-
-> [!info] 3 of 80 in [[se-ete-2025-26]] — question B4 (part)
+> [!info] What it asked — question B4 (part)
 > The vault's **only** paper, so this is the whole of rule 2's evidence:
 > one sitting, not a trend. See [[weightage]] for what that can and
 > cannot tell you. Lectures 48 is *syllabus depth* and rule 3 forbids
 > reading it as marks.
-
-Statistical SQA, reliability and availability measures (MTBF, MTTF, MTTR), and the ISO 9000/9001 approach to quality assurance systems.
 
 ## How it's asked
 
@@ -42,7 +41,7 @@ Generic skeleton on [[answer-patterns]] §2. **3 of 80 — the ISO half of B4.**
   → how measured reliability (MTBF/MTTF/availability) produces confidence.
 - **Trap:** answering only the SQA half. B4 names two things; both are marked.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L12_SQA+ISO+Maintenance.ppt`
 - `raw/sources/ppts/2025/Chapter_26.ppt`

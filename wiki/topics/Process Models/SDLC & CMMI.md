@@ -15,22 +15,23 @@ last_practiced: null
 
 # SDLC & CMMI
 
-**Prerequisites:** [[Software Engineering as a Layered Technology]]
-
-## Overview
-
-> [!info] 8 of 80 in [[se-ete-2025-26]] — questions A2 and B3
-> The **third-heaviest topic in the MTE window**, and the heaviest that is not a
-> 10-marker. A2 (2 marks) gives a scenario and asks for the CMMI maturity level
-> plus justification. B3 (6 marks) asks for the distribution of effort across
-> SDLC phases, related to traditional, structured and CASE environments.
-> One paper only; see [[weightage]].
-
 - **The question this lecture asks is different from the ten before it.** Those
   asked *which model should this project use?* This one asks *is your
   organisation capable of following any model at all?* — CMMI's subject.
 - **Alongside it:** the SDLC itself — the phase sequence every model rearranges,
   and how project effort actually distributes across those phases.
+
+**Prerequisites:** [[Software Engineering as a Layered Technology]]
+**Asked as:** scenario, explain — **8 of 80** in [[se-ete-2025-26]] · **1** in [[se-assign-1-2026]]
+
+**The thread:** six phases exist, but they do not cost the same (1→2); and knowing where effort goes requires an organisation mature enough to measure it (2→3) — which is why a level-4 organisation redistributes effort deliberately.
+
+> [!info] What it asked — questions A2 and B3
+> The **third-heaviest topic in the MTE window**, and the heaviest that is not a
+> 10-marker. A2 (2 marks) gives a scenario and asks for the CMMI maturity level
+> plus justification. B3 (6 marks) asks for the distribution of effort across
+> SDLC phases, related to traditional, structured and CASE environments.
+> One paper only; see [[weightage]].
 
 > [!warning] B3's content is not in any deck — 6 marks unsourced
 > A keyword sweep of all 24 files finds **no treatment of effort distribution
@@ -42,6 +43,44 @@ last_practiced: null
 > material, not lecture 12. Subtopic 2 is therefore **written from standard
 > textbook material and labelled unsourced**. It is the largest unsourced block
 > anywhere in the Mid-Term window, and the highest-value gap in this vault.
+
+## How it's asked
+
+Generic skeletons on [[answer-patterns]] §1 and §2. **This topic is asked in two
+different archetypes on the same paper — 8 of 80, third-heaviest in the window.**
+
+### Explain with reason — B3, 6 marks
+
+- **Spot it:** "Explain the distribution of effort … **by relating them to**
+  traditional, structured and CASE development environments." The words *relating
+  them to* mean a comparison is compulsory.
+- **Skeleton — the three components, and the third is the one candidates skip:**
+  1. **State** the 40-20-40 baseline with the finer percentages. (~2 marks)
+  2. **Apply** — a table of the three environments against the phases, showing
+     effort moving *earlier* as sophistication rises. (~2 marks)
+  3. **Mechanism** — the cost of fixing a defect rises steeply with the phase it
+     is found in, so early effort is **relocated**, not added. (~2 marks)
+- **Earns the marks:** component 3. Two candidates write the same table; the one
+  who explains *why* scores higher.
+- **Trap:** giving 40-20-40 and stopping — that is a third of the question.
+  Second trap: conflating *development* effort (40-20-40) with *lifetime* effort
+  (maintenance ≈ 60%). Say which you mean.
+
+### Scenario → identify & justify — A2, 2 marks
+
+- **Spot it:** a short organisational story ending "identify the CMMI maturity
+  level and justify".
+- **Skeleton:** name the level → map two or three of the scenario's own phrases
+  onto that level's characteristics → **say explicitly why the adjacent level is
+  wrong** → one line on what the level means.
+- **Earns the marks:** the mapping, and the exclusion of the neighbour.
+- **Trap:** matching one keyword. "Documented" → 3, "metrics" → 4, "improvement"
+  → 5, and scenarios contain several deliberately. Read for the **highest
+  capability demonstrated**, and let the outcome phrase ("predictable",
+  "continuously improving") break the tie.
+
+**Never asked as:** `numerical`, `draw`. The 40-20-40 percentages are quoted, not
+computed.
 
 ## Quick Reference
 
@@ -120,56 +159,6 @@ entirely on whether the individuals happen to be good.
 shifts **earlier** — out of coding and maintenance, into analysis and design.
 Because a defect costs more the later it is found, front-loading reduces total
 effort.
-
-## How it's asked
-
-Generic skeletons on [[answer-patterns]] §1 and §2. **This topic is asked in two
-different archetypes on the same paper — 8 of 80, third-heaviest in the window.**
-
-### Explain with reason — B3, 6 marks
-
-- **Spot it:** "Explain the distribution of effort … **by relating them to**
-  traditional, structured and CASE development environments." The words *relating
-  them to* mean a comparison is compulsory.
-- **Skeleton — the three components, and the third is the one candidates skip:**
-  1. **State** the 40-20-40 baseline with the finer percentages. (~2 marks)
-  2. **Apply** — a table of the three environments against the phases, showing
-     effort moving *earlier* as sophistication rises. (~2 marks)
-  3. **Mechanism** — the cost of fixing a defect rises steeply with the phase it
-     is found in, so early effort is **relocated**, not added. (~2 marks)
-- **Earns the marks:** component 3. Two candidates write the same table; the one
-  who explains *why* scores higher.
-- **Trap:** giving 40-20-40 and stopping — that is a third of the question.
-  Second trap: conflating *development* effort (40-20-40) with *lifetime* effort
-  (maintenance ≈ 60%). Say which you mean.
-
-### Scenario → identify & justify — A2, 2 marks
-
-- **Spot it:** a short organisational story ending "identify the CMMI maturity
-  level and justify".
-- **Skeleton:** name the level → map two or three of the scenario's own phrases
-  onto that level's characteristics → **say explicitly why the adjacent level is
-  wrong** → one line on what the level means.
-- **Earns the marks:** the mapping, and the exclusion of the neighbour.
-- **Trap:** matching one keyword. "Documented" → 3, "metrics" → 4, "improvement"
-  → 5, and scenarios contain several deliberately. Read for the **highest
-  capability demonstrated**, and let the outcome phrase ("predictable",
-  "continuously improving") break the tie.
-
-**Never asked as:** `numerical`, `draw`. The 40-20-40 percentages are quoted, not
-computed.
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | The SDLC and its phases | procedural | — | 0 | the phase sequence and its deliverables |
-| 2 | Effort distribution across phases | definitional | **explain** | **6** | carries B3 — **no deck covers this** |
-| 3 | CMMI and the five maturity levels | definitional | **scenario** | **2** | carries A2 |
-
-**The thread:** six phases exist, but they do not cost the same (1→2); and knowing
-where effort goes requires an organisation mature enough to measure it (2→3) —
-which is why a level-4 organisation redistributes effort deliberately.
 
 ## 1 · The SDLC and its phases
 
@@ -259,7 +248,6 @@ one glance, and 20 of this paper's 80 marks are on drawings.
 *(No solution key exists for this paper — unchecked, no `✓`. Also unsourced by any
 deck; see the warning.)*
 
-
 > [!note] Where this content really lives
 > The vault files B3 here because the paper tags it **CO1** (lectures 1-12) and
 > its subject noun is "SDLC model". Its machinery, though, is estimation content —
@@ -320,8 +308,7 @@ process to make it predictable — not innovating beyond it.
 
 *(No solution key — unchecked, no `✓`.)*
 
-
-## Question Bank
+## Practice
 
 **PYQ — 2.**
 
@@ -362,7 +349,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Answering A2 on one keyword.** Scenarios contain signals for several levels.
   Identify the **highest** capability demonstrated; use the outcome phrase as
@@ -378,7 +365,7 @@ considers important.
 - **Assuming coding dominates.** It is roughly 20% — the most counter-intuitive
   number in the module.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L2 Lec (9 - 14).pdf` — CMMI in full: the framework
   definition, all five levels with characteristics, the cooking analogies, and the

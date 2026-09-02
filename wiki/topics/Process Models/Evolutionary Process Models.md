@@ -15,22 +15,21 @@ last_practiced: null
 
 # Evolutionary Process Models
 
-**Prerequisites:** [[Conventional Process Models]]
-
-## Overview
-
-> [!info] 4 of 80 in [[se-ete-2025-26]] — question B1, cases 2 and 3
-> Case 2 (retail inventory built quickly from **reusable components**, user
-> feedback during development) and case 3 (e-learning platform released as a
-> **basic version**, then updated in multiple cycles) are both here, 2 marks
-> each. Case 1 is on [[Conventional Process Models]]. One paper; see
-> [[weightage]].
-
 - **Where conventional models commit up front, these refuse to.** Incremental
   delivers in slices · Spiral schedules the riskiest thing first · Component-based
   buys rather than builds · V-model pairs a test with every development stage.
 - **The comparison across all of them is the most reusable table in the module** —
   it is what a "which model and why" question is really testing.
+
+**Prerequisites:** [[Conventional Process Models]]
+**Asked as:** scenario — **4 of 80** in [[se-ete-2025-26]] · **1** in [[se-assign-1-2026]]
+
+> [!info] What it asked — question B1, cases 2 and 3
+> Case 2 (retail inventory built quickly from **reusable components**, user
+> feedback during development) and case 3 (e-learning platform released as a
+> **basic version**, then updated in multiple cycles) are both here, 2 marks
+> each. Case 1 is on [[Conventional Process Models]]. One paper; see
+> [[weightage]].
 
 > [!warning] The deck and the handout group these differently
 > Handout lecture 8: evolutionary = **incremental, spiral, component-based,
@@ -40,6 +39,38 @@ last_practiced: null
 > of the **Unified Process** the handout does. This vault follows the handout for
 > page structure. Practical consequence: **answer by naming the model, not its
 > category** — that is precisely where your two sources disagree.
+
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §1. **4 of 80 — two cases of the same
+question.**
+
+### Scenario → identify & justify — B1 cases 2 and 3, 2 marks each
+
+- **Spot it:** the same B1 form as [[Conventional Process Models]] — a scenario
+  described by behaviour, "identify the model and justify".
+  - **Incremental's tells:** "releases a basic version", "core features first",
+    then cycles that **add** functionality.
+  - **CBD's tell:** the phrase **"reusable components"**, which names a mechanism
+    no other model in the course is characterised by.
+- **Skeleton:** name → quote two or three phrases → map each → state the general
+  condition.
+- **Earns the marks:** the mapping, again.
+- **Trap:** answering "iterative" for an incremental scenario. **If each cycle
+  adds new features it is incremental; if each refines the same whole it is
+  iterative.** "Until all features are complete" settles it.
+- **The contested one:** case 2 fits **RAD** too. This vault answers CBD because
+  "reusable components" names a mechanism while "quickly" only names an outcome —
+  but **a well-justified RAD answer should score**. Justify from the scenario's
+  own words and the choice is defensible either way.
+
+### Compare — likeliest unasked form
+
+*Incremental vs iterative* is the most confusable pair on this page and the most
+plausible 2-mark `compare` question. Table it: **adds** versus **refines**, one
+example each. See [[answer-patterns]] §5.
+
+**Never asked as:** `numerical`, `draw`.
 
 ## Quick Reference
 
@@ -120,50 +151,7 @@ table applied backwards:
 | Component-based | a component library exists and the domain is well understood | reuse |
 | V-model | requirements stable and testing rigour required | a test stage per development stage |
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §1. **4 of 80 — two cases of the same
-question.**
-
-### Scenario → identify & justify — B1 cases 2 and 3, 2 marks each
-
-- **Spot it:** the same B1 form as [[Conventional Process Models]] — a scenario
-  described by behaviour, "identify the model and justify".
-  - **Incremental's tells:** "releases a basic version", "core features first",
-    then cycles that **add** functionality.
-  - **CBD's tell:** the phrase **"reusable components"**, which names a mechanism
-    no other model in the course is characterised by.
-- **Skeleton:** name → quote two or three phrases → map each → state the general
-  condition.
-- **Earns the marks:** the mapping, again.
-- **Trap:** answering "iterative" for an incremental scenario. **If each cycle
-  adds new features it is incremental; if each refines the same whole it is
-  iterative.** "Until all features are complete" settles it.
-- **The contested one:** case 2 fits **RAD** too. This vault answers CBD because
-  "reusable components" names a mechanism while "quickly" only names an outcome —
-  but **a well-justified RAD answer should score**. Justify from the scenario's
-  own words and the choice is defensible either way.
-
-### Compare — likeliest unasked form
-
-*Incremental vs iterative* is the most confusable pair on this page and the most
-plausible 2-mark `compare` question. Table it: **adds** versus **refines**, one
-example each. See [[answer-patterns]] §5.
-
-**Never asked as:** `numerical`, `draw`.
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | The incremental model | procedural | **scenario** | **2** | carries B1 case 3; delivery in slices |
-| 2 | The iterative model, and incremental vs iterative | definitional | compare (likely) | 0 | the distinction that gets confused |
-| 3 | The spiral model | procedural | — | 0 | the only model with explicit risk handling |
-| 4 | Component-Based Development | procedural | **scenario** | **2** | carries B1 case 2 (contested — see below) |
-| 5 | The V-model | notational | — | 0 | verification vs validation, used all through testing |
-| 6 | Comparison of models | definitional | — | 0 | the table a "which model and why" question wants |
-
-## Mindmap
+**How the sections connect:**
 
 ```mermaid
 graph TD
@@ -219,7 +207,6 @@ stops the model degenerating into endless churn.
 that can ship first, with secondary features prioritised and added later — exactly
 the condition incremental delivery requires. *(No solution key — unchecked, no
 `✓`.)*
-
 
 ## 2 · The iterative model, and incremental vs iterative
 
@@ -287,7 +274,6 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
 
 *(No solution key — unchecked, no `✓`.)*
 
-
 ## 5 · The V-model
 
 - **The defect it fixes:** in waterfall all testing happens at the end, so a
@@ -318,7 +304,7 @@ the condition incremental delivery requires. *(No solution key — unchecked, no
   is the single most likely form for this module to reappear in. Learn the
   *selection criterion* per model, not its full description.
 
-## Question Bank
+## Practice
 
 **PYQ — 2** (both parts of B1).
 
@@ -348,7 +334,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Incremental vs iterative.** Adds features versus refines the whole — the most
   confusable pair in the module and the likeliest 2-marker.
@@ -362,7 +348,7 @@ considers important.
 - **Describing rather than justifying.** Every mark in B1 is for mapping the
   scenario's own words onto the model's properties.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L1 PPT from 1 to 8.pdf` — covers lectures 1-8. For this
   topic: the full model list, spiral with its four sectors and Boehm attribution,

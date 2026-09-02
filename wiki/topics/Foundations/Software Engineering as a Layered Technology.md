@@ -15,21 +15,22 @@ last_practiced: null
 
 # Software Engineering as a Layered Technology
 
-**Prerequisites:** [[Introduction to Software Engineering]]
-
-## Overview
-
-> [!warning] 0 of 80 in [[se-ete-2025-26]] — not asked once, on one paper
-> A single paper cannot show a topic is unexamined, only that it was not asked
-> that day. In syllabus and taught, so fully examinable. Lectures 4-5 is
-> *syllabus depth* and rule 3 forbids reading it as marks.
-
 - **What it supplies:** four layers, each resting on the one below, and a
   **process framework** of five activities every project performs whatever model
   it follows.
 - **Why it matters:** it is the vocabulary the rest of the course speaks in —
   "framework activity", "umbrella activity" and "process model" get their
   meanings here.
+
+**Prerequisites:** [[Introduction to Software Engineering]]
+**Asked as:** — — **0 marks** on the one paper
+
+**The thread:** "process" is one of the four layers, so what is in it? (1→2) — five activities in sequence, but some work never stops (2→3) — and that machinery exists to produce something (3→4), whose nature decides which model is viable.
+
+> [!warning] Never asked — on one paper, which is nearly no evidence
+> A single paper cannot show a topic is unexamined, only that it was not asked
+> that day. In syllabus and taught, so fully examinable. Lectures 4-5 is
+> *syllabus depth* and rule 3 forbids reading it as marks.
 
 > [!warning] This page is almost entirely unsourced
 > Zero deck hits for "layered", "umbrella", "generic process" and "process
@@ -39,6 +40,22 @@ last_practiced: null
 > Everything except subtopic 4 is **standard Pressman material, not your
 > instructor's slides.** Rule 5: deck silence is not evidence of being out of
 > scope. **This is the page to fix first if you can get the lecture 4-5 slides.**
+
+## How it's asked
+
+**Never asked, on the one paper in this vault** — `asked_as` is empty. Rule 7
+requires saying that plainly rather than inventing drill.
+
+**If it appears, the two likely shapes** (prediction, not evidence):
+- **`compare`** — *framework activity vs umbrella activity*, or *process framework
+  vs process model*. Both pairs are in Quick Reference; answer as a table with the
+  dimension named in every row. See [[answer-patterns]] §5.
+- **`explain`** — "explain software engineering as a layered technology", 2 marks.
+  Four names bottom-up, one line each, **and draw the stack** — it costs ten
+  seconds and makes the ordering unambiguous.
+
+**The single most likely thing to be tested** is the *direction* of the stack:
+quality focus at the bottom, tools at the top.
 
 ## Quick Reference
 
@@ -99,35 +116,6 @@ the five characteristics, the eight application domains — all on
 [[Introduction to Software Engineering]]. The handout assigns them to lecture 5;
 the deck teaches them alongside lecture 1-3 material, so rule 8 keeps them there.
 
-## How it's asked
-
-**Never asked, on the one paper in this vault** — `asked_as` is empty. Rule 7
-requires saying that plainly rather than inventing drill.
-
-**If it appears, the two likely shapes** (prediction, not evidence):
-- **`compare`** — *framework activity vs umbrella activity*, or *process framework
-  vs process model*. Both pairs are in Quick Reference; answer as a table with the
-  dimension named in every row. See [[answer-patterns]] §5.
-- **`explain`** — "explain software engineering as a layered technology", 2 marks.
-  Four names bottom-up, one line each, **and draw the stack** — it costs ten
-  seconds and makes the ordering unambiguous.
-
-**The single most likely thing to be tested** is the *direction* of the stack:
-quality focus at the bottom, tools at the top.
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | Software engineering as a layered technology | definitional | — | 0 | the four-layer stack — **no deck** |
-| 2 | The generic process framework | procedural | — | 0 | the five activities every model rearranges — **no deck** |
-| 3 | Umbrella activities | definitional | — | 0 | what runs across all phases — **no deck** |
-| 4 | The process, and software products | definitional | — | 0 | generic vs customised; points back to topic 1 |
-
-**The thread:** "process" is one of the four layers, so what is in it? (1→2) —
-five activities in sequence, but some work never stops (2→3) — and that machinery
-exists to produce something (3→4), whose nature decides which model is viable.
-
 ## 1 · Software engineering as a layered technology
 
 - **The argument:** organisations buy tools and expect to become good at
@@ -185,7 +173,7 @@ exists to produce something (3→4), whose nature decides which model is viable.
   [[Introduction to Software Engineering]]. Revise them there.
 - **Never examined.**
 
-## Question Bank
+## Practice
 
 - **PYQ — none.** No question on [[se-ete-2025-26]] tests this topic.
 - **Deck — none**, because no deck covers the topic.
@@ -195,7 +183,7 @@ exists to produce something (3→4), whose nature decides which model is viable.
   invented drill. If the lecture 4-5 slides or the textbook land, this section is
   the first thing to rebuild.
 
-## Mistakes & Traps
+## Traps
 
 - **Drawing the layer stack upside down.** Quality focus is the *bottom*. Tools at
   the base inverts the argument the diagram exists to make.
@@ -206,7 +194,7 @@ exists to produce something (3→4), whose nature decides which model is viable.
 - **Listing the five framework activities out of order.** Communication →
   planning → modeling → construction → deployment. The order is the content.
 
-## Course Material
+## Sources
 
 **No deck covers this topic.** Confirmed by keyword sweep of all 24 files in
 `raw/sources/ppts/`:

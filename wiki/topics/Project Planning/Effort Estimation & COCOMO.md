@@ -15,11 +15,16 @@ last_practiced: null
 
 # Effort Estimation & COCOMO
 
+- **Size becomes a schedule here.** COCOMO — Boehm's **CO**nstructive
+  **CO**st **MO**del — takes KLOC and returns **effort in person-months** and
+  **duration in months**, in three escalating variants.
+- **The densest arithmetic in the course, and the most reliably examinable thing
+  in the Mid-Term window.**
+
 **Prerequisites:** [[Software Size Estimation]]
+**Asked as:** numerical — **10 of 80** in [[se-ete-2025-26]] · **3** in [[se-assign-1-2026]]
 
-## Overview
-
-> [!info] 10 of 80 in [[se-ete-2025-26]] — question D1
+> [!info] What it asked — question D1
 > **The heaviest topic in the MTE window, and the only numerical on the entire
 > paper.** D1 is a 10-mark Section D question: 100000 LOC embedded system,
 > compare effort and duration under two staffing scenarios, then find the effort
@@ -33,10 +38,49 @@ last_practiced: null
 > **work the deck's example and you have worked the exam question.** It is
 > reproduced in full in the Question Bank, along with **an error it contains**.
 
-Size becomes a schedule here. COCOMO — Boehm's **CO**nstructive **CO**st
-**MO**del — takes KLOC and returns effort in person-months and duration in
-months, in three escalating variants. It is the densest arithmetic in the course
-and the most reliably examinable thing in the Mid-Term window.
+## How it's asked
+
+Generic skeleton on [[answer-patterns]] §3. **This is the paper's only numerical
+long-answer and the heaviest topic in the MTE window — 10 of 80.**
+
+### Numerical — D1, 10 marks (4 + 4 + 2)
+
+- **Spot it:** a size in LOC, a mode named or implied, and a note supplying
+  *a, b, c, d*. **An *a* of 2.8 or 3.0/3.2 means Intermediate, not Basic** — the
+  coefficient set identifies the model, and the question will not say so.
+- **Skeleton, in this exact order:**
+  1. **Given block** — convert LOC → KLOC on the first line. State the mode and
+     which model the coefficients belong to.
+  2. **Nominal effort** *E* = *a* × KLOC<sup>*b*</sup>, showing the log-antilog
+     working for the power.
+  3. **EAF** = product of the cost-driver multipliers given.
+  4. **Adjusted effort** = nominal × EAF, then **duration** *D* = *c* × *E*<sup>*d*</sup>.
+  5. **Repeat for each case**, then compute what was actually asked — usually the
+     **variation between cases**, absolute and percentage.
+  6. Answer line **with units**: PM for effort, months for duration.
+- **Earns the marks:** the variation step. D1 gives 2 marks for it specifically,
+  and candidates who compute both cases correctly still lose those 2 by stopping.
+- **Trap:** forgetting to divide by 1000; using KLOC where effort belongs in the
+  duration formula; reporting person-months as months.
+
+**Also asked as a mode-selection sub-step.** Deck Example 4.6 gives a word problem
+with no mode stated ("average experience", "schedule not very tight") and expects
+you to pick semi-detached and justify. That is a `scenario` move embedded inside a
+`numerical` question — see section 1.
+
+**Never asked as:** `draw`, `compare`. `explain` appears only adjacent — B3's
+effort-distribution question is filed on [[SDLC & CMMI]] but its machinery is
+here.
+**Also worth knowing:**
+- **Section 1 is never examined alone, but every COCOMO question begins there** —
+  a wrong mode makes every subsequent number wrong. D1 removed the difficulty by
+  naming "embedded system" and supplying the coefficients. Do not count on that.
+- **If Basic COCOMO appears**, it will be the three-mode comparison (deck Example
+  4.5, reused verbatim as assignment Q6) or the staff-size-and-productivity form
+  (Example 4.6).
+- **Detailed COCOMO:** definition depth only — name the two additions and the
+  three-level hierarchy. It connects to B3's effort-distribution question on
+  [[SDLC & CMMI]], which asks the same idea non-numerically.
 
 ## Quick Reference
 
@@ -133,75 +177,6 @@ hierarchy** (module / subsystem / system), allocating manpower per phase.
 Plan and requirements: **effort 6-8%**, development time **10-40%**, depending on
 mode and size.
 
-## How it's asked
-
-Generic skeleton on [[answer-patterns]] §3. **This is the paper's only numerical
-long-answer and the heaviest topic in the MTE window — 10 of 80.**
-
-### Numerical — D1, 10 marks (4 + 4 + 2)
-
-- **Spot it:** a size in LOC, a mode named or implied, and a note supplying
-  *a, b, c, d*. **An *a* of 2.8 or 3.0/3.2 means Intermediate, not Basic** — the
-  coefficient set identifies the model, and the question will not say so.
-- **Skeleton, in this exact order:**
-  1. **Given block** — convert LOC → KLOC on the first line. State the mode and
-     which model the coefficients belong to.
-  2. **Nominal effort** *E* = *a* × KLOC<sup>*b*</sup>, showing the log-antilog
-     working for the power.
-  3. **EAF** = product of the cost-driver multipliers given.
-  4. **Adjusted effort** = nominal × EAF, then **duration** *D* = *c* × *E*<sup>*d*</sup>.
-  5. **Repeat for each case**, then compute what was actually asked — usually the
-     **variation between cases**, absolute and percentage.
-  6. Answer line **with units**: PM for effort, months for duration.
-- **Earns the marks:** the variation step. D1 gives 2 marks for it specifically,
-  and candidates who compute both cases correctly still lose those 2 by stopping.
-- **Trap:** forgetting to divide by 1000; using KLOC where effort belongs in the
-  duration formula; reporting person-months as months.
-
-**Also asked as a mode-selection sub-step.** Deck Example 4.6 gives a word problem
-with no mode stated ("average experience", "schedule not very tight") and expects
-you to pick semi-detached and justify. That is a `scenario` move embedded inside a
-`numerical` question — see section 1.
-
-**Never asked as:** `draw`, `compare`. `explain` appears only adjacent — B3's
-effort-distribution question is filed on [[SDLC & CMMI]] but its machinery is
-here.
-**Also worth knowing:**
-- **Section 1 is never examined alone, but every COCOMO question begins there** —
-  a wrong mode makes every subsequent number wrong. D1 removed the difficulty by
-  naming "embedded system" and supplying the coefficients. Do not count on that.
-- **If Basic COCOMO appears**, it will be the three-mode comparison (deck Example
-  4.5, reused verbatim as assignment Q6) or the staff-size-and-productivity form
-  (Example 4.6).
-- **Detailed COCOMO:** definition depth only — name the two additions and the
-  three-level hierarchy. It connects to B3's effort-distribution question on
-  [[SDLC & CMMI]], which asks the same idea non-numerically.
-
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | The three development modes | definitional | scenario (embedded) | 0 | picks every coefficient — the first step of any question |
-| 2 | Basic COCOMO | numerical | numerical | 0 | two worked deck examples; staff size and productivity |
-| 3 | Intermediate COCOMO and the cost drivers | numerical | **numerical** | **10** | **carries D1** — the paper's only numerical |
-| 4 | Detailed COCOMO | definitional | — | 0 | phase-sensitive multipliers; definition only |
-
-## Mindmap
-
-```mermaid
-graph TD
-    S1["1 · The three modes<br/>0 marks"]
-    S2["2 · Basic COCOMO<br/>0 marks"]
-    S3["3 · Intermediate COCOMO<br/>10 marks"]
-    S4["4 · Detailed COCOMO<br/>0 marks"]
-
-    S1 -->|"the mode fixes a, b, c, d.<br/>now plug the size in"| S2
-    S2 -->|"size alone ignores the team,<br/>the hardware, the deadline"| S3
-    S3 -->|"one multiplier for the whole<br/>project is still too coarse"| S4
-    S4 -.->|"every variant needs the mode<br/>decided first"| S1
-```
-
 ## 1 · The three development modes
 
 - **A hundred thousand lines of payroll code and a hundred thousand lines of
@@ -225,7 +200,6 @@ Size bands (2-50 / 50-300 / over 300 KLOC) are typical values, not definitions.
 Deck Example 4.6 makes the point: a 200 KLOC project with an **average-experience
 team** and a **schedule that is not very tight** is semi-detached, and the deck
 justifies the choice explicitly on those two phrases rather than on the size.
-
 
 ## 2 · Basic COCOMO
 
@@ -256,7 +230,6 @@ $$\text{Average staff size} = \frac{E}{D} \text{ persons} \qquad \text{Productiv
 
 **Worked example.** Deck Examples 4.5 and 4.6 are worked in full in the Question
 Bank.
-
 
 ## 3 · Intermediate COCOMO and the cost drivers
 
@@ -372,7 +345,6 @@ acquired; capability is not.
 *(No printed solution key exists for this paper, so this answer is unchecked —
 no `✓`. All arithmetic independently verified.)*
 
-
 ## 4 · Detailed COCOMO
 
 - **Even the intermediate model applies one EAF across the entire project**, which
@@ -393,8 +365,7 @@ The deck's one concrete figure: for the **plan and requirements** phase, effort
 is **6-8%** and development time **10-40%** of the total, varying with mode and
 size.
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — 1.**
 
@@ -544,7 +515,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Not converting LOC to KLOC.** D1 says 100000 LOC; the formula wants 100.
   This single slip destroys every subsequent number.
@@ -563,7 +534,7 @@ considers important.
 - **Dropping units.** Effort is **person-months**, duration is **months**, staff
   size is **persons**. Person-months and months are different answers.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L7 Software Project planning_6.pdf` — the main source.
   The three modes with the full comparison table; Basic COCOMO with its

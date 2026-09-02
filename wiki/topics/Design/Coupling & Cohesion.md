@@ -15,11 +15,20 @@ last_practiced: null
 
 # Coupling & Cohesion
 
+- **Where "good design" stops being taste and becomes measurable.**
+- **Cohesion** asks whether a module does one job; **coupling** asks how much it
+  depends on others.
+- **Both are ranked scales**, so you can name exactly how bad a design is rather
+  than just disliking it.
+- The goal is the most quoted rule in the subject: **high cohesion, low
+  coupling.**
+
 **Prerequisites:** [[Design Concepts & Principles]]
+**Asked as:** compare, scenario — **6 of 80** in [[se-ete-2025-26]]
 
-## Overview
+**The thread:** a module that does one job well still has to talk to others (1→2), and two scales stay theory until you name them in real code (2→3) — where the fix is always the same: **split it, or pass less**.
 
-> [!info] 6 of 80 in [[se-ete-2025-26]] — question B2
+> [!info] What it asked — question B2
 > B2 is 3 + 3: **(a)** define and differentiate cohesion and coupling; **(b)**
 > examine a `Library` / `Member` code snippet and identify the type of cohesion
 > and coupling **with justification**. One paper only; see [[weightage]].
@@ -30,13 +39,42 @@ last_practiced: null
 > The deck's answer is reproduced and examined in subtopic 3, **including where
 > it disagrees with standard theory.**
 
-- **Where "good design" stops being taste and becomes measurable.**
-- **Cohesion** asks whether a module does one job; **coupling** asks how much it
-  depends on others.
-- **Both are ranked scales**, so you can name exactly how bad a design is rather
-  than just disliking it.
-- The goal is the most quoted rule in the subject: **high cohesion, low
-  coupling.**
+## How it's asked
+
+Generic skeletons are on [[answer-patterns]]; this section carries only what is
+specific to this topic. **Both archetypes appear in one question — B2 is
+`compare` then `scenario`, 3 marks each.**
+
+### Compare & distinguish — B2(a), 3 marks
+
+- **Spot it:** "Define **and** differentiate cohesion and coupling." Two
+  instructions, and the second is where the marks are.
+- **Skeleton:** a five-row table — scope · what it measures · desired direction ·
+  effect if wrong · number of levels — then **one closing line**: *cohesion is
+  intra-module and should be maximised; coupling is inter-module and should be
+  minimised.* That line is the mark.
+- **Earns the marks:** the contrast. Defining each separately and stopping earns
+  roughly half.
+- **Trap:** listing the seven and six levels instead of differentiating. The
+  levels are subtopics 1-2; part (a) wants the *distinction*.
+
+### Scenario → identify & justify — B2(b), 3 marks
+
+- **Spot it:** a code snippet, usually two classes, and "identify the type of
+  cohesion and coupling **with justification**."
+- **Skeleton:**
+  1. Name the cohesion type and the coupling type — one line each.
+  2. **Point at specific lines.** *"`generateBill()` is a billing operation, a
+     different concern from `addBook()` and `issueBook()`"* — quote the method
+     names.
+  3. Say why the adjacent level is not it.
+  4. One line on how to fix it — split the class, or pass data instead.
+- **Earns the marks:** step 2. **An unsupported label earns almost nothing.**
+- **Trap:** the deck's own answer disagrees with standard theory on this snippet
+  — see subtopic 3, which carries both readings and which to write.
+
+**Never asked as:** `numerical`, `draw`, `explain`. Do not prepare a diagram for
+this topic.
 
 ## Quick Reference
 
@@ -105,58 +143,6 @@ The deck's analysis: `Calculator` focuses only on mathematical operations
 (**functional cohesion**); `Display` is responsible only for showing results.
 They are independent and only share data — **Display can be replaced without
 affecting Calculator.**
-
-## How it's asked
-
-Generic skeletons are on [[answer-patterns]]; this section carries only what is
-specific to this topic. **Both archetypes appear in one question — B2 is
-`compare` then `scenario`, 3 marks each.**
-
-### Compare & distinguish — B2(a), 3 marks
-
-- **Spot it:** "Define **and** differentiate cohesion and coupling." Two
-  instructions, and the second is where the marks are.
-- **Skeleton:** a five-row table — scope · what it measures · desired direction ·
-  effect if wrong · number of levels — then **one closing line**: *cohesion is
-  intra-module and should be maximised; coupling is inter-module and should be
-  minimised.* That line is the mark.
-- **Earns the marks:** the contrast. Defining each separately and stopping earns
-  roughly half.
-- **Trap:** listing the seven and six levels instead of differentiating. The
-  levels are subtopics 1-2; part (a) wants the *distinction*.
-
-### Scenario → identify & justify — B2(b), 3 marks
-
-- **Spot it:** a code snippet, usually two classes, and "identify the type of
-  cohesion and coupling **with justification**."
-- **Skeleton:**
-  1. Name the cohesion type and the coupling type — one line each.
-  2. **Point at specific lines.** *"`generateBill()` is a billing operation, a
-     different concern from `addBook()` and `issueBook()`"* — quote the method
-     names.
-  3. Say why the adjacent level is not it.
-  4. One line on how to fix it — split the class, or pass data instead.
-- **Earns the marks:** step 2. **An unsupported label earns almost nothing.**
-- **Trap:** the deck's own answer disagrees with standard theory on this snippet
-  — see subtopic 3, which carries both readings and which to write.
-
-**Never asked as:** `numerical`, `draw`, `explain`. Do not prepare a diagram for
-this topic.
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | Cohesion — the seven levels | definitional | — | 0 | the scale, and how to recognise each |
-| 2 | Coupling — the six levels | definitional | — | 0 | the other scale |
-| 3 | Reading code for cohesion and coupling | procedural | scenario | **6** | **carries B2**, both parts |
-
-**The thread:** a module that does one job well still has to talk to others (1→2),
-and two scales stay theory until you name them in real code (2→3) — where the fix
-is always the same: **split it, or pass less**.
-
-*(Sections 1 and 2 carry no marks of their own — B2(a)'s 3 marks are counted in
-section 3, which is where the definition-and-differentiate answer is worked.)*
 
 ## 1 · Cohesion — the seven levels
 
@@ -316,8 +302,7 @@ editing `Member`.
 no `✓`. The disagreement with the deck's printed reasoning is recorded above, as
 rule 8 requires.)*
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — 1.**
 
@@ -356,7 +341,7 @@ independent key.
 extracted.** `L8 Chapter 5 Software Design_3.pdf` is Aggarwal & Singh chapter 5;
 Pressman 8e is not in the vault.
 
-## Mistakes & Traps
+## Traps
 
 - **Reversing the directions.** Cohesion **high**, coupling **low**. Getting this
   backwards invalidates the whole answer.
@@ -371,7 +356,7 @@ Pressman 8e is not in the vault.
 - **Answering only one of the two types.** B2(b) asks for cohesion **and**
   coupling.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L9 Coupling and Cohesion.pptx` — the main source and one
   of the richest decks in the vault. All six coupling types and all seven cohesion

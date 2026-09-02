@@ -15,11 +15,16 @@ last_practiced: null
 
 # Software Size Estimation
 
+- **Someone will ask for a date.** Size is the only thing estimable from
+  requirements alone, so it comes first.
+- **LOC** counts what you will write · **function points** count what the user
+  will get · **static models** convert either into effort and duration.
+- Then [[Effort Estimation & COCOMO]] does the same job properly.
+
 **Prerequisites:** [[Requirements Engineering]]
+**Asked as:** — — **0 marks** on the one paper · **4** in [[se-assign-1-2026]]
 
-## Overview
-
-> [!warning] 0 of 80 in [[se-ete-2025-26]] — not asked once, on one paper
+> [!warning] Never asked — on one paper, which is nearly no evidence
 > A single paper cannot show a topic is unexamined. In syllabus, taught across
 > two lectures. Lectures 15-16 is *syllabus depth* and rule 3 forbids reading it
 > as marks.
@@ -32,10 +37,59 @@ last_practiced: null
 > numericals** plus a 61-item question bank from the Aggarwal & Singh text, which
 > rule 8 rates as the highest-value drill available.
 
-Someone will ask for a date. Size is the only thing estimable from requirements
-alone, so it comes first: **LOC** counts what you will write, **function points**
-count what the user will get, and static models convert either into effort and
-duration. Then [[Effort Estimation & COCOMO]] does the same job properly.
+## How it's asked
+
+**Zero marks on the one paper — and four of the assignment's fifteen questions.**
+Like [[Agile Development]], the coursework says what the exam did not.
+
+> [!warning] Do not read the zero as "skip it"
+> This page is the **prerequisite for [[Effort Estimation & COCOMO]]**, which is
+> the heaviest topic in the window. Function points and Halstead are also
+> examinable on their own — the handout names both, and rule 1 governs scope.
+
+### Numerical — the archetype to prepare
+
+Three distinct calculations live here, and the assignment used all three:
+
+- **Function points** — count × weight per functional unit → UFP → optionally
+  × CAF. **Memorise the weighting table; it is rarely supplied.** *(Assignment
+  Q14 supplied it, the deck's own examples do not.)*
+- **Halstead** — four counts → vocabulary, length, volume, difficulty, effort,
+  time, defects. **Lower-case *n* is distinct, upper-case *N* is total**; confuse
+  them and every derived quantity is wrong. *(Assignment Q13.)*
+- **Static models** — *E* = *aL*<sup>b</sup>, SEL vs Walston-Felix.
+- **Cost from size** — FP ÷ productivity = effort, × rate = cost. *(Q10.)*
+
+**Skeleton:** the standard Given → Steps → Answer of [[answer-patterns]] §3, with
+the log-antilog working shown for any fractional power.
+
+**Traps specific to this page:**
+- **Applying the CAF when the question says *Unadjusted*.** UFP stops before it.
+- **Confusing ILF and EIF** — maintained *inside* vs referenced from *elsewhere*.
+- **Using log₁₀ in Halstead.** It is base 2 throughout.
+
+### Explain — assignment Q13 and Q14(b)
+
+Both open with a written part: *"explain Halstead as a technique"*, *"explain how
+FPA assists estimation"*. **Lead with what the technique fixes about the
+alternative** — FPA can be counted before code exists and is language-independent;
+Halstead is objective where LOC is formatting-sensitive.
+
+**Never asked as:** `draw`, `compare`, `scenario`.
+**Traps specific to function points, from the deck's three worked examples:**
+- **Using the wrong weight column.** The default is *Average*, not Low.
+- **"All factors average" means ΣF = 42**, not 14. CAF = 0.65 + 0.42 = 1.07.
+- **Classifying user files as EI rather than ILF.** The file types carry the
+  heaviest weights, so misclassifying one costs the most.
+
+**Also worth knowing:**
+- **Feasibility study:** most plausible as a 2-mark "what is it / name its types".
+- **LOC's unit convention is load-bearing** — KLOC is the input to D1 on
+  [[Effort Estimation & COCOMO]], the paper's only numerical.
+- **Static models**, if asked, take the comparison form: given an effort, reverse
+  both models for size, then compute duration, productivity and manning for each.
+- **Halstead:** know the four counts, vocabulary, length and volume. Do not go
+  deeper until a deck or the textbook says to.
 
 ## Quick Reference
 
@@ -141,72 +195,7 @@ and for every 100 projects there are **94 restarts**.
 | Economic | do the benefits exceed the costs? |
 | Operational | will it work in the organisation, and will people use it? |
 
-## How it's asked
-
-**Zero marks on the one paper — and four of the assignment's fifteen questions.**
-Like [[Agile Development]], the coursework says what the exam did not.
-
-> [!warning] Do not read the zero as "skip it"
-> This page is the **prerequisite for [[Effort Estimation & COCOMO]]**, which is
-> the heaviest topic in the window. Function points and Halstead are also
-> examinable on their own — the handout names both, and rule 1 governs scope.
-
-### Numerical — the archetype to prepare
-
-Three distinct calculations live here, and the assignment used all three:
-
-- **Function points** — count × weight per functional unit → UFP → optionally
-  × CAF. **Memorise the weighting table; it is rarely supplied.** *(Assignment
-  Q14 supplied it, the deck's own examples do not.)*
-- **Halstead** — four counts → vocabulary, length, volume, difficulty, effort,
-  time, defects. **Lower-case *n* is distinct, upper-case *N* is total**; confuse
-  them and every derived quantity is wrong. *(Assignment Q13.)*
-- **Static models** — *E* = *aL*<sup>b</sup>, SEL vs Walston-Felix.
-- **Cost from size** — FP ÷ productivity = effort, × rate = cost. *(Q10.)*
-
-**Skeleton:** the standard Given → Steps → Answer of [[answer-patterns]] §3, with
-the log-antilog working shown for any fractional power.
-
-**Traps specific to this page:**
-- **Applying the CAF when the question says *Unadjusted*.** UFP stops before it.
-- **Confusing ILF and EIF** — maintained *inside* vs referenced from *elsewhere*.
-- **Using log₁₀ in Halstead.** It is base 2 throughout.
-
-### Explain — assignment Q13 and Q14(b)
-
-Both open with a written part: *"explain Halstead as a technique"*, *"explain how
-FPA assists estimation"*. **Lead with what the technique fixes about the
-alternative** — FPA can be counted before code exists and is language-independent;
-Halstead is objective where LOC is formatting-sensitive.
-
-**Never asked as:** `draw`, `compare`, `scenario`.
-**Traps specific to function points, from the deck's three worked examples:**
-- **Using the wrong weight column.** The default is *Average*, not Low.
-- **"All factors average" means ΣF = 42**, not 14. CAF = 0.65 + 0.42 = 1.07.
-- **Classifying user files as EI rather than ILF.** The file types carry the
-  heaviest weights, so misclassifying one costs the most.
-
-**Also worth knowing:**
-- **Feasibility study:** most plausible as a 2-mark "what is it / name its types".
-- **LOC's unit convention is load-bearing** — KLOC is the input to D1 on
-  [[Effort Estimation & COCOMO]], the paper's only numerical.
-- **Static models**, if asked, take the comparison form: given an effort, reverse
-  both models for size, then compute duration, productivity and manning for each.
-- **Halstead:** know the four counts, vocabulary, length and volume. Do not go
-  deeper until a deck or the textbook says to.
-
-
-## Contents
-
-| # | Section | Type | Archetype | Marks | Why it's here |
-|---|---|---|---|---|---|
-| 1 | Feasibility study and software scope | definitional | — | 0 | the cheapest way to cancel a doomed project |
-| 2 | LOC estimation | definitional | — | 0 | the simplest size measure, and its problems |
-| 3 | Function point analysis | numerical | **numerical** | 0 | **three worked deck examples** — the page's real drill |
-| 4 | Static estimation models | numerical | numerical | 0 | SEL and Walston-Felix; one worked comparison |
-| 5 | Halstead size estimation | numerical | **numerical** | 0 | named by the handout — **no deck covers it** |
-
-## Mindmap
+**How the sections connect:**
 
 ```mermaid
 graph TD
@@ -252,7 +241,6 @@ the input to every estimate — you cannot size what you have not bounded.
 > follows the handout and teaches it here; revising from the L5 deck, you will
 > meet it alongside [[Software Engineering Practice]].
 
-
 ## 2 · LOC estimation
 
 - **The obvious way to measure a program is to count its lines** — simple,
@@ -276,7 +264,6 @@ LOC** under this rule.
 [[Effort Estimation & COCOMO]] takes**. Substituting raw LOC into
 *E* = 1.4 *L*<sup>0.93</sup> gives an answer wrong by a factor of roughly a
 thousand.
-
 
 ## 3 · Function point analysis
 
@@ -314,7 +301,6 @@ in an exam** — both must be memorised.
 below. They escalate exactly as an exam would: all-average, mixed with a given
 CAF, then fully mixed with the CAF derived from stated conditions.
 
-
 ## 4 · Static estimation models
 
 - **Once you have a size, effort follows from an empirical power law** fitted to
@@ -344,7 +330,6 @@ Reference.
 people needed on the project per month.
 
 **Worked example.** Deck Example 4.4 is worked in full in the Question Bank.
-
 
 ## 5 · Halstead size estimation
 
@@ -384,8 +369,7 @@ The distinction that carries any question here: **lower-case *n* counts distinct
 symbols, upper-case *N* counts total occurrences.** Confusing them makes every
 derived quantity wrong.
 
-
-## Question Bank
+## Practice
 
 **PYQ questions — none.** No question on [[se-ete-2025-26]] tests this topic.
 
@@ -594,7 +578,7 @@ Worked in full on that page, with method and traps. **Coursework, so it does not
 change [[weightage]]** — but it is direct evidence of what the instructor
 considers important.
 
-## Mistakes & Traps
+## Traps
 
 - **Substituting LOC where the formula wants KLOC.** Off by ~1000. Every static
   model and COCOMO takes *L* in thousands.
@@ -614,7 +598,7 @@ considers important.
 - **Confusing *n* with *N*** in Halstead. Lower case = distinct, upper case =
   total.
 
-## Course Material
+## Sources
 
 - `raw/sources/ppts/2025/L7 Software Project planning_6.pdf` — the main source.
   LOC definition with a 17-LOC worked figure; Albrecht and function point
