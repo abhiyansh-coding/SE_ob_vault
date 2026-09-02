@@ -10,8 +10,8 @@ The queue for the **30-mark Mid-Term**, close book, covering **lectures 1-32**
 per the override recorded on [[syllabus]] — not the handout's 1-34.
 
 > [!tip] Next up
-> **Session 1, step 2 — [[Software Engineering as a Layered Technology]].**
-> Step 1 is built. Move this callout as each step completes.
+> **Session 3, step 7 — [[Requirements Engineering]].**
+> Sessions 1 and 2 are built (steps 1-6). Move this callout as each step completes.
 
 ## What the Mid-Term covers
 
@@ -80,11 +80,11 @@ Marks are from [[se-ete-2025-26]].
 | # | Ses | Topic | Lec | Marks | Hrs | Built | Note |
 |---|---|---|---|---|---|---|---|
 | 1 | 1 | [[Introduction to Software Engineering]] | 1-3 | **2** | 0.75 | **yes** | myths and the deterioration curve |
-| 2 | 1 | [[Software Engineering as a Layered Technology]] | 4-5 | 0 | 0.5 | no | short |
-| 3 | 1 | [[Conventional Process Models]] | 6-7 | 2 | 1.0 | no | |
-| 4 | 1 | [[Evolutionary Process Models]] | 8 | 4 | 1.0 | no | the comparison table is the payload |
-| 5 | 2 | [[Agile Development]] | 9-11 | 0 | 1.5 | no | deck carries a **velocity/cost numerical** |
-| 6 | 2 | [[SDLC & CMMI]] | 12 | 8 | 1.5 | no | |
+| 2 | 1 | [[Software Engineering as a Layered Technology]] | 4-5 | 0 | 0.5 | **yes** | short |
+| 3 | 1 | [[Conventional Process Models]] | 6-7 | 2 | 1.0 | **yes** | |
+| 4 | 1 | [[Evolutionary Process Models]] | 8 | 4 | 1.0 | **yes** | the comparison table is the payload |
+| 5 | 2 | [[Agile Development]] | 9-11 | 0 | 1.5 | **yes** | deck carries a **velocity/cost numerical** |
+| 6 | 2 | [[SDLC & CMMI]] | 12 | 8 | 1.5 | **yes** | |
 | 7 | 3 | [[Requirements Engineering]] | 13 | 2 | 1.0 | no | |
 | 8 | 3 | [[Software Engineering Practice]] | 14 | 0 | 0.5 | no | |
 | 9 | 3 | [[Software Size Estimation]] | 15-16 | 0 | 1.5 | no | numerical; **prerequisite for step 10** |

@@ -136,9 +136,9 @@ Where they disagree, 2026-27 wins.
 | `2025/UML.pdf` | UML diagrams | partial |
 | `2025/Case study Student Result Management System.pdf` | design case study (lecture 23) | **image-only** (37 pp) |
 | `2025/L7 Software Project planning_6.pdf` | estimation, COCOMO, risk | yes |
-| `2025/Chapter 4 Software Project planning.pdf` | estimation, COCOMO | yes |
+| `2025/Chapter 4 Software Project planning.pdf` | estimation, COCOMO — **Aggarwal & Singh textbook ch. 4, with exercises** | yes |
 | `2025/Chapter_26.ppt` | Pressman ch. 26 — scope, feasibility, estimation | yes |
-| `2025/L8 Chapter 5 Software Design_3.pdf` | design concepts, coupling/cohesion | yes |
+| `2025/L8 Chapter 5 Software Design_3.pdf` | design concepts, coupling/cohesion — **Aggarwal & Singh textbook ch. 5** | yes |
 | `2025/L9 Coupling and Cohesion.pptx` | coupling and cohesion | yes |
 | `2025/L10 Chapter 5 Architecture  Design.pdf` | architecture, transform mapping | yes |
 | `2025/L11 Software Testing_5.pdf` | all testing, debugging | yes |
@@ -152,8 +152,16 @@ Where they disagree, 2026-27 wins.
 ### Gaps
 
 > [!warning] What is missing
-> - **No textbook.** Pressman 8e is prescribed and absent, so rule 6's fallback
->   is unavailable. Everything comes from decks until it lands.
+> - **Pressman 8e is absent.** The prescribed textbook is not in the vault. Two
+>   files catalogued above are chapters of a *different* text — **K.K. Aggarwal &
+>   Yogesh Singh, _Software Engineering_ (3rd ed.), New Age International, 2007** —
+>   which do carry usable exercise sets. Rule 6 applies to them with extra care:
+>   explain syllabus topics, never expand scope.
+> - **Confirmed unsourced, worth 6 marks:** effort distribution across
+>   traditional/structured/CASE environments (question B3) appears in no deck at
+>   all. See [[SDLC & CMMI]]. Also unsourced: software myths, legacy software,
+>   layered technology, the process framework, umbrella activities, and the
+>   Unified Process.
 > - **One paper only.** Read [[weightage]]'s caveat before trusting any mark.
 > - **No Mid-Term paper**, so the MTE's section structure is guesswork.
 > - **Five decks are image-only, five more image-heavy.** Three of the
