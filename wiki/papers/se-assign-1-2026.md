@@ -104,6 +104,22 @@ carry 11 of the 15.
 
 ## Q1 · Release planning — duration and cost
 
+> **Question 1.** A team is doing release planning, and they decide the next
+> release will include all stories from Story 1 to Story 11 listed below.
+> - The velocity range to be used for release planning is **14–20 ideal days per
+>   iteration**.
+> - The team works in a **2-week iteration**.
+> - It costs **$48,000 per iteration** to fund the entire team.
+>
+> **Calculate the estimated duration for the next release (in iterations and
+> weeks). Additionally, how much will this release cost?**
+>
+> Prioritized Product Backlog (estimates in ideal days):
+>
+> | Story Title | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 | S10 | S11 |
+> |---|---|---|---|---|---|---|---|---|---|---|---|
+> | **Estimate (in ideal days)** | 4 | 6 | 5 | 3 | 7 | 2 | 5 | 6 | 4 | 8 | 3 |
+
 **Where it's from.** `raw/sources/ppts/2025/L4 Print Questions Agile.pdf`, Q1,
 with the numbers changed. Revise [[Agile Development]] subtopic 5; the original is
 worked in that page's Question Bank as Deck Q1.
@@ -154,6 +170,24 @@ worked in that page's Question Bank as Deck Q1.
 ---
 
 ## Q2 · User story map — mobile banking
+
+> **Question 2.** Consider the following mobile banking application requirements:
+> - Login using portal account
+> - View account balance
+> - Deposit cheques
+> - Check offers and promotions
+> - Take pictures of cheques
+> - Enter cheque details
+> - Select account
+> - Verify image with details
+> - Print receipt
+>
+> **Create a User Story Map by organizing these requirements into:**
+> - User Activities
+> - User Tasks
+> - User Stories
+> - Priorities
+> - Release 1 and Release 2.
 
 **Where it's from.** The scenario is new. **The technique is out of syllabus** —
 see the scope flag above. Nearest vault content: user stories on
@@ -212,6 +246,41 @@ tasks belonging to the *Deposit cheques* activity.
 
 ## Q3 · User story map — e-commerce
 
+> **Question 3: E-Commerce / Online Shopping App.**
+>
+> **User Activities**
+> 1. User Registration & Login
+> 2. Search Products
+> 3. Product Selection
+> 4. Shopping Cart
+> 5. Payment
+> 6. Order Tracking
+>
+> **User Tasks**
+>
+> | Activity | User Tasks |
+> |---|---|
+> | Registration & Login | Register, Login, Forgot Password |
+> | Search Products | Search, Filter, Sort |
+> | Product Selection | View Product, View Reviews, Select Size/Color |
+> | Shopping Cart | Add to Cart, Change Quantity, Remove Item |
+> | Payment | Select Payment Method, Enter Details, Confirm Payment |
+> | Order Tracking | View Order, Track Shipment, Cancel Order |
+>
+> **User Stories**
+> - As a customer, I want to **register an account** so that I can place orders.
+> - As a customer, I want to **search for products** so that I can find what I need.
+> - As a customer, I want to **add products to my cart** so that I can purchase them later.
+> - As a customer, I want to **make online payment** so that I can complete my purchase.
+> - As a customer, I want to **track my order** so that I know its delivery status.
+>
+> **Releases**
+> **Release 1 – MVP:** Registration/Login · Search products · Product details ·
+> Add to cart · Payment
+> **Release 2:** Reviews · Wishlist · Advanced filters · Order tracking
+>
+> **Create a User Story Map by organizing these requirements.**
+
 **Where it's from.** The scenario is new and **the question hands you the
 answer's raw material** — activities, tasks, stories and both releases are all
 printed. The only work is *organising* them into the map. Same scope flag as Q2.
@@ -260,6 +329,35 @@ to transact.**
 ---
 
 ## Q4 · Sprint commitment from capacity
+
+> **Question 4.** Your team is planning out the next sprint. You've chosen to
+> fill the sprint by taking stories in priority order from the product backlog and
+> **stopping when you reach the first story that won't fit** in the sprint. Based
+> on following details, which stories should the team commit to for a sprint?
+>
+> **Table 1:** Prioritized story with estimated story points and total estimate in
+> hrs of tasks for that story.
+>
+> | Story | Story Points | Total of Tasks Estimates |
+> |---|---|---|
+> | Story 1 | 5 | 16 hrs |
+> | Story 2 | 8 | 16 hrs |
+> | Story 3 | 5 | 24 hrs |
+> | Story 4 | 3 | 16 hrs |
+> | Story 5 | 13 | 32 hrs |
+> | Story 6 | 8 | 26 hrs |
+> | Story 7 | 5 | 8 hrs |
+> | Story 8 | 8 | 15 hrs |
+> | Story 9 | 5 | 12 hrs |
+>
+> **Table 2:** Capacity of Team members for given sprint
+>
+> | Name | # days available | Hours / day | Capacity (hrs) *You compute this* |
+> |---|---|---|---|
+> | John | 3 | 4-5 | |
+> | Matt | 5 | 2-3 | |
+> | Sally | 5 | 4-5 | |
+> | Ram | 5 | 2-3 | |
 
 **Where it's from.** `raw/sources/ppts/2025/L4 Print Questions Agile.pdf`, Q2 —
 **verbatim, identical numbers**. Worked in [[Agile Development]]'s Question Bank
@@ -325,6 +423,20 @@ the stories to commit to.
 ---
 
 ## Q5 · Clinic Management System — DFDs and ERD
+
+> **Question 5.** Smart Health Clinic is deploying an integrated Clinic
+> Management System that must handle appointments, EMR encounters, lab
+> orders/results, pharmacy dispensing, billing/insurance claims, and reporting
+> while ensuring privacy, role-based access, audit trails, and interoperability.
+> Daily visits range from 600–800 with peak walk-ins.
+>
+> **(a)** Draw a Level 0 Context DFD identifying all external entities
+> **(b)** Provide a Level 1 DFD by decomposing the following major processes:
+> **(c)** Draft an ERD (entities, keys, relationships) for core concepts such as
+> Patient, Provider, Appointment, Encounter, Lab Order, Lab Result, Prescription,
+> Invoice, Claim, Insurance Policy, User/Role, Audit Log.
+
+*(Part (b) ends at the colon — nothing is listed. See Notes.)*
 
 **Where it's from.** New scenario. Revise [[Flow-Oriented Modeling & DFD]] for
 (a) and (b), [[Data Modeling & ERD]] for (c). **Part (b) is defective as printed**
@@ -503,6 +615,15 @@ what*, satisfying the scenario's audit requirement.
 
 ## Q6 · Basic COCOMO — 400 KLOC, three modes
 
+> **Question 6.** A project size of **400000 LOC** is to be developed. Analyze
+> and evaluate the effort and development time for organic, semi-detached &
+> embedded modes of development from the provided values.
+>
+> (Note: **Organic**: a<sub>b</sub> = 2.4, b<sub>b</sub> = 1.05, c<sub>b</sub> =
+> 2.5, d<sub>b</sub> = .38; **Semidetached**: a<sub>b</sub> = 3.0, b<sub>b</sub> =
+> 1.12, c<sub>b</sub> = 2.5, d<sub>b</sub> = .35; **Embedded**: a<sub>b</sub> =
+> 3.6, b<sub>b</sub> = 1.20, c<sub>b</sub> = 2.5, d<sub>b</sub> = .32)
+
 **Where it's from.** `raw/sources/ppts/2025/L7 Software Project planning_6.pdf`
 **Example 4.5, verbatim** — same size, same three modes, same coefficients.
 Already worked in [[Effort Estimation & COCOMO]]'s Question Bank; the figures
@@ -528,20 +649,42 @@ below match the deck's printed answers.
 | Embedded | *a*, *b*, *c*, *d* | 3.6, 1.20, 2.5, 0.32 |
 | **Find** | | effort and development time in each mode |
 
-**Step 1 — Organic.**
+> **How to raise to a fractional power by hand.** log₁₀(400) = 2.60206.
+> Multiply by the exponent, then take the antilog. Show this working — it is
+> method marks.
 
-*E* = 2.4 × (400)<sup>1.05</sup> = 2.4 × 539.71 = **1295.31 PM**
-*D* = 2.5 × (1295.31)<sup>0.38</sup> = 2.5 × 15.23 = **38.08 months**
+**Step 1 — Organic** (*a* = 2.4, *b* = 1.05, *c* = 2.5, *d* = 0.38).
 
-**Step 2 — Semi-detached.**
+*Effort.*
+(400)<sup>1.05</sup> : 2.60206 × 1.05 = 2.732163 → antilog = **539.71**
+*E* = 2.4 × 539.71 = **1295.31 PM**
 
-*E* = 3.0 × (400)<sup>1.12</sup> = 3.0 × 820.93 = **2462.80 PM**
-*D* = 2.5 × (2462.80)<sup>0.35</sup> = 2.5 × 15.38 = **38.45 months**
+*Duration.*
+(1295.31)<sup>0.38</sup> : log₁₀(1295.31) = 3.11237 → 3.11237 × 0.38 = 1.182702
+→ antilog = **15.23**
+*D* = 2.5 × 15.23 = **38.08 months**
 
-**Step 3 — Embedded.**
+**Step 2 — Semi-detached** (*a* = 3.0, *b* = 1.12, *c* = 2.5, *d* = 0.35).
 
-*E* = 3.6 × (400)<sup>1.20</sup> = 3.6 × 1325.78 = **4772.81 PM**
-*D* = 2.5 × (4772.81)<sup>0.32</sup> = 2.5 × 15.04 = **37.60 months**
+*Effort.*
+(400)<sup>1.12</sup> : 2.60206 × 1.12 = 2.914307 → antilog = **820.93**
+*E* = 3.0 × 820.93 = **2462.80 PM**
+
+*Duration.*
+(2462.80)<sup>0.35</sup> : log₁₀(2462.80) = 3.39143 → 3.39143 × 0.35 = 1.187000
+→ antilog = **15.38**
+*D* = 2.5 × 15.38 = **38.45 months**
+
+**Step 3 — Embedded** (*a* = 3.6, *b* = 1.20, *c* = 2.5, *d* = 0.32).
+
+*Effort.*
+(400)<sup>1.20</sup> : 2.60206 × 1.20 = 3.122472 → antilog = **1325.78**
+*E* = 3.6 × 1325.78 = **4772.81 PM**
+
+*Duration.*
+(4772.81)<sup>0.32</sup> : log₁₀(4772.81) = 3.67877 → 3.67877 × 0.32 = 1.177208
+→ antilog = **15.04**
+*D* = 2.5 × 15.04 = **37.60 months**
 
 **Step 4 — compare, because the question says *analyze and evaluate*.**
 
@@ -565,6 +708,12 @@ below match the deck's printed answers.
 ---
 
 ## Q7 · Loan system — requirements and sprints
+
+> **Question 7.** A bank's online loan system must allow applications, verify
+> credit scores, approve loans within 24 hour, and ensure 99.9 % uptime.
+>
+> **a.** List one functional and one non-functional requirement.
+> **b.** How Sprint contributes to the success of the Agile project?
 
 **Where it's from.** New scenario. (a) is [[Requirements Engineering]] subtopic 2;
 (b) is [[Agile Development]] subtopic 2, and is answered almost word for word by
@@ -621,6 +770,20 @@ system is still rejected at acceptance.
 ---
 
 ## Q8 · Waterfall vs Agile for an Online Banking System
+
+> **Question 8.** A bank has decided to launch a new Online Banking System that
+> will allow customers to manage their accounts, transfer funds, check balances,
+> and more. The system must be highly secure, user-friendly, and scalable. The
+> project needs to be completed in 12 months. The project team must choose between
+> two SDLC methodologies: Waterfall and Agile. Both methods have their strengths,
+> and stakeholders are uncertain about which approach would work best for this
+> high-priority system.
+>
+> **(i)** Compare and contrast the Waterfall and Agile methodologies in the
+> context of developing the Online Banking System.
+> **(ii)** Which methodology would you recommend for this project? Justify your
+> answer with reasons, considering factors like timeline, customer feedback, and
+> regulatory changes.
 
 **Where it's from.** New scenario, classic form. Revise
 [[Conventional Process Models]] subtopic 1 and [[Agile Development]] subtopic 1;
@@ -685,6 +848,17 @@ preference.
 
 ## Q9 · Basic COCOMO — embedded, 4000 LOC, with cost and manpower
 
+> **Question 9.** A company is developing digital signal processing software for
+> one of its latest inventions. The estimated size of the software is **4000 lines
+> of code (LOC)**. The company plans to use the **Basic COCOMO** model for cost
+> estimation, and the project falls under the **embedded** category. The model
+> parameters are given as: **a = 3.6, b = 1.20, c = 2.5, and d = 0.32**, the
+> average cost per person-month is **₹50,000**. Using this information, calculate
+> the following:
+>
+> **(i)** Effort Estimation  **(iii)** Time Estimation
+> **(ii)** Cost Estimation  **(iv)** Manpower Estimation
+
 **Where it's from.** New numbers, same four-part form as deck Example 4.6 on
 [[Effort Estimation & COCOMO]] (which asks effort, time, staff size and
 productivity). This one swaps productivity for cost.
@@ -709,8 +883,11 @@ productivity). This one swaps productivity for cost.
 
 **(i) Effort.**
 
-*E* = 3.6 × (4)<sup>1.20</sup>
-(4)<sup>1.20</sup> = 5.278
+*E* = *a* × (KLOC)<sup>*b*</sup> = 3.6 × (4)<sup>1.20</sup>
+
+(4)<sup>1.20</sup> : log₁₀4 = 0.60206 → 0.60206 × 1.20 = 0.722472
+→ antilog = **5.278**
+
 *E* = 3.6 × 5.278 = **19.00 person-months**
 
 **(ii) Cost.**
@@ -719,7 +896,12 @@ Cost = *E* × ₹50,000 = 19.00 × 50,000 = **₹9,50,000**
 
 **(iii) Time.**
 
-*D* = 2.5 × (19.00)<sup>0.32</sup> = 2.5 × 2.566 = **6.41 months**
+*D* = *c* × *E*<sup>*d*</sup> = 2.5 × (19.00)<sup>0.32</sup>
+
+(19.00)<sup>0.32</sup> : log₁₀19 = 1.27875 → 1.27875 × 0.32 = 0.409201
+→ antilog = **2.566**
+
+*D* = 2.5 × 2.566 = **6.41 months**
 
 **(iv) Manpower** — average staff size.
 
@@ -737,6 +919,12 @@ Cost = *E* × ₹50,000 = 19.00 × 50,000 = **₹9,50,000**
 ---
 
 ## Q10 · Function points to project cost
+
+> **Question 10.** A software project is estimated at **400 FP**. A team of five
+> members (one project manager, two senior developers, one junior developer, and
+> one tester) is assigned. Their monthly salaries are **₹90,000, ₹70,000, ₹50,000,
+> and ₹45,000** respectively. The average productivity is **10 FP per
+> person-month**. Calculate the total cost of the project.
 
 **Where it's from.** New numbers; same form as the deck's FP-to-cost question
 worked in [[Software Size Estimation]]'s Question Bank.
@@ -796,6 +984,34 @@ what tells you the average-rate step was legitimate.
 
 ## Q11 · Organic duration, and the L1/L2 break-even
 
+> **Question 11.**
+>
+> **(i)** A simple stand-alone software utility is to be developed in 'C'
+> programming by a team of software experts for a computer running Linux and the
+> overall size of this software is estimated to be **20,000 lines of code**.
+> Considering **(a, b) = (2.4, 1.05)** as multiplicative and exponential factor
+> for the basic COCOMO effort estimation equation and **(c, d) = (2.5, 0.38)** as
+> multiplicative and exponential factor for the basic COCOMO development time
+> estimation equation, approximately how long does the software project take to
+> complete?
+>
+> **(ii)** A company needs to develop a strategy for software product development
+> for which it has a choice of two programming languages **L1** and **L2**. The
+> number of lines of code (LOC) developed using **L2 is estimated to be twice** the
+> LOC developed with L1. The product will have to be maintained for **five years**.
+> Various parameters for the company are given in the table below.
+>
+> | Parameter | Language L1 | Language L2 |
+> |---|---|---|
+> | Man years needed for development | LOC/10000 | LOC/10000 |
+> | Development cost per man year | Rs. 10,00,000 | Rs. 7,50,000 |
+> | Maintenance time | 5 years | 5 years |
+> | Cost of maintenance per year | Rs. 1,00,000 | Rs. 50,000 |
+>
+> Total cost of the project includes cost of development and maintenance. **What
+> is the LOC for L1 for which the cost of the project using L1 is equal to the cost
+> of the project using L2?**
+
 **Where it's from.** (i) is standard basic COCOMO — [[Effort Estimation & COCOMO]]
 subtopic 2. (ii) is a **classic GATE-style question**, not from any deck; its
 machinery is the cost side of [[Software Size Estimation]].
@@ -816,11 +1032,21 @@ machinery is the cost side of [[Software Size Estimation]].
 
 **Step 1 — effort.**
 
-*E* = 2.4 × (20)<sup>1.05</sup> = 2.4 × 23.23 = **55.76 person-months**
+*E* = 2.4 × (20)<sup>1.05</sup>
+
+(20)<sup>1.05</sup> : log₁₀20 = 1.30103 → 1.30103 × 1.05 = 1.366081
+→ antilog = **23.23**
+
+*E* = 2.4 × 23.23 = **55.76 person-months**
 
 **Step 2 — duration.**
 
-*D* = 2.5 × (55.76)<sup>0.38</sup> = 2.5 × 4.609 = **11.52 months**
+*D* = 2.5 × (55.76)<sup>0.38</sup>
+
+(55.76)<sup>0.38</sup> : log₁₀55.76 = 1.74629 → 1.74629 × 0.38 = 0.663591
+→ antilog = **4.609**
+
+*D* = 2.5 × 4.609 = **11.52 months**
 
 > **Answer: approximately 11.5 months — call it about 12 months.**
 
@@ -884,6 +1110,15 @@ L2: 150(5000) + 2,50,000 = 7,50,000 + 2,50,000 = **₹10,00,000** ✔
 ---
 
 ## Q12 · Conducting a CMMI assessment
+
+> **Question 12.** A software organization is experiencing **frequent project
+> delays, cost overruns, inconsistent development processes, and poor defect
+> management**. Management decides to conduct a CMMI assessment.
+>
+> **As a CMMI assessment team member, explain how you would conduct the
+> assessment.** Identify the process areas that should be investigated, the
+> evidence that should be collected, and how the assessment results could be used
+> to improve the organization's processes.
 
 **Where it's from.** New scenario. The five maturity levels are on
 [[SDLC & CMMI]] subtopic 3 — and note that the End Term's Q A2 was a CMMI
@@ -976,6 +1211,21 @@ implemented practice, and that gap is exactly what an appraisal exists to find.
 
 ## Q13 · Halstead software metrics
 
+> **Question 13.** Explain Halstead Software Metrics as a technique for software
+> size and complexity estimation.
+>
+> A development team is analyzing a banking application module containing **25
+> distinct operators, 40 distinct operands, 150 total operators, and 250 total
+> operands**. Using Halstead Software Metrics:
+>
+> **a)** Estimate the **program vocabulary and program length**.
+> **b)** Calculate the **estimated program length**.
+> **c)** Calculate the **program volume**.
+> **d)** Calculate the **program difficulty**.
+> **e)** Calculate the **programming effort**.
+> **f)** Estimate the **development time and delivered defects**.
+> **g)** Interpret the results from a software engineering perspective.
+
 **Where it's from.** Handout lecture 16, taught on [[Software Size Estimation]]
 subtopic 5 — which carries the vocabulary, length, volume, difficulty and effort
 formulas. **Time and delivered-defects are not on that page**; they are standard
@@ -995,6 +1245,55 @@ Halstead and are added here.
 
 **Worked solution.**
 
+### The explanation the question opens with
+
+**Halstead Software Metrics** (Maurice Halstead, 1977 — "software science") treat
+a program as a stream of **tokens**, each of which is either an **operator** or an
+**operand**, and derive size, complexity and effort from nothing but counting
+them.
+
+- **Operators** — anything that acts: `+`, `=`, `if`, `while`, function names,
+  punctuation, brackets.
+- **Operands** — anything acted upon: variables, constants, literals.
+- **The claim:** a program's properties are determined by its **vocabulary** (how
+  many *distinct* tokens it uses) and its **length** (how many tokens *in total*).
+  From four counts, everything else follows by formula.
+
+**Why it exists — what it fixes about LOC and function points:**
+- **LOC can be inflated by formatting** — the same logic written across more lines
+  scores higher. Halstead counts tokens, so layout is irrelevant.
+- **Function points depend on subjective complexity ratings**; two counters can
+  disagree. Halstead's counts are **objective and mechanically extractable** from
+  source.
+- It is **language-independent in principle** — volume measures information
+  content, not line count.
+- **Its limitation, worth one line:** it needs the code to exist, so unlike
+  function points it **cannot be used before implementation**. It is a measure of
+  what was built, not an estimator of what will be.
+
+**The four primitive counts, and everything derived from them:**
+
+| Symbol | Meaning |
+|---|---|
+| *n*₁ | number of **distinct** operators |
+| *n*₂ | number of **distinct** operands |
+| *N*₁ | **total** occurrences of operators |
+| *N*₂ | **total** occurrences of operands |
+
+| Quantity | Formula | What it means |
+|---|---|---|
+| Vocabulary | *n* = *n*₁ + *n*₂ | how many different tokens exist |
+| Length | *N* = *N*₁ + *N*₂ | how many tokens in total |
+| Estimated length | *N̂* = *n*₁log₂*n*₁ + *n*₂log₂*n*₂ | predicted length from vocabulary alone |
+| Volume | *V* = *N* log₂ *n* | information content, in **bits** |
+| Difficulty | *D* = (*n*₁/2) × (*N*₂/*n*₂) | how hard to write or understand |
+| Level | *L* = 1/*D* | the inverse — higher is simpler |
+| Effort | *E* = *D* × *V* | elementary mental discriminations |
+| Time | *T* = *E*/18 | seconds (18 = Stroud number) |
+| Delivered defects | *B* = *V*/3000 | predicted bugs at delivery |
+
+### The numerical
+
 **Given**
 
 | Quantity | Symbol | Value |
@@ -1013,8 +1312,11 @@ Halstead and are added here.
 **(b) Estimated program length.**
 
 *N̂* = *n*₁ log₂ *n*₁ + *n*₂ log₂ *n*₂
-= 25 × log₂25 + 40 × log₂40
-= 25 × 4.6439 + 40 × 5.3219
+
+log₂25 = ln 25 / ln 2 = 3.2189 / 0.6931 = **4.6439**
+log₂40 = ln 40 / ln 2 = 3.6889 / 0.6931 = **5.3219**
+
+*N̂* = 25 × 4.6439 + 40 × 5.3219
 = 116.10 + 212.88 = **328.97**
 
 *Compare with the actual N = 400:* the estimate is about 18% low, which is normal
@@ -1022,7 +1324,9 @@ Halstead and are added here.
 
 **(c) Volume.**
 
-*V* = *N* × log₂ *n* = 400 × log₂65 = 400 × 6.0224 = **2408.95 bits**
+log₂65 = ln 65 / ln 2 = 4.1744 / 0.6931 = **6.0224**
+
+*V* = *N* × log₂ *n* = 400 × 6.0224 = **2408.95 bits**
 
 **(d) Difficulty.**
 
@@ -1031,6 +1335,9 @@ Halstead and are added here.
 **(e) Effort.**
 
 *E* = *D* × *V* = 78.125 × 2408.95 = **1,88,199 elementary mental discriminations**
+
+*(Also worth stating: program level L = 1/D = 1/78.125 = **0.0128** — very low,
+confirming a dense implementation.)*
 
 **(f) Time and delivered defects.**
 
@@ -1070,6 +1377,17 @@ State which formula you used.)*
 ---
 
 ## Q14 · Unadjusted Function Points
+
+> **Question 14.** A software company has received a project to develop an
+> Online Hospital Management System. The client requirements are well defined, but
+> the management wants to estimate the project size before development.
+>
+> **a)** Calculate the Unadjusted Function Point (UFP) for the following data:
+> External Inputs (EI) = 18, External Outputs (EO) = 15, External Inquiries (EQ) =
+> 10, Internal Logical Files (ILF) = 8 and External Interface Files (EIF) = 4.
+> Use the weights: **EI=4, EO=5, EQ=4, ILF=10, EIF=7**.
+> **b)** Explain how Function Point Analysis assists in software project
+> estimation.
 
 **Where it's from.** Same form as deck Examples 4.1-4.3 on
 [[Software Size Estimation]] subtopic 3. **The weights are supplied here** —
@@ -1147,6 +1465,14 @@ changes.)*
 ---
 
 ## Q15 · Online Library Management System — DFDs
+
+> **Question 15.** A university plans to develop an Online Library Management
+> System where students can search books, issue books, return books and librarians
+> manage the inventory.
+>
+> **a)** Develop the Level-0 (Context Diagram) for the system.
+> **b)** Construct the Level-1 Data Flow Diagram (DFD) showing processes, external
+> entities, data stores and data flows.
 
 **Where it's from.** New scenario, and the standard textbook DFD exercise. Revise
 [[Flow-Oriented Modeling & DFD]] subtopics 1-3.
