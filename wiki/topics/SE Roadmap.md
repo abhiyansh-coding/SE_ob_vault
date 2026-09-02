@@ -23,7 +23,7 @@ the vault's only paper — read [[weightage]]'s caveat before trusting any of th
 
 | # | Topic | Lec | Marks |
 |---|---|---|---|
-| 1 | [[Introduction to Software Engineering]] | 1-3 | 0 |
+| 1 | [[Introduction to Software Engineering]] | 1-3 | 2 |
 | 2 | [[Software Engineering as a Layered Technology]] | 4-5 | 0 |
 | 3 | [[Conventional Process Models]] | 6-7 | 2 |
 | 4 | [[Evolutionary Process Models]] | 8 | 4 |
@@ -32,7 +32,7 @@ the vault's only paper — read [[weightage]]'s caveat before trusting any of th
 | 7 | [[Requirements Engineering]] | 13 | 2 |
 | 8 | [[Software Engineering Practice]] | 14 | 0 |
 | 9 | [[Software Size Estimation]] | 15-16 | 0 |
-| 10 | [[Effort Estimation & COCOMO]] | 17 | 12 |
+| 10 | [[Effort Estimation & COCOMO]] | 17 | 10 |
 | 11 | [[Risk Analysis & Estimation]] | 18 | 2 |
 | 12 | [[Data Modeling & ERD]] | 19-20 | 0 |
 | 13 | [[Flow-Oriented Modeling & DFD]] | 19, 21 | 0 |

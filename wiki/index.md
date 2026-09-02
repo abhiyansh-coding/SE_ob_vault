@@ -21,11 +21,11 @@ Catalog of everything in the wiki. Updated on every ingest/generate/grade.
 [[se-ete-2025-26]], the vault's only paper. **`MTE` marks the 18 topics inside
 lectures 1-32.**
 
-### Foundations — 0/80
+### Foundations — 2/80
 
 | Topic | Lec | Marks | MTE | Studied | Status |
 |---|---|---|---|---|---|
-| [[Introduction to Software Engineering]] | 1-3 | 0 | yes | no | not-started |
+| [[Introduction to Software Engineering]] | 1-3 | 2 | yes | no | not-started |
 | [[Software Engineering as a Layered Technology]] | 4-5 | 0 | yes | no | not-started |
 
 ### Process Models — 14/80
@@ -44,11 +44,11 @@ lectures 1-32.**
 | [[Requirements Engineering]] | 13 | 2 | yes | no | not-started |
 | [[Software Engineering Practice]] | 14 | 0 | yes | no | not-started |
 
-### Project Planning — 14/80
+### Project Planning — 12/80
 
 | Topic | Lec | Marks | MTE | Studied | Status |
 |---|---|---|---|---|---|
-| [[Effort Estimation & COCOMO]] | 17 | 12 | yes | no | not-started |
+| [[Effort Estimation & COCOMO]] | 17 | 10 | yes | no | not-started |
 | [[Risk Analysis & Estimation]] | 18 | 2 | yes | no | not-started |
 | [[Software Size Estimation]] | 15-16 | 0 | yes | no | not-started |
 

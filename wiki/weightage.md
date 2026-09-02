@@ -26,13 +26,13 @@ split and the split is noted on both pages and on the paper page.
 |---|---|---|---|---|
 | Testing | 35-43 | 20 | 25.0% | no |
 | Process Models | 6-12 | 14 | 17.5% | **yes** |
-| Project Planning | 15-18 | 14 | 17.5% | **yes** |
+| Project Planning | 15-18 | 12 | 15.0% | **yes** |
 | Analysis Modeling | 19-23 | 10 | 12.5% | **yes** |
 | Quality & Maintenance | 44, 46-50 | 8 | 10.0% | no |
 | Design | 24-32 | 6 | 7.5% | **yes** |
 | DevOps | 51-53 | 6 | 7.5% | no |
 | Requirements | 13-14 | 2 | 2.5% | **yes** |
-| Foundations | 1-5 | 0 | 0% | **yes** |
+| Foundations | 1-5 | 2 | 2.5% | **yes** |
 | Construction | 33-34 | 0 | 0% | no |
 | **Total** | | **80** | **100%** | |
 
@@ -40,7 +40,7 @@ split and the split is noted on both pages and on the paper page.
 
 | Topic | Phase | Marks | Question | MTE |
 |---|---|---|---|---|
-| [[Effort Estimation & COCOMO]] | Project Planning | 12 | A5, D1 | **yes** |
+| [[Effort Estimation & COCOMO]] | Project Planning | 10 | D1 | **yes** |
 | [[Black-Box Testing]] | Testing | 10 | C2 | no |
 | [[UML & Use Case Modeling]] | Analysis Modeling | 10 | D2 | **yes** |
 | [[SDLC & CMMI]] | Process Models | 8 | A2, B3 | **yes** |
@@ -55,7 +55,7 @@ split and the split is noted on both pages and on the paper page.
 | [[Requirements Engineering]] | Requirements | 2 | A3 | **yes** |
 | [[Risk Analysis & Estimation]] | Project Planning | 2 | A4 | **yes** |
 | [[Re-engineering & Reverse Engineering]] | Quality & Maintenance | 2 | A1 | no |
-| [[Introduction to Software Engineering]] | Foundations | 0 | — | **yes** |
+| [[Introduction to Software Engineering]] | Foundations | 2 | A5 | **yes** |
 | [[Software Engineering as a Layered Technology]] | Foundations | 0 | — | **yes** |
 | [[Agile Development]] | Process Models | 0 | — | **yes** |
 | [[Software Engineering Practice]] | Requirements | 0 | — | **yes** |
@@ -79,7 +79,7 @@ the Mid-Term also covers. Ranked, the in-window topics that earned marks:
 
 | Rank | Topic | Marks | Form it took |
 |---|---|---|---|
-| 1 | [[Effort Estimation & COCOMO]] | 12 | a 10-mark Section D numerical + a 2-mark Brooks's-Law justification |
+| 1 | [[Effort Estimation & COCOMO]] | 10 | a 10-mark Section D numerical |
 | 2 | [[UML & Use Case Modeling]] | 10 | a 10-mark Section D **drawing** (activity diagram from a described workflow) |
 | 3 | [[SDLC & CMMI]] | 8 | a 2-mark CMMI-level scenario + a 6-mark effort-distribution essay |
 | 4 | [[Coupling & Cohesion]] | 6 | 3 marks definition + 3 marks reading a code snippet |
@@ -87,6 +87,7 @@ the Mid-Term also covers. Ranked, the in-window topics that earned marks:
 | 6= | [[Conventional Process Models]] | 2 | one scenario-matching case |
 | 6= | [[Requirements Engineering]] | 2 | why SRS survives in waterfall but not Agile |
 | 6= | [[Risk Analysis & Estimation]] | 2 | identification vs assessment |
+| 6= | [[Introduction to Software Engineering]] | 2 | can adding people rescue a late project? |
 
 > [!warning] The MTE structure is unknown
 > The handout sets the Mid-Term at **30 marks, close book** and says nothing
