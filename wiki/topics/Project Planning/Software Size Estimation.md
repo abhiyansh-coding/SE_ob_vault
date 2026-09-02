@@ -560,6 +560,12 @@ points and COCOMO. **No answer key is included.** Rule 6: use it to drill
 syllabus topics, never to expand scope. Most of the COCOMO items belong on
 [[Effort Estimation & COCOMO]].
 
+**Assignment questions — [[se-assign-1-2026]].** **Q10** FP → effort → project cost · **Q11(ii)** L1/L2 cost break-even · **Q13** Halstead, seven parts · **Q14** Unadjusted Function Points
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Substituting LOC where the formula wants KLOC.** Off by ~1000. Every static

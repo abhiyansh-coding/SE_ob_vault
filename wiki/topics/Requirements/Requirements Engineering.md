@@ -291,6 +291,12 @@ example is for the Hospital Management System instead.
 `raw/sources/`. The two Aggarwal & Singh chapters in the vault cover project
 planning and design, not requirements.
 
+**Assignment questions — [[se-assign-1-2026]].** **Q7(a)** one functional and one non-functional requirement, from a loan-system scenario
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Claiming agile has no documentation.** It has less, and different. "Working

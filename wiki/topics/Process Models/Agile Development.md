@@ -66,6 +66,32 @@ matter.
 **The eight models the deck names:** Scrum · FDD · ASD · DSDM · XP · Crystal ·
 Agile Modeling (AM) · Kanban.
 
+**The 12 Agile Alliance principles** (Pressman ch. 4 deck) — the four values made
+operational. Condensed, in order: satisfy the customer through **early and
+continuous delivery** · **welcome changing requirements**, even late · deliver
+working software **frequently** (weeks, not months) · business people and
+developers work together **daily** · build projects around **motivated
+individuals** and trust them · **face-to-face conversation** is the most efficient
+method · **working software is the primary measure of progress** · sustainable
+development at a **constant pace** indefinitely · continuous attention to
+**technical excellence** · **simplicity** — maximising the work *not* done ·
+the best architectures emerge from **self-organizing teams** · the team
+**reflects and adjusts** at regular intervals.
+
+**The three assumptions every agile process addresses** (deck, §4.2):
+1. It is **difficult to predict** which requirements will persist and how customer
+   priorities will change.
+2. For many types of software, **design and construction are interleaved** — both
+   performed in tandem so models are proven as they are created.
+3. Analysis, design, construction and testing are **not as predictable** as we
+   would like, from a planning point of view.
+
+**The six human factors** an agile team needs (deck, §4.2.2): **competence** ·
+**common focus** · **collaboration** · **decision-making ability** · **fuzzy
+problem-solving ability** · **mutual trust and respect** · **self-organization**.
+The key point: *the process molds to the needs of the people and team*, not the
+other way around.
+
 ### Scrum
 
 | | |
@@ -91,6 +117,20 @@ Agile Modeling (AM) · Kanban.
 **Events:** Sprint Planning · Sprint (the work period) · Daily Scrum / stand-up ·
 Sprint Review · Sprint Retrospective. Deliberately short — the deck notes
 stand-ups are "sometimes conducted without chairs".
+
+**Scrum's four process patterns** (Pressman ch. 4 deck, Figure 4.3) — the wording
+that answers "how does the sprint contribute?":
+
+| Pattern | What it is |
+|---|---|
+| **Backlog** | prioritised list of requirements or features providing business value; items can be added **at any time** — this is how change is introduced |
+| **Sprints** | work units achieving a backlog requirement within a **predefined time-box (typically 30 days)**. During the sprint the backlog items it addresses are **frozen** — changes are not introduced — so "the sprint allows team members to work in a **short-term, but stable environment**" |
+| **Scrum meetings** | 15-minute daily meetings answering three questions: *What did you do since the last meeting? What obstacles are you encountering? What do you plan to accomplish by the next meeting?* Led by the Scrum master; produce "knowledge socialization" |
+| **Demos** | deliver the increment to the customer for evaluation. **May not contain all planned functionality** — only what fit the time-box |
+
+**Where change is absorbed:** *between* sprints, never inside one. That is how
+agile stays adaptive without becoming chaotic, and it is the answer to any "why
+is the sprint valuable" question.
 
 ### Extreme Programming (XP)
 
@@ -373,6 +413,12 @@ unchecked against a key, so no `✓`.)*
 The two Aggarwal & Singh chapters that *are* in the vault cover project planning
 and design, not agile.
 
+**Assignment questions — [[se-assign-1-2026]].** **Q1** release planning (deck numerical, numbers changed) · **Q2, Q3** user story maps (**out of syllabus**) · **Q4** sprint commitment (**deck question, verbatim**) · **Q7(b)** how the sprint contributes
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Reading the manifesto as "B has no value".** Every value is *A over B*, not
@@ -400,12 +446,21 @@ and design, not agile.
 - `raw/sources/ppts/2025/L4 Print Questions Agile.pdf` — **the two numericals**,
   worked above.
 
-> [!warning] One deck for this topic has not been read
-> `raw/sources/ppts/2025/L3 Agile Development models.pdf` is **17 pages of images
-> with zero extractable text**. It is named for this topic and has not been opened
-> visually. Nothing on this page is cited to it. It may hold additional models,
-> diagrams or worked examples — worth a look by eye before the exam, and worth
-> asking me to read if you want it folded in.
+- `raw/sources/ppts/2025/L3 Agile Development models.pdf` — **read by eye on
+  2026-09-03** (17 image-only pages, no extractable text). It is **Pressman
+  Chapter 4, "An Agile View of Process", pages 103-118, scanned**, with the
+  instructor's own underlining and one handwritten note defining refactoring.
+  Contents: the manifesto and its four values · **the 12 Agile Alliance
+  principles** · the three assumptions of an agile process · **the six human
+  factors** · XP in full with Figure 4.1 · ASD with Figure 4.2 · Scrum with
+  Figure 4.3 and its four process patterns. All folded into this page.
+
+> [!tip] This deck is the closest thing in the vault to Pressman 8e
+> [[se-handout-2026-muj]] prescribes Pressman, and `raw/sources/` does not have
+> it — rule 6's fallback has been unavailable on every page built so far. This
+> deck is **one chapter of it**, scanned. It resolves the gap for Agile only, but
+> it confirms the instructor teaches straight from Pressman, so the textbook's
+> wording is the wording to expect.
 
 **Related:** [[story]] · [[syllabus]] · [[weightage]] · [[MTE Roadmap]] ·
 previous [[Evolutionary Process Models]] · next [[SDLC & CMMI]]

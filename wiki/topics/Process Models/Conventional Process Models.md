@@ -260,6 +260,12 @@ final handover. *(Unchecked — no solution key.)* Cases 2 and 3 are worked on
   practice bank for these models.
 - **Textbook — unavailable.** Pressman 8e is not in `raw/sources/`.
 
+**Assignment questions — [[se-assign-1-2026]].** **Q8** Waterfall vs Agile for an Online Banking System — compare, then recommend
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Describing the model instead of justifying the match.** B1 gives 2 marks per

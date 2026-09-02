@@ -277,6 +277,12 @@ project planning and design.
 > control-flow-graph problems. Its content belongs to [[White-Box Testing]] and
 > [[Cyclomatic Complexity & Graph Matrices]]. **This topic has no question sheet.**
 
+**Assignment questions — [[se-assign-1-2026]].** **Q5(c)** ERD for a Clinic Management System — 12 entities with keys and cardinality
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Confusing degree with cardinality.** Degree counts entity *types*;

@@ -322,6 +322,12 @@ deliverable, successive cycles adding features. *(Unchecked.)*
 - **Deck — none.** `L1 PPT from 1 to 8.pdf` is expository throughout.
 - **Textbook — unavailable.** Pressman 8e is not in `raw/sources/`.
 
+**Assignment questions — [[se-assign-1-2026]].** **Q8** supplies the selection logic for the Waterfall-vs-Agile recommendation
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Incremental vs iterative.** Adds features versus refines the whole — the most

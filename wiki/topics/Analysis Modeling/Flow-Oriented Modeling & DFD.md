@@ -364,6 +364,12 @@ System is worked at both levels in subtopic 3, from
 > **Consequence: this topic has no drill at all beyond the Food Ordering
 > example.** That is stated rather than papered over with invented questions.
 
+**Assignment questions — [[se-assign-1-2026]].** **Q5(a)(b)** clinic context + Level-1 DFD (part (b) is defective as printed) · **Q15** library context + Level-1 DFD
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Drawing control flow in a DFD.** No decisions, no loops, no sequence. A DFD

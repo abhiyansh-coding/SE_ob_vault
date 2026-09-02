@@ -523,6 +523,12 @@ exercise bank, much of it COCOMO. Directly relevant items, quoted:
 let them expand scope — COCOMO-II items (4.22-4.25) are **outside** this
 syllabus, which names only the empirical estimation models.
 
+**Assignment questions — [[se-assign-1-2026]].** **Q6** basic COCOMO, 400 KLOC, all three modes (**deck Example 4.5, verbatim**) · **Q9** embedded 4 KLOC with cost and manpower · **Q11(i)** organic 20 KLOC duration
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Not converting LOC to KLOC.** D1 says 100000 LOC; the formula wants 100.

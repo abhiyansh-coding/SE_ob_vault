@@ -106,6 +106,7 @@ lectures 1-32.**
 | Paper | Exam | Code | Marks | Status | Score |
 |---|---|---|---|---|---|
 | [[se-ete-2025-26]] | Odd Sem End Term, Nov-Dec 2025 | CSE3102/CS3201 | 80 | unattempted | — |
+| [[se-assign-1-2026]] | **Assignment 1**, 2026-27 (coursework, **not** a PYQ) | CSE3102 | not stated | unattempted | 15 Qs, all solved; due 04 Sep (LMS) / 07 Sep (hard copy) |
 
 **One paper.** Reconciles at 80/80. No MTE paper exists in this vault, so the
 Mid-Term's format is unknown — see [[MTE Roadmap]].
@@ -116,6 +117,7 @@ Mid-Term's format is unknown — see [[MTE Roadmap]].
 |---|---|---|
 | [[se-handout-2026-muj]] | `se-handout-2026-muj.pdf` | scope, rule 1 |
 | [[se-ete-2025-26]] | `se-ete-2025-26-unitopper-{1,2}.png` | weightage, rule 2 |
+| [[se-assign-1-2026]] | `Assignment_1.pdf` | coursework — **does not feed weightage** |
 
 ### Lecture decks — 24 files
 
@@ -127,7 +129,7 @@ Where they disagree, 2026-27 wins.
 | `2026-27/UML & UseCase Diagram.pdf` | UML, use cases — **this year** | image-heavy (33 pp) |
 | `2025/L1 PPT from 1 to 8.pdf` | lectures 1-8: intro, myths, layered, process models | yes |
 | `2025/L2 Lec (9 - 14).pdf` | lectures 9-14: agile, CMMI, requirements | yes |
-| `2025/L3 Agile Development models.pdf` | agile models | **image-only** (17 pp) |
+| `2025/L3 Agile Development models.pdf` | **Pressman ch. 4 "An Agile View of Process", pp. 103-118, scanned** — 12 agile principles, three assumptions, six human factors, XP/ASD/Scrum figures | image-only (17 pp), **read by eye 2026-09-03** |
 | `2025/L4 Print Questions Agile.pdf` | **agile velocity/cost numericals** | yes |
 | `2025/L5 Chapter 3 Software Requirements_2.pdf` | requirements, SRS, UML | yes |
 | `2025/L6 Requirement Analysis Diagrams.pdf` | DFD, ERD | image-heavy (10 pp) |

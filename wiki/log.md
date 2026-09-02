@@ -67,3 +67,45 @@ Changes, nothing deleted:
 Result: 46,976 to 40,762 words, 6,214 removed. Two paragraphs of 60+ words remain
 vault-wide, both inside worked answers. Also restored the accidentally deleted
 Design Concepts and Principles scaffold, which ten live wikilinks point at.
+
+## [2026-09-03] ingest | Assignment 1 (CSE3102) — 15 questions, all solved
+
+`raw/sources/Assignment_1.pdf`. New page wiki/papers/se-assign-1-2026.md, type
+assignment. Every question gets: where it is from, method to try first, full
+worked solution, and the trap it sets. Due 04 Sep (LMS) / 07 Sep (hard copy).
+
+**Coursework, not a PYQ — weightage is untouched** (rule 2). No pyq_marks field
+on any topic page changed.
+
+**Rule 8, confirmed hard.** Three questions are deck questions:
+- Q1 is the Agile deck release-planning numerical with numbers changed
+  (velocity 15-22 to 14-20, $50k to $48k, 58 to 53 ideal days).
+- Q4 is the Agile deck sprint-capacity question verbatim, identical numbers.
+- Q6 is COCOMO deck Example 4.5 verbatim, 400 KLOC across three modes.
+All three were already worked in the vault; answers cross-check against the deck.
+
+**Scope flags recorded on the page:** Q2 and Q3 ask for User Story Maps, which no
+deck teaches and the syllabus never names — answer as coursework, do not revise
+for the exam. Q12 needs CMMI process areas and appraisal method, beyond the
+vault, labelled unsourced. Q5(b) is defective as printed: it says "decomposing
+the following major processes:" and lists none.
+
+**Arithmetic verified independently:** Q1 53 ideal days, 3-4 iterations, 6-8
+weeks, $144k-$192k. Q4 capacity 52-70 hrs, commit Stories 1-3 at 56 hrs. Q6
+organic 1295.31 PM / 38.08 mo, semi 2462.80 / 38.45, embedded 4772.81 / 37.60.
+Q9 19.00 PM, Rs 9,50,000, 6.41 mo, 3 people. Q10 Rs 26,00,000 (two routes agree).
+Q11 (i) 11.52 months (ii) L = 5000 LOC. Q13 n 65, N 400, Nhat 328.97, V 2408.95,
+D 78.125, E 188199, T 2.9 hrs, B 0.80. Q14 UFP 295.
+
+## [2026-09-03] ingest | read the image-only agile deck by eye — it is Pressman ch. 4
+
+`raw/sources/ppts/2025/L3 Agile Development models.pdf`, flagged unread since the
+Agile build, opened visually. It is Pressman Chapter 4 "An Agile View of Process",
+pages 103-118, scanned, with the instructor's underlining. Folded into the Agile
+page: the 12 Agile Alliance principles, the three assumptions of an agile process,
+the six human factors, and Scrum's four process patterns (Backlog, Sprints, Scrum
+meetings, Demos) with the frozen-scope wording that answers assignment Q7(b).
+The stale "deck not read" warning is removed.
+
+This is the closest thing in the vault to the prescribed Pressman 8e, and it
+confirms the instructor teaches straight from it.

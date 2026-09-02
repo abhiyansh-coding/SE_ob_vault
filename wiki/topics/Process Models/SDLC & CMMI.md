@@ -349,6 +349,12 @@ and the cost-of-change reason for the trend. Worked in full in subtopic 2.
   mode. Explain the phase wise distribution of effort."* That is the closest thing
   in the vault to B3 drill, and it sits on [[Effort Estimation & COCOMO]].
 
+**Assignment questions — [[se-assign-1-2026]].** **Q12** conduct a CMMI assessment — process areas, evidence, use of results (**partly beyond the vault**)
+
+Worked in full on that page, with method and traps. **Coursework, so it does not
+change [[weightage]]** — but it is direct evidence of what the instructor
+considers important.
+
 ## Mistakes & Traps
 
 - **Answering A2 on one keyword.** Scenarios contain signals for several levels.
