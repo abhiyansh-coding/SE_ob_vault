@@ -1,0 +1,5 @@
+.DS_Store
+
+# Per-device Obsidian UI state — churns on every pane move, syncs via iCloud
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
