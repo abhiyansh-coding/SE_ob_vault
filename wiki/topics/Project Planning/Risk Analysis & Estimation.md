@@ -260,8 +260,6 @@ risk. No answer key.
 
 ## Traps
 
-- **Treating identification and assessment as parallel.** Identification is
-  *inside* assessment. This is the whole of A4.
 - **Confusing risk analysis with risk assessment.** Analysis is one of the three
   activities; assessment is the group containing it.
 - **Defining a risk as a problem.** A risk **has not happened yet**. Once it has,

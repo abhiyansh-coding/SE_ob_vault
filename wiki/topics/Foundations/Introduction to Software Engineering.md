@@ -313,7 +313,6 @@ partitionable. Remedies: scope reduction, schedule extension, re-planning.
 
 - **Answering A5 "yes, if added early enough."** The project is already delayed.
   Answer no, then justify.
-- **Naming Brooks's Law instead of explaining it.** The eponym earns nothing.
 - **Confusing the two curves.** Bathtub = *hardware*. Software's ideal curve
   flattens; its real curve ratchets upward. Label which is which.
 - **Saying software "wears out".** It deteriorates — the wrong verb signals you

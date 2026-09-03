@@ -365,8 +365,6 @@ considers important.
   organisation-wide. That is the entire difference.
 - **Answering B3 with only the 40-20-40 rule.** The environment comparison is half
   the marks; the reasoning earns the rest.
-- **Conflating development effort with lifetime effort.** 40-20-40 is development;
-  maintenance alone is ~60% of lifetime. State which you mean.
 - **Assuming coding dominates.** It is roughly 20% — the most counter-intuitive
   number in the module.
 

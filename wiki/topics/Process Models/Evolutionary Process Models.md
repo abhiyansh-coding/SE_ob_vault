@@ -349,8 +349,6 @@ considers important.
 
 ## Traps
 
-- **Incremental vs iterative.** Adds features versus refines the whole — the most
-  confusable pair in the module and the likeliest 2-marker.
 - **Placing the spiral prototype at the end of development.** It is produced at
   the end of the **risk analysis** sector.
 - **Giving the spiral a fixed number of loops.** It varies by project.

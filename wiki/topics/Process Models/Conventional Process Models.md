@@ -281,9 +281,6 @@ considers important.
   *friendly customers*, acceptance = *the customer after delivery*.
 - **Assuming RAD always applies under a deadline.** It needs the project to
   decompose into independent modules *and* enough people to staff parallel teams.
-- **Answering with a category ("conventional") when the deck uses a different
-  one.** Name the model.
-
 ## Sources
 
 - `raw/sources/ppts/2025/L1 PPT from 1 to 8.pdf` — covers lectures 1-8. For this

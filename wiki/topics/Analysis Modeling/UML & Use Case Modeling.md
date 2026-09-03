@@ -447,9 +447,6 @@ end-of-chapter UML exercises within the extracted range.
 
 ## Traps
 
-- **Using a decision diamond where a fork belongs.** "Two parallel activities
-  start" means **both** run — that is a fork bar, not a branch. This is D2's
-  central trap.
 - **Forking without joining.** Every fork needs a matching join, with as many
   inputs as the fork had outputs.
 - **Unlabelled decision guards.** `[complete]` / `[incomplete]` — without them a
@@ -459,9 +456,6 @@ end-of-chapter UML exercises within the extracted range.
   external by definition.
 - **Confusing use case with use case scenario.** The use case is the structured
   template; the scenario is an unstructured description.
-- **Ignoring named actors.** If a question names two actors, swimlanes are the
-  expected structure.
-
 ## Sources
 
 - `raw/sources/ppts/2026-27/UML & UseCase Diagram.pdf` — **this year's session,

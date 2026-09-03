@@ -458,10 +458,6 @@ considers important.
   *A instead of B*. Agile teams do document — just not for its own sake.
 - **Rounding iterations down.** ⌈58/22⌉ = 3, not 2. A partial iteration still
   costs a whole iteration.
-- **Giving one number when velocity is a range.** The range is the question — two
-  bounds, two durations, two costs.
-- **Committing a sprint by story points instead of task hours.** Capacity is in
-  hours; the stopping rule compares task estimates against it.
 - **Confusing Product Backlog with Sprint Backlog.** Everything versus this
   sprint's slice.
 - **Calling the Scrum leader a project manager.** They remove obstacles; the team

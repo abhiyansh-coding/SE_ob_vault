@@ -311,8 +311,6 @@ considers important.
 
 ## Traps
 
-- **Claiming agile has no documentation.** It has less, and different. "Working
-  software **over** comprehensive documentation" is a priority, not a prohibition.
 - **Mixing requirements with design in an SRS.** The SRS says *what*, not *how* —
   the deck lists this as a common mistake explicitly.
 - **Forgetting non-functional requirements.** They are what acceptance fails on.

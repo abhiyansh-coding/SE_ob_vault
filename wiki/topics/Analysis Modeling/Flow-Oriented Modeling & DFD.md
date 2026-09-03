@@ -379,10 +379,6 @@ considers important.
 
 ## Traps
 
-- **Drawing control flow in a DFD.** No decisions, no loops, no sequence. A DFD
-  shows *what data goes where*, never *when* or *under what condition*.
-- **Putting more than one process on a context diagram.** Level 0 has exactly
-  **one** bubble.
 - **Putting data stores on a context diagram.** Stores are internal; the context
   diagram does not open the system.
 - **Unbalanced levels.** The child's net inputs and outputs must equal the
