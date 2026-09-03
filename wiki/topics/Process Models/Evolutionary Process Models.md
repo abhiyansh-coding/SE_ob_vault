@@ -58,12 +58,14 @@ priority in early increments · **once an increment starts, its requirements are
 frozen** (later increments' may keep evolving) · a "multi-waterfall" life cycle —
 each increment passes through requirements, design, implementation and testing.
 
-**Iterative — the deck's framing:** "the same phases as the waterfall model, but
-with fewer restrictions" — same order, conducted over several cycles, a reusable
-product released at the end of each. **Use when:** requirements clearly defined
-and easy to understand · the application is large · changes expected in future.
-an increment's development starts its requirements freeze** — that freeze is what
-stops the model degenerating into endless churn.
+**Iterative — the deck's framing:** *"the same phases as the waterfall model, but
+with fewer restrictions"* — same order, conducted over several cycles, a reusable
+product released at the end of each.
+- **Use when:** requirements clearly defined and easy to understand · the
+  application is large · changes are expected in future.
+- **The easily-missed incremental rule:** requirements are prioritised, and **once
+  an increment's development starts its requirements freeze** — that freeze is
+  what stops the model degenerating into endless churn.
 
 **Worked example.**
 

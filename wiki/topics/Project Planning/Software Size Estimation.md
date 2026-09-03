@@ -60,12 +60,12 @@ and for every 100 projects there are **94 restarts**.
 | Economic | do the benefits exceed the costs? |
 | Operational | will it work in the organisation, and will people use it? |
 
-The deck's own technical-feasibility examples are
-deliberately extreme — *is it technically feasible to provide direct
-communication connectivity through space between two points on the globe?*, *is
-it feasible to design a programming language using Sanskrit?* — to make the point
-that technical feasibility asks whether the thing is possible **with available
-technology and skills**, not whether it is imaginable.
+**The deck's technical-feasibility examples are deliberately extreme:**
+- *Is it technically feasible to provide direct communication connectivity through
+  space between two points on the globe?*
+- *Is it feasible to design a programming language using Sanskrit?*
+- **The point:** technical feasibility asks whether the thing is possible **with
+  available technology and skills**, not whether it is imaginable.
 
 **Software scope** bounds what the system will and will not do: the functions and
 features delivered, the data in and out, the performance and constraints. It is

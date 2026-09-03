@@ -136,7 +136,6 @@ requirements — users and affected persons.
   when many people must agree, and dispensable when a handful of people can simply
   talk to each other.
 
-**Terms and distinctions.** Purpose list, the good-SRS characteristics, IEEE
 **Definition.** A detailed written document describing what a software system
 should do and the constraints under which it must operate. It **bridges
 stakeholders and developers** and **may act as a contract** between developer and
@@ -169,11 +168,10 @@ practice* list adds: requirements change · over-reliance on CASE tools · tight
 schedules · communication barriers · market-driven development · lack of
 resources.
 
-The deck
-also carries a **full worked SRS for a Hospital Management System** (purpose,
+**The deck carries a full worked SRS for a Hospital Management System** — purpose,
 scope, definitions, references, overview, product perspective, features, user
-classes admin/doctor/patient, operating environment, design constraints) — worth
-reading once end to end, because it shows the level of specificity IEEE 830
+classes (admin/doctor/patient), operating environment, design constraints.
+**Worth reading once end to end:** it shows the level of specificity IEEE 830
 expects, which the section headings alone do not convey.
 
 **Worked example.**

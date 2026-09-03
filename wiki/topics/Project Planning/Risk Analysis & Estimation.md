@@ -143,10 +143,11 @@ of the three activities that make up risk assessment.**
 | **Relationship** | the **first step** of assessment | **contains** identification |
 | **Involves measurement?** | no — purely enumeration | yes — analysis and prioritization use risk exposure |
 
-**In one sentence:** risk identification produces the list of what might go wrong;
-risk assessment is the wider stage that takes that list, analyses how each risk
-would change project outcomes, and prioritises them by risk exposure so the severe
-ones get attention first.
+**In one sentence:**
+- **Identification** produces the list of what might go wrong.
+- **Assessment** is the wider stage that takes that list, **analyses** how each
+  risk would change project outcomes, and **prioritises** by risk exposure so the
+  severe ones get attention first.
 
 Risk assessment then pairs with **risk control** (planning, monitoring,
 resolution) to make up risk management as a whole.
@@ -168,11 +169,12 @@ no `✓`.)*
 
 **Terms and distinctions.** The three control activities are in the table above.
 
-**Risk management planning** produces a plan for dealing with each significant
-risk, and the decisions are **recorded in the plan** — a documentation
-requirement, not just an intention. **Risk resolution** is the execution of those
-plans. **Risk monitoring** runs between them, tracking risks over the project's
-life, which is also how risks nobody originally listed get caught.
+- **Risk management planning** — a plan for each significant risk, with the
+  decisions **recorded in the plan**. A documentation requirement, not just an
+  intention.
+- **Risk resolution** — the execution of those plans.
+- **Risk monitoring** — runs between them, tracking risks over the project's life.
+  **This is also how risks nobody originally listed get caught.**
 
 Risk management is an **umbrella activity** in the sense of
 [[Software Engineering as a Layered Technology]] — it runs across the whole

@@ -116,12 +116,9 @@ participant**.
 Deck example: STUDENT has attributes Student_ID, Name, Address, Phone_No.
 **Student_ID is the candidate key**, and is chosen as the identifier.
 
-**Minimum cardinality** is the subtlety worth carrying. Ordinary cardinality says
-how many *can* be associated; minimum cardinality says how few *may* be. When the
-minimum is zero the participation is **optional** — a movie may be stocked as zero
-tapes, so VIDEO TAPE optionally participates. In an exam this is the difference
-between drawing "must have exactly one" and "may have none", and it is the detail
-that separates a careful diagram from an approximate one.
+**Why it matters in an exam:** it is the difference between drawing *"must have
+exactly one"* and *"may have none"* — the detail separating a careful diagram from
+an approximate one.
 
 **Worked example.** The deck works several small ones:
 

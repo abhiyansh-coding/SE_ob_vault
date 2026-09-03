@@ -108,21 +108,24 @@ is so limited · is simple to draw, amend and elaborate.
 > A child diagram must have **exactly the same** net inputs and outputs as the
 > parent bubble it decomposes.
 
-If the context diagram shows an `Order` entering the system and a `Bill` leaving,
-the level-1 diagram must show the same `Order` entering and the same `Bill`
-leaving — no more, no fewer. This is what stops a model quietly inventing data,
-and it is the property a marker checks first.
+**Worked check:**
+- Context shows `Order` in, `Bill` out.
+- Level 1 must show the **same** `Order` entering and the **same** `Bill` leaving
+  — **no more, no fewer**.
+- **This is what stops a model quietly inventing data, and it is the property a
+  marker checks first.**
 
 **Process numbering**
 
 Context process is **0**. Its children are **1, 2, 3…**. Children of process 2 are
 **2.1, 2.2, 2.3…**. The number says which level a bubble belongs to.
 
-The context diagram's defining properties, worth stating exactly: **exactly one
-process node**, representing the functions of the complete system in terms of how
-it interacts with external entities; **all** external entities; the data flows
-between them; and **no data stores**, because stores are internal and the context
-diagram does not open the system up.
+**The context diagram's defining properties**, worth stating exactly:
+- **Exactly one process node**, representing the complete system in terms of how
+  it interacts with external entities.
+- **All** external entities, and the data flows between them and the system.
+- **No data stores** — stores are internal, and the context diagram does not open
+  the system up.
 
 ## 3 · The Food Ordering System worked example
 
@@ -226,10 +229,10 @@ are exactly those on the context diagram. **Balanced.**
 - **The process specification does the same job for bubbles:** when a process is
   not decomposed further, its logic has to be written down somewhere.
 
-**Terms and distinctions.** The companion-notation table is in Quick
-Reference. The **control flow model** is the DFD's counterpart for systems where
-events and control matter as much as data — the deck names it alongside the data
-flow model and the process specification as the contents of lecture 21.
+- **Control flow model** — the DFD's counterpart for systems where **events and
+  control** matter as much as data.
+- The deck names it alongside the data flow model and the process specification as
+  the contents of **lecture 21**.
 
 ## 5 · Decision tables and state transition diagrams
 
@@ -243,19 +246,18 @@ flow model and the process specification as the contents of lecture 21.
 
 **Terms and distinctions.**
 
-**Decision table** — the upper rows specify the variables or conditions to be
-evaluated; the lower rows specify the actions to be taken when the corresponding
-conditions are satisfied. A **column is a rule**: if its condition combination
-holds, the corresponding action executes. The deck's example is a Library
-Management System: *if the valid-selection condition is false, the action is
-'display error message'.*
+**Decision table:**
+- **Upper rows** — the variables or conditions to be evaluated.
+- **Lower rows** — the actions taken when those conditions are satisfied.
+- **A column is a rule:** if its condition combination holds, that action executes.
+- **Deck example**, a Library Management System: *if the valid-selection condition
+  is false, the action is 'display error message'.*
 
 **State transition diagram** — objects change state as functions are performed on
-them. The deck's case study: a web application where a user can search for other
-users, send a friend request, have it accepted (both users added to each other's
-friend lists) or declined (the second user may send another request), and where
-users can block each other. Each of those is a state, and each action is a
-transition.
+them. **Each condition is a state; each action is a transition.**
+- **Deck case study**, a web application: search for other users · send a friend
+  request · request accepted (both users added to each other's friend lists) ·
+  request declined (the second user may send another) · users block each other.
 
 ```mermaid
 stateDiagram-v2

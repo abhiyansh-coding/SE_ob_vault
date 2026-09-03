@@ -200,11 +200,11 @@ organisation's software development process.**
 | 3 → 4 | processes are followed → processes are **measured** |
 | 4 → 5 | measured and predictable → **continuously improved** |
 
-**The deck's level-1 example:** a startup building a Hospital Management System
-with no requirements documents or design blueprints; programmers code what they
-think the hospital wants; no testing standards; each developer's own style; no
-schedule. The result depends entirely on whether the individuals happen to be
-good.
+**The deck's level-1 example** — a startup building a Hospital Management System:
+- No requirements documents or design blueprints.
+- Programmers code what they *think* the hospital wants.
+- No testing standards; each developer's own style; no schedule.
+- **The result depends entirely on whether the individuals happen to be good.**
 
 The analogies are the instructor's own and worth keeping:
 

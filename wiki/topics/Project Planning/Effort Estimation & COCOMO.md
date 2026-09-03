@@ -67,10 +67,11 @@ The examinable skill is **classification from a word problem**:
 | "compiler", "database system", "editor", average experience | Semi-detached |
 | **"embedded"**, "real-time", "ATM", "air traffic control", tight deadline, complex interfaces | Embedded |
 
-Size bands (2-50 / 50-300 / over 300 KLOC) are typical values, not definitions.
-Deck Example 4.6 makes the point: a 200 KLOC project with an **average-experience
-team** and a **schedule that is not very tight** is semi-detached, and the deck
-justifies the choice explicitly on those two phrases rather than on the size.
+- **Size bands (2-50 / 50-300 / over 300 KLOC) are typical values, not
+  definitions.**
+- **Deck Example 4.6 makes the point:** a 200 KLOC project with an
+  **average-experience team** and a **schedule not very tight** is semi-detached —
+  and the deck justifies it on those two phrases, **not on the size**.
 
 ## 2 · Basic COCOMO
 
@@ -191,11 +192,12 @@ multiplying *D*.
 | TOOL | 1.24 | 1.10 | 1.00 | 0.91 | 0.83 | — |
 | SCED | 1.23 | 1.08 | 1.00 | 1.04 | 1.10 | — |
 
-**Bold entries are the four D1 uses.** Note the direction: for capability and
-experience drivers, **better people give a multiplier below 1** (less effort).
-For demand drivers like RELY, CPLX and TIME, **more demanding gives above 1**.
-SCED is the odd one — both ends exceed 1.00, because compressing *or* stretching
-a schedule costs effort.
+**Bold entries are the four D1 uses.** The direction:
+- **Capability and experience drivers** — better people give a multiplier **below
+  1** (less effort).
+- **Demand drivers** (RELY, CPLX, TIME) — more demanding gives **above 1**.
+- **SCED is the odd one** — both ends exceed 1.00, because compressing *or*
+  stretching a schedule costs effort.
 
 **Worked example.**
 

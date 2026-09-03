@@ -100,9 +100,9 @@ and not repeated here.
 
 ## 3 · Specification
 
-The output of analysis lives in people's heads and in meeting
-notes. **Specification writes it down in a form that can be handed to someone who
-was not in the room** — which is the only way work can be divided at all.
+- The output of analysis lives in people's heads and in meeting notes.
+- **Specification writes it down in a form that can be handed to someone who was
+  not in the room** — the only way work can be divided at all.
 
 **Terms and distinctions.** Formats: the **SRS to IEEE 830**, use cases, user
 stories and diagrams. The SRS's structure, purpose, characteristics and common
@@ -118,10 +118,11 @@ they are not duplicated here.
 - This is where the course introduces the question that recurs through the whole
   testing module: *are we building the right product?*
 
-**Terms and distinctions.** Four techniques: **reviews, walkthroughs,
-prototyping, test-case generation**. The last is the subtle one — if you cannot
-write a test case for a requirement, the requirement is not verifiable, so
-attempting the test cases validates the specification as a side effect.
+**Four techniques:** reviews · walkthroughs · prototyping · **test-case
+generation**.
+- **The last is the subtle one:** if you cannot write a test case for a
+  requirement, the requirement is **not verifiable** — so attempting the test
+  cases validates the specification as a side effect.
 
 The verification/validation pair is tabulated in Quick Reference and taught in
 full on [[Evolutionary Process Models]] with the V-model.

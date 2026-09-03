@@ -72,11 +72,11 @@ Organised into two groups:
 |---|---|
 | class · package · object · component · composite structure · deployment | activity · sequence · use case · state · communication · interaction overview · timing |
 
-The grouping is worth understanding rather than memorising: **structural**
-diagrams show what the system *is* — the parts and their arrangement, frozen in
-time. **Behavioral** diagrams show what the system *does* — how it changes,
-responds and sequences. A class diagram is structural; an activity diagram is
-behavioral.
+**The grouping is worth understanding rather than memorising:**
+- **Structural** — what the system *is*: the parts and their arrangement, frozen
+  in time. A class diagram is structural.
+- **Behavioral** — what the system *does*: how it changes, responds and sequences.
+  An activity diagram is behavioral.
 
 ## 2 · The use case approach
 
@@ -144,9 +144,12 @@ organised by actor:
 | **Auditor** | print transaction report · reconcile takings |
 | **Coin collector** | unlock cash box · empty coins · confirm collection |
 
-Each actor sits outside the system boundary; each use case is an ellipse inside
-it; lines join an actor to every use case they initiate. *(Deck exercise with no
-printed solution — this is a worked approach, not a transcription, so no `✓`.)*
+- Each **actor** sits outside the system boundary.
+- Each **use case** is an ellipse inside it.
+- **Lines** join an actor to every use case they initiate.
+
+*(Deck exercise with no printed solution — a worked approach, not a
+transcription, so no `✓`.)*
 
 ## 3 · Class, object and sequence diagrams
 

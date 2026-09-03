@@ -38,16 +38,16 @@ last_practiced: null
 ## 1 · The Agile manifesto and its trade-offs
 
 **The 12 Agile Alliance principles** (Pressman ch. 4 deck) — the four values made
-operational. Condensed, in order: satisfy the customer through **early and
-continuous delivery** · **welcome changing requirements**, even late · deliver
-working software **frequently** (weeks, not months) · business people and
-developers work together **daily** · build projects around **motivated
-individuals** and trust them · **face-to-face conversation** is the most efficient
-method · **working software is the primary measure of progress** · sustainable
-development at a **constant pace** indefinitely · continuous attention to
-**technical excellence** · **simplicity** — maximising the work *not* done ·
-the best architectures emerge from **self-organizing teams** · the team
-**reflects and adjusts** at regular intervals.
+operational, in order:
+
+| # | Principle | # | Principle |
+|---|---|---|---|
+| 1 | satisfy the customer through **early and continuous delivery** | 7 | **working software is the primary measure of progress** |
+| 2 | **welcome changing requirements**, even late | 8 | sustainable development at a **constant pace**, indefinitely |
+| 3 | deliver **frequently** — weeks, not months | 9 | continuous attention to **technical excellence** |
+| 4 | business and developers work together **daily** | 10 | **simplicity** — maximise the work *not* done |
+| 5 | build around **motivated individuals** | 11 | best architectures emerge from **self-organizing teams** |
+| 6 | **face-to-face conversation** is the most efficient method | 12 | the team **reflects and adjusts** at regular intervals |
 
 **The three assumptions every agile process addresses** (deck, §4.2):
 1. It is **difficult to predict** which requirements will persist and how customer
