@@ -232,3 +232,80 @@ LOC counting definition, the CAF 0.65-1.35 sanity band, the static estimation
 models with productivity and manning, Risk's definition and the "tomorrow's
 problems are today's risks" hook, the four maintenance types on waterfall, and
 the five-activity elicitation table with its techniques column.
+
+## [2026-09-04] generate | Theory and Numericals — two MTE-scoped study pages
+
+Built `wiki/notes/Theory.md` (21,000 words) and `wiki/notes/Numericals.md`
+(10,800 words), both scoped to the **Mid-Term window, lectures 1-32**, both
+ordered by the handout's lecture plan rather than by phase or by marks.
+
+**Theory** — 16 sections, one per lecture block, covering every lecture from 1 to
+32 with no gaps. Each section teaches, then closes with a **Remember** callout
+holding the bullets to reproduce in an answer. Ends with a whole-syllabus cram
+table, six definitions to memorise verbatim, and the three highest-value exam
+habits.
+
+**Numericals** — 12 types plus a skeleton section: communication paths, agile
+release planning, sprint capacity, phase effort distribution, function points,
+FP-to-cost, Halstead, static models (SEL and Walston-Felix), the language
+break-even, Basic COCOMO, Intermediate COCOMO with the EAF, and risk exposure.
+Every type carries formulas, method, at least one fully worked example in
+Given/Steps/Answer form, and its traps. Two appendices: log-antilog working by
+hand, and a master formula sheet. Closes with an 18-row trap list ranked by cost
+and four ten-second sanity checks.
+
+**Rule 8 work done for these pages.** The Design block, lectures 24-32, was nine
+MTE lectures sitting in unbuilt scaffolds, so both design decks were extracted
+and read: `L8 Chapter 5 Software Design_3.pdf` (conceptual vs technical design,
+modularity with its six properties, the design strategies, function-oriented
+design, structure charts, functional procedure layers, the SDD to IEEE 1016 with
+its four design views, and the full OO vocabulary) and
+`L10 Chapter 5 Architecture Design.pdf` (data design, ATAM's six steps with its
+three views and nine quality attributes, Zhao's three dependency types, and
+transform vs transaction flow). That material had not previously been written
+anywhere in this vault.
+
+**Arithmetic independently recomputed** for every worked example. All deck figures
+match except Example 4.7, whose AEXP-for-PCAP error is carried forward and
+diagnosed on the page.
+
+**Gaps flagged inline rather than papered over:** software myths, legacy software,
+the layered-technology stack, the process framework, umbrella activities, the
+40-20-40 environment comparison, Halstead, and control hierarchy / structural
+partitioning are taught by no deck. Pressman 8e is still absent, so rule 6 has no
+fallback.
+
+Testing, Quality and DevOps are deliberately excluded — outside lectures 1-32.
+
+## [2026-09-04] generate | Contents tables added to Theory and Numericals
+
+Both study pages now open with a **Contents** table answering three questions per
+section in one row: **what subtopics are in it, which deck/chapter it was read
+from, and what it is worth.**
+
+**Theory** — 16 rows, one per lecture block, each listing its numbered subtopics
+(all 62 of them, verified to match the actual headings in both directions), its
+source deck with the Aggarwal & Singh chapter number where the deck carries one,
+and its score on the End Term. Followed by a **sections-ranked-by-marks** table
+and a note on how the handout's five modules map onto the lecture plan -- they do
+not line up, and the Design block maps to no module cleanly, which is recorded
+rather than fudged.
+
+**Numericals** — 13 rows (12 types plus the answer-skeleton section) with the
+core formula per type, and **two separate evidence columns**: End Term marks and
+assignment question count. Kept separate on purpose, per rule 2: coursework is
+evidence of emphasis and can never move the marks column. Followed by a
+**drill-priority ranking** that reads both columns together.
+
+**Reconciliation checked.** Theory's Contents and its ranked table both sum to
+**46 of 80**, matching the MTE-window figure on weightage. Numericals sums to
+**10 End Term marks and 9 assignment questions**, matching weightage and the
+assignment page. Every subtopic cited in a Contents row exists as a heading, and
+every heading is cited -- no orphans in either direction.
+
+**Two warnings carried on both tables**, because the marks column is the easiest
+thing on these pages to misread: the figures are **End Term** marks and the
+Mid-Term's format is unknown, and the corpus is **one sitting**, so a zero means
+*not asked once*, never *safe to skip*. The three least trustworthy zeros are
+named: ERD/DFD, Agile, and the nine-lecture Design block.
+

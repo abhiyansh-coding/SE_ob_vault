@@ -11,6 +11,14 @@ Catalog of everything in the wiki. Updated on every ingest/generate/grade.
 - **Full course: [[SE Roadmap]]** — all 30 topics, lectures 1-53
 - [[log]] — append-only timeline of every change to this vault
 
+**Study notes** — the read-top-to-bottom pages, `wiki/notes/`:
+
+- **[[Theory]]** — everything in the MTE syllabus that is not arithmetic,
+  lectures 1-32 in order, each section closing with a **Remember** block
+- **[[Numericals]]** — all 12 numerical types in the MTE syllabus, each with
+  formulas, method, worked examples and traps
+- **[[01 Testing]]** — lectures 35-45, **outside the Mid-Term**
+
 > [!info] 15 of 30 pages are built; the other 15 are scaffolds
 > The built pages follow the **SE-native schema adopted 2026-09-03** — Quick
 > Reference, **How it's asked**, Contents, then sections shaped by content type.
